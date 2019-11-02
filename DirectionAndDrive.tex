@@ -23,13 +23,11 @@
 \usepackage{array}
 %% Full Page Graphics
 \usepackage{pdfpages}
-%% No separation betwen elements of lists
+%% No separation between elements of lists
 \usepackage{enumitem}
 \setlist{nosep}
 %% Include links to websites
 \usepackage{hyperref}
-%% Multi-line comments
-\usepackage{verbatim}
 
 \title{Direction and Drive \\ {\large What would you do if your spaceship was falling apart around you?}}
 \author{Scott Armstrong}
@@ -45,6 +43,281 @@
 
 \tableofcontents
 
+every system:
+\begin{itemize}
+\item table of breakages 
+\item recommended breakages for specific emotions
+\item diagram
+\item difficult problems
+\end{itemize}
+
+\section{Notation} \label{notation}
+Typical D\&D notation will be used, with some shorthand added. 
+\begin{itemize}
+\item \textit{Advantage} means roll two dice and use the larger result. \textit{Disadvantage} means roll two dice and use the smaller result.
+\item \textit{1d20} means roll one 20-sided die.
+\item \textit{1d2} means flip a coin.
+\item \textit{1d20 = 1} means only do this if you roll exactly one on a 20-sided die.
+\item \textit{1d4 ? 1. ... 2. ... 3. ... 4. ...} means roll a 4-sided die, and if it comes up 1 then follow the sentence after 1 (whatever is in the first ellipsis), and likewise for 2, 3, and 4.
+\end{itemize}
+
+\hspace{-18pt} Some abbreviations for damage types will be used. In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
+\begin{itemize}
+\item \textit{P} - piercing
+\item \textit{B} - bludgeoning
+\item \textit{H} - heating
+\item \textit{W} - wear
+\end{itemize}
+
+\def\qtwo#1#2#3{1d2 ? 
+\vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
+\item [1.] #1 
+\item [2.] #2 
+\end{enumerate}}
+\def\qthree#1#2#3{1d3 ? 
+\vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
+\item [1.] #1 
+\item [2.] #2 
+\item [3.] #3 
+\end{enumerate}}
+\def\qfour#1#2#3#4{1d4 ? 
+\vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
+\item [1.] #1 
+\item [2.] #2 
+\item [3.] #3 
+\item [4.] #4 
+\end{enumerate}}
+
+\section{Theory of the System} \label{theory}
+
+The DM will tell the players that ship-to-ship combat has begun, but their only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
+
+Here the DM refers back to an interview with the player about the character they're playing. While the DM encouraged each character to have clear and helpful strengths, they also required tangible weaknesses. Whether it's anger issues, feeling lost, or childhood fears, the DM will have picked out several weaknesses that can challenge the player and a few strengths to reward them.
+
+The DM picks a weakness and keeps it in mind for what then plays out. Here the DM rolls or chooses from the list of components of one of that player's systems. Whatever component chosen is then damaged according to the damage type of the weapon used. For the first few fights, and when unsure, roll on the table. However, if a specific theme has already come up and you want to explore it further, feel free to choose a specific part to break, as long as you keep the weapon the same.
+
+A DM must choose their words carefully. When describing the problem that arises, the DM keeps in mind the player's weakness and delivers the information in a way to help build the emotion of the scene. A sentence spoken is generally split up into three things to notice:
+\begin{itemize}
+\item diction - Choose specific words to evoke the worst of the character's weakness. A character terrified of snakes would be traumatized if you mention the hiss of a gas escaping, while a character with anger issues would be more affected by the deafening sound of that gas escaping.
+\item style - Alter the length of your sentences to convey meaning as well. To help develop tension, use short, direct sentences with long pauses between them. To help develop further anger, make the sentences long, include more superfluous vocabulary, and never stop for long to breathe.
+\item voice - This advice will be more acting than writing, and more general, but pay attention to the volume of your voice and your facial features. Making the face of whatever emotion you intend to convey oddly enough works often to imbue your voice with that emotion.
+\end{itemize}
+
+Once the problem is described, it's up to the player to fix it. Be sure to put pressure onto the player. Thinking and googling is okay, but they take too long specifically to decide on something, that's when to continue describing how the mess is getting bigger, or the problem is getting worse. Once pressure is on, think of different ways to raise the stakes. If there's a particular kind of problem that sticks out to you as relevant to what just happened, make note of it and use it as the next problem for that player. If you see a way that the solution could fail, make note of problems that could do so, and decide whether or not to use them or to give the player a break.
+
+This system is a long-form description of the DM presenting the player a problem, and the player giving the DM a solution. The main problem that arises is when the player presents an easy solution and thinks nothing of it. At that point the player is ready for a more complex problem, or multiple smaller problems at the same time. With each successive combat session, the DM should raise the complexity of each problem given, either by including more different problems, or by propagating a problem down toward different parts.
+
+Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
+
+\section{Systems} \label{systems}
+
+\subsection{Engine} \label{engine}
+
+Engineeers aboard a large ship spend their time in the hot engine decks by the rear of the ship. An engineer needs to be particularly handy in fixing things, since a rocket engine is already a complex thing, let alone one that needs to work in zero gravity, survive no atmosphere, and turn on and off at will.
+
+The following table contains all the different components of an engine. When the engine is hit by a damaging weapon, roll on the table to determine which component of the engine is actually going to be hit. When a component is hit, determine which type of damage the weapon does, then look up the component below the table and find that damage type listed beneath the component. That sentence will explain the most likely problems that arise because of that component taking that type of damage, so use this to continuously throw different random problems at the players. In general, more important components are located near the top, so for harder problems roll smaller dice or give yourself disadvantage on the roll.
+
+Four emotions are highlighted here. Under each emotion is listed a few hand-selected problems which enhance the emotion.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item The churning of a turbine blade against its casing is a horrific, high-pitched wail which nobody enjoys hearing. See \textit{Turbo} \ref{engine_turbo}, \textit{H$_2$O (l) Pump} \ref{engine_h2o_pump}, or \textit{O$_2$ (l) Pump} \ref{engine_o2_pump}.
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item The flame roaring from a pierced \textit{turbo} \ref{engine_turbo} or \textit{combustion chamber} \ref{engine_combustion}, or if a bludgeoning shot rips the seam open. 
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item When one of the fuel liquids in \textit{H$_2$ (l) Storage} \ref{engine_h2_storage} or \textit{O$_2$ (l) Storage} \ref{engine_o2_storage} escapes, it will create a billowing gas. A DM could explore being lost amidst this gas, or use the tension of something it represents. Clouds of hydrogen represent the danger of fire, while clouds of oxygen represent a huge wave of coldness. 
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item When a severely cold liquid escapes, such as in \textit{H$_2$ (l) Storage} \ref{engine_h2_storage} or \textit{O$_2$ (l) Storage} \ref{engine_o2_storage}, the whole room will fill with white gas and it will become cold. A true crewman must fix this before things start freezing around him, and so must push directly into the smoke and cold to fix it.
+\end{itemize}
+\end{minipage}
+ 
+\vspace{0.5cm}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
+\toprule
+1d32 & Component & Link \\
+\midrule
+1-2 & Electrolysis Chamber & \ref{engine_electrolysis} \\
+3 & Turbo & \ref{engine_turbo} \\
+4 & Combustion Chamber & \ref{engine_combustion} \\
+5-8 & Exhaust Vent & \ref{engine_exhaust} \\
+9 & Computer & ? \\
+10-11 & Thermal Pipes & ? \\
+12-15 & H$_2$O (l) Storage & \ref{engine_h2o_storage} \\
+16 & H$_2$O (l) Pipe & \ref{engine_h2o_pipe} \\
+17 & H$_2$O (l) Pump & \ref{engine_h2o_pump} \\
+18-19 & H$_2$ (l) Storage & \ref{engine_h2_storage} \\
+20-21 & H$_2$ (l) Pipe & \ref{engine_h2_pipe} \\
+22 & H$_2$ (g) Condenser & \ref{engine_h2_condenser} \\
+23-24 & O$_2$ (l) Storage & \ref{engine_o2_storage} \\
+25-26 & O$_2$ (l) Pipe & \ref{engine_o2_pipe} \\
+27 & O$_2$ (l) Pump & \ref{engine_o2_pump} \\
+28 & O$_2$ (g) Condenser & \ref{engine_o2_condenser} \\
+29-32 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
+\bottomrule
+\end{tabular}
 
 
+\hspace{-18pt} \subsubsection{Electrolysis Chamber} \label{engine_electrolysis} \vspace{-0.2cm}
+Long-term spacefaring vessels require frequent refueling, meaning most ships elect to use water due to its frequency on planets and in the asteroid belt. Storing hydrogen gas for long periods of time is dangerous, and oxygen is similar, so fuel is stored as liquid water. The liquid water is constantly pumped into the hydrolysis chamber, which uses an electrical current to separate H$_2$O(l) into H$_2$(g) and O$_2$(g). These gases then liquefy in an adjacent condenser, to be stored and used as rocket fuel. Given that a rocket consumes fuel very quickly, this is the main limiting factor in the engine's output, even when the chamber is huge and has many layers of filaments. 
+
+Therefore the engine consists of a large chamber to hold water, a huge number of metal filaments, and escape vents for gas to filter out.
+
+\begin{enumerate}
+\item [\textit{P}] - A small hole is punctured through the casing. \newline 
+\hspace*{3pt} \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.} \\
+\item [\textit{B}] - The casing is dented. \newline \hspace*{3pt} 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.
+\item [\textit{H}] - Heats very slowly. \newline \hspace*{3pt} 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.
+\item [\textit{W}] - Filaments must be regularly replaced. Container is subject to acids and oxidation.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Turbo} \label{engine_turbo} \vspace{-0.2cm}
+Given that the engine must stop and let the hydrolysis chamber refuel every now and then, the fuel flow needs to be able to shut off and start up at will. A typical electric motor cannot push enough fuel for an engine to run at full capacity. Instead, a separate stream of rocket fuel is ignited, which then powers the set of main turbines. That is, a separate rocket "engine" is powering the turbines which push fuel into the rocket engine. 
+
+This contraption is called the turbo, which consists of a separate fuel intake powering a miniature combustion chamber, which pushes a drive shaft that connects to the main turbines.
+\begin{enumerate}
+\item [\textit{P}] - \qthree{A hole is pierced in the miniature combustion chamber. A small jet of flames escapes when fuel is flowing into the engine, and this fuel flow is slowed slightly.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ miniature turbine in the combustion chamber. Its structure is compromised. \newline \hspace*{-3pt} 1d4 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ main turbine. Its structure is compromised. \newline \hspace*{-3pt} 1d2 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.} 
+\item [\textit{B}] -  Complete stoppage of flow. Either the 1d2 miniature or main turbine grinds to a halt against its dented outer casing. This is either the 1d2 H$_2$ or O$_2$ turbine.
+\item [\textit{H}] - Turbine blade structure weakened. Heats up fuel flowing directly to the exhaust vent cooling system. \newline \hspace{3pt} 1d4 = 1 Turbine blade structure compromised, fuel flow reduced to save it.
+\item [\textit{W}] - Turbines require oiling. Over time, exhaust water and oncoming O$_2$ erodes turbine blades. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Combustion Chamber} \label{engine_combustion} \vspace{-0.2cm}
+The turbo pumps an enormous amount of liquid oxygen and hydrogen fuel into this chamber, where it is lit, it combusts, and the exhaust escapes out the exhaust vent. 
+\begin{enumerate}
+\item [\textit{P}] - Hole pierced in chamber, allowing a huge jet of flame to escape when the engine is firing. Reduces output.
+\item [\textit{B}] - Shape of chamber changed, reducing flow and altering exhaust direction vector. \newline \hspace{3pt} 1d4 = 1 Hit so hard that the shape of the output nozzle changes too, significantly limiting exhaust flow. 
+\item [\textit{H}] - Possible slight structural warping giving similar effects to bludgeoning damage. Otherwise designed to get hot.
+\item [\textit{W}] - Severe erosion at nozzle.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Exhaust Vent} \label{engine_exhaust} \vspace{-0.2cm}
+Exhaust from the combustion chamber flows out this vent and into space. The particular shape of the vent is designed to maximize the output of the engine. The vent gets very hot, so liquid oxygen fuel is pumped through an extensive array of cooling pipes that surround the vent. This liquid oxygen absorbs much of the heat, and then immediately explodes and flies off to space, taking the heat with it.
+\begin{enumerate}
+\item [\textit{P}] - A small hole is pierced through the plate shell of the vent, releasing a jet of hot steam out the side when firing. \newline \hspace{-3pt} 1d4 = 1 A structural joint, bolt, or strut is punctured, compromising it. Doing full throttle will result in the structure warping.
+\item [\textit{B}] - Structure dented, changed exhaust vector. \newline \hspace{3pt} 1d4 = 1 Structure compromised, so doing full throttle will result in the structure warping.
+\item [\textit{H}] - If coolant is flowing, the liquid oxygen can boil before it reaches the combustion chamber, noticeably reducing output. If coolant has stopped, the boiling oxygen will burst the pipes. Afterwards, the heat may begin to warp the engine.
+\item [\textit{W}] - Noticeable erosion inside the vent.
+\end{enumerate}
+
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Storage} \label{engine_h2o_storage} \vspace{-0.2cm} 
+Water is easy to store at room temperature and pressure. However, a zero-gravity ship makes this more complicated. No water tower can provide water pressure, and water in any container will slosh around and mix with the gas in the container. As a result, liquid storage vats contain inflatable bags that hold the liquid itself, while the atmosphere between the bag but still inside the container is pressurized to allow flow and generate water pressure as desired.
+\begin{enumerate}
+\item [\textit{P}] - The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline \vspace{-3pt} 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.
+\item [\textit{B}] - The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.
+\item [\textit{H}] - Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.
+\item [\textit{W}] - Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{engine_h2o_pipe} \vspace{-0.2cm}
+It's a pipe with room-temperature, 1 atm pressure water flowing through it. 
+\begin{enumerate}
+\item [\textit{P}] - Water flows out.
+\item [\textit{B}] - Water flow is reduced.
+\item [\textit{H}] - Water absorbs heat easily, so little effect.
+\item [\textit{W}] - Water erodes things relatively quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{engine_h2o_pump} \vspace{-0.2cm}
+A big fan inside of a pipe. Usually the blades are elongated like a screw.
+\begin{enumerate}
+\item [\textit{P}] - Blade structure weakened. 1d4 = 1 Blade shatters, reducing pump flow.
+\item [\textit{B}] - Turbine grinds to a halt. 1d4 out of 4 blades are damaged.
+\item [\textit{H}] - Blades expand, increasing friction. Blade structure weakens.
+\item [\textit{W}] - Requires oiling. 
+\end{enumerate}
+
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (l) Storage} \label{engine_h2_storage} \vspace{-0.2cm}
+Liquid hydrogen is terrifying to store. The liquid can spontaneously evaporate, particularly when jostled or flowing, and it's highly flammable if it hits an oxygen atmosphere. Only so much storage at a time is safe, making this another main limiting factor of the engine. There is no material flexible enough to expand and contract like a bag at such low temperatures, so it is kept in a container that is pressurized highly enough to ensure the majority of the hydrogen inside is liquid.
+
+Liquid hydrogen must be stored below 20 K to ensure no boiling occurs at room pressure \cite{international_temperature_scale_of_1968}. With a pressurized tank, some leniency is given. Expect pressures in the range of tens of atmospheres.
+\begin{enumerate}
+\item [\textit{P}] - The huge pressure of the container squirts out a jet of freezing-cold liquid hydrogen. The hydrogen spray would cover the room, immediately evaporating into hydrogen steam. Both the freezing temperature and the evaporation sap heat from the room, quickly making it cold. At the moment of evaporation, the hydrogen gas becomes highly flammable, and the slightest stray spark will completely combust the room, removing all available oxygen and roasting everything inside.
+\item [\textit{B}] - The tank is dented. A pressure wave flows throughout the tank. The pressure wave combines with the nucleation site of the dent, both making many bubbles where hydrogen is kicked into evaporating. The pressure wave and the additional pressure from the newly-created gas are likely to overload the opening valve of the tank. \newline \hspace{-3pt} 1d2 = 1 The opening valve of the tank bursts, spraying liquid hydrogen throughout the room. The effects will be similar to piercing damage.
+\item [\textit{H}] - When liquid hydrogen is heated even slightly, many additional bubbles form from the spontaneous evaporation. \newline \hspace{3pt} 1d2 = 1 The additional bubbles become enough to burst the opening valve of the tank. The effects will be similar to piercing damage.
+\item [\textit{W}] - Hydrogen is slightly corrosive, forming rare free radicals that have an acidic effect.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (l) Pipe} \label{engine_h2_pipe} \vspace{-0.2cm}
+A highly-insulated strictly-static pipe through which liquid hydrogen flows.
+\begin{enumerate}
+\item [\textit{P}] - Liquid hydrogen spills into the room, resulting in smaller but similar effects as piercing damage in \textit{H$_2$ Storage} \ref{engine_h2_storage}.
+\item [\textit{B}] - Liquid flow slightly reduced.
+\item [\textit{H}] - Hydrogen gas bubbles form and pass the extra pressure on to the next component.
+\item [\textit{W}] - Hydrogen is slightly corrosive.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Condenser} \label{engine_h2_condenser} \vspace{-0.2cm}
+The liquid hydrogen storage tank is pressurized to ensure its contents are liquid. This has the added benefit that the pressure naturally forces liquid hydrogen out of the container when it is opened, meaning no pump is required. This is helpful since a pump would jostle the liquid hydrogen too much. Still a powerful condenser is needed to put hydrogen into the tank. 
+
+This particular condenser is composed of a chamber which collects hydrogen. This chamber is then mechanically compressed with a piston, increasing the pressure until the hydrogen condenses. Once the pressure is higher than the pressure of the tank, the new liquid hydrogen will freely flow into the tank.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and hydrogen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.} \\
+\item [\textit{B}] - \qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.} \\
+\item [\textit{H}] - The dangerous part is the hydrogen absorbing the heat, which then is transferred directly into the hydrogen storage.
+\item [\textit{W}] - Pistons require lubrication and maintenance.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Storage} \label{engine_o2_storage} \vspace{-0.2cm}
+The oxygen storage tank is similarly supercooled to around 60 K and pressurized to a handful of tens of atmospheres. Oxygen is slightly more forgiving, since it won't explode or spontaneously boil, though it's highly corrosive to the wrong materials.
+\begin{enumerate}
+\item [\textit{P}] - A stream of highly pressurized liquid oxygen at unbelievably cold temperatures streams outward and covers the room. The oxygen sucks heat out of the air both to warm itself up and to boil away, leaving everything a frost-covered mess. A high concentration of oxygen in the room allows for many more things to burn than normal, and at even lower temperatures, making the risk of fires high.
+\item [\textit{B}] - The tank is dented, sending a sudden pressure wave to the output valve. \newline \hspace*{3pt} 1d4 = 1 The pressure is enough to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.
+\item [\textit{H}] - Liquid oxygen will boil if its temperature gets too high, though not as sensitively as hydrogen. \newline \hspace*{3pt} 1d4 = 1 The boiling creates enough additional pressure to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.
+\item [\textit{W}] - Oxygen corrodes the wrong materials, though the tank is designed to avoid that. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Pipe} \label{engine_o2_pipe} \vspace{-0.2cm}
+This pipe carries liquid oxygen from place to place. 
+\begin{enumerate}
+\item [\textit{P}] - Liquid oxygen leaks out. Use a less dangerous version of the piercing damage section of \textit{O$_2$(l) Storage} \ref{engine_o2_storage}
+\item [\textit{B}] - Limits liquid flow rate.
+\item [\textit{H}] - Transfers heat to downstream component.
+\item [\textit{W}] - Designed to withstand oxygen corrosion.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Cooling Pipes} \label{engine_o2_cooling} \vspace{-0.2cm}
+Since oxygen has a decent specific heat capacity, these pipes wrap around the exhaust vent several times. Otherwise these pipes are identical to the above O$_2$(l) pipes.
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Pump} \label{engine_o2_pump} \vspace{-0.2cm}
+While a decent flow comes out of the liquid oxygen storage tank due to the pressurization of the liquid, it's not enough to push the liquid around the exhaust vent several times. An additional liquid pump is required, which is simply a small turbine that pushes the liquid through it.
+\begin{enumerate}
+\item [\textit{P}] - A turbine blade has a hole punched through it, compromising its structure. \newline \hspace*{3pt} 1d4 = 1 It shatters when used, stopping its addition to the flow until it can be rebalanced.s
+\item [\textit{B}] - The turbine grinds to a halt. 1d4 of the 4 turbine blades are damaged.
+\item [\textit{H}] - Heating here will transfer to the exhaust vent.
+\item [\textit{W}] - Designed to withstand oxygen corrosion.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Condenser} \label{engine_o2_condenser} \vspace{-0.2cm}
+An oxygen condenser is similar to a hydrogen condenser except that it's significantly safer.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and oxygen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.} \\
+\item [\textit{B}] - \qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.} \\
+\item [\textit{H}] - Oxygen will absorb the heat readily, though it will heat up relatively slowly, and this will be transferred into the oxygen storage.
+\item [\textit{W}] - Pistons require lubrication and maintenance.
+\end{enumerate}
+
+\newpage
+\begin{thebibliography}{0}
+\bibitem{international_temperature_scale_of_1968} 
+Rossini, F. D. (1968). A Report on the International Temperature Scale of 1968. Retrieved from \url{http://media.iupac.org/publications/pac/1970/pdf/2203x0555.pdf}
+\end{thebibliography}
 \end{document}
