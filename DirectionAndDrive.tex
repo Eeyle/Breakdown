@@ -29,6 +29,9 @@
 %% Include links to websites
 \usepackage{hyperref}
 
+% Dashes not dots
+\renewcommand\labelitemi{---}
+
 \title{Direction and Drive \\ {\large What would you do if your spaceship was falling apart around you?}}
 \author{Scott Armstrong}
 \date{1 Nov 2019}
@@ -43,15 +46,9 @@
 
 \tableofcontents
 
-every system:
-\begin{itemize}
-\item table of breakages 
-\item recommended breakages for specific emotions
-\item diagram
-\item difficult problems
-\end{itemize}
+\section{Preface} \label{preface}
 
-\section{Notation} \label{notation}
+\subsection{Notation} \label{preface_notation}
 Typical D\&D notation will be used, with some shorthand added. 
 \begin{itemize}
 \item \textit{Advantage} means roll two dice and use the larger result. \textit{Disadvantage} means roll two dice and use the smaller result.
@@ -61,7 +58,7 @@ Typical D\&D notation will be used, with some shorthand added.
 \item \textit{1d4 ? 1. ... 2. ... 3. ... 4. ...} means roll a 4-sided die, and if it comes up 1 then follow the sentence after 1 (whatever is in the first ellipsis), and likewise for 2, 3, and 4.
 \end{itemize}
 
-\hspace{-18pt} Some abbreviations for damage types will be used. In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
+\vspace{0.2cm} \hspace{-18pt} Some abbreviations for damage types will be used. In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
 \begin{itemize}
 \item \textit{P} - piercing
 \item \textit{B} - bludgeoning
@@ -88,11 +85,25 @@ Typical D\&D notation will be used, with some shorthand added.
 \item [4.] #4 
 \end{enumerate}}
 
+\subsection{Recommended Prior Knowledge}
+
+The players can have any amount of schooling in the subject, or none at all, as long as they are ready and willing to learn. The DM's knowledge is more demanding, as the arbiter of engineered solutions. In general this RPG assumes that the DM has at least high-school (secondary school) level knowledge in the sciences. The following is a list of topics that the DM should know or be familiar with.
+\begin{itemize}
+\item Most biology required will be related to medicine or injury. Recommended is an awareness of how the following injuries manifest in a person: burns, acids, deafening noises, and oxygen deprivation.
+\item High-school level chemistry will be plenty. Technically the only knowledge necessary is chemical reaction equations, all four states of matter, ionization, and combustion reactions.
+\item Knowledge of physics is somewhat more demanding. High-school physics is a must and taking some physics or engineering courses at undergraduate level is recommended. A student who did well in the first year of a high-school course in physics should suffice. The items below are a list of the subjects within physics that are needed or recommended. 
+\item Classical mechanics is required. The players will be in zero-gravity, where movement demands understanding the subject.
+\item Electronics is required. Most of the system relies on some form of electricity, and one of the systems is designed for generating and storing it. One of the systems uses many symbols from circuit design, so one should be able to read a simple circuit. One should be familiar with the vocabulary current, resistance, voltage, capacitor, and electromagnet.
+\item Thermodynamics is required. One should know the laws of thermodynamics and the three ways that heat can be transferred. Additionally one should be familiar with how to model ideal gases and how a refrigerator can keep things cold.
+\item Basic Fluid Mechanics is recommended. Most people have a sufficient understanding of plumbing to DM, but some additional equations relating pressure and velocity will help understand the engine and perhaps the thermal and life support systems.
+\item Electrostatics is recommended. This is the study of static (non-changing) electric and magnetic fields. While not necessary, knowing this subject will help understand the structure of railguns, rays, and magnetic field coils.
+\end{itemize}
+
 \section{Theory of the System} \label{theory}
 
 The DM will tell the players that ship-to-ship combat has begun, but their only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
 
-Here the DM refers back to an interview with the player about the character they're playing. While the DM encouraged each character to have clear and helpful strengths, they also required tangible weaknesses. Whether it's anger issues, feeling lost, or childhood fears, the DM will have picked out several weaknesses that can challenge the player and a few strengths to reward them.
+Here the DM refers back to an interview they had with the player about their character. While the DM encouraged each character to have clear and helpful strengths, they also required tangible weaknesses. Whether it's anger issues, feeling lost, or childhood fears, the DM will have picked out several weaknesses that can challenge the player and a few strengths to reward them.
 
 The DM picks a weakness and keeps it in mind for what then plays out. Here the DM rolls or chooses from the list of components of one of that player's systems. Whatever component chosen is then damaged according to the damage type of the weapon used. For the first few fights, and when unsure, roll on the table. However, if a specific theme has already come up and you want to explore it further, feel free to choose a specific part to break, as long as you keep the weapon the same.
 
@@ -109,6 +120,26 @@ This system is a long-form description of the DM presenting the player a problem
 
 Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
 
+\subsection{Highlighting Emotions}
+
+\subsubsection{Fear} \label{fear}
+
+In this document the word Fear will represent a more Lovecraftian style of horror. Large industrial machinery is everywhere on the ship, most of which the players will not fully understand. These enormous machines do not care about the wills of humans, and will break spectacularly under the right conditions. This sets up an atmosphere of indifference to the players, ensuring that the machinery will go on its way without them, if left alone. 
+
+\subsubsection{Anger} \label{anger}
+
+When fixing things, building things, or playing games, it's easy to become frustrated by materials or rules that don't go your way. While this Anger is a rather general emotion rather than a specific one, it still will happen a lot when players' solutions start failing. 
+
+\subsubsection{Isolation} \label{isolation}
+
+The word Isolation is misleading like fear was above. Isolation here refers not to long-term loneliness but to the players' current position. They are physically isolated from the Earth and any space stations nearby, meaning absolutely nobody is going to save them except for themselves. They are isolated from the vacuum around them, living mere inches away from an inhospitable wasteland. The players are living on the edge at every moment. While this type of emotion does not generate crazy roleplaying scenarios, it adds to the other emotions. Isolation will enhance the fear of a situation, since failing to fix it is exceedingly dangerous. Isolation will enhance anger, since the player knows that only they themselves are there to fix it, making every failure even more frustrating. 
+
+\subsubsection{Duty} \label{duty}
+
+Finally, isolation will hopefully inspire a sense of Duty to the ship and crew. Since nobody else is there to save them, and problems can be dangerous for the entire ship, a single crew member will often have to step up and try to fix a dangerous situation despite terrifying odds. This could be called courage or bravery, but in this context is hopefully inspired by loyalty to the vessel.
+
+
+\newpage
 \section{Systems} \label{systems}
 
 \subsection{Engine} \label{engine}
@@ -123,7 +154,7 @@ Four emotions are highlighted here. Under each emotion is listed a few hand-sele
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item The churning of a turbine blade against its casing is a horrific, high-pitched wail which nobody enjoys hearing. See \textit{Turbo} \ref{engine_turbo}, \textit{H$_2$O (l) Pump} \ref{engine_h2o_pump}, or \textit{O$_2$ (l) Pump} \ref{engine_o2_pump}.
+\item The churning of a turbine blade against its casing is a horrific, high-pitched wail which nobody enjoys hearing. See \textit{turbo} \ref{engine_turbo}, \textit{H$_2$O (l) Pump} \ref{engine_h2o_pump}, or \textit{O$_2$ (l) Pump} \ref{engine_o2_pump}.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
@@ -146,8 +177,8 @@ Duty
 \end{itemize}
 \end{minipage}
  
-\vspace{0.5cm}
-\begin{tabular}{@{} | c | l | c | @{}}
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{| c | l | c |}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
 \toprule
@@ -194,7 +225,7 @@ This contraption is called the turbo, which consists of a separate fuel intake p
 \begin{enumerate}
 \item [\textit{P}] - \qthree{A hole is pierced in the miniature combustion chamber. A small jet of flames escapes when fuel is flowing into the engine, and this fuel flow is slowed slightly.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ miniature turbine in the combustion chamber. Its structure is compromised. \newline \hspace*{-3pt} 1d4 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ main turbine. Its structure is compromised. \newline \hspace*{-3pt} 1d2 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.} 
 \item [\textit{B}] -  Complete stoppage of flow. Either the 1d2 miniature or main turbine grinds to a halt against its dented outer casing. This is either the 1d2 H$_2$ or O$_2$ turbine.
-\item [\textit{H}] - Turbine blade structure weakened. Heats up fuel flowing directly to the exhaust vent cooling system. \newline \hspace{3pt} 1d4 = 1 Turbine blade structure compromised, fuel flow reduced to save it.
+\item [\textit{H}] - Turbine blade structure weakened. Heats up fuel flowing directly to the exhaust vent cooling system. \newline \hspace*{3pt} 1d4 = 1 Turbine blade structure compromised, fuel flow reduced to save it.
 \item [\textit{W}] - Turbines require oiling. Over time, exhaust water and oncoming O$_2$ erodes turbine blades. 
 \end{enumerate}
 
@@ -202,7 +233,7 @@ This contraption is called the turbo, which consists of a separate fuel intake p
 The turbo pumps an enormous amount of liquid oxygen and hydrogen fuel into this chamber, where it is lit, it combusts, and the exhaust escapes out the exhaust vent. 
 \begin{enumerate}
 \item [\textit{P}] - Hole pierced in chamber, allowing a huge jet of flame to escape when the engine is firing. Reduces output.
-\item [\textit{B}] - Shape of chamber changed, reducing flow and altering exhaust direction vector. \newline \hspace{3pt} 1d4 = 1 Hit so hard that the shape of the output nozzle changes too, significantly limiting exhaust flow. 
+\item [\textit{B}] - Shape of chamber changed, reducing flow and altering exhaust direction vector. \newline \hspace*{3pt} 1d4 = 1 Hit so hard that the shape of the output nozzle changes too, significantly limiting exhaust flow. 
 \item [\textit{H}] - Possible slight structural warping giving similar effects to bludgeoning damage. Otherwise designed to get hot.
 \item [\textit{W}] - Severe erosion at nozzle.
 \end{enumerate}
@@ -210,8 +241,8 @@ The turbo pumps an enormous amount of liquid oxygen and hydrogen fuel into this 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Exhaust Vent} \label{engine_exhaust} \vspace{-0.2cm}
 Exhaust from the combustion chamber flows out this vent and into space. The particular shape of the vent is designed to maximize the output of the engine. The vent gets very hot, so liquid oxygen fuel is pumped through an extensive array of cooling pipes that surround the vent. This liquid oxygen absorbs much of the heat, and then immediately explodes and flies off to space, taking the heat with it.
 \begin{enumerate}
-\item [\textit{P}] - A small hole is pierced through the plate shell of the vent, releasing a jet of hot steam out the side when firing. \newline \hspace{-3pt} 1d4 = 1 A structural joint, bolt, or strut is punctured, compromising it. Doing full throttle will result in the structure warping.
-\item [\textit{B}] - Structure dented, changed exhaust vector. \newline \hspace{3pt} 1d4 = 1 Structure compromised, so doing full throttle will result in the structure warping.
+\item [\textit{P}] - A small hole is pierced through the plate shell of the vent, releasing a jet of hot steam out the side when firing. \newline \hspace*{-3pt} 1d4 = 1 A structural joint, bolt, or strut is punctured, compromising it. Doing full throttle will result in the structure warping.
+\item [\textit{B}] - Structure dented, changed exhaust vector. \newline \hspace*{3pt} 1d4 = 1 Structure compromised, so doing full throttle will result in the structure warping.
 \item [\textit{H}] - If coolant is flowing, the liquid oxygen can boil before it reaches the combustion chamber, noticeably reducing output. If coolant has stopped, the boiling oxygen will burst the pipes. Afterwards, the heat may begin to warp the engine.
 \item [\textit{W}] - Noticeable erosion inside the vent.
 \end{enumerate}
@@ -251,8 +282,8 @@ Liquid hydrogen is terrifying to store. The liquid can spontaneously evaporate, 
 Liquid hydrogen must be stored below 20 K to ensure no boiling occurs at room pressure \cite{international_temperature_scale_of_1968}. With a pressurized tank, some leniency is given. Expect pressures in the range of tens of atmospheres.
 \begin{enumerate}
 \item [\textit{P}] - The huge pressure of the container squirts out a jet of freezing-cold liquid hydrogen. The hydrogen spray would cover the room, immediately evaporating into hydrogen steam. Both the freezing temperature and the evaporation sap heat from the room, quickly making it cold. At the moment of evaporation, the hydrogen gas becomes highly flammable, and the slightest stray spark will completely combust the room, removing all available oxygen and roasting everything inside.
-\item [\textit{B}] - The tank is dented. A pressure wave flows throughout the tank. The pressure wave combines with the nucleation site of the dent, both making many bubbles where hydrogen is kicked into evaporating. The pressure wave and the additional pressure from the newly-created gas are likely to overload the opening valve of the tank. \newline \hspace{-3pt} 1d2 = 1 The opening valve of the tank bursts, spraying liquid hydrogen throughout the room. The effects will be similar to piercing damage.
-\item [\textit{H}] - When liquid hydrogen is heated even slightly, many additional bubbles form from the spontaneous evaporation. \newline \hspace{3pt} 1d2 = 1 The additional bubbles become enough to burst the opening valve of the tank. The effects will be similar to piercing damage.
+\item [\textit{B}] - The tank is dented. A pressure wave flows throughout the tank. The pressure wave combines with the nucleation site of the dent, both making many bubbles where hydrogen is kicked into evaporating. The pressure wave and the additional pressure from the newly-created gas are likely to overload the opening valve of the tank. \newline \hspace*{-3pt} 1d2 = 1 The opening valve of the tank bursts, spraying liquid hydrogen throughout the room. The effects will be similar to piercing damage.
+\item [\textit{H}] - When liquid hydrogen is heated even slightly, many additional bubbles form from the spontaneous evaporation. \newline \hspace*{3pt} 1d2 = 1 The additional bubbles become enough to burst the opening valve of the tank. The effects will be similar to piercing damage.
 \item [\textit{W}] - Hydrogen is slightly corrosive, forming rare free radicals that have an acidic effect.
 \end{enumerate}
 
@@ -314,6 +345,193 @@ An oxygen condenser is similar to a hydrogen condenser except that it's signific
 \item [\textit{H}] - Oxygen will absorb the heat readily, though it will heat up relatively slowly, and this will be transferred into the oxygen storage.
 \item [\textit{W}] - Pistons require lubrication and maintenance.
 \end{enumerate}
+
+\subsection{Thermal} \label{thermal}
+
+Every ship in space generates heat via various mechanisms. Any energy generation has some inefficiency which becomes stray heat, weaponry creates heat on firing, and every other system generates at least some heat as well. If a spaceship were left in space with no way to get rid of its heat, it would melt far more quickly than it would freeze. As a result, every ship is equipped with a thermal system, a system designed to take the heat from all the other parts of the ship and to get rid of it.
+
+Most systems aboard a ship operate at room temperature. For these systems, liquid water works perfectly fine as a conduit to transfer heat to the radiator. Even systems that generate large amounts of heat like weaponry can be handled by water due to its specific heat capacity. However, certain parts of the ship require extreme temperatures. The radiator must be excruciatingly hot, while liquid fuel for the engines and liquid helium in magnetic field coils must be near absolute zero. For these, a compressible substance is needed. Compressible substances can be compressed and expanded at will, unlike water, allowing their temperature to be varied as needed.
+
+If the radiator or nitrogen circuit stops, heat will continue being transferred into the heat sink until the heat sink becomes full. When the heat sink is full, heat can be dumped into any system that can handle it. If the water circuit stops, heat will start to be generated by every system on the ship. Each system will simultaneously have to fight off heat-related problems, though more severe for systems that generate lots of heat like weaponry.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item If a single hole were poked into the \textit{Radiator} \ref{thermal_radiator}, or if a bludgeoning attack tears a crack in it, a laser beam of heat would escape. This beam would be raging hot, something that nobody should touch, nobody should see. The belly of the beast is a raw and powerful thing.
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item Heat is often synonymous with anger. If a player is getting particularly angry, consider having the thermal pipes that carry water to their system \textit{H$_2$O (l) Pipe} \ref{thermal_h2o_pipe} burst. This way their machine will become hot to be around, hot to the touch, and further problems may arise. 
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item Something small and insignificant stops working, like a \textit{compressor} \ref{thermal_compressor}. Perhaps even a simple fix. However, for a brief moment, the radiator must stop running, and heat must build up. The ship is only one tiny malfunction away from the radiator completely stopping, and the ship would boil alive. The only line of defense that the ship has is the player.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item When a \textit{Radiator} \ref{thermal_radiator} breaks open, the air around it becomes singed with heat and plasma, and the walls of the room facing the opening grow red hot. If more heat keeps spilling into the room, it will overheat the enginery and overload the atmosphere's climate control. The lone player must venture directly toward the radiator, into the blazing heat and sizzling air, and have the courage to place something over the breakage to stop it.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{| c | l | c |}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{thermal} Thermal Components} \\
+\toprule
+1d12 & Component & Link \\
+\midrule
+1 & Radiator & \ref{thermal_radiator} \\
+2 & Compressor & \ref{thermal_compressor} \\
+3 & Heat Exchanger & \ref{thermal_exchanger} \\
+4 & Heat Sink & \ref{thermal_sink} \\
+5 & Computer & ? \\
+6-7 & H$_2$O (l) Pipe & \ref{thermal_h2o_pipe} \\
+8 & H$_2$O (l) Pump & \ref{thermal_h2o_pump} \\
+9-10 & N$_2$ (g) Pipe & \ref{thermal_n2_pipe} \\
+11 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Radiator} \label{thermal_radiator} \vspace{-0.2cm}
+
+The radiator is the component that actually sends heat flying away. All objects constantly release some energy in the form of light as a result of their temperature. Hotter objects like the sun release more energy as light. Larger objects also release more energy, which is why the ISS is equipped with huge arrays of white panel radiators.
+
+Aboard a combat vessel, a ship's radiator should be as small as possible to avoid being damaged. As a result, high-temperature radiators are used. These radiators dump waste heat into an extremely hot metal filament. The insane temperature of the filament means that it will radiate heat much more quickly. The waste heat therefore escapes out the radiator and is reflected into a thin cone pointed in a single direction.
+\begin{enumerate}
+\item [\textit{P}] - A hole is pierced through the casing of the radiator. The heat from the radiator escapes through this hole. The air begins to noticeably warm, and wherever the beam of heat is shining becomes red-hot quickly. \newline \hspace*{-3pt} 1d4 = 1 The shot pierces through the filament as well. Sudden kicks to the ship or full-throttle acceleration may cause the filament to snap. If it snaps, the tip of the filament will touch the casing at a single point, beginning to melt it.
+\item [\textit{B}] - The casing of the radiator is dented, altering its outflow direction slightly. \newline \hspace*{3pt} 1d2 = 1 The denting is enough to touch the filament. The casing at that point immediately becomes red hot and will quickly melt.
+\item [\textit{H}] - The radiator is designed to get stupidly hot.
+\item [\textit{W}] - The filament needs to be changed regularly. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Compressor} \label{thermal_compressor} \vspace{-0.2cm}
+Just before nitrogen enters the radiator to transfer its heat to the filament, the nitrogen must become hotter than the filament. This work is done by a compressor, squeezing the gas by so much that its temperature rises significantly. Once it has transferred its heat, a decompresser just after the nitrogen leaves the radiator will return it to normal pressure levels.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{The piercing shot hits the compressor while nitrogen is still highly pressurized. A stream of piping-hot nitrogen shoots out of the pipage.}{The piercing shot hits the while nitrogen is depressurized. A small leakage of nitrogen gas escapes.} \\
+\item [\textit{B}] - \qtwo{The dent prevents the compressor from fully compressing the gas.}{The dent prevents the compressor from fully entering the decompressed state.} \\
+\item [\textit{H}] - The nitrogen takes the heat and dumps it directly into the radiator.
+\item [\textit{W}] - Compressors require oiling and are subject to mechanical erosion.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heat Exchanger} \label{thermal_exchanger} \vspace{-0.2cm}
+The thermal system on large ships is split into two separate circuits: the main H$_2$O (l) circuit which cools the majority of systems, and the secondary N$_2$ (g) circuit which cools the very cold systems and heats the very hot ones. Between these two systems is an interface called the heat exchanger. This exchanger keeps the two liquids separate, but separates them by a material that allows heat to pass easily. This means that the waste heat in the water circuit can be constantly passed to the nitrogen circuit in order to release it out the radiator.
+
+The exchanger separates water and nitrogen into large sheets and lets them flow down either side of a large boundary. Several layers of sheets are included to increase the total heat flow rate.
+\begin{enumerate}
+\item [\textit{P}] - Flip two coins. \newline \hspace*{3pt} \qtwo{The shot misses any water tube.}{The shot hits a water tube, and lukewarm water sprays out.} \\ \hspace*{3pt} \qtwo{The shot misses any nitrogen tube.}{The shot hits a nitrogen tube, releasing it.} \\
+\item [\textit{B}] - The dent will certainly cause flow to slow somewhere. However, there are so many different tubes and panels that it will go mostly unnoticed.
+\item [\textit{H}] - The exchanger will dump heat into the nitrogen.
+\item [\textit{W}] - The exchanger is subject to erosion on both sides across a huge surface area. Layers require frequent cleaning and replacing.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heat Sink} \label{thermal_sink} \vspace{-0.2cm}
+When the radiator needs repairs, or when too much heat is entering the ship for the radiator to handle, the extra heat can be dumped into a heat sink. In the majority of cases this heat sink is the engine's water fuel tank, since water has an impressive specific heat capacity and a lot of water is carried in the tank. For problems with this tank, see \textit{H$_2$O (l) Storage} \ref{engine_h2o_storage}. When nearly empty, certain metal parts of the hull can also absorb much heat. 
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{thermal_h2o_pipe} \vspace{-0.2cm}
+It carries water. Amazing.
+\begin{enumerate}
+\item [\textit{P}] - Water spills out.
+\item [\textit{B}] - Water flow is slowed.
+\item [\textit{H}] - The water carries heat to the heat exchanger.
+\item [\textit{W}] - Water erodes pipes relatively quickly compared to other liquids.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{thermal_h2o_pump} \vspace{-0.2cm}
+A water pump is a big wet fan.
+\begin{enumerate}
+\item [\textit{P}] - The structure of a fan blade becomes compromised. \newline \hspace*{3pt} 1d4 = 1 The blade shatters, severely slowing flow until it can be rebalanced.
+\item [\textit{B}] - The fan grinds to a halt. A total of 1d4 out of the 8 blades are damaged.
+\item [\textit{H}] - The fan is cooled by the water around it.
+\item [\textit{W}] - Water erodes fans quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (g) Pipe} \label{thermal_n2_pipe} \vspace{-0.2cm}
+A pipe that holds nitrogen. When these pipes carry nitrogen to a system that requires extreme cooling, the nitrogen passes through a condenser first to be turned into a liquid. This allows it to reach temperatures far lower than as a gas. Afterwards it is turned back into a gas via an evaporator and the nitrogen rejoins the gas circuit.
+\begin{enumerate}
+\item [\textit{P}] - Nitrogen gas spills out.  
+\item [\textit{B}] - The flow of nitrogen gas is limited slightly.
+\item [\textit{H}] - The nitrogen delivers its heat directly to the radiator. If the nitrogen is in liquid form, extra heat may cause some to boil. This is not dangerous in small quantities, since the evaporator handles gases just fine. In large quantities, bursting may occur from the unexpected pressure increase.
+\item [\textit{W}] - Little wear or tear.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (g) Pump} \label{thermal_n2_pump} \vspace{-0.2cm}
+A pump that pushes gaseous nitrogen through its circuit. It is literally just a fan.
+\begin{enumerate}
+\item [\textit{P}] - One of the blades is punctured. \newline \hspace*{3pt} 1d4 = 1 The blade shatters on use, severely slowing nitrogen flow until it can be rebalanced.
+\item [\textit{B}] - The blades grind to a halt against their casing. A total of 1d4 out of 4 of the blades are damaged.
+\item [\textit{H}] - The pump is cooled by the nitrogen.
+\item [\textit{W}] - Little wear or tear.
+\end{enumerate}
+
+
+\subsection{blank section} \label{blank}
+
+description
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{blank} Blank Components} \\
+\toprule
+1d?? & Component & Link \\
+\midrule
+1 & Blank blank & \ref{blank_blank} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Blank Component} \label{blank_blank} \vspace{-0.2cm}
+text
+\begin{enumerate}
+\item [\textit{P}] - 
+\item [\textit{B}] - 
+\item [\textit{H}] - 
+\item [\textit{W}] - 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Blank Component} \label{blank_blank2} \vspace{-0.2cm}
+text
+\begin{enumerate}
+\item [\textit{P}] - 
+\item [\textit{B}] - 
+\item [\textit{H}] - 
+\item [\textit{W}] - 
+\end{enumerate}
+
 
 \newpage
 \begin{thebibliography}{0}
