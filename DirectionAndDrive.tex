@@ -44,6 +44,7 @@
 
 \end{abstract}
 
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 \section{Preface} \label{preface}
@@ -66,6 +67,8 @@ Typical D\&D notation will be used, with some shorthand added.
 \item \textit{W} - wear
 \end{itemize}
 
+% these are the commands used to generate the indented 1d4 ? 1. ... blocks of text
+% The first three are hard-coded to be 1d2, 1d3, and 1d4 respectively where each  1, 2, 3, and 4 is a separate line. This is usually what I use so the abbreviation is handy.
 \def\qtwo#1#2#3{1d2 ? 
 \vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
 \item [1.] #1 
@@ -85,6 +88,27 @@ Typical D\&D notation will be used, with some shorthand added.
 \item [4.] #4 
 \end{enumerate}}
 
+% This is a more general form of the above functions. Its first argument should be the dice used. The next two arguments form a pair, the first being which die outcomes and the second what happens on those outcomes. Each two arguments after that are optional, and form pairs, so that up to four ranges of die outcomes can be represented.
+% For example, #1 could be 1d12. #2 and #3 say 1-4. Something happens. Then #4 and #5 say 5-6. Something else happens. Then #6 and #7 say 7-12. A third different thing happens. #8 and #9 are left blank. This gives three die ranges and three outcomes, depending on what you roll on 1d12.
+\def\qeq#1#2#3#4#5#6#7#8#9{#1 ? 
+\vspace*{-0.4cm} \begin{enumerate}[leftmargin=2cm]
+\item [#2] #3 
+\ifx&#4&% empty
+\else
+\item [#4] #5
+\fi
+\ifx&#6&% empty
+\else
+\item [#6] #7
+\fi
+\ifx&#8&% empty
+\else
+\item [#8] #9
+\fi
+\end{enumerate}}
+
+% \qeq{1d4}{1-2.}{one or two}{3.}{three}{4.}{four}{}{} % what a scuffed function
+
 \subsection{Recommended Prior Knowledge}
 
 The players can have any amount of schooling in the subject, or none at all, as long as they are ready and willing to learn. The DM's knowledge is more demanding, as the arbiter of engineered solutions. In general this RPG assumes that the DM has at least high-school (secondary school) level knowledge in the sciences. The following is a list of topics that the DM should know or be familiar with.
@@ -93,13 +117,15 @@ The players can have any amount of schooling in the subject, or none at all, as 
 \item High-school level chemistry will be plenty. Technically the only knowledge necessary is chemical reaction equations, all four states of matter, ionization, and combustion reactions.
 \item Knowledge of physics is somewhat more demanding. High-school physics is a must and taking some physics or engineering courses at undergraduate level is recommended. A student who did well in the first year of a high-school course in physics should suffice. The items below are a list of the subjects within physics that are needed or recommended. 
 \item Classical mechanics is required. The players will be in zero-gravity, where movement demands understanding the subject.
-\item Electronics is required. Most of the system relies on some form of electricity, and one of the systems is designed for generating and storing it. One of the systems uses many symbols from circuit design, so one should be able to read a simple circuit. One should be familiar with the vocabulary current, resistance, voltage, capacitor, and electromagnet.
+\item Electronics is required. Most of the system relies on some form of electricity, and one of the systems is designed for generating and storing it. One of the systems uses many symbols from circuit design, so one should be able to read a simple circuit. One should be familiar with the vocabulary AC/DC, capacitor, and electromagnet.
 \item Thermodynamics is required. One should know the laws of thermodynamics and the three ways that heat can be transferred. Additionally one should be familiar with how to model ideal gases and how a refrigerator can keep things cold.
 \item Basic Fluid Mechanics is recommended. Most people have a sufficient understanding of plumbing to DM, but some additional equations relating pressure and velocity will help understand the engine and perhaps the thermal and life support systems.
 \item Electrostatics is recommended. This is the study of static (non-changing) electric and magnetic fields. While not necessary, knowing this subject will help understand the structure of railguns, rays, and magnetic field coils.
 \end{itemize}
 
-\section{Theory of the System} \label{theory}
+\section{Theory of the RPG} \label{theory}
+
+\subsection{Example First Combat}
 
 The DM will tell the players that ship-to-ship combat has begun, but their only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
 
@@ -120,7 +146,10 @@ This system is a long-form description of the DM presenting the player a problem
 
 Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
 
+
 \subsection{Highlighting Emotions}
+
+The following are a few particular emotions that arise naturally from the nature of the problems presented. I recommend that the DM be able to explore many of the player's weaknesses through these. For example, at least one player should have one weakness that the DM can use fear to explore.
 
 \subsubsection{Fear} \label{fear}
 
@@ -472,6 +501,284 @@ A pump that pushes gaseous nitrogen through its circuit. It is literally just a 
 \end{enumerate}
 
 
+\subsection{Railgun} \label{railgun}
+
+A railgun is composed of two parallel metal rails with a round of ammunition, a small hunk of metal flak, sandwiched between them. Huge amounts of current is passed through this system, traveling down one rail, through the metal flak, and then back the other rail. The particular circular movement of current generates a magnetic field, and individual electrons in the current through the flak round experience a force as a result of the moving through the magnetic field. With a capacitor to store a huge amount of electrical energy and a switch to release it, the large voltage from the capacitor will draw a large current from the electrical grid. The will generate an enormous force on the small flak round. Railguns can typically accelerate a small round to velocities at least 2.5 km/s \cite{naval_railgun} and up to 5.9 km/s \cite{scientific_railgun}.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item The railgun can get messy. Consider first having the \textit{Ammunition Supply} \ref{railgun_ammunition} get bludgeoned so that the room is covered with floating metal cubes getting in the way of everything. Also make sure to emphasize the sound of the railgun itself as it fires: the scrape of metal on metal, the hiss of gases and water sizzling, and the hum of pumps and pistons resetting the gun.
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item If a breakage causes the thermal system of the railgun to temporarily stop, it can still theoretically be fired. Pushing it like this will heat the rails up to huge temperatures, and could parallel a character's recklessness well.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item Gazing through the \textit{Cameras} \ref{railgun_cameras} shows complete darkness most of the time, and otherwise only shows the smallest red blip of another ship. The gunner has the closest connection to space outside, so make sure there's a window nearby. Occasionally describe their shots disappearing into the void when they miss.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item A railgun that's lost its \textit{Cameras} \ref{railgun_cameras} or its computer system can still be aimed and fired manually. Perhaps a player must fire the last critical shot at an enemy by hand. 
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{railgun} Railgun Components} \\
+\toprule
+1d20 & Component & Link \\
+\midrule
+1-4 & Rails & \ref{railgun_rails} \\
+5 & Reloader & \ref{railgun_reloader} \\
+6 & Transformer & \ref{railgun_transformer} \\
+7 & Capacitor & \ref{railgun_capacitor} \\
+8-9 & Hatch & \ref{railgun_hatch} \\
+10 & Cameras & \ref{railgun_cameras} \\
+11-14 & Ammunition Supply & \ref{railgun_ammunition} \\
+15 & H$_2$O (g) Condenser & \ref{railgun_h2o_condenser} \\
+16 & H$_2$O (g) Pump & \ref{railgun_h2o_g_pump} \\
+17-19 & H$_2$O (l) Pipe & \ref{railgun_h2o_pipe} \\
+20 & H$_2$O (l) Pump & \ref{railgun_h2o_l_pump} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Rails} \label{railgun_rails} \vspace{-0.2cm}
+Two long metal rails are precisely engineered to be smooth and an exact distance away from each other, so that they fit rounds of ammunition snugly. Unfortunately no matter the smoothness, the railgun still loses much energy to friction and to the partial deformation of the rails. The friction generates huge amounts of heat, so a railgun can only fire one shot before requiring cooling. It is cooled by sealing the railgun with exterior flaps, pumping the chamber full of atmosphere and then spraying the rails with water via sprinklers, which evaporates and sucks heat away.  
+\begin{enumerate}
+\item [\textit{P}] - The structure of one of the rails is compromised. The outer casing is pierced, so a small amount of atmosphere and water escapes each cooling cycle. 
+\newline \hspace{-3pt} The next time the railgun is fired, the railgun shot will warp the rail enough to break the flow of current between them, weakening the shot until the rail is changed. A rapid change from hot to cold or vice-versa via the heating system could also cause such a significant warpage.
+\item [\textit{B}] - The outer casing of the railgun is hugely dented, and the rail took the brunt of the rest of the hit. It is deformed enough to break the flow of current halfway through the shot, weakening the shot and making it much less accurate until the rail is changed.
+\item [\textit{H}] - Heating will weaken the metal just like firing a shot.
+\item [\textit{W}] - The frequent heating and cooling of the rails weakens the metal and can contribute to developing cracks, and the flak scrapes metal away as it is fired and this can deform the rails further. This means that rails need to be frequently changed out even under optimal conditions.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Reloader} \label{railgun_reloader} \vspace{-0.2cm}
+The railgun fires several shots at a time, cooling between each one, before returning to upright position to reload. The reloading mechanism is a simple piston which pushes a chunk of cubical metal slugs into the railgun, while maintaining a seal. This device is typically broken when directly being used, so when the piston is expanding and retracting.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{The piston arm or head is pierced, weakening it though not noticeably.}{The piston's pneumatics are pierced, releasing water and immediately shrinking the bottom of the piston arm down to the level of the hole.} \\
+\item [\textit{B}] - \qtwo{The piston arm is dented, and will not push straight nor far enough.}{The pneumatic cylinder is dented, preventing the bottom of the piston arm from dropping lower than the dent.} \\
+\item [\textit{H}] - The piston head is a relatively small piece of metal, meaning it can heat up quickly.
+\item [\textit{W}] - Pistons require lubrication and occasional maintenance.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{railgun_transformer} \vspace{-0.2cm}
+The power supply is split into two parts. The main electrical grid of the ship uses AC power, which converted to DC power via the transformer. A transformer consists of a diode bridge, containing four diodes, and a capacitor.
+\begin{enumerate}
+\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
+\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
+\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
+\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{railgun_capacitor} \vspace{-0.2cm}
+The railgun needs a huge surge of current and voltage in a fraction of a second, which is perfect for a capacitor. A large array of capacitors are connected in parallel and charged by the DC power coming from the transformer.
+\begin{enumerate}
+\item [\textit{P}] - A single capacitor is hit and requires replacement.
+\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
+\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
+\item [\textit{W}] - Capacitors burn out and wires corrode.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hatch} \label{railgun_hatch} \vspace{-0.2cm}
+The entire railgun arms are enclosed in a cylindrical casing. At the muzzle, a hatch opens so that the railgun can fire into the vacuum of space. 
+\begin{enumerate}
+\item [\textit{P}] - Some water and atmosphere escape when cooling the railgun.
+\item [\textit{B}] - \qtwo{The hatch is stuck open.}{The hatch is stuck closed.} \\
+\item [\textit{H}] - The hatch becomes much easier to push open from the inside.
+\item [\textit{W}] - The hatch requires lubrication and decays under stellar radiation.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Cameras} \label{railgun_cameras} \vspace{-0.2cm}
+A railgun is equipped with several thermal cameras which track the locations of enemy ships so that targeting computers can properly aim the railguns. There are at least two cameras per railgun in order to help estimate distances.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.} \\
+\item [\textit{B}] - One of the cameras is smashed to pieces.
+\item [\textit{H}] - The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.
+\item [\textit{W}] - Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ammunition Supply} \label{railgun_ammunition} \vspace{-0.2cm}
+Somewhere next to the railgun a huge pile of ammunition is stored. This is just a cube of stacked metal slugs, where each slug is a cube as well, with a piston to push slugs into reloading position.
+\begin{enumerate}
+\item [\textit{P}] - A total of 1d4 slugs now have a hole in them.
+\item [\textit{B}] - A total of 1d4 slugs are smashed into unusable shape and another 1d12 slugs go flying off into the room.
+\item [\textit{H}] - The metal slugs can absorb a ton of heat.
+\item [\textit{W}] - Slugs need to have precisely manufactured dimensions in order to fit between the perfect distance between the rails. Deforming them in any way will most of the time make them unusable.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (g) Condenser} \label{railgun_h2o_condenser} \vspace{-0.2cm}
+Spraying water into the railgun chamber utilizes the huge amount of latent heat required to turn water from liquid into steam. The steam is vented out by a steam pump, and needs to be recovered. Thermal pipes curl around several times to provide ample surface area for water to condense, drip, and be collected for spraying again.
+\begin{enumerate}
+\item [\textit{P}] - Some steam escapes. \newline \hspace*{3pt} 1d2 = 1 A thermal pipe is also pierced. Additional water flows into the condenser until it can be plugged.
+\item [\textit{B}] - The condenser chamber is dented. \newline \hspace*{3pt} 1d4 = 1 The denting is enough to break a seal somewhere, and steam escapes.
+\item [\textit{H}] - If this component ends up collecting extra heat, it will increase the temperature difference between steam and thermal pipe and therefore will increase the heat flow rate into from the steam into the pipe. Thus the steam will condense even faster.
+\item [\textit{W}] - Water will corrode both sides of the thermal pipes, making them subject to annual replacement.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (g) Pump} \label{railgun_h2o_g_pump} \vspace{-0.2cm}
+It's a big fan.
+\begin{enumerate}
+\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
+\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
+\item [\textit{H}] - The turbine will transfer heat to the steam. 
+\item [\textit{W}] - The turbine erodes moderately quickly due to the steam.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{railgun_h2o_pipe} \vspace{-0.2cm}
+It's a pipe that carries water.
+\begin{enumerate}
+\item [\textit{P}] - Water spills out.
+\item [\textit{B}] - Limits water flow slightly.
+\item [\textit{H}] - Transfers heat to the railgun when sprayed on it.
+\item [\textit{W}] - Water wears pipes decently quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{railgun_h2o_l_pump} \vspace{-0.2cm}
+It's literally just a big wet fan.
+\begin{enumerate}
+\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
+\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
+\item [\textit{H}] - The turbine will transfer heat to the water. 
+\item [\textit{W}] - The turbine erodes quickly from the water.
+\end{enumerate}
+
+\subsection{Ray Accelerator} \label{ray}
+
+The ray accelerator is a theoretical weapon based on the particle accelerators of modern day. The machine ionizes a material, accelerates it by spinning it around a circular path, and then lets the stream of hot ionized gas fly toward the enemy. While no proper experiments have been done to determine this, it is likely that the shot will penetrate through essentially anything it comes across due to the pinpoint accuracy available when using voltages for precise targeting.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item The xenon is spinning right there in the main vacuum chamber \ref{ray_chamber}, mere feet away from the gunner. If a container magnet \ref{ray_containment} so much as malfunctions slightly, that beam of xenon will pierce through the walls of its chamber just as easily as an enemy. 
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item The vacuum can fail in the main chamber \ref{ray_chamber} or the ionization chamber \ref{ray_ionization}, and once it fails it takes a long time to reestablish the full vacuum. I could see a character's frustration building as they cannot seem to get a vacuum to stay put, taking up long amounts of time where the ray is completely inoperable.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item If all the xenon gas in its storage \ref{ray_xe_storage} escapes, which is surprisingly likely, there's no backup xenon anywhere. The player must come up with something themselves that can be used in place of xenon and scavenge it from a different part of the ship. Make sure the captain or another crew asks for frequent updates on the ray.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item The electromagnets (in \ref{ray_accelerator} and \ref{ray_containment}) are finely positioned and critical to the system. If something knocks them out of place, the whole system fails. A particularly heroic crew member might need to stand up on top of the vacuum chamber and use their strength to force a hot metal coil back into place while it sizzles and sparks in their hands.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{ray} Ray Components} \\
+\toprule
+1d12 & Component & Link \\
+\midrule
+1-4 & Vacuum Chamber & \ref{ray_chamber} \\
+5 & Ionization Chamber & \ref{ray_ionization} \\
+6 & Electric Field Accelerator & \ref{ray_accelerator} \\
+7-8 & Magnetic Field Containment & \ref{ray_containment} \\
+9 & Transformer & \ref{ray_transformer} \\
+10 & Capacitor & \ref{ray_capacitor} \\
+11 & Xe (g) Storage & \ref{ray_xe_storage} \\
+12 & Vacuum Pump & \ref{ray_vacuum_pump} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Vacuum Chamber} \label{ray_chamber} \vspace{-0.2cm}
+The gaseous material needs to be accelerated to incredible speeds in order for such otherwise weak gases to deal damage. This simply is not possible in an atmosphere, since air resistance will completely destroy such small quantities of gas. Therefore the donut in which the gas is accelerated has a near-perfect vacuum maintained in it.
+\begin{enumerate}
+\item [\textit{P}] - The vacuum quickly weakens to unacceptable levels and the gas becomes unable to accelerate.
+\item [\textit{B}] - The chamber is dented. \newline \hspace*{3pt} 1d2 = 1. The dent is enough to break the vacuum seal, quickly destroying the vacuum. \newline \hspace*{3pt} 1d2 = 1. The dent is enough to get in the way of the beam of gas as it accelerates, meaning the ray cannot fire until this dent is undone.
+\item [\textit{H}] - The metal walls of the chamber can store a decent amount of heat, though they do not get rid of it very quickly.
+\item [\textit{W}] - A vacuum is never perfect and the seal weakens over time. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ionization Chamber} \label{ray_ionization} \vspace{-0.2cm}
+Only charged particles are affected by electric and magnetic field, meaning the gas needs to be ionized before use. A shot's worth of gas is sprayed into the ionization chamber, where it is bombarded with electrons until electrons are knocked off. Like the acceleration chamber, this chamber must be at a vacuum as well.
+\begin{enumerate}
+\item [\textit{P}] - The vacuum is destroyed, xenon gas leaks out, and stray electrons can leak out.
+\item [\textit{B}] - The chamber is dented. \newline \hspace*{3pt} The dent is enough to break the seal, destroying the vacuum.
+\item [\textit{H}] - The chamber walls will heat up and stay hot.
+\item [\textit{W}] - Vacuum seal weakens over time. Inside walls become damaged by ions and bombardment.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Electric Field Accelerator} \label{ray_accelerator} \vspace{-0.2cm}
+Each time that the gas goes around in a circle inside the main vacuum chamber, it passes the accelerator. This device generates a strong electric field that will accelerate charged particles that pass through it in the proper direction. If it circles enough times, its velocity will eventually be so large that the gas can pierce nearly anything.
+
+This particular design of electric field uses an electromagnet wrapped around a single slice of the main vacuum chamber. Energy is dumped rapidly into the magnet coil, and the rapid rise in a magnetic field can generate a strong electric field as well. As long as the timings for when the particles arrive at the accelerator and when the magnetic field is increasing or decreasing are matched up, this can accelerate particles to huge velocities.
+\begin{enumerate}
+\item [\textit{P}] - The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline \hspace*{3pt} 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.
+\item [\textit{B}] - The electromagnet is bent out of shape, altering the precise direction that it accelerates the particles in the main chamber. As a result the beam of particles will eventually hit the wall, and the weapon cannot accelerate its shot to proper speed.
+\item [\textit{H}] - The wiring will warp and can come in contact with the vacuum chamber. Even slight warping will alter the direction of acceleration, scattering the beam far before it can fire every time it is shot.
+\item [\textit{W}] - Such swings in current will wear even a strong wire decently quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Magnetic Field Containment} \label{ray_containment} \vspace{-0.2cm}
+The particles inside the vacuum chamber need some force that keeps them spinning in a circle. This force is conveniently supplied just by placing strong magnets above and below. The faster the particle is moving, the stronger the magnetic field needs to be, so its power increases over time as a shot is fired.
+
+The magnetic field needs to begin at near zero and end at a huge strength. Such huge changes are possible with only electromagnets. This magnetic coil will be larger and more densely packed than the electric field generator coil. 
+\begin{enumerate}
+\item [\textit{P}] - One of the wires is nicked, stopping ample current from flowing until it is patched.
+\item [\textit{B}] - The coil is knocked out of shape, altering the direction of the magnetic field it creates. This will change the exact orbit of the gas in the accelerator when it fires. \newline \hspace*{-3pt} 1d2 = 1. The magnetic field is altered enough to knock particles into the walls of the vacuum chamber every time. The ray cannot fire.
+\item [\textit{H}] - The coil can warp with temperature and change direction slightly. Slight changes to direction mean only slight changes to particle orbits, meaning not much happens until the electromagnet is significantly warped.
+\item [\textit{W}] - The coil deals with large changes in current and voltage, and it generates a lot of heat, making it wear away quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{ray_transformer} \vspace{-0.2cm}
+The power supply is split into two parts. The main electrical grid of the ship uses AC power, which converted to DC power via the transformer. A transformer consists of a diode bridge, containing four diodes, and a capacitor.
+\begin{enumerate}
+\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
+\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
+\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
+\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{ray_capacitor} \vspace{-0.2cm}
+The ray needs a longer burst of current and voltage in a fraction of a second compared to a railgun, though a capacitor system will still work fine as long as a different capacitor is used. A large array of capacitors are connected in parallel and charged by the DC power coming from the transformer.
+\begin{enumerate}
+\item [\textit{P}] - A single capacitor is hit and requires replacement.
+\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
+\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
+\item [\textit{W}] - Capacitors burn out and wires corrode.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Xe (g) Storage} \label{ray_xe_storage} \vspace{-0.2cm}
+A particle accelerator requires single ions in a stream, meaning diatomic gases and larger molecules are off-limits. In terms of natural and common gases, this leaves only the noble gases. The gas chosen is the gas with the most weight per small chunk, so as to punch as large a hole as possible with as little material as possible. A bonus of noble gases is that they store easily and are not poisonous or reactive in any way, as long as one can overlook the price and lack of abundance.
+\begin{enumerate}
+\item [\textit{P}] - Xenon gas escapes. Only a small amount is kept in storage, since microscopic amounts are used per shot. The gas will all escape if not stopped quickly.
+\item [\textit{B}] - The storage vessel is dented. \newline \hspace{3pt} 1d4 = 1. The dent is enough to break a seal, and nearly all the xenon escapes.
+\item [\textit{H}] - The xenon heats up and the pressure increases. This is unlikely to break anything given the small and well-reinforced container.
+\item [\textit{W}] - The seal becomes less effective over time.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Vacuum Pump} \label{ray_vacuum_pump} \vspace{-0.2cm}
+Both the main chamber and the ionization chamber need to be almost perfect vacuums. As a result one almost always hears the loud hum of a vacuum pump running. A vacuum pump is a pump with a one way seal. That is, a fan pumps air out, and when the fan stops the seal prevents air from rushing back in. 
+\begin{enumerate}
+\item [\textit{P}] - The seal around the fan is broken, making it much less effective. One of the fan blades has a hole punched through it. \newline \hspace{-3pt} 1d4 = 1. The fan blade is compromised enough to shatter on next usage.
+\item [\textit{B}] - The fan grinds to a stop. A total of 1d4 of the 8 blades are damaged.
+\item [\textit{H}] - The fan is cooled by the air it sucks out.
+\item [\textit{W}] - A fan of such power and constant use requires oiling and regular maintenance.
+\end{enumerate}
+
+
 \subsection{blank section} \label{blank}
 
 description
@@ -534,7 +841,11 @@ text
 
 
 \newpage
-\begin{thebibliography}{0}
+\begin{thebibliography}{3}
+\bibitem{naval_railgun}
+Adams, D. A. (2003). Naval Rail Guns Are Revolutionary. \textit{US Naval Institute}. Retrieved from \url{https://web.archive.org/web/20070708054858/http://edusworld.org/ew/ficheros/2004/railguns.pdf}
+\bibitem{scientific_railgun}
+Rashleigh, S. C. and Marshall, R. A. (1978). Electromagnetic acceleration of macroparticles to high velocities. \textit{Journal of Applied Physics} 49, 2540. \url{doi.org/10.1063/1.325107}	
 \bibitem{international_temperature_scale_of_1968} 
 Rossini, F. D. (1968). A Report on the International Temperature Scale of 1968. Retrieved from \url{http://media.iupac.org/publications/pac/1970/pdf/2203x0555.pdf}
 \end{thebibliography}
