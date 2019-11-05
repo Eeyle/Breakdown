@@ -148,11 +148,34 @@ This system is a long-form description of the DM presenting the player a problem
 
 Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
 
-\subsubsection{Damage Types}
+\subsection{Damage Types}
 
 Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a huge dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe damage to the delicate systems of the ship.
 
 Additionally, two other less common types of damage exist. If the thermal control of a system fails, it will begin to heat up, and the component will be subject to \textit{heating} damage. Over time, every system becomes subject to \textit{wear} damage, representing the long-term wear and tear of the system. This is only rarely apparent for systems inside the ship, which can be engineered to avoid wear for many years. However, the outside of the ship is subject to stray solar wind and ionizing radiation, which breaks down materials much more quickly than without. Wear is most apparent and relevant to the systems outside the ship.
+
+\subsection{Direction and Drive}
+
+This title is a handy way of remembering the key variables needed to describe the different areas of physics. For Each unique disciple of classical mechanics, fluid mechanics, thermodynamics, and electronics all have different variables but share this common relation between two variables. 
+
+\vspace{0.2cm} \hspace{0.2cm}
+\begin{tabular}{| l | l | l | l |}
+\toprule
+Discipline & direction variable & drive variable & (resistance variable) \\
+\midrule
+Classical Mechanics & $p$ momentum & $k_e$ kinetic energy & $\epsilon$ elasticity of collision? \\
+Fluid Mechanics & $\phi$ fluid flux & $p$ pressure & $A$ cross-sectional area\\
+Thermodynamics & $T$ temperature & $Q$ heat flow & $\kappa$ thermal conductivity \\
+Electronics & $I$ current & $V$ voltage & $R$ resistance \\
+\bottomrule
+\end{tabular}
+\vspace{0.2cm}
+
+The direction variable encodes which direction things are moving in a situation. Comparing two temperatures will tell you the direction that heat will flow. Knowing the current in a wire tells you the direction and rate at which electrons in it are flowing. The fluid flux of water is a fancy word for how much total volume of water is flowing through a pipe, which again tells the direction of flow by being positive or negative. Finally momentum is strictly a vector quantity, meaning it has a direction.
+
+The drive variable encodes how strong things are being pushed in a situation. While temperature tells you which direction heat will flow, the heat flow rate must be known to be aware of how much heat actually ends up flowing. The current in a wire means nothing to an electrical device if it doesn't have the adequate voltage to push it through the device fully. A similar story exists for water, where the water flowing through a pipe is useless if there isn't enough pressure to push it out. In classical mechanics, momentum tells you the direction of movement while kinetic energy is a measure of how much punch something has, and both are needed to determine the final speeds and directions after a collision in zero gravity. 
+
+More of these variables exist, for example all of fluid mechanics, thermodynamics, and electronics have an analogue for resistance, and both fluid mechanics and electronics have an analogue for power. However, none of these variables have a thesaurus entry that starts with d, meaning including them in the title would ruin the alliteration. Additionally, these variables tend to have a weak counterpart in one or more discipline, for example classical mechanics does not have a clean variable that mimics resistance. Thus including them would break the pretty symmetry in the table above. Finally, the title is the perfect length as-is. It follows anapestic meter, meaning it scores bonus points with poets. Its initialism is DnD, which is neat too.
 
 
 \subsection{Highlighting Emotions}
@@ -548,16 +571,14 @@ Duty
 \midrule
 1-4 & Rails & \ref{railgun_rails} \\
 5 & Reloader & \ref{railgun_reloader} \\
-6 & Transformer & \ref{railgun_transformer} \\
-7 & Capacitor & \ref{railgun_capacitor} \\
-8-9 & Hatch & \ref{railgun_hatch} \\
-10 & Cameras & \ref{railgun_cameras} \\
-11-14 & Ammunition Supply & \ref{railgun_ammunition} \\
+6-7 & Hatch & \ref{railgun_hatch} \\
+8 & Cameras & \ref{railgun_cameras} \\
+9-12 & Ammunition Supply & \ref{railgun_ammunition} \\
 \midrule
-15 & H$_2$O (g) Condenser & \ref{railgun_h2o_condenser} \\
-16 & H$_2$O (g) Pump & \ref{railgun_h2o_g_pump} \\
-17-19 & H$_2$O (l) Pipe & \ref{railgun_h2o_pipe} \\
-20 & H$_2$O (l) Pump & \ref{railgun_h2o_l_pump} \\
+13 & H$_2$O (g) Condenser & \ref{railgun_h2o_condenser} \\
+14 & H$_2$O (g) Pump & \ref{railgun_h2o_g_pump} \\
+15-17 & H$_2$O (l) Pipe & \ref{railgun_h2o_pipe} \\
+18 & H$_2$O (l) Pump & \ref{railgun_h2o_l_pump} \\
 \bottomrule
 \end{tabular}
 
@@ -578,24 +599,6 @@ The railgun fires several shots at a time, cooling between each one, before retu
 \item [\textit{B}] - \qtwo{The piston arm is dented, and will not push straight nor far enough.}{The pneumatic cylinder is dented, preventing the bottom of the piston arm from dropping lower than the dent.} \\
 \item [\textit{H}] - The piston head is a relatively small piece of metal, meaning it can heat up quickly.
 \item [\textit{W}] - Pistons require lubrication and occasional maintenance.
-\end{enumerate}
-
-\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{railgun_transformer} \vspace{-0.2cm}
-The power supply is split into two parts. The main electrical grid of the ship uses AC power, which converted to DC power via the transformer. A transformer consists of a diode bridge, containing four diodes, and a capacitor.
-\begin{enumerate}
-\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
-\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
-\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
-\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
-\end{enumerate}
-
-\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{railgun_capacitor} \vspace{-0.2cm}
-The railgun needs a huge surge of current and voltage in a fraction of a second, which is perfect for a capacitor. A large array of capacitors are connected in parallel and charged by the DC power coming from the transformer.
-\begin{enumerate}
-\item [\textit{P}] - A single capacitor is hit and requires replacement.
-\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
-\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
-\item [\textit{W}] - Capacitors burn out and wires corrode.
 \end{enumerate}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hatch} \label{railgun_hatch} \vspace{-0.2cm}
@@ -697,16 +700,14 @@ Duty
 \toprule
 \multicolumn{3}{|l|}{Table \ref{ray} Ray Components} \\
 \toprule
-1d12 & Component & Link \\
+1d10 & Component & Link \\
 \midrule
 1-4 & Vacuum Chamber & \ref{ray_chamber} \\
 5 & Ionization Chamber & \ref{ray_ionization} \\
 6 & Electric Field Accelerator & \ref{ray_accelerator} \\
 7-8 & Magnetic Field Containment & \ref{ray_containment} \\
-9 & Transformer & \ref{ray_transformer} \\
-10 & Capacitor & \ref{ray_capacitor} \\
-11 & Xe (g) Storage & \ref{ray_xe_storage} \\
-12 & Vacuum Pump & \ref{ray_vacuum_pump} \\
+9 & Xe (g) Storage & \ref{ray_xe_storage} \\
+10 & Vacuum Pump & \ref{ray_vacuum_pump} \\
 \bottomrule
 \end{tabular}
 
@@ -748,24 +749,6 @@ The magnetic field needs to begin at near zero and end at a huge strength. Such 
 \item [\textit{B}] - The coil is knocked out of shape, altering the direction of the magnetic field it creates. This will change the exact orbit of the gas in the accelerator when it fires. \newline \hspace*{-3pt} 1d2 = 1. The magnetic field is altered enough to knock particles into the walls of the vacuum chamber every time. The ray cannot fire.
 \item [\textit{H}] - The coil can warp with temperature and change direction slightly. Slight changes to direction mean only slight changes to particle orbits, meaning not much happens until the electromagnet is significantly warped.
 \item [\textit{W}] - The coil deals with large changes in current and voltage, and it generates a lot of heat, making it wear away quickly.
-\end{enumerate}
-
-\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{ray_transformer} \vspace{-0.2cm}
-The power supply is split into two parts. The main electrical grid of the ship uses AC power, which converted to DC power via the transformer. A transformer consists of a diode bridge, containing four diodes, and a capacitor.
-\begin{enumerate}
-\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
-\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
-\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
-\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
-\end{enumerate}
-
-\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{ray_capacitor} \vspace{-0.2cm}
-The ray needs a longer burst of current and voltage in a fraction of a second compared to a railgun, though a capacitor system will still work fine as long as a different capacitor is used. A large array of capacitors are connected in parallel and charged by the DC power coming from the transformer.
-\begin{enumerate}
-\item [\textit{P}] - A single capacitor is hit and requires replacement.
-\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
-\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
-\item [\textit{W}] - Capacitors burn out and wires corrode.
 \end{enumerate}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Xe (g) Storage} \label{ray_xe_storage} \vspace{-0.2cm}
@@ -996,6 +979,138 @@ A vat of liquid nitrogen supplies extra air for the ship. The vat is kept very c
 \item [\textit{H}] - The nitrogen immediately begins to boil. The cooling coils can deal with heat gain due to passive influences, but if something actively adds heat to this tank, they could not keep up. The boiling nitrogen will raise the pressure of its container significantly. \newline \hspace{-3pt} 1d2 = 1. The rise in pressure is enough to burst a seal, letting liquid nitrogen spill out. See \textit{piercing} effects above.
 \item [\textit{W}] - Such cold liquids wear little, but their containers become brittle over time.
 \end{enumerate}
+
+
+\subsection{Electrical Grid} \label{grid}
+
+Every single system aboard the ship requires some form of electricity to function properly. A small, sel-contained nuclear reactor gives the ship more power than it knows what to do with. This supplies power in the form of a central high-voltage AC line. Weaponry taps directly into this line, though converting it to DC power first. A transformer lowers the voltage for the less intense systems and computers.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item While it would match with the theme of fear, I recommend avoiding damaging the \textit{reactor} \ref{grid_reactor}, as it would immediately turn the RPG into a post-apocalyptic horror scenario. Instead, the extremely cold, humming \textit{magnetic field coils} \ref{grid_m_field_coils} provide sufficient tension while keeping the danger (relatively) low. A single puncture or a stray source of heat can turn this system into a frozen helium bomb. 
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item Any time a component with wiring is damaged by either piercing or bludgeoning, there is a likely chance that electrical sparks fly. If things keep going wrong in this system for a character, consider continually shocking them, with the shocks getting worse the more angry and sloppy the character gets.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item A single line connects the reactor to the rest of the ship. If this line is broken or stopped, every single system on the ship loses power and many of them stop immediately. While batteries can be used as a backup to maintain power for a while, they can't sustain weaponry during combat. If the power goes out, the ship is completely stranded with no communication or control.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item Many different coils exist throughout the electrical grid, including in the \textit{transformer} \ref{grid_transformer}, \textit{electric field generator} \ref{grid_e_field_generator}, and \textit{magnetic field coils} \ref{grid_m_field_coils}. If these are bent out of shape, it is likely they come into contact with another metal object. This short circuits the coil and causes a part of it to become very hot very quickly. A brave soul might have to bend a coil back into shape by hand while it's searing hot.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{grid} Electrical Grid Components} \\
+\toprule
+1d20 & Component & Link \\
+\midrule
+- & Reactor & \ref{grid_reactor} \\
+1-4 & Batteries & \ref{grid_batteries} \\
+5-6 & Transformer & \ref{grid_transformer} \\
+7-8 & Converter & \ref{grid_converter} \\
+9-10 & Capacitor & \ref{grid_capacitor} \\
+11-12 & Electric Field Generator & \ref{grid_e_field_generator} \\
+13-16 & Magnetic Field Coils & \ref{grid_m_field_coils} \\
+17-19 & Wiring & \ref{grid_wiring} \\
+20 & Heavy Wiring & \ref{grid_heavy_wiring} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Reactor} \label{grid_reactor} \vspace{-0.2cm}
+The part of the ship that generates electricity is a self-contained nuclear reactor. A ship's engineer need only plug it in to the electrical and thermal grids, and it works. The reactor typically produces an excess of electrical energy for the ship, so that nobody should worry about running out. A nuclear reactor is a complicated thing in itself, and any damage to it could be catastrophic to the crew inside. As a result, avoid having the reactor undergo any problems. It is by far the safest hardware on the ship, with the worst consequences if broken.
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Batteries} \label{grid_batteries} \vspace{-0.2cm}
+If the reactor needs to temporarily shut down, the ship can run off of a store of batteries for a few hours. Using these batteries to shoot weaponry will make them deplete significantly faster.
+\begin{enumerate}
+\item [\textit{P}] - Battery acid spills out from a total of 1d4 batteries.
+\item [\textit{B}] - One battery is smashed to pieces. A total of 1d4 batteries are ripped from their sockets and scattered, and 1d8 more are disloged from place but are still connected.
+\item [\textit{H}] - Batteries do not fare well under heat. Expect eventual leakage and expansion. 
+\item [\textit{W}] - Batteries lose capacity over time, and must be replaced.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{grid_transformer} \vspace{-0.2cm}
+Power from the reactor comes at high voltage for the more demanding parts of the ship. The majority of systems require only a computer or minor electrical parts, and so only need low-voltage wiring. A transformer turns the high voltage reactor output into low voltage electricity for most of the ship to use.
+
+A transformer is composed of a large hunk of metal with two coils wrapped entirely around it on separate sides. 
+\begin{enumerate}
+\item [\textit{P}] - \qeq{1d4}{1-2.}{The chunk of metal in the middle is pierced, with little effect.}{3.}{The high voltage coil is pierced, significantly reducing current flow.}{4.}{The low voltage coil is pierced, significantly reducing current output.}{}{}
+\item [\textit{B}] - Will likely dent something enough that a coil begins to touch the metal hunk. This will short circuit the system and may melt or burn a section of the coil.
+\item [\textit{H}] - The metal chunk will absorb much heat.
+\item [\textit{W}] - Little wear.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Converter} \label{grid_converter} \vspace{-0.2cm}
+The main electrical grid of the ship uses AC power, which needs to be converted to DC power for a few systems, including the 1d4 railgun, ray, electric field generator, and magnetic field coils. A converter consists of a diode bridge, containing four diodes, and a capacitor. 
+
+\begin{enumerate}
+\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
+\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
+\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
+\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{grid_capacitor} \vspace{-0.2cm}
+Certain systems need a huge surge of current and voltage in a fraction of a second, which is perfect for a capacitor. A large array of capacitors are connected in parallel and charged by the DC power coming from the converter before it. A capacitor is included in the 1d3 railgun, ray, and electric field generator (sub)systems.
+\begin{enumerate}
+\item [\textit{P}] - A single capacitor is hit and requires replacement.
+\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
+\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
+\item [\textit{W}] - Capacitors burn out and wires corrode.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Electric Field Generator} \label{grid_e_field_generator} \vspace{-0.2cm}
+This particular design of electric field generator uses a strong electromagnet. Energy is dumped rapidly into the magnet coil, and the rapid rise in a magnetic field can generate a strong electric field as well. An electric field generator coil is included at two opposite parts of the ship where the magnetic fields of the ship end up accumulating hot particles. Strong bursts of electric field push the particles away when the accumulations become too large.
+\begin{enumerate}
+\item [\textit{P}] - The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline \hspace*{3pt} 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.
+\item [\textit{B}] - The electromagnet is bent out of shape, altering the direction that it accelerates away the hot ions near it. \newline \hspace{-3pt} 1d2 = 1. The coil is bent completely out of shape, and will not sufficiently push away the hot ions.
+\item [\textit{H}] - The wiring will warp and can eventually short circuit.
+\item [\textit{W}] - Such swings in current will wear even a strong wire decently quickly. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Magnetic Field Coils} \label{grid_m_field_coils} \vspace{-0.2cm}
+The ship is wrapped in long coils that envelop the ship in magnetic fields. When hot ions arrive from the sun or from enemy ray shots, they are deflected by the magnetic fields. 
+
+Ray shots arrive far too quickly to be able to predict. As a result, the magnetic fields must be kept up at all times. This is possible by keeping the magnetic field coils cooled so much that the helium inside becomes a superconductor. A ship can dump excess electrical energy into the superconductor, and very little of that energy will be dissipated over time. Instead that energy will all go toward deflecting any ions that arrive, whenever they arrive.
+\begin{enumerate}
+\item [\textit{P}] - Liquid helium escapes. Whether it escapes into the vacuum of space or into a pressurized atmosphere, it instantly evaporates into a gas. 
+\item [\textit{B}] - The coils become dented, limiting helium flow rate and thus magnetic field strength. Warms up the coil noticeably as well, temporarily stopping its use.
+\item [\textit{H}] - Keeping the coils so incredibly cool for so long is difficult, and the more energy the ship dumps into the coils the warmer they become. As a result, this defense mechanism works in the beginning of the fight, but rapidly falls behind as the helium loses its superconducting state and must be slowly cooled again. Once it stops superconducting, all the magnetic fields die.
+\item [\textit{W}] - Casing becomes brittle from the cold. Helium escapes slightly, but over time this is noticeable.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Wiring} \label{grid_wiring} \vspace{-0.2cm}
+The most common wiring carries low voltage electricity to the majority of systems on the ship.
+\begin{enumerate}
+\item [\textit{P}] - The wire is nicked, reducing current flow significantly.
+\item [\textit{B}] - The wire is yanked out of place and its 1d2 out of its two connections on either side are ripped out.
+\item [\textit{H}] - The wire's covering will burn before the wire melts.
+\item [\textit{W}] - Little wear, mostly on the connections between wires and other things.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heavy Wiring} \label{grid_heavy_wiring} \vspace{-0.2cm}
+Heavy wiring carries high voltage electricity from the reactor to the systems of the ship that demand more power.
+\begin{enumerate}
+\item [\textit{P}] - A small section of the wiring is pierced, doing little. Sparks can now easily jump out of the hole due to the enormous voltage.
+\item [\textit{B}] - The wiring takes the brunt of the hit. This can split open its rubber casing, allow sparks out. Additionally it can smash wires inside or break them, reducing flow. Finally it can sever the connection on either end of the wiring.
+\item [\textit{H}] - The metal in the wire will absorb much heat, though the rubber will still burn first.
+\item [\textit{W}] - Requires regular replacement.
+\end{enumerate}
+
 
 
 
