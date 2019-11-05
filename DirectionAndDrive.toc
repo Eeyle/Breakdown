@@ -1,14 +1,14 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Preface}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Notation}{1}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Recommended Prior Knowledge}{1}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.2}Recommended Prior Knowledge}{2}{subsection.1.2}
 \contentsline {section}{\numberline {2}Theory of the RPG}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Example First Combat}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Highlighting Emotions}{3}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Fear}{3}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Anger}{3}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Isolation}{3}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Duty}{3}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.4}Duty}{4}{subsubsection.2.2.4}
 \contentsline {section}{\numberline {3}Systems}{5}{section.3}
 \contentsline {subsection}{\numberline {3.1}Engine}{5}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Electrolysis Chamber}{6}{subsubsection.3.1.1}
@@ -56,6 +56,22 @@
 \contentsline {subsubsection}{\numberline {3.4.6}Capacitor}{18}{subsubsection.3.4.6}
 \contentsline {subsubsection}{\numberline {3.4.7}Xe (g) Storage}{18}{subsubsection.3.4.7}
 \contentsline {subsubsection}{\numberline {3.4.8}Vacuum Pump}{18}{subsubsection.3.4.8}
-\contentsline {subsection}{\numberline {3.5}blank section}{18}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Blank Component}{18}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Blank Component}{19}{subsubsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5}Life Support}{18}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Electrolysis Chamber}{19}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Carbon Scrubber}{20}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Hydrogen Recapture}{20}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Dehumidifier}{21}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Atmosphere}{21}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}H$_2$O (l) Storage}{21}{subsubsection.3.5.6}
+\contentsline {subsubsection}{\numberline {3.5.7}H$_2$O (l) Pump}{21}{subsubsection.3.5.7}
+\contentsline {subsubsection}{\numberline {3.5.8}H$_2$O (l) Pipe}{22}{subsubsection.3.5.8}
+\contentsline {subsubsection}{\numberline {3.5.9}H$_2$ (g) Storage}{22}{subsubsection.3.5.9}
+\contentsline {subsubsection}{\numberline {3.5.10}H$_2$ (g) Pipe}{22}{subsubsection.3.5.10}
+\contentsline {subsubsection}{\numberline {3.5.11}H$_2$ (g) Compressor}{22}{subsubsection.3.5.11}
+\contentsline {subsubsection}{\numberline {3.5.12}O$_2$ (g) Storage}{22}{subsubsection.3.5.12}
+\contentsline {subsubsection}{\numberline {3.5.13}O$_2$ (g) Pipe}{22}{subsubsection.3.5.13}
+\contentsline {subsubsection}{\numberline {3.5.14}O$_2$ (g) Compressor}{23}{subsubsection.3.5.14}
+\contentsline {subsubsection}{\numberline {3.5.15}N$_2$ (l) Storage}{23}{subsubsection.3.5.15}
+\contentsline {subsection}{\numberline {3.6}blank section}{23}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Blank Component}{23}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Blank Component}{24}{subsubsection.3.6.2}

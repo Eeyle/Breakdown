@@ -28,6 +28,8 @@
 \setlist{nosep}
 %% Include links to websites
 \usepackage{hyperref}
+%% Generate the degree symbol
+\usepackage{gensymb}
 
 % Dashes not dots
 \renewcommand\labelitemi{---}
@@ -146,6 +148,12 @@ This system is a long-form description of the DM presenting the player a problem
 
 Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
 
+\subsubsection{Damage Types}
+
+Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a huge dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe damage to the delicate systems of the ship.
+
+Additionally, two other less common types of damage exist. If the thermal control of a system fails, it will begin to heat up, and the component will be subject to \textit{heating} damage. Over time, every system becomes subject to \textit{wear} damage, representing the long-term wear and tear of the system. This is only rarely apparent for systems inside the ship, which can be engineered to avoid wear for many years. However, the outside of the ship is subject to stray solar wind and ionizing radiation, which breaks down materials much more quickly than without. Wear is most apparent and relevant to the systems outside the ship.
+
 
 \subsection{Highlighting Emotions}
 
@@ -211,25 +219,24 @@ Duty
 \toprule
 \multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
 \toprule
-1d32 & Component & Link \\
+1d30 & Component & Link \\
 \midrule
 1-2 & Electrolysis Chamber & \ref{engine_electrolysis} \\
 3 & Turbo & \ref{engine_turbo} \\
 4 & Combustion Chamber & \ref{engine_combustion} \\
 5-8 & Exhaust Vent & \ref{engine_exhaust} \\
-9 & Computer & ? \\
-10-11 & Thermal Pipes & ? \\
-12-15 & H$_2$O (l) Storage & \ref{engine_h2o_storage} \\
-16 & H$_2$O (l) Pipe & \ref{engine_h2o_pipe} \\
-17 & H$_2$O (l) Pump & \ref{engine_h2o_pump} \\
-18-19 & H$_2$ (l) Storage & \ref{engine_h2_storage} \\
-20-21 & H$_2$ (l) Pipe & \ref{engine_h2_pipe} \\
-22 & H$_2$ (g) Condenser & \ref{engine_h2_condenser} \\
-23-24 & O$_2$ (l) Storage & \ref{engine_o2_storage} \\
-25-26 & O$_2$ (l) Pipe & \ref{engine_o2_pipe} \\
-27 & O$_2$ (l) Pump & \ref{engine_o2_pump} \\
-28 & O$_2$ (g) Condenser & \ref{engine_o2_condenser} \\
-29-32 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
+\midrule
+9-12 & H$_2$O (l) Storage & \ref{engine_h2o_storage} \\
+13 & H$_2$O (l) Pipe & \ref{engine_h2o_pipe} \\
+14 & H$_2$O (l) Pump & \ref{engine_h2o_pump} \\
+15-16 & H$_2$ (l) Storage & \ref{engine_h2_storage} \\
+17-18 & H$_2$ (l) Pipe & \ref{engine_h2_pipe} \\
+19 & H$_2$ (g) Condenser & \ref{engine_h2_condenser} \\
+20-21 & O$_2$ (l) Storage & \ref{engine_o2_storage} \\
+22-23 & O$_2$ (l) Pipe & \ref{engine_o2_pipe} \\
+24 & O$_2$ (l) Pump & \ref{engine_o2_pump} \\
+25 & O$_2$ (g) Condenser & \ref{engine_o2_condenser} \\
+26-29 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
 \bottomrule
 \end{tabular}
 
@@ -415,17 +422,17 @@ Duty
 \toprule
 \multicolumn{3}{|l|}{Table \ref{thermal} Thermal Components} \\
 \toprule
-1d12 & Component & Link \\
+1d10 & Component & Link \\
 \midrule
 1 & Radiator & \ref{thermal_radiator} \\
 2 & Compressor & \ref{thermal_compressor} \\
 3 & Heat Exchanger & \ref{thermal_exchanger} \\
 4 & Heat Sink & \ref{thermal_sink} \\
-5 & Computer & ? \\
-6-7 & H$_2$O (l) Pipe & \ref{thermal_h2o_pipe} \\
-8 & H$_2$O (l) Pump & \ref{thermal_h2o_pump} \\
-9-10 & N$_2$ (g) Pipe & \ref{thermal_n2_pipe} \\
-11 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
+\midrule
+5-6 & H$_2$O (l) Pipe & \ref{thermal_h2o_pipe} \\
+7 & H$_2$O (l) Pump & \ref{thermal_h2o_pump} \\
+8-9 & N$_2$ (g) Pipe & \ref{thermal_n2_pipe} \\
+10 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
 \bottomrule
 \end{tabular}
 
@@ -546,6 +553,7 @@ Duty
 8-9 & Hatch & \ref{railgun_hatch} \\
 10 & Cameras & \ref{railgun_cameras} \\
 11-14 & Ammunition Supply & \ref{railgun_ammunition} \\
+\midrule
 15 & H$_2$O (g) Condenser & \ref{railgun_h2o_condenser} \\
 16 & H$_2$O (g) Pump & \ref{railgun_h2o_g_pump} \\
 17-19 & H$_2$O (l) Pipe & \ref{railgun_h2o_pipe} \\
@@ -779,6 +787,228 @@ Both the main chamber and the ionization chamber need to be almost perfect vacuu
 \end{enumerate}
 
 
+\subsection{Life Support} \label{life}
+
+Human beings need to live and work in the ship for long periods of time. The ship is equipped with a fully self-sufficient life support system, meaning it its a closed loop that could theoretically go on indefinitely. Note that life support does not include thermal controle. The primary function of life support is to clean the air of the ship. As humans waddle about the ship, they release moisture, germs, and they add take away oxygen while adding carbon dioxide. The physical moisture and bacteria is not particularly difficult to deal with, so the main challenge is getting rid of carbon dioxide chemically.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item The \textit{Carbon Scrubber} \ref{life_c_scrubber} and the \textit{Hydrogen Recapture} \ref{life_h2_recapture} components both handle extremely dangerous gases. The hydrogen and methane they use is handled at many hundreds of degrees centigrade, meaning the gases will instantly, violently explode if they come into contact with oxygen. Dealing with these systems requires the utmost care to avoid burn, explosion, or other extremely dangerous mishap.
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item The endless tiny pebbles contained in the \textit{Dehumidifier} \ref{life_dehumidifier} could be unimaginably annoying if they escape into the room. They will float around everywhere, bump into you while you work, and get into delicate machinery. A DM could poke a single player over and over with such a mishap, raising their frustration each time.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item The quintessential way to make your players feel like they are alone in space, is to open up their room to the vacuum of space. Piercing or bludgeoning open the \textit{Atmosphere} \ref{life_atmosphere} of a room is a simple way to add tension while making sure the players are constantly reminded of just how close they are to cold, dead nothingness.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item The \textit{Carbon Scrubber} \ref{life_c_scrubber} and the \textit{Hydrogen Recapture} \ref{life_h2_recapture} components both contain layers of delicate catalysts. If a bludgeoning shot hits one of them, it can dent the sheets of metal out of shape, making them extremely difficult to remove. A character might be forced to open up the blazing-hot chamber and physically yank the sheets out in order to make sure the system keeps working.
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{blank} Life Support Components} \\
+\toprule
+1d30 & Component & Link \\
+\midrule
+1-2 & Electrolysis Chamber & \ref{life_electrolysis} \\
+3-4 & Carbon Scrubber & \ref{life_c_scrubber} \\
+5 & Hydrogen Recapture & \ref{life_h2_recapture} \\
+6-7 & Dehumidifier & \ref{life_dehumidifier} \\
+8-9 & Atmosphere & \ref{life_atmosphere} \\
+\midrule
+12-15 & H$_2$O (l) Storage & \ref{life_h2o_storage} \\
+16 & H$_2$O (l) Pump & \ref{life_h2o_pump} \\
+17-18 & H$_2$O (l) Pipe & \ref{life_h2o_pipe} \\
+19-20 & H$_2$ (g) Storage & \ref{life_h2_storage} \\
+21-22 & H$_2$ (g) Pipe & \ref{life_h2_pipe} \\
+23 & H$_2$ (g) Compressor & \ref{life_h2_compressor} \\
+24-25 & O$_2$ (g) Storage & \ref{life_o2_storage} \\
+26-27 & O$_2$ (g) Pipe & \ref{life_o2_pipe} \\
+28 & O$_2$ (g) Compressor & \ref{life_o2_compressor} \\
+29-30 & N$_2$ (l) Storage & \ref{life_n2_storage} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Electrolysis Chamber} \label{life_electrolysis} \vspace{-0.2cm}
+A large vat of water serves as backup oxygen in case of failure. This is also needed because the one of the byproducts of the carbon stripping process is water. This water is split into its component gases which both go to temporary storage, to be then sent where needed.
+
+An electrolysis chamber is composed of two filaments which gain opposite charges when electricity is applied. The electricity excites the water enough to split into gases, which are then collected. In case the electrolysis chamber needs to work very quickly, many layers of thin filaments are stacked on top of each other inside the chamber. 
+\begin{enumerate}
+\item [\textit{P}] - A small hole is punctured through the casing. \newline 
+\hspace*{3pt} \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.} \\
+\item [\textit{B}] - The casing is dented. \newline \hspace*{3pt} 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.
+\item [\textit{H}] - Heats very slowly. \newline \hspace*{3pt} 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.
+\item [\textit{W}] - Filaments must be regularly replaced. Container is subject to acids and oxidation.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Carbon Scrubber} \label{life_c_scrubber} \vspace{-0.2cm}
+The carbon scrubbing process is composed of two parts. First carbon dioxide must be isolated from the air, and then the oxygen in it must be reclaimed. The first part of the process takes place in the \textit{Dehumidifier} \ref{life_dehumidifier}.
+
+The second part of the scrubbing process isolates extracts oxygen from carbon dioxide by using the Sabatier reaction 
+\begin{equation} \label{sabatier_reaction}
+CO_2 + 4 H_2 \xrightarrow[\text{pressure}]{\text{400 C}} CH_4 + 2 H_2O
+\end{equation}
+A small pressurized chamber next to the radiator is kept very hot. Several thin plates of nickel act as catalysts for the reaction \cite{recycling_water_and_air}. Carbon dioxide is brought from the dehumidifier and allowed to pass over the catalysts in a hydrogen atmosphere. The reaction is allowed to go to near completion, and the methane then passes to the hydrogen recapture chamber.   
+\begin{enumerate}
+\item [\textit{P}] - Extremely hot gas of either 1d2 H$_2$ or CH$_4$ escapes. As soon as the gas meets the oxygen of the air, it is so hot that it combusts, turning the jet of gas into a hydrogen or methane flamethrower.
+\item [\textit{B}] - The case is dented. \newline \hspace{3pt} 1d2 = 1. The denting is enough to make it difficult to remove layers of catalyst when they need to be replaced.
+\item [\textit{H}] - The heating of this component is kept tightly controlled. Any stray heat will transfer directly to the radiator to escape. 
+\item [\textit{W}] - Plates require constant replacement due to cracking, wear, and depositing. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hydrogen Recapture} \label{life_h2_recapture} \vspace{-0.2cm}
+Once oxygen has been reclaimed from the carbon dioxide, hydrogen has taken the place of the oxygen. If the life support system intends to be fully self-sufficient, this hydrogen must be recaptured as well. If methane becomes hot enough in the absence of oxygen, it will decompose into solid carbon and hydrogen gas. 
+\begin{equation} \label{anaerobic_decomposition_of_methane}
+CH_4\ (g) \xrightarrow[anaerobic]{above\ 400\ C} C\ (s) + H_2\ (g)
+\end{equation}
+
+A second chamber sits next to the carbon scrubber chamber, which is also kept pressurized and much hotter, up to 900 \degree C. This chamber is similarly filled with plates of catalysts, though these plates are thinner and are made of iron or nickel in an alternating pattern. Methane enters, is heated, and the carbon is deposited on the surface of the catalyst sheets in the form of black soot, nanotubes, or graphite. The hydrogen can then return to storage while the carbon is scraped and shaken off. \cite{hydrogen_recapture}. 
+\begin{enumerate}
+\item [\textit{P}] - A hole is pierced through the chamber, and a hot gas escapes of either 1d2 H$_2$ or CH$_4$. As soon as the hot gas meets the oxygen of the atmosphere, it combusts, turning the jet of gas into a flamethrower.
+\item [\textit{B}] - The chamber is dented. Carbon begins to accumulate at the point of denting, and is difficult to remove. \newline \hspace*{3pt} 1d2 = 1. The denting is enough to make it difficult to remove catalyst layers when they need replacement. 
+\item [\textit{H}] - The heating of this component is also tightly controlled, so extra heat passes directly to the radiator.
+\item [\textit{W}] - Carbon is deposited directly onto the plates. The hot, pressurized plates are then shaken vigorously, and carbon is physically scraped off. This is a trifecta of erosion. Catalyst plates need to be replaced and recycled constantly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Dehumidifier} \label{life_dehumidifier} \vspace{-0.2cm}
+Humans mix water vapor and carbon dioxide into the air they breathe. The nitrogen and oxygen left in the gas can be reused, and will often mess with reclamation reactions, meaning the carbon dioxide and water must be physically separated from the rest of the atmosphere before they can be reused.
+
+Eventually the air contained in all rooms in the ship must pass through a central dehumidifier chamber. This chamber is filled with a synthetic mineral called zeolite which soaks up water and carbon dioxide. Then the atmosphere can be vacated, and when the zeolite is reheated in the presence of a vacuum it will give off its stored water and carbon dioxide. The water is then condensed to a liquid and sent to storage, while the carbon dioxide is passed to the carbon scrubber.
+\begin{enumerate}
+\item [\textit{P}] - The hole allows either air or carbon dioxide and water to escape.
+\item [\textit{B}] - The tiny mineral rocks are scattered everywhere throughout the room. They are smaller than pebbels and begin to bounce off everything in the room.
+\item [\textit{H}] - The rocks absorb heat well and will not melt for a long time.
+\item [\textit{W}] - Rocks become covered in stray grime and dust over time, becoming less absorbant. Rocks therefore must be replaced and recycled.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Atmosphere} \label{life_atmosphere} \vspace{-0.2cm}
+Each individual room is hooked up to several things needed for life support. Every room needs to be pressurized and climate controlled. A room is connected directly to oxygen and nitrogen gas storage in case it needs to be repressurized, and it can be opened to the vacuum of space to depressurize as well. Each room has thermal cooling pipes for cooling the room and an electric heater in case a room needs to be quickly heated.
+
+I recommend avoiding the more trivial items listed in the above paragraph. The following list describes how any room can be damaged by a weapon. Include this to add additional challenge to a problem. 
+\begin{enumerate}
+\item [\textit{P}] - If a room's walls are pierced, it's only a matter of time before the room runs out of atmosphere.
+\item [\textit{B}] - If a bludgeoning shot has hit another system, it must have gone through the outer hull to get there. Make the hole small and the dent large so that every single bludgeoning shot doesn't immediately depressurize the room.
+\item [\textit{H}] - The room's heating system can only handle so much. If a system is heating up in a room, then the room is heating up too.
+\item [\textit{W}] - The structure of the outer hull degenerates over time like all things. Expect larger dents, and perhaps throw in a permanent crack or two. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Storage} \label{life_h2o_storage} \vspace{-0.2cm}
+This tank holds long-term reserve oxygen in case of emergency. It additionally collects the byproducts of the carbon scrubbing process and the water vapor that humans breathe out into the atmosphere.
+\begin{enumerate}
+\item [\textit{P}] - The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline \vspace{-3pt} 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.
+\item [\textit{B}] - The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.
+\item [\textit{H}] - Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.
+\item [\textit{W}] - Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{life_h2o_pump} \vspace{-0.2cm}
+It's a big wet fan.
+\begin{enumerate}
+\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
+\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
+\item [\textit{H}] - The turbine will transfer heat to the water. 
+\item [\textit{W}] - The turbine erodes quickly from the water.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{life_h2o_pipe} \vspace{-0.2cm}
+It's a pipe that carries water.
+\begin{enumerate}
+\item [\textit{P}] - Water spills out.
+\item [\textit{B}] - Limits water flow slightly.
+\item [\textit{H}] - Transfers heat to the railgun when sprayed on it.
+\item [\textit{W}] - Water wears pipes decently quickly.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Storage} \label{life_h2_storage} \vspace{-0.2cm}
+Hydrogen is slightly less terrifying to store as a gas than as a liquid, but should still be handled with utmost care. 
+\begin{enumerate}
+\item [\textit{P}] - Hydrogen gas escapes.
+\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.
+\item [\textit{H}] - Hydrogen gas heats very quickly and will push out immense pressures. \newline \hspace*{3pt} 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.
+\item [\textit{W}] - Hydrogen wears containers very little.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Pipe} \label{life_h2_pipe} \vspace{-0.2cm}
+Hydrogen gas flows through this pipe.
+\begin{enumerate}
+\item [\textit{P}] - Hydrogen gas escapes.
+\item [\textit{B}] - The flow is restricted. \newline \hspace*{3pt} 1d2 = 1. The blow is enough to break a seal, letting hydrogen gas escape into the atmosphere.
+\item [\textit{H}] - The hydrogen will heat up a lot and transfer that increased temperature and pressure to the system downstream.
+\item [\textit{W}] - Little wear.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Compressor} \label{life_h2_compressor} \vspace{-0.2cm}
+For hydrogen gas to be stored in a tank, something must compress it to a higher pressure than the tank before it will flow into the tank. A typical compressor is a fan that blows strongly, but such blades could disturb the hydrogen into combustion. Instead, a slow-moving piston is used to compress the gas.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{The hole is behind the piston, preventing it from retracting behind that point.}{The hole is in front of the piston. Super-compressed hydrogen gas escapes extremely quickly. The sheer speed of the hydrogen escaping would likely be enough to ignite it on fire.} \\ 
+\item [\textit{B}] - \qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.} \\
+\item [\textit{H}] - The pressure of the hydrogen will increase. Luckily, that is what this system is designed to handle.
+\item [\textit{W}] - Pistons require lubrication and the seal requires maintenance.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Storage} \label{life_o2_storage} \vspace{-0.2cm}
+Oxygen gas is stored in a container before it is piped into the atmosphere.
+\begin{enumerate}
+\item [\textit{P}] - Oxygen gas escapes.
+\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The denting sends a pressure wave strong enough to break the output valve, letting oxygen gas escape.
+\item [\textit{H}] - The oxygen will absorb the heat slowly, and then will transfer it to the atmosphere of the rooms.
+\item [\textit{W}] - Oxygen is corrosive but the tank is designed to mitigate that.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Pipe} \label{life_o2_pipe} \vspace{-0.2cm}
+This pipe carries oxygen gas.
+\begin{enumerate}
+\item [\textit{P}] - Oxygen gas escapes.
+\item [\textit{B}] - Restricts flow. \newline \hspace*{3pt} 1d2 = 1. The blow is enough to break a seal, and oxygen gas escapes.
+\item [\textit{H}] - The oxygen gas transfers the heat to the atmosphere of the room it is entering.
+\item [\textit{W}] - Oxygen is corrosive but the pipe is designed to mitigate that.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Compressor} \label{life_o2_compressor} \vspace{-0.2cm}
+A similar oxygen compressor works in parallel with the hydrogen compressor, pushing oxygen gas into storage.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{The hole is behind the piston, stopping it from retracting behind that point.}{The hole is in front of the piston, allowing super-compressed oxygen gas to escape very quickly.} \\
+\item [\textit{B}] - \qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.} \\
+\item [\textit{H}] - The oxygen heats up, increasing the pressure, but this device is designed to handle high pressures.
+\item [\textit{W}] - Oxygen corrodes things that aren't designed to hold it.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (l) Storage} \label{life_n2_storage} \vspace{-0.2cm}
+A vat of liquid nitrogen supplies extra air for the ship. The vat is kept very close to boiling temperature, and the gas that evaporates naturally flows into each room. This nitrogen should only be used if a room needs to be repressurized after its air has been evacuated.
+\begin{enumerate}
+\item [\textit{P}] - Liquid nitrogen spills out. It immediately freezes anything it touches. Great billows of thick white gas engulf the room, significantly lowering the temperature and completely blocking vision.
+\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The dent sends a pressure wave enough to burst a seal, and liquid nitrogen spills out. See \textit{piercing} effects above.
+\item [\textit{H}] - The nitrogen immediately begins to boil. The cooling coils can deal with heat gain due to passive influences, but if something actively adds heat to this tank, they could not keep up. The boiling nitrogen will raise the pressure of its container significantly. \newline \hspace{-3pt} 1d2 = 1. The rise in pressure is enough to burst a seal, letting liquid nitrogen spill out. See \textit{piercing} effects above.
+\item [\textit{W}] - Such cold liquids wear little, but their containers become brittle over time.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{blank section} \label{blank}
 
 description
@@ -841,12 +1071,16 @@ text
 
 
 \newpage
-\begin{thebibliography}{3}
-\bibitem{naval_railgun}
-Adams, D. A. (2003). Naval Rail Guns Are Revolutionary. \textit{US Naval Institute}. Retrieved from \url{https://web.archive.org/web/20070708054858/http://edusworld.org/ew/ficheros/2004/railguns.pdf}
+\begin{thebibliography}{5} % ALWAYS UPDATE THIS NUMBER WHEN ADDING
+\bibitem{naval_railgun} 
+Adams, D. A. (2003). Naval rail guns are revolutionary. \textit{US Naval Institute}. Retrieved from \url{https://web.archive.org/web/20070708054858/http://edusworld.org/ew/ficheros/2004/railguns.pdf}
+\bibitem{recycling_water_and_air} 
+Closing the Loop: Recycling Water and Air in Space [PDF file]. (n.d.). Summary of inaccessible video. NASA. Retrieved from \url{https://www.nasa.gov/pdf/146558main_RecyclingEDA(final) 4_10_06.pdf}
 \bibitem{scientific_railgun}
 Rashleigh, S. C. and Marshall, R. A. (1978). Electromagnetic acceleration of macroparticles to high velocities. \textit{Journal of Applied Physics} 49, 2540. \url{doi.org/10.1063/1.325107}	
 \bibitem{international_temperature_scale_of_1968} 
 Rossini, F. D. (1968). A Report on the International Temperature Scale of 1968. Retrieved from \url{http://media.iupac.org/publications/pac/1970/pdf/2203x0555.pdf}
+\bibitem{hydrogen_recapture} 
+Shah, N., Panjala, D., and Huffman, G. P. (2001). Hydrogen production by catalytic decomposition of methane. \textit{Energy Fuels} 15, 6, 1528-1534. \url{https://doi.org/10.1021/ef0101964}
 \end{thebibliography}
 \end{document}
