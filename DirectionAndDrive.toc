@@ -87,12 +87,21 @@
 \contentsline {subsubsection}{\numberline {3.7.2}Computer Damage Types}{29}{subsubsection.3.7.2}
 \contentsline {subsubsection}{\numberline {3.7.3}Computer Bug Types}{30}{subsubsection.3.7.3}
 \contentsline {subsubsection}{\numberline {3.7.4}Positioning}{31}{subsubsection.3.7.4}
-\contentsline {subsubsection}{\numberline {3.7.5}Vectoring}{32}{subsubsection.3.7.5}
+\contentsline {subsubsection}{\numberline {3.7.5}Vectoring}{31}{subsubsection.3.7.5}
 \contentsline {subsubsection}{\numberline {3.7.6}Ranging}{32}{subsubsection.3.7.6}
 \contentsline {subsubsection}{\numberline {3.7.7}Aiming}{32}{subsubsection.3.7.7}
 \contentsline {subsubsection}{\numberline {3.7.8}Warning}{32}{subsubsection.3.7.8}
-\contentsline {subsubsection}{\numberline {3.7.9}Evading}{33}{subsubsection.3.7.9}
-\contentsline {subsubsection}{\numberline {3.7.10}Controlling}{33}{subsubsection.3.7.10}
-\contentsline {subsection}{\numberline {3.8}blank section}{33}{subsection.3.8}
-\contentsline {subsubsection}{\numberline {3.8.1}Blank Component}{33}{subsubsection.3.8.1}
-\contentsline {subsubsection}{\numberline {3.8.2}Blank Component}{33}{subsubsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.7.9}Evading}{32}{subsubsection.3.7.9}
+\contentsline {subsubsection}{\numberline {3.7.10}Controlling}{32}{subsubsection.3.7.10}
+\contentsline {subsection}{\numberline {3.8}Outer Hull}{33}{subsection.3.8}
+\contentsline {subsubsection}{\numberline {3.8.1}Antennae}{34}{subsubsection.3.8.1}
+\contentsline {subsubsection}{\numberline {3.8.2}Radar Dishes}{34}{subsubsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.3}Airlocks}{35}{subsubsection.3.8.3}
+\contentsline {subsubsection}{\numberline {3.8.4}Hangar Door}{35}{subsubsection.3.8.4}
+\contentsline {subsubsection}{\numberline {3.8.5}Docking Magnets}{35}{subsubsection.3.8.5}
+\contentsline {subsubsection}{\numberline {3.8.6}Scrap Arm}{36}{subsubsection.3.8.6}
+\contentsline {subsubsection}{\numberline {3.8.7}Hull}{36}{subsubsection.3.8.7}
+\contentsline {subsubsection}{\numberline {3.8.8}Structural Beams}{36}{subsubsection.3.8.8}
+\contentsline {subsubsection}{\numberline {3.8.9}Observation Deck}{37}{subsubsection.3.8.9}
+\contentsline {subsubsection}{\numberline {3.8.10}Windows}{37}{subsubsection.3.8.10}
+\contentsline {subsubsection}{\numberline {3.8.11}Cameras}{37}{subsubsection.3.8.11}

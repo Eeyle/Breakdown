@@ -134,7 +134,7 @@ The players can have any amount of schooling in the subject, or none at all, as 
 
 Spacefaring vessels are entirely controlled by computers in the modern age. When extending this to space combat, it becomes readily apparent that computers will control all aiming, most dodging, and harder maneuvers like docking. Most spaceships could be run with no crew whatsoever and space combat would go on its way normally.
 
-Railguns accelerate hunks of metal to incredible speeds, which are impossible for a large ship to dodge, and other ship weaponry is even faster. These weapons will hit a large ship constantly and with devastating effect. Consider the incredible precision engineering required for a single subsystem of the ships. A hole pierced in the wrong place, or denting something at the wrong time proves disastrous for every system, be it the intricate plumbing of the rocket engine or the various tubes and chambers of the life support system.
+Railguns accelerate hunks of metal to incredible speeds, which are impossible for a large ship to dodge, and other ship weaponry is even faster. These weapons will hit a large ship constantly and with devastating effect. Consider the incredible precision engineering required for a single subsystem of the ships. A hole pierced in the wrong place or a dent in something at the wrong time proves disastrous for every system, be it the intricate plumbing of the rocket engine or the various tubes and chambers of the life support system.
 
 An autonomous ship, entirely controlled by a computer, can fly, dodge, and land just a well as a human. But as soon as it takes a single shot of flak, it's almost certainly going to lose a core system. What is the use of a space ship if it dies after the first hit?
 
@@ -1318,10 +1318,6 @@ A DM can cause physical damage to the computer systems of the fighter, as descri
 \item floating point rounding - A comparison in the code expects exact equality between two numbers on either side of the equals sign in an equation. This should be theoretically true, but practically floating point numbers can't store certain numbers exactly, so equality does not hold. 
 \item numerical instability - An algorithm is theoretically sound, except that at some stage it rounds a number, causing the accuracy of the algorithm to drift significantly over time.
 \item off-by-one - A long list of numbers should have exactly one more or one less element than it does, leaving the program in a question of what to do. 
-\item integer overflow - An integer can become so large, so unbelievably large that the programmer never anticipated that it could be possible, that it will flip over and either return to 0 or become an enormous negative number. This sudden swing can lead to laughably huge inaccuracies. 
-\item improper units - One part of the computer expects a certain unit, while another part hands it a different unit. While this problem may seem trivial, over the course of history it has caused multiple multi-million dollar space exploration missions to catastrophically fail.
-\item type formatting - A malicious user or stray corruption of data causes a random character to be inserted into a text being displayed. If the wrong character, and especially if the programmer never anticipated it, this can cause surprisingly frequent crashes.
-\item versioning - A piece of software is using the wrong version of another API or library. This can lead to security issues and inaccuracies if major bugs have been recently fixed. 
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.5\linewidth}
@@ -1330,12 +1326,30 @@ A DM can cause physical damage to the computer systems of the fighter, as descri
 \item divide-by-zero - A programmer lazily never considered that a certain equation could result in dividing by zero. The computer recognizes this is an error and won't completely crash, but won't continue either.
 \item timekeeping - Even the slightest error in a clock will add up very noticeably over time. Since the clock is used for everything relating to the equations of motion, trajectories will become wrong. This is especially important for spacefaring vessels, which have to adjust their time dynamically as a result of their height in orbit and their speed. 
 \item syntax - The programmer literally used the wrong words. This can be as obvious as a straight up typo, to something more subtle like i = 1 vs i == 1.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.45\linewidth}
+\begin{itemize}[leftmargin=0cm]
+\item integer overflow - An integer can become so large, so unbelievably large that the programmer never anticipated that it could be possible, that it will flip over and either return to 0 or become an enormous negative number. This sudden swing can lead to laughably huge inaccuracies. 
+\item improper units - One part of the computer expects a certain unit, while another part hands it a different unit. While this problem may seem trivial, over the course of history it has caused multiple multi-million dollar space exploration missions to catastrophically fail.
+\item type formatting - A malicious user or stray corruption of data causes a random character to be inserted into a text being displayed. If the wrong character, and especially if the programmer never anticipated it, this can cause surprisingly frequent crashes.
+\item versioning - A piece of software is using the wrong version of another API or library. This can lead to security issues and inaccuracies if major bugs have been recently fixed. 
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}[leftmargin=0.5cm]
 \item infinite loop - Somewhere in the program an unforeseen loop occurs which cannot be exited. Modern operating systems will stop this after a number of iterations, but in the meantime this will use up extra memory and processing power.
 \item race condition - Two processes working simultaneously require data from each other. During particularly intense situations, where things need to be prioritized, this can result in certain processes completely stopping while they wait for another one to finish.
 \item data typing - The programmer expects a number or piece of data to be in one format, when it arrives to them in another. Again this can be as simple as integer versus float, or more complicated like two different types of integers, long or short.
 \item language - The most important military hardware, created by dumping money into a pool of the most talented game developers and military computer engineers, the very hardware that keeps the peace in space, runs entirely on Javascript. It is an unfortunate world that we live in.
 \end{itemize}
-\end{minipage} % NOTE split this into two minipages over two pages once document is finished
+\end{minipage}
+
+
+
+
+
 
 
 \hspace{-18pt} \subsubsection{Positioning} \label{fighter_positioning} \vspace{-0.2cm}
@@ -1395,87 +1409,186 @@ The ship is controlled with three joysticks. In one hand the pilot always holds 
 \end{enumerate}
 
 
+\subsection{Outer Hull} \label{outer}
 
+While a wealth of possible bugs and problems are possible with the fighter pilot's AR display, they are also in charge of extravehicular (EV) maneuvers. The pilot is trained in zero-g dexterity and maneuvering, meaning it is better to have the pilot fix a problem on the outside of the hull than have some plumber put on a space suit and fumble their way around the outer hull.
 
-
-
-
-
-
-
-
-
-\subsection{blank section} \label{blank}
-
-description
+The bottom half of every system's table so far has been relatively useless, but the bottom of this table is especially useless. See the description of each part to determine whether or not to actually hit it, since many parts are unnecessary unless they are actively being used.
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item problem
+\item Seeing the hull \ref{outer_hull} of a ship after a proper space combat would be unnerving to say the least. The kevlar would be spotted with huge holes that let many panels sag. Under every hole is dent after dent spotted into the aluminum plating. The sheer power of space weaponry should be awe inducing, not to mention how many shots were actually fired in a combat compared to the number of problems the players had to solve.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
 Anger
 \begin{itemize}
-\item problem
+\item A cruel DM could keep a fighter pilot inside of the parent ship by damaging the hangar doors \ref{outer_hangar}. This could set off a chain of several failures that raise the pilot's frustration higher and higher as they simply sit there still.
 \end{itemize}
 \end{minipage}
 
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item problem
+\item If one of the antennae \ref{outer_antennae} are broken, it can completely disable communication either between the fighter pilot and their parent ship or between the parent ship and any backup or higher command. Leaving a ship completely in the dark is a terrifying thing, particularly for a fighter pilot completely alone in their craft. A similar feeling could also be achieved by breaking a radar dish \ref{outer_radar}. 
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item problem
+\item If one of the doors or hatches of the hangar \ref{outer_hangar} or an airlock \ref{outer_airlocks} becomes dented, it could refuse to open, close, or lock fully. A brave soul might have to take their chances in an atmosphere that's escaping in order to physically bend the door back into a workable shape.
 \end{itemize}
 \end{minipage}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
 \begin{tabular}{@{} | c | l | c | @{}}
 \toprule
-\multicolumn{3}{|l|}{Table \ref{blank} Blank Components} \\
+\multicolumn{3}{|l|}{Table \ref{outer} Outer Hull Components} \\
 \toprule
-1d?? & Component & Link \\
+1d10 & Component & Link \\
 \midrule
-1 & Blank blank & \ref{blank_blank} \\
+1 & Antennae & \ref{outer_antennae} \\
+2 & Radar Dishes & \ref{outer_radar} \\
+3-4 & Airlocks & \ref{outer_airlocks} \\
+5-7 & Hangar Doors & \ref{outer_hangar} \\
+8 & Docking Magnets & \ref{outer_docking} \\
+9 & Scrap Arm & \ref{outer_arm} \\
+\midrule
+1d32 & Nonessentials & Link \\
+\midrule
+1-16 & Hull & \ref{outer_hull} \\
+17-25 & Structural Beams & \ref{outer_beams} \\
+26-29 & Observation Deck & \ref{outer_observation} \\
+30-31 & Windows & \ref{outer_windows} \\ 
+32 & Cameras & \ref{outer_cameras} \\
 \bottomrule
 \end{tabular}
 
-\hspace{-18pt} \subsubsection{Blank Component} \label{blank_blank} \vspace{-0.2cm}
-text
+\hspace{-18pt} \subsubsection{Antennae} \label{outer_antennae} \vspace{-0.2cm}
+The ship uses various long-range antannae to communicate with nearby stations, satellites, and their own child ships. These antannae do not receive nor send signals well behind aluminum plating, meaning they cannot be inside the ship, and must be outside of the hull. They are typically hidden underneath kevlar, which does not reduce the signal nearly as much.
 \begin{enumerate}
-\item [\textit{P}] - 
-\item [\textit{B}] - 
-\item [\textit{H}] - 
-\item [\textit{W}] - 
+\item [\textit{P}] - One of the metal antennae is pierced. \newline \hspace*{3pt} 1d2 = 1. The hole is enough to structurally compromise the antenna. See bludgeoning damage below.
+\item [\textit{B}] - The antenna is bent out of shape, drastically reducing its ability to detect signals in precise bandwidths. Choose either 1d2 a sending antenna or a receiving antenna. The ship can no longer send or receive messages to the following others. \newline \hspace*{-3pt} \qthree{The ship's signal with its own children fighters is disconnected, preventing the ship from sending or receiving orders from them.}{The ship's line to the nearest station is closed, preventing the ship from receiving any new orders or guidance from command, or from requesting immediate backup.}{The ship's long-range antenna is broken, preventing them from raising concerns to higher command on the nearest planet, or receiving updates and reports from higher command.} 
+\item [\textit{H}] - Antennae which get too hot can expand enough to receive signals at slightly the wrong frequency, and eventually a jolt can be enough to bend the wire out of shape. Then see bludgeoning damage above.
+\item [\textit{W}] - Stray UV light can cause voltage surges and can be enough to fry an antenna's connection. Surges typically only result in annoying blips in the signal, while the signal completely stops if the connection is fried. \newline \hspace*{3pt} Antennae are engineered to rotate when subjected to a foreign magnetic field, and when they properly align with the direction of the magnetic field, communication is still possible in both directions. On a fighter, the antennae may not be engineered this way, meaning only certain orientations will allow a fighter to communicate when under a magnetic field. Those orientations are exactly when the antenna is aligned perfectly with the magnetic field line at that point.
 \end{enumerate}
 
-\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Blank Component} \label{blank_blank2} \vspace{-0.2cm}
-text
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Radar Dishes} \label{outer_radar} \vspace{-0.2cm}
+In order to detect nearby scrap, ships, asteroids, and other large objects, the ship employs a few sweeping radars. The radar dish uses radio waves like the antennae, which reflect off aluminum but can pass relatively unimpeded through a thin layer of kevlar, meaning it can be hidden behind the kevlar as well. 
 \begin{enumerate}
-\item [\textit{P}] - 
-\item [\textit{B}] - 
-\item [\textit{H}] - 
-\item [\textit{W}] - 
+\item [\textit{P}] - A small hole is pierced in the large rotating block of metal, the head of the radar dish. Little occurs.
+\item [\textit{B}] - The radar head is bent out of shape significantly. \newline \hspace*{3pt} \qtwo{Either side of the radar is bent so far out of shape as to become useless. The head can still spin, but only one side of it can detect things.}{The entire head grinds to a halt.} \\
+\item [\textit{H}] - The metal can absorb much heat.
+\item [\textit{W}] - Stray UV light can cause unintended blips on the radar. \newline When right inside of a magnetic field, there is no orientation that will result in a perfect signal all the time. If you know which of the following die outcomes should occur, choose it, and if not then roll. \newline \hspace*{-3pt} \qtwo{The current orientation allows a clear signal half of the time.}{The current orientation interferest with the signal significantly the entire time.} \\
 \end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Airlocks} \label{outer_airlocks} \vspace{-0.2cm}
+The following few components will be less critical to the combat than the ones above. Only consider having an airlock break during combat if a player or NPC is inside of it.
+\begin{enumerate}
+\item [\textit{P}] - The airlock is no longer airtight and will leak atmosphere while full or filling. 
+\item [\textit{B}] - The shot collides with the airlock hatch. \newline \hspace*{3pt} \qtwo{The seal remains, but locking or unlocking the airlock becomes blocked by the dent.}{The dent is enough to break the seal, and atmosphere rapidly escapes.} \\
+\item [\textit{H}] - The hatch can absorb much heat, and otherwise it will go into the atmosphere.
+\item [\textit{W}] - Stray UV light and fast-moving microparticles can damage the seal of the airlock over time.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hangar Door} \label{outer_hangar} \vspace{-0.2cm}
+The hangar is a large region of the ship capable of fitting a fighter. The hangar can be pressurized so that mechanics can fix or perform maintenance on the fighter children of the ship. It then depressurizes, and its large door slide open, allowing the fighter to leave. Only consider damaging the hangar doors when somebody or something is inside of the hangar. If questioned, I would justify this by saying that problems do happen to the hangar doors (and to other less important components of the outer hull), but the problem is not significant or noteworthy if a player or object is not at risk inside, so what is the purpose of mentioning it?
+\begin{enumerate}
+\item [\textit{P}] - A small hole is pierced in the enormous hangar door. Atmosphere leaks out. However, the hangar necessarily has a lot more atmosphere than most other rooms on the ship, meaning this time pressure is not as significant as other rooms.
+\item [\textit{B}] - The hangar door is dented. If it is closed, it is prevented from opening fully, and vice-versa.
+\item [\textit{H}] - The hangar door can absorb much heat, and the large atmosphere inside can absorb the rest.
+\item [\textit{W}] - Stray UV light and fast-moving microparticles can slowly compromise the seal of the hangar door over time.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Docking Magnets} \label{outer_docking} \vspace{-0.2cm}
+A few permanent magnets can slide out of a container in order to attach to another piece of metal. This is used to dock the ship to a station and to dock fighters to the outside of the ship. In this state, fighter spacecraft can be ready to fly at a moment's notice, since the belly of the fighter can be opened to allow the pilot to quickly get inside while it is docked on the outside of the hull. This hatch on the fighter connects to an airlock. Again, only consider bringing up that a docking magnet has become damaged if something is attached to it.
+\begin{enumerate}
+\item [\textit{P}] - A hole is pierced through the hunk of metal. Little effect.
+\item [\textit{B}] - The magnet is bent out of shape. \newline \hspace*{3pt} \qtwo{The magnet's connecting strength is reduced, so it becomes easy for something to knock it off.}{The magnet can no longer connect at all.} \\
+\item [\textit{H}] - The hunks of metal absorb much heat.
+\item [\textit{W}] - Stray UV light and microparticles do little as they act like piercing damage in certain ways. \newline A docking magnet encountering another strong magnetic field can weaken the magnet if it is pointed against the docking magnet or strengthen it if they are pointed in the same direction. Typically this will only weaken the magnet over time, therefore requiring frequent replacement.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Scrap Arm} \label{outer_arm} \vspace{-0.2cm}
+This arm is a small prehensile robotic arm with both an electromagnet and grabbing fingers attached to the end. It is used to pick out important pieces of scrap or for other miscellaneous uses. Only consider damaging this arm if it is being used to grab something.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{A metal arm is pierced, doing little.}{A hydraulic tube is pierced. One joint of the arm no longer can rotate back and forth, as hydraulic fluid spills out.} \\
+\item [\textit{B}] - One section of the arm is bent out of shape. \newline \hspace{3pt} 1d2 = 1. The hit also disconnects or damages one of the pneumatic pipes, spilling hydraulic fluid and stopping one joint of the arm from working.
+\item [\textit{H}] - The metal of the arms absorb all the heat.
+\item [\textit{W}] - UV light and microparticles are particularly dangerous for such a delicately-controlled system. It can damage the metal joints over time. The seals of the hydraulic system can also become compromised. Fast-moving microparticles can also pierce large enough holes to leak hydraulic fluid itself. \newline \hspace*{3pt} Under a strong magnetic field, the arm will move in strange directions and will be very difficult to control.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hull} \label{outer_hull} \vspace{-0.2cm}
+The hull of the ship is composed of two layers. The first layer is a sheet of dense kevlar \cite{kevlar_properties}. This layer obliterates railgun flak shots when they arrive. This obliteration scatters the shot so that it hits a wider area of the hull underneath, and therefore the dent will be wider but more shallow, and is much less likely to pierce the hull. Below the kevlar the proper hull is a thin sheet of aluminum, reinforced by its precisely-engineered shape that maintains structural integrity while saving mass.
+\begin{enumerate}
+\item [\textit{P}] - The piercing shots of a ray accelerator essentially go straight through the relatively thin kevlar and aluminum layers. The shot will continue until it encounters enough different layers of metal, or it will stop immediately if it hits a vat of liquid.
+\item [\textit{B}] - The railgun shot is shattered by the kevlar layer and spreads its energy over a larger area. Once the kevlar is hit like this, it becomes much weaker and is no longer held taught. If a railgun shot hits the same place again, it the kevlar will deflect it directly into the dent that was just made, and it can pierce through the aluminum. Once this happens, the shot continues until it hits a hunk of metal and it severely dents that. The shot may bounce and hit other nearby parts. The hole in the aluminum hull is ragged and difficult to achieve a proper seal around.
+\item [\textit{H}] - Kevlar absorbs much heat, and if you can get it hot enough it will decompose and become weaker. After that, some heat may transfer to the aluminum plate, which spreads heat very quickly and will only melt at extreme temperatures. In short, the hull is affected by heat very little.
+\item [\textit{W}] - Repeated exposure to UV radiation noticeably decomposes the kevlar outer layer of the hull. It is also designed to shatter microparticles, stopping them from piercing the hull while damaging and weakening the kevlar. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Structural Beams} \label{outer_beams} \vspace{-0.2cm}
+A few other components of the ship stick out of the hull, including the radiator and engine exhaust vent. The structural beams of the ship hold the large magnetic field coils \ref{grid_m_field_coils}. Evenly spaced along the length of the ship are these beams, which separate sections of kevlar held taught. 
+\begin{enumerate}
+\item [\textit{P}] - Adds some slight wear to the beam.
+\item [\textit{B}] - A structural beam taking a direct hit from a railgun is not a good thing. The beam becomes dented and its structure is compromised. Every time that the ship goes to full acceleration while it is still dented and compromised, roll 1d2. On 1d2 = 1, the force is enough to warp the entire structure of the ship. The long cylindrical ship now is slightly bent at this beam. Firing the engine now causes the entire ship to spin, and some rooms may crack open to the vacuum of space.
+\item [\textit{H}] - The huge metal beams absorb heat well.
+\item [\textit{W}] - UV radiation wears away at the beams over time. The beams at the rear of the ship become worn by constantly being pushed strongly by the engine. 
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Observation Deck} \label{outer_observation} \vspace{-0.2cm}
+The ship has a room with a series of windows that can look in many directions. Only considering damaging this room if something or somebody is inside of it.
+\begin{enumerate}
+\item [\textit{P}] - A small hole is pierced through a window. \newline \hspace*{3pt} 1d4 = 1. Cracks form, and the pressure of the atmosphere is enough to blow the window out. See bludgeoning damage below.
+\item [\textit{B}] - The railgun shot completely shatters the window, instantly sucking out the entirety of the atmosphere.
+\item [\textit{H}] - The glass does not fare well to repeated or sudden heating.
+\item [\textit{W}] - The glass and seals between panes slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Windows} \label{outer_windows} \vspace{-0.2cm}
+Around the ship are various small, circular, thick-paned windows for crew to look out.
+\begin{enumerate}
+\item [\textit{P}] - The window has a hole in it. \newline \hspace*{3pt} 1d4 = 1. Cracks form and the pressure is enough to shatter the window. See bludgeoning damage below.
+\item [\textit{B}] - The majority of the window shatters, letting out atmosphere extremely quickly.
+\item [\textit{H}] - The glass does not appreciate repeated or sudden heating.
+\item [\textit{W}] - The glass and seal slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Cameras} \label{outer_cameras} \vspace{-0.2cm}
+Various cameras of several wavelengths of light are placed around the outer hull of the ship so that the the full battlefield can be displayed for the commanders inside.
+\begin{enumerate}
+\item [\textit{P}] - \qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.} \\
+\item [\textit{B}] - One of the cameras is smashed to pieces.
+\item [\textit{H}] - The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.
+\item [\textit{W}] - Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.
+\end{enumerate}
+
+
+
+
+
+
 
 
 \newpage
-\begin{thebibliography}{5} % ALWAYS UPDATE THIS NUMBER WHEN ADDING
+\begin{thebibliography}{6} % ALWAYS UPDATE THIS NUMBER WHEN ADDING
 \bibitem{naval_railgun} 
 Adams, D. A. (2003). Naval rail guns are revolutionary. \textit{US Naval Institute}. Retrieved from \url{https://web.archive.org/web/20070708054858/http://edusworld.org/ew/ficheros/2004/railguns.pdf}
+
 \bibitem{recycling_water_and_air} 
-Closing the Loop: Recycling Water and Air in Space [PDF file]. (n.d.). Summary of inaccessible video. NASA. Retrieved from \url{https://www.nasa.gov/pdf/146558main_RecyclingEDA(final) 4_10_06.pdf}
+Closing the Loop: Recycling Water and Air in Space [PDF file]. (n.d.). Summary of inaccessible video. \textit{NASA}. Retrieved from \url{https://www.nasa.gov/pdf/146558main_RecyclingEDA(final) 4_10_06.pdf}
+
+\bibitem{kevlar_properties}
+Kevlar Aramid Fiber Technical Guide [PDF file] (2017). \textit{DuPont}. Retrieved 9 November 2019. Retrieved from \url{http://www.dupont.com/content/dam/dupont/products-and-services/fabrics-fibers-and-nonwovens/fibers/documents/Kevlar_Technical_Guide_0319.pdf}
+
 \bibitem{scientific_railgun}
 Rashleigh, S. C. and Marshall, R. A. (1978). Electromagnetic acceleration of macroparticles to high velocities. \textit{Journal of Applied Physics} 49, 2540. \url{doi.org/10.1063/1.325107}	
+
 \bibitem{international_temperature_scale_of_1968} 
 Rossini, F. D. (1968). A Report on the International Temperature Scale of 1968. Retrieved from \url{http://media.iupac.org/publications/pac/1970/pdf/2203x0555.pdf}
+
 \bibitem{hydrogen_recapture} 
 Shah, N., Panjala, D., and Huffman, G. P. (2001). Hydrogen production by catalytic decomposition of methane. \textit{Energy Fuels} 15, 6, 1528-1534. \url{https://doi.org/10.1021/ef0101964}
 \end{thebibliography}
