@@ -30,6 +30,8 @@
 \usepackage{hyperref}
 %% Generate the degree symbol
 \usepackage{gensymb}
+%% Drawing connections between nodes of graph
+\usepackage{tikz}
 
 % Dashes not dots
 \renewcommand\labelitemi{---}
@@ -43,6 +45,7 @@
 \maketitle
 
 \begin{abstract}
+
 
 \end{abstract}
 
@@ -127,6 +130,18 @@ The players can have any amount of schooling in the subject, or none at all, as 
 
 \section{Theory of the RPG} \label{theory}
 
+\subsection{Pitch}
+
+Spacefaring vessels are entirely controlled by computers in the modern age. When extending this to space combat, it becomes readily apparent that computers will control all aiming, most dodging, and harder maneuvers like docking. Most spaceships could be run with no crew whatsoever and space combat would go on its way normally.
+
+Railguns accelerate hunks of metal to incredible speeds, which are impossible for a large ship to dodge, and other ship weaponry is even faster. These weapons will hit a large ship constantly and with devastating effect. Consider the incredible precision engineering required for a single subsystem of the ships. A hole pierced in the wrong place, or denting something at the wrong time proves disastrous for every system, be it the intricate plumbing of the rocket engine or the various tubes and chambers of the life support system.
+
+An autonomous ship, entirely controlled by a computer, can fly, dodge, and land just a well as a human. But as soon as it takes a single shot of flak, it's almost certainly going to lose a core system. What is the use of a space ship if it dies after the first hit?
+
+Only a human being can make up the difference. While redundancies and safeties can be engineered into the design, no robot can be created that can fix every problem, and certainly not with any speed. Only a human has the rapid problem-solving ability, combined with incredible dexterity and muscle memory, to fix a problem that arises. When a system has a hole pierced through it by a ray shot, a trained plumber can patch it while half-asleep. Denting a delicate life-support chamber is fine as long as a human is there to strip away dangerous parts and maintain the flow.
+
+This RPG a science fiction campaign centered around realistic space combat, except that the players hardly participate in the combat itself at all. Instead, the purpose of the players is to understand their particular system well enough to identify problems, come up with solutions, and then fix those problems. The players will not be valiant heroes nor keen mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances. 
+
 \subsection{Example First Combat}
 
 The DM will tell the players that ship-to-ship combat has begun, but their only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
@@ -153,6 +168,34 @@ Each part of the ship is a real, tangible thing in today's society. When things 
 Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a huge dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe damage to the delicate systems of the ship.
 
 Additionally, two other less common types of damage exist. If the thermal control of a system fails, it will begin to heat up, and the component will be subject to \textit{heating} damage. Over time, every system becomes subject to \textit{wear} damage, representing the long-term wear and tear of the system. This is only rarely apparent for systems inside the ship, which can be engineered to avoid wear for many years. However, the outside of the ship is subject to stray solar wind and ionizing radiation, which breaks down materials much more quickly than without. Wear is most apparent and relevant to the systems outside the ship.
+
+\subsection{Roles}
+
+While any player could try to fix any system, it's recommended to give different players different systems to overlook. This means that each player becomes familiar with one system over the course of the game, and there is no anxiety about constantly learning new random things. 
+
+My suggested split is composed of four roles. Each role takes care of exactly two systems, though there can be some overlap. Listed below are the four roles, which systems they oversee, and which skills a person must have to be this role.
+\begin{itemize}
+\item \textit{Engineer}. Primarily in charge of the rocket engine \ref{engine} of the ship. Such a complex system requires a dedicated caretaker. The plumbing experience of the engineer is also useful for the thermal system \ref{thermal} of the ship.
+\begin{itemize}
+\item \textit{Plumbing}. The rocket engine uses many different types of piping, pump, and storage chamber. Not to mention the extensive array of liquid cooling pipes that the engineer is typically in charge of.
+\item \textit{Temperature Hazards}. Between the extremely cold liquid fuel of the engine to the blazing hot radiator, the engineer must develop a respect for and an understanding of the hazards of extreme temperatures.
+\end{itemize}
+\item \textit{Systems Manager}. A large number of various sensors, measurements, and data feeds are directed to the central computer of the ship. The system manager is responsible for sifting through pages of data and identifying problems that arise. On a smaller ship, the systems manager has a more hands-on role as well, and is responsible for repairing the core systems of the ship. The systems manager is in full control of the power grid \ref{grid} and life support systems \ref{life}.
+\begin{itemize}
+\item \textit{Electronics}. The systems manager should develop a solid grasp of the electrical grid of the ship, dealing with both practical skills like wiring and more theoretical ones like magnetic coils.
+\item \textit{Chemistry}. The life support system uses both physical and industrial chemistry to properly cleanse the atmosphere. 
+\end{itemize}
+\item \textit{Gunner}. The gunner is in charge of ensuring that the weaponry hit their target. This role can have a slightly more active role in combat. If the target is close enough, the gunner can choose which part of the enemy ship to aim at. If the target is in medium range, they can try to predict which direction the enemy is going to dodge. Otherwise the gunner is in charge of repairing the railgun \ref{railgun} and ray accelerator \ref{ray}.
+\begin{itemize}
+\item \textit{Electronics}. Both the railgun and ray require surges of electricity, and accelerate their shots using electricity. The gunner should become familiar with how the laws of electromagnetism bend to their will.
+\item \textit{Construction}. The railgun requires enormous metal rails, which undergo constant stress from firing. The ray requires a large chamber that can withstand a strong vacuum and has several large hunks of metal that serve as electromagnets. A familiarity of the tools of an automobile mechanic and/or construction worker, combined with an eye for cracks and weak points, is helpful to a gunner.
+\end{itemize}
+\item \textit{Fighter Pilot}. The fighter pilot has the most active role during combat, but will still end up bugfixing and troubleshooting often. They are in control of their own separate small fighter spacecraft during combat, and are in charge of its maintenance during downtime. A fighter spaceship contains most if not all of the same systems as the proper ship, so instead the fighter pilot will deal with problems in their computer visualization system \ref{fighter} and problems in outside the hull of the ship \ref{outer}. 
+\begin{itemize}
+\item \textit{Motor Control}. The fighter pilot becomes intimately familiar with the joystick controls of their ship. This task requires precise hand-eye coordination and a strong muscle memory, so this skill reflects something between reflex, dexterity, and your motor control. This additionally means that the pilot is in charge of all maneuvers outside the hull of the ship, such as patching the hull, saving an overboard crew member, or some other acrobatic maneuver with the fighter.
+\item \textit{Computers}. The pilot uses an advanced alternate-reality visor which presents the battlefield around them in videogame-like color and vibrance instead of pitch black. Such a system requires familiarity with software and videogame user interfaces, and fixing problems that come up requires knowledge of common bugs in software and possible damages that can occur to computers.
+\end{itemize}
+\end{itemize}
 
 \subsection{Direction and Drive}
 
@@ -1112,6 +1155,244 @@ Heavy wiring carries high voltage electricity from the reactor to the systems of
 \end{enumerate}
 
 
+\subsection{Fighter AR Display} \label{fighter}
+
+A fighter pilot in open space would look around him outside a glass window and see the pitch black void of space. If there were any ships visible, they would be so far away as to be minuscule specks, and often are only partially lit by the sun. As a result, a collection of videogame designers and military simulation designers worked together to create an alternate-reality virtual battlefield for pilots to view in real-time.
+
+Now, when a pilot looks out their visor, they see any ships nearby as highlighted outlines, with indications of their direction of movement and orientation, and they instead of an empty void they see a field of spaced lines as a coordinate system around them.
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item Many parts of the ship act without the will of the pilot. The ship might suddenly jump to dodge \ref{fighter_evading} out of the way of a shot, and might start aiming the railgun \ref{fighter_aiming} when it detects an enemy in front of it. The ship as a whole, a unit of engineering marvel, might start to seem like a living, moody thing. Focus on its indifference to the pilot, choosing different things and jarring the pilot during thought. Such a disconnect between rider and horse is scary on its own - a disconnect like this between pilot and ship is haunting.
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item If the reader has debugged \ref{fighter_computer_bug_types} any program, they will know that it can be incredibly frustrating. Consider having the same type of bug appear several times in a row, possibly for the same reason, to irritate them. Another option is to have one specific system be made by an incompetent programmer, and this becomes more and more apparent as the pilot finds bug after bug in that one system.
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item If a sufficient terrible problem leaves the pilot out of control \ref{fighter_controlling} of the ship, it will drift away into the void. The pilot will have to be recovered by another ship long after the combat is finished.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item In the case that the aiming system \ref{fighter_aiming} of the ship keeps failing, a brave fighter pilot might have to raise up their visor and fire a key shot at the enemy ship, without any computer assistance whatsoever. 
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{fighter} Fighter AR Components} \\
+\toprule
+1d10 & Component & Link \\
+\midrule
+1 & Positioning & \ref{fighter_positioning} \\
+2 & Vectoring & \ref{fighter_vectoring} \\
+3 & Ranging & \ref{fighter_ranging} \\
+4-5 & Aiming & \ref{fighter_aiming} \\
+6 & Warning & \ref{fighter_warning} \\
+7 & Evading & \ref{fighter_evading} \\
+8-9 & Controlling & \ref{fighter_controlling} \\
+
+\bottomrule
+\end{tabular}
+
+
+\subsubsection{Combat System} \label{fighter_combat_system}
+
+The following is a brief description of a combat system for fighter ships. I recommend focusing on the bugfixing, problem solving, and outer-space acrobatics problems instead of the combat.
+
+Each turn of fighter combat, choose \textit{up to two} of the following actions to take.
+\begin{itemize}
+\item \textit{Thrust}. Choose a location and fire your engines towards it, or halt to a stop, or turn your velocity vector. Firing your engines requires focusing on what direction to fire and how to manage your ships position and velocity.
+\item \textit{Fire}. Choose an enemy and fire the fighter's railgun at them. If the enemy is close enough, the player can choose which system of the ship to hit. If the enemy is medium range, the player can attempt to predict which direction the enemy will dodge, and if they predict it correctly they hit. When choosing a direction, something simple like choosing one of up, down, left, or right is sufficient, and results in a 1/4 chance of hit. Optionally 8-fold direction can be used, in which case I recommend the chance of hit to be 3/8, so that choosing adjacent directions results in a hit (If enemy dodges N, then firing at any of NW, N, or NE will hit it).
+\item \textit{React - Dodge}. Take no immediate action. Instead wait for the next shot to be fired at you, and attempt to dodge it. If the enemy is close enough when the shot is fired, dodging is useless. If the enemy is medium range, the player chooses a direction to dodge. If the enemy predicts the correct direction, they will hit you, and otherwise will miss. Again, either the 4-fold direction 1/4 chance or 8-fold 3/8 chance method can be used.
+\item \textit{React - Deflect}. Take no immediate action. Instead aim the fighter's railgun precisely at an enemy railgun. When that railgun fires, the thermal imaging cameras on the railgun will trigger it to immediately fire, and the two shots will collide in mid-space, deflecting them both in random directions. This method allows a ship to theoretically avoid two different shots each turn, if it does nothing else on its turn.
+\end{itemize}
+
+\vspace{0.2cm} \hspace{-17pt} Note that using either the engine or the railgun excessively in one turn will put stress on it. Take the following actions if these two specific actions are taken.
+\begin{itemize}
+\item \textit{Fire and React - Deflect}. If the pilot both fires a shot and then ends up firing a second deflection shot before their next turn, then the railgun will undergo heat stress. To be brutal, see the \textit{T} section of \ref{railgun_rails}.
+\item \textit{Thrust and React - Dodge}. If the pilot both fires the engines to thrust and then ends up having to dodge a shot before their next turn, then the engine will undergo heat stress. To be brutal, see the \textit{T} section of \ref{engine_exhaust}.
+\end{itemize}
+
+
+\subsubsection{Computer Damage Types} \label{fighter_computer_damage_types}
+
+The damage types used for other systems are not particularly applicable to computer systems. Here \textit{Wear} damage will be split into two parts: stray UV radiation from the sun and stray magnetic fields from other ships. These five will form the base damage types.
+
+Each base damage type can cause a number of different secondary problems, which ultimately then cause a result problem. There are very few result problems, meaning knowing the full path of the problem is important. The following table summarizes the base damage types, secondary problems, and result problems, as well as which leads to which.
+
+
+\vspace{0.2cm} \hspace{0.1\linewidth}
+\begin{tabular}{| l |}
+\toprule
+Table \ref{fighter_computer_damage_types} Computer Damage Types \\
+\midrule
+\hspace{10pt} base problem \hspace{40pt} secondary problem \hspace{10pt} result problem \\
+\midrule
+\begin{tikzpicture}
+\node(A){stray UV radiation};
+\node(B)[below=of A]{stray magnetic fields};
+\node(C)[below=of B]{piercing damage};
+\node(D)[below=of C]{bludgeoning damage};
+\node(E)[below=of D]{excess heating};
+
+\node(F)[right=of A]{memory loss};
+\node(G)[right=of A, below=of F]{voltage surge};
+\node(H)[right=of A, below=of G]{wire disconnection};
+\node(I)[right=of A, below=of H]{signal warpage};
+
+\node(J)[right=of F]{crash};
+\node(K)[right=of F, below=of J]{corruption};
+\node(L)[right=of F, below=of K]{inaccuracies};
+
+\draw [->] (A) -> (F);
+\draw [->] (A) -> (G);
+\draw [->] (A) -> (H);
+\draw [->] (B) -> (F);
+\draw [->] (B) -> (G);
+\draw [->] (B) -> (I);
+\draw [->] (C) -> (F);
+\draw [->] (C) -> (H);
+\draw [->] (D) -> (H);
+\draw [->] (E) -> (H);
+\draw [->] (E) -> (I);
+
+\draw [->] (F) -> (J);
+\draw [->] (F) -> (K);
+\draw [->] (G) -> (J);
+\draw [->] (G) -> (L);
+\draw [->] (H) -> (J);
+\draw [->] (H) -> (K);
+\draw [->] (I) -> (K);
+\draw [->] (I) -> (L);
+\end{tikzpicture} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.2cm}
+Base problems
+\begin{enumerate}[leftmargin=4cm]
+\item [stray UV radiation] - What would normally be blocked by the atmosphere is instead allowed to ravage the precise electronics of a ship. This is the same radiation that gives you a sunburn, which can cause bits to be changed, wires to undergo a surge, and even fry a wire.
+\item [stray magnetic fields] - In strong areas of a planet's magnetic field or when very close to another ship, the electrons moving in precise patterns in the electronics suddenly experience a magnetic force, throwing them in random directions as the ship moves through it.
+\item [piercing damage] - Physical piercing damage can damage hard drives and disconnect wires.
+\item [bludgeoning damage] - Dents can disconnect wires and can totally destroy some parts, but otherwise they do little.
+\item [excess heating] - A processor that gets too hot will see its wires rapidly melt if it's not completely shut down. Additionally the temperature can interfere with receiving and sending signals with antannas. 
+\end{enumerate}
+
+\vspace{0.2cm}
+Secondary problems
+\begin{enumerate}[leftmargin=4cm]
+\item [memory loss] - Permanent or temporary memory of the computer can be deleted by base damages. This results in the computer not being able to find something, finding nothing when it does, or straight up crashing.
+\item [voltage surge] - A surge of voltage in the wrong direction can be disastrous. If writing data or performing a particularly important calculation, one of these surges could cause a completely wrong number to be calculated. This is as long as the surge is weak enough to not fry the wire completely, resulting in a wire disconnection.
+\item [wire disconnection] - A wire is completely disconnected as a result of melting, frying, or being physically yanked out. This typically instantly crashes the system, and if not it will result in warped results and certain impossible operations.
+\item [signal warpage] - The communications signals that should be coming to the player are being warped by faulty parts or magnetic field interference. As a result voice communications are distorted, your measured distance to the parent ship and thus also your own velocity (calculated based on this distance) will be off, and any further orders or transferred data may be inaccurate.
+\end{enumerate}
+
+\vspace{0.2cm}
+Result problems
+\begin{enumerate}[leftmargin=4cm]
+\item [crash] - One particular program of the whole completely crashes, stopping it until it can be rebooted. If not bugfixed, the problem will arise again guaranteed.
+\item [corruption] - The computer has failed to find something or found nothing where it should have been. This results in basic textures being displayed, missing data points, and warped lines displayed on screen. If not bugfixed, a restart may (1d2 = 2) successfully reformat everything and fix the problem, or it may be unsucessful.
+\item [inaccuracies] - While all the components are properly working, wrong numbers keep consistently getting spit out. This results in warped voices, missed shots, and an inaccurate depiction of the battlefield.
+\end{enumerate}
+
+\subsubsection{Computer Bug Types} \label{fighter_computer_bug_types}
+
+A DM can cause physical damage to the computer systems of the fighter, as described in the above section, but they can also let software issues get in the way as well. The following is a list of problems of varying severity in no particular order which can serve as problems. These problems have wildly differing amounts of work needed to fix them: a versioning issue can be fixed in ten seconds by downloading the right version, while a timekeeping issue can be a needle in a haystack to solve.
+
+\begin{minipage}[t]{0.45\linewidth}
+\begin{itemize}[leftmargin=0cm]
+\item memory leak - An issue in the program causes more and more memory to be needed, eventually slowing down the entire system to a crawl.
+\item buffer overflow - The program begins writing memory beyond the designated area that it is currently working on. Causes corruption of data, changing file headings to make them disappear before obliterating their contents.
+\item floating point rounding - A comparison in the code expects exact equality between two numbers on either side of the equals sign in an equation. This should be theoretically true, but practically floating point numbers can't store certain numbers exactly, so equality does not hold. 
+\item numerical instability - An algorithm is theoretically sound, except that at some stage it rounds a number, causing the accuracy of the algorithm to drift significantly over time.
+\item off-by-one - A long list of numbers should have exactly one more or one less element than it does, leaving the program in a question of what to do. 
+\item integer overflow - An integer can become so large, so unbelievably large that the programmer never anticipated that it could be possible, that it will flip over and either return to 0 or become an enormous negative number. This sudden swing can lead to laughably huge inaccuracies. 
+\item improper units - One part of the computer expects a certain unit, while another part hands it a different unit. While this problem may seem trivial, over the course of history it has caused multiple multi-million dollar space exploration missions to catastrophically fail.
+\item type formatting - A malicious user or stray corruption of data causes a random character to be inserted into a text being displayed. If the wrong character, and especially if the programmer never anticipated it, this can cause surprisingly frequent crashes.
+\item versioning - A piece of software is using the wrong version of another API or library. This can lead to security issues and inaccuracies if major bugs have been recently fixed. 
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\begin{itemize}[leftmargin=0.5cm]
+\item null pointer - A program searched for an object in memory but found nothing in its place. This is typically the error thrown when memory is damaged, and usually results in a crash right away.
+\item divide-by-zero - A programmer lazily never considered that a certain equation could result in dividing by zero. The computer recognizes this is an error and won't completely crash, but won't continue either.
+\item timekeeping - Even the slightest error in a clock will add up very noticeably over time. Since the clock is used for everything relating to the equations of motion, trajectories will become wrong. This is especially important for spacefaring vessels, which have to adjust their time dynamically as a result of their height in orbit and their speed. 
+\item syntax - The programmer literally used the wrong words. This can be as obvious as a straight up typo, to something more subtle like i = 1 vs i == 1.
+\item infinite loop - Somewhere in the program an unforeseen loop occurs which cannot be exited. Modern operating systems will stop this after a number of iterations, but in the meantime this will use up extra memory and processing power.
+\item race condition - Two processes working simultaneously require data from each other. During particularly intense situations, where things need to be prioritized, this can result in certain processes completely stopping while they wait for another one to finish.
+\item data typing - The programmer expects a number or piece of data to be in one format, when it arrives to them in another. Again this can be as simple as integer versus float, or more complicated like two different types of integers, long or short.
+\item language - The most important military hardware, created by dumping money into a pool of the most talented game developers and military computer engineers, the very hardware that keeps the peace in space, runs entirely on Javascript. It is an unfortunate world that we live in.
+\end{itemize}
+\end{minipage} % NOTE split this into two minipages over two pages once document is finished
+
+
+\hspace{-18pt} \subsubsection{Positioning} \label{fighter_positioning} \vspace{-0.2cm}
+The role of the positioning systems is to ensure that the pilot has a decent understanding of their current position in the battlefield. The fighter vessel pings its parent ship every fraction of a second. This ping travels at exactly the speed of light, meaning its time taken can be converted directly into a distance. Thus the pilot always knows the distance to their parent. Additional distance lines are drawn toward any other ship detected. This system also draws a clear outline around every ship looked at, to ensure the pilot can see it.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - The positioning system shuts down. The fighter's relative position to anything becomes unknown. The fighter's velocity becomes unknown. All other ships go dark, vanishing from screen.
+\item [\textit{corruption}] - An image file disappears. Either a distance line or all ships' outlines gain the debug texture, a bright, annoying texture that blocks out a bunch of stuff behind it.
+\item [\textit{inaccuracy}] - One distance number becomes either slightly or wildly inaccurate, depending on the problem. This can also alter the shape of one part of a line, giving a distance line a pimple or a ship's outline a dent. An inaccurate distance between this ship and another ship results in the weaponry missing the majority of its shots, particularly if the enemy is at the edge of the range of the weapon.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Vectoring} \label{fighter_vectoring} \vspace{-0.2cm}
+While the position of the battlefield is important, the pilot also needs to know what it will look like in ten seconds. The orientation, velocity, and acceleration vectors are drawn for every ship. This system also draws the future trajectories of every ship, if they continue holding their current acceleration, so that the pilot does not have to guess it.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - All future trajectories and vectors disappear. The weaponry cannot hit anything for its life, as it depends on this trajectory to know where to aim.
+\item [\textit{corruption}] - A single vector simply disappears. For example, a ship may be clearly moving very quickly, yet its velocity vector simply displays zero.
+\item [\textit{inaccuracy}] - A vector becomes slightly longer or shorter, or changes direction. This results in larger and larger errors the farther along the future trajectory you try to predict, meaning the weapon's maximum range reduces noticeably.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ranging} \label{fighter_ranging} \vspace{-0.2cm}
+Instead of a blank black background, the ranging component adds a coordinate system to the battlefield. This coordinate system consists of regularly-spaced lines as well as markings for the maximum ranges of weaponry. The maximum ranges of weaponry are shown around both the pilot and any enemy they are pointed at. Typically the coordinate system is centered on the player, but this can be changed to center on any other ship, object, or place. The most useful coordinate system for a pilot is polar coordinates, since it immediately informs the pilot of whether they can swivel the ship and immediately be in range of an enemy to fire at. Polar coordinates appear as concentric circles around the center. The coordinate system can be switched to Cartesian as well.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - The black void of space returns. While distances to every ship is known, a good understanding of the layout of the battlefield will be lacking.
+\item [\textit{corruption}] - The image of the coordinate markings is gone, so the system replaces it with a bright, ugly debug texture that now completely covers the battlefield. 
+\item [\textit{inaccuracy}] - One of the lines of the coordinate system has a bump on it.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Aiming} \label{fighter_aiming} \vspace{-0.2cm}
+Extending from the railgun at the front of the ship is a long straight path representing exactly where the railgun will go under perfect circumstances. Around this line is displayed a cone representing the accuracy of the weapon, and another larger cone around that representing the full turning range of the railgun. Underneath these visual systems, thermal cameras are recording from the front of the railgun and tracking the target. A dedicated GPU on the railgun calculates the future trajectory of the ship and where to aim the railgun in order to hit it, so that the pilot doesn't have to guess.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - The railgun no longer has a visual trajectory, and it cannot compute its own aiming anymore. The gun must be aimed manually.
+\item [\textit{corruption}] - A piece of data about the tracked enemy ship goes missing. This particular enemy can no longer be tracked by the system, though any other enemy can be. 
+\item [\textit{inaccuracy}] - A value related to the trajectory of the railgun is incorrect. The railgun is less likely to hit.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Warning} \label{fighter_warning} \vspace{-0.2cm}
+Arrows pointing to the direction of enemy ships and other hazards are drawn in the peripherals of the pilot's vision, so that the pilot knows where the enemies are no matter what direction they are facing.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - The arrows disappear.
+\item [\textit{corruption}] - An arrow disappears.
+\item [\textit{inaccuracy}] - An arrow starts pointing in the wrong direction.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Evading} \label{fighter_evading} \vspace{-0.2cm}
+Thermal warning cameras are placed all around the ship. These cameras look for the signature temperature of a railgun shot and immediately identify and track any shot fired at the ship. Since railgun shots move at inhuman speeds, the computer system automatically begins dodging the shot. These evasion systems also allow the ship to fire deflecting shots if the ship is already aimed at the incoming shot.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - The ship will no longer automatically dodge, significantly increasing your chance of being hit by something.
+\item [\textit{corruption}] - A camera feed loses track of a shot at a critical moment. This forces the computer system to guess, and it may not move the ship away properly or fire a proper deflection shot.
+\item [\textit{inaccuracy}] - Inaccuracy will prevent a deflection shot from hitting but will not affect dodges as much.
+\end{enumerate}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Controlling} \label{fighter_controlling} \vspace{-0.2cm}
+The ship is controlled with three joysticks. In one hand the pilot always holds the main control joystick, which rotates the ship to quickly face in any direction. In the other hand, the pilot typically holds on to the aiming joystick. This joystick allows the pilot to finely aim the orientation of the ship and the railgun it fires. The third joystick is only held during parking and taxiing or during group maneuvers. It is the linear control joystick, which gently pushes the ship to move in any direction.
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{crash}] - All joysticks lose control for a very short amount of time while the controlling system flash-reboots. This can mess up turns and other maneuvers.
+\item [\textit{corruption}] - An input gets lost, meaning the pilot cannot begin a maneuver they intended to until they try a few times. This can delay a dodge to dangerous levels.
+\item [\textit{inaccuracy}] - A pilot is intimately familiar with the sensitivity of their controls. If they are even slightly off, shot will start to miss and the pilot will begin missing their intended marks.
+\end{enumerate}
 
 
 
