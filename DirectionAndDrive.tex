@@ -64,7 +64,7 @@ Typical D\&D notation will be used, with some shorthand added.
 \item \textit{1d4 ? 1. ... 2. ... 3. ... 4. ...} means roll a 4-sided die, and if it comes up 1 then follow the sentence after 1 (whatever is in the first ellipsis), and likewise for 2, 3, and 4.
 \end{itemize}
 
-\vspace{0.2cm} \hspace{-18pt} Some abbreviations for damage types will be used. In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
+\vspace{0.2cm} \hspace{-18pt} Some abbreviations for damage types will be used. For a description of these, see \ref{damage_types} In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
 \begin{itemize}
 \item \textit{P} - piercing
 \item \textit{B} - bludgeoning
@@ -75,44 +75,64 @@ Typical D\&D notation will be used, with some shorthand added.
 % these are the commands used to generate the indented 1d4 ? 1. ... blocks of text
 % The first three are hard-coded to be 1d2, 1d3, and 1d4 respectively where each  1, 2, 3, and 4 is a separate line. This is usually what I use so the abbreviation is handy.
 \def\qtwo#1#2#3{1d2 ? 
-\vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
+\vspace*{-0.4cm} 
+\begin{enumerate}[leftmargin=1.8cm]
 \item [1.] #1 
 \item [2.] #2 
-\end{enumerate}}
+\end{enumerate}\\}
 \def\qthree#1#2#3{1d3 ? 
 \vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
 \item [1.] #1 
 \item [2.] #2 
 \item [3.] #3 
-\end{enumerate}}
+\end{enumerate}\\}
 \def\qfour#1#2#3#4{1d4 ? 
 \vspace*{-0.4cm} \begin{enumerate}[leftmargin=1.8cm]
 \item [1.] #1 
 \item [2.] #2 
 \item [3.] #3 
 \item [4.] #4 
-\end{enumerate}}
+\end{enumerate}\\}
 
 % This is a more general form of the above functions. Its first argument should be the dice used. The next two arguments form a pair, the first being which die outcomes and the second what happens on those outcomes. Each two arguments after that are optional, and form pairs, so that up to four ranges of die outcomes can be represented.
 % For example, #1 could be 1d12. #2 and #3 say 1-4. Something happens. Then #4 and #5 say 5-6. Something else happens. Then #6 and #7 say 7-12. A third different thing happens. #8 and #9 are left blank. This gives three die ranges and three outcomes, depending on what you roll on 1d12.
 \def\qeq#1#2#3#4#5#6#7#8#9{#1 ? 
 \vspace*{-0.4cm} \begin{enumerate}[leftmargin=2cm]
 \item [#2] #3 
-\ifx&#4&% empty
+
+\if#4% empty
 \else
 \item [#4] #5
 \fi
-\ifx&#6&% empty
+
+\if#6% empty
 \else
 \item [#6] #7
 \fi
-\ifx&#8&% empty
+
+\if#8% empty
 \else
 \item [#8] #9
 \fi
 \end{enumerate}}
 
-% \qeq{1d4}{1-2.}{one or two}{3.}{three}{4.}{four}{}{} % what a scuffed function
+
+% This is the four-fold PBHW list seen under every component.
+\def\pbhw#1#2#3#4{
+\begin{tabular}[t]{r p{15cm}}
+\textit{P} - & #1 \\
+\textit{B} - & #2 \\
+\textit{H} - & #3 \\
+\textit{W} - & #4 \\
+\end{tabular}}
+
+% This command creates the crash, corruption, inaccuracy CCI lists seen under the fighter AR display system.
+\def\cci#1#2#3{
+\begin{tabular}[t]{r p{12cm}}
+\textit{crash} - & #1 \\
+\textit{corruption} - & #2 \\
+\textit{inaccuracy} - & #3 \\
+\end{tabular}}
 
 \subsection{Recommended Prior Knowledge}
 
@@ -120,7 +140,7 @@ The players can have any amount of schooling in the subject, or none at all, as 
 \begin{itemize}
 \item Most biology required will be related to medicine or injury. Recommended is an awareness of how the following injuries manifest in a person: burns, acids, deafening noises, and oxygen deprivation.
 \item High-school level chemistry will be plenty. Technically the only knowledge necessary is chemical reaction equations, all four states of matter, ionization, and combustion reactions.
-\item Knowledge of physics is somewhat more demanding. High-school physics is a must and taking some physics or engineering courses at undergraduate level is recommended. A student who did well in the first year of a high-school course in physics should suffice. The items below are a list of the subjects within physics that are needed or recommended. 
+\item Knowledge of physics is somewhat more demanding. High-school physics is a must and taking some physics or engineering courses at undergraduate level is recommended. A student who did well in the first year of a high-school course in physics could suffice. The items below are a list of the subjects within physics that are needed or recommended. 
 \item Classical mechanics is required. The players will be in zero-gravity, where movement demands understanding the subject.
 \item Electronics is required. Most of the system relies on some form of electricity, and one of the systems is designed for generating and storing it. One of the systems uses many symbols from circuit design, so one should be able to read a simple circuit. One should be familiar with the vocabulary AC/DC, capacitor, and electromagnet.
 \item Thermodynamics is required. One should know the laws of thermodynamics and the three ways that heat can be transferred. Additionally one should be familiar with how to model ideal gases and how a refrigerator can keep things cold.
@@ -144,7 +164,7 @@ This RPG a science fiction campaign centered around realistic space combat, exce
 
 \subsection{Example First Combat}
 
-The DM will tell the players that ship-to-ship combat has begun, but their only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
+Ship-to-ship combat has begun, but the players' only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
 
 Here the DM refers back to an interview they had with the player about their character. While the DM encouraged each character to have clear and helpful strengths, they also required tangible weaknesses. Whether it's anger issues, feeling lost, or childhood fears, the DM will have picked out several weaknesses that can challenge the player and a few strengths to reward them.
 
@@ -157,19 +177,19 @@ A DM must choose their words carefully. When describing the problem that arises,
 \item voice - This advice will be more acting than writing, and more general, but pay attention to the volume of your voice and your facial features. Making the face of whatever emotion you intend to convey oddly enough works often to imbue your voice with that emotion.
 \end{itemize}
 
-Once the problem is described, it's up to the player to fix it. Be sure to put pressure onto the player. Thinking and googling is okay, but they take too long specifically to decide on something, that's when to continue describing how the mess is getting bigger, or the problem is getting worse. Once pressure is on, think of different ways to raise the stakes. If there's a particular kind of problem that sticks out to you as relevant to what just happened, make note of it and use it as the next problem for that player. If you see a way that the solution could fail, make note of problems that could do so, and decide whether or not to use them or to give the player a break.
+Once the problem is described, it's up to the player to fix it. Be sure to put pressure onto the player. Thinking and googling is okay, but if they take too long specifically to decide on something, that's when to continue describing how the mess is getting bigger, or the problem is getting worse. Once pressure is on, think of different ways to raise the stakes. If there's a particular kind of problem that sticks out to you as relevant to what just happened, make note of it and use it as the next problem for that player. If you see a way that the solution could fail, make note of problems that could do so, and decide whether or not to use them or to give the player a break.
 
 This system is a long-form description of the DM presenting the player a problem, and the player giving the DM a solution. The main problem that arises is when the player presents an easy solution and thinks nothing of it. At that point the player is ready for a more complex problem, or multiple smaller problems at the same time. With each successive combat session, the DM should raise the complexity of each problem given, either by including more different problems, or by propagating a problem down toward different parts.
 
 Each part of the ship is a real, tangible thing in today's society. When things go wrong aboard a spaceship, the consequences are real, the problems are real, and the only person there to solve it is the player. This situation naturally enhances the emotion of the moment by putting pressure on the player, meaning if the DM can adequately tailor the problem and the delivery of it, then a player's weakness can be intimately explored.
 
-\subsection{Damage Types}
+\subsection{Damage Types} \label{damage_types}
 
 Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a huge dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe damage to the delicate systems of the ship.
 
 Additionally, two other less common types of damage exist. If the thermal control of a system fails, it will begin to heat up, and the component will be subject to \textit{heating} damage. Over time, every system becomes subject to \textit{wear} damage, representing the long-term wear and tear of the system. This is only rarely apparent for systems inside the ship, which can be engineered to avoid wear for many years. However, the outside of the ship is subject to stray solar wind and ionizing radiation, which breaks down materials much more quickly than without. Wear is most apparent and relevant to the systems outside the ship.
 
-\subsection{Roles}
+\subsection{Roles} \label{roles}
 
 While any player could try to fix any system, it's recommended to give different players different systems to overlook. This means that each player becomes familiar with one system over the course of the game, and there is no anxiety about constantly learning new random things. 
 
@@ -185,12 +205,12 @@ My suggested split is composed of four roles. Each role takes care of exactly tw
 \item \textit{Electronics}. The systems manager should develop a solid grasp of the electrical grid of the ship, dealing with both practical skills like wiring and more theoretical ones like magnetic coils.
 \item \textit{Chemistry}. The life support system uses both physical and industrial chemistry to properly cleanse the atmosphere. 
 \end{itemize}
-\item \textit{Gunner}. The gunner is in charge of ensuring that the weaponry hit their target. This role can have a slightly more active role in combat. If the target is close enough, the gunner can choose which part of the enemy ship to aim at. If the target is in medium range, they can try to predict which direction the enemy is going to dodge. Otherwise the gunner is in charge of repairing the railgun \ref{railgun} and ray accelerator \ref{ray}.
+\item \textit{Gunner}. The gunner is in charge of ensuring that the weapons hit their targets. This role can have a slightly more active role in combat. If a target enemy is close enough, the gunner can choose which part of the enemy ship to aim at. If the target is in medium range, they can try to predict which direction the enemy is going to dodge. Otherwise the gunner is in charge of repairing the railgun \ref{railgun} and ray accelerator \ref{ray}.
 \begin{itemize}
 \item \textit{Electronics}. Both the railgun and ray require surges of electricity, and accelerate their shots using electricity. The gunner should become familiar with how the laws of electromagnetism bend to their will.
 \item \textit{Construction}. The railgun requires enormous metal rails, which undergo constant stress from firing. The ray requires a large chamber that can withstand a strong vacuum and has several large hunks of metal that serve as electromagnets. A familiarity of the tools of an automobile mechanic and/or construction worker, combined with an eye for cracks and weak points, is helpful to a gunner.
 \end{itemize}
-\item \textit{Fighter Pilot}. The fighter pilot has the most active role during combat, but will still end up bugfixing and troubleshooting often. They are in control of their own separate small fighter spacecraft during combat, and are in charge of its maintenance during downtime. A fighter spaceship contains most if not all of the same systems as the proper ship, so instead the fighter pilot will deal with problems in their computer visualization system \ref{fighter} and problems in outside the hull of the ship \ref{outer}. 
+\item \textit{Fighter Pilot}. The fighter pilot has the most active role during combat, but will still end up bugfixing and troubleshooting often. They are in control of their own separate small fighter spacecraft during combat, and are in charge of its maintenance during downtime. A fighter spaceship contains most if not all of the same systems as the proper ship, so instead the fighter pilot will deal with problems in their computer visualization system \ref{fighter} and problems outside the hull of the ship \ref{outer}. 
 \begin{itemize}
 \item \textit{Motor Control}. The fighter pilot becomes intimately familiar with the joystick controls of their ship. This task requires precise hand-eye coordination and a strong muscle memory, so this skill reflects something between reflex, dexterity, and your motor control. This additionally means that the pilot is in charge of all maneuvers outside the hull of the ship, such as patching the hull, saving an overboard crew member, or some other acrobatic maneuver with the fighter.
 \item \textit{Computers}. The pilot uses an advanced alternate-reality visor which presents the battlefield around them in videogame-like color and vibrance instead of pitch black. Such a system requires familiarity with software and videogame user interfaces, and fixing problems that come up requires knowledge of common bugs in software and possible damages that can occur to computers.
@@ -216,14 +236,14 @@ Electronics & $I$ current & $V$ voltage & $R$ resistance \\
 
 The direction variable encodes which direction things are moving in a situation. Comparing two temperatures will tell you the direction that heat will flow. Knowing the current in a wire tells you the direction and rate at which electrons in it are flowing. The fluid flux of water is a fancy word for how much total volume of water is flowing through a pipe, which again tells the direction of flow by being positive or negative. Finally momentum is strictly a vector quantity, meaning it has a direction.
 
-The drive variable encodes how strong things are being pushed in a situation. While temperature tells you which direction heat will flow, the heat flow rate must be known to be aware of how much heat actually ends up flowing. The current in a wire means nothing to an electrical device if it doesn't have the adequate voltage to push it through the device fully. A similar story exists for water, where the water flowing through a pipe is useless if there isn't enough pressure to push it out. In classical mechanics, momentum tells you the direction of movement while kinetic energy is a measure of how much punch something has, and both are needed to determine the final speeds and directions after a collision in zero gravity. 
+The drive variable encodes how strong things are being pushed in a situation. Think of the word "drive" as in a car's engine creates a "driving" force that pushes the car. While temperature tells you which direction heat will flow, the heat flow rate must be known to be aware of how much heat actually ends up flowing. The current in a wire means nothing to an electrical device if it doesn't have the adequate voltage to push it through the device fully. A similar story exists for water, where the water flowing through a pipe is useless if there isn't enough pressure to push it out. In classical mechanics, momentum tells you the direction of movement while kinetic energy is a measure of how much punch something has, and both are needed to determine the final speeds and directions after a collision in zero gravity. 
 
 More of these variables exist, for example all of fluid mechanics, thermodynamics, and electronics have an analogue for resistance, and both fluid mechanics and electronics have an analogue for power. However, none of these variables have a thesaurus entry that starts with d, meaning including them in the title would ruin the alliteration. Additionally, these variables tend to have a weak counterpart in one or more discipline, for example classical mechanics does not have a clean variable that mimics resistance. Thus including them would break the pretty symmetry in the table above. Finally, the title is the perfect length as-is. It follows anapestic meter, meaning it scores bonus points with poets. Its initialism is DnD, which is neat too.
 
 
 \subsection{Highlighting Emotions}
 
-The following are a few particular emotions that arise naturally from the nature of the problems presented. I recommend that the DM be able to explore many of the player's weaknesses through these. For example, at least one player should have one weakness that the DM can use fear to explore.
+The following are a few particular emotions that arise naturally from the nature of the problems presented. I recommend that the DM be able to explore many of the player's weaknesses through these. For example, at least one player should have one weakness that the DM can use fear to explore. Each system of the ship has a few recommended failures that highlight these specific emotions.
 
 \subsubsection{Fear} \label{fear}
 
@@ -235,11 +255,11 @@ When fixing things, building things, or playing games, it's easy to become frust
 
 \subsubsection{Isolation} \label{isolation}
 
-The word Isolation is misleading like fear was above. Isolation here refers not to long-term loneliness but to the players' current position. They are physically isolated from the Earth and any space stations nearby, meaning absolutely nobody is going to save them except for themselves. They are isolated from the vacuum around them, living mere inches away from an inhospitable wasteland. The players are living on the edge at every moment. While this type of emotion does not generate crazy roleplaying scenarios, it adds to the other emotions. Isolation will enhance the fear of a situation, since failing to fix it is exceedingly dangerous. Isolation will enhance anger, since the player knows that only they themselves are there to fix it, making every failure even more frustrating. 
+The word Isolation is misleading like fear was above. Isolation here refers not to long-term loneliness but to the players' current position. They are physically isolated from the Earth and any space stations nearby, meaning absolutely nobody is going to save them except for themselves. They are isolated from the vacuum around them, living mere inches away from an inhospitable wasteland. The players are living on the edge at every moment. While this type of emotion does not generate crazy roleplaying scenarios, it adds to the other emotions. Isolation will enhance the fear of a situation, since failing to fix something can be exceedingly dangerous. Isolation will enhance anger, since the player knows that only they themselves are there to fix it, making every failure even more frustrating. 
 
 \subsubsection{Duty} \label{duty}
 
-Finally, isolation will hopefully inspire a sense of Duty to the ship and crew. Since nobody else is there to save them, and problems can be dangerous for the entire ship, a single crew member will often have to step up and try to fix a dangerous situation despite terrifying odds. This could be called courage or bravery, but in this context is hopefully inspired by loyalty to the vessel.
+Finally, isolation will hopefully inspire a sense of Duty to the ship and crew. Since nobody else is there to save them, and problems can be dangerous for the entire ship, a single crew member will often have to step up and try to fix a dangerous situation despite terrifying odds. This could be called courage or bravery, but in this context is hopefully inspired by loyalty to the vessel, or at least a respect for the lives of your fellow crew.
 
 
 \newpage
@@ -251,32 +271,30 @@ Engineeers aboard a large ship spend their time in the hot engine decks by the r
 
 The following table contains all the different components of an engine. When the engine is hit by a damaging weapon, roll on the table to determine which component of the engine is actually going to be hit. When a component is hit, determine which type of damage the weapon does, then look up the component below the table and find that damage type listed beneath the component. That sentence will explain the most likely problems that arise because of that component taking that type of damage, so use this to continuously throw different random problems at the players. In general, more important components are located near the top, so for harder problems roll smaller dice or give yourself disadvantage on the roll.
 
-Four emotions are highlighted here. Under each emotion is listed a few hand-selected problems which enhance the emotion.
-
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item The churning of a turbine blade against its casing is a horrific, high-pitched wail which nobody enjoys hearing. See \textit{turbo} \ref{engine_turbo}, \textit{H$_2$O (l) Pump} \ref{engine_h2o_pump}, or \textit{O$_2$ (l) Pump} \ref{engine_o2_pump}.
+\item The churning of a turbine blade against its casing is a horrific, high-pitched wail which nobody enjoys hearing. See turbo \ref{engine_turbo}, H$_2$O (l) Pump \ref{engine_h2o_pump}, or O$_2$ (l) Pump \ref{engine_o2_pump}.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
 Anger
 \begin{itemize}
-\item The flame roaring from a pierced \textit{turbo} \ref{engine_turbo} or \textit{combustion chamber} \ref{engine_combustion}, or if a bludgeoning shot rips the seam open. 
+\item The flame roaring from a pierced turbo \ref{engine_turbo} or combustion chamber \ref{engine_combustion}, or if a bludgeoning shot rips the seam open. 
 \end{itemize}
 \end{minipage}
 
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item When one of the fuel liquids in \textit{H$_2$ (l) Storage} \ref{engine_h2_storage} or \textit{O$_2$ (l) Storage} \ref{engine_o2_storage} escapes, it will create a billowing gas. A DM could explore being lost amidst this gas, or use the tension of something it represents. Clouds of hydrogen represent the danger of fire, while clouds of oxygen represent a huge wave of coldness. 
+\item When one of the fuel liquids in H$_2$ (l) Storage \ref{engine_h2_storage} or O$_2$ (l) Storage \ref{engine_o2_storage} escapes, it will create a billowing gas. A DM could explore being lost amidst this gas, or use the tension of something it represents. Clouds of hydrogen represent the danger of fire, while clouds of oxygen represent a huge wave of coldness. 
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item When a severely cold liquid escapes, such as in \textit{H$_2$ (l) Storage} \ref{engine_h2_storage} or \textit{O$_2$ (l) Storage} \ref{engine_o2_storage}, the whole room will fill with white gas and it will become cold. A true crewman must fix this before things start freezing around him, and so must push directly into the smoke and cold to fix it.
+\item When a severely cold liquid escapes, such as in H$_2$ (l) Storage \ref{engine_h2_storage} or O$_2$ (l) Storage \ref{engine_o2_storage}, the whole room will fill with white gas and it will become cold. A true crewman must fix this before things start freezing around him, and so must push directly into the smoke and cold to fix it.
 \end{itemize}
 \end{minipage}
  
@@ -311,142 +329,147 @@ Duty
 Long-term spacefaring vessels require frequent refueling, meaning most ships elect to use water due to its frequency on planets and in the asteroid belt. Storing hydrogen gas for long periods of time is dangerous, and oxygen is similar, so fuel is stored as liquid water. The liquid water is constantly pumped into the hydrolysis chamber, which uses an electrical current to separate H$_2$O(l) into H$_2$(g) and O$_2$(g). These gases then liquefy in an adjacent condenser, to be stored and used as rocket fuel. Given that a rocket consumes fuel very quickly, this is the main limiting factor in the engine's output, even when the chamber is huge and has many layers of filaments. 
 
 Therefore the engine consists of a large chamber to hold water, a huge number of metal filaments, and escape vents for gas to filter out.
+\\ \pbhw
+{A small hole is punctured through the casing. \newline \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.}}
+{The casing is dented. \newline 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.}
+{Heats very slowly. \newline 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.}
+{Filaments must be regularly replaced. Container is subject to acids and oxidation.}
 
-\begin{enumerate}
-\item [\textit{P}] - A small hole is punctured through the casing. \newline 
-\hspace*{3pt} \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.} \\
-\item [\textit{B}] - The casing is dented. \newline \hspace*{3pt} 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.
-\item [\textit{H}] - Heats very slowly. \newline \hspace*{3pt} 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.
-\item [\textit{W}] - Filaments must be regularly replaced. Container is subject to acids and oxidation.
-\end{enumerate}
+
+%\begin{enumerate}[label=2cm]
+%{A small hole is punctured through the casing. \newline 
+%\qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.} \\
+%{The casing is dented. \newline 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.
+%{Heats very slowly. \newline 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.
+%{Filaments must be regularly replaced. Container is subject to acids and oxidation.
+%
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Turbo} \label{engine_turbo} \vspace{-0.2cm}
 Given that the engine must stop and let the hydrolysis chamber refuel every now and then, the fuel flow needs to be able to shut off and start up at will. A typical electric motor cannot push enough fuel for an engine to run at full capacity. Instead, a separate stream of rocket fuel is ignited, which then powers the set of main turbines. That is, a separate rocket "engine" is powering the turbines which push fuel into the rocket engine. 
 
 This contraption is called the turbo, which consists of a separate fuel intake powering a miniature combustion chamber, which pushes a drive shaft that connects to the main turbines.
-\begin{enumerate}
-\item [\textit{P}] - \qthree{A hole is pierced in the miniature combustion chamber. A small jet of flames escapes when fuel is flowing into the engine, and this fuel flow is slowed slightly.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ miniature turbine in the combustion chamber. Its structure is compromised. \newline \hspace*{-3pt} 1d4 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ main turbine. Its structure is compromised. \newline \hspace*{-3pt} 1d2 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.} 
-\item [\textit{B}] -  Complete stoppage of flow. Either the 1d2 miniature or main turbine grinds to a halt against its dented outer casing. This is either the 1d2 H$_2$ or O$_2$ turbine.
-\item [\textit{H}] - Turbine blade structure weakened. Heats up fuel flowing directly to the exhaust vent cooling system. \newline \hspace*{3pt} 1d4 = 1 Turbine blade structure compromised, fuel flow reduced to save it.
-\item [\textit{W}] - Turbines require oiling. Over time, exhaust water and oncoming O$_2$ erodes turbine blades. 
-\end{enumerate}
+\\ \pbhw
+{\qthree{A hole is pierced in the miniature combustion chamber. A small jet of flames escapes when fuel is flowing into the engine, and this fuel flow is slowed slightly.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ miniature turbine in the combustion chamber. Its structure is compromised. \newline 1d4 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.}{A hole is punctured in the blade of either the 1d2 H$_2$ or O$_2$ main turbine. Its structure is compromised. \newline 1d2 = 1 It shatters when used, and fuel flow is severely reduced until it can be rebalanced.}}
+{Complete stoppage of flow. Either the 1d2 miniature or main turbine grinds to a halt against its dented outer casing. This is either the 1d2 H$_2$ or O$_2$ turbine.}
+{Turbine blade structure weakened. Heats up fuel flowing directly to the exhaust vent cooling system. \newline 1d4 = 1 Turbine blade structure compromised, fuel flow reduced to save it.}
+{Turbines require oiling. Over time, exhaust water and oncoming O$_2$ erodes turbine blades. }
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Combustion Chamber} \label{engine_combustion} \vspace{-0.2cm}
 The turbo pumps an enormous amount of liquid oxygen and hydrogen fuel into this chamber, where it is lit, it combusts, and the exhaust escapes out the exhaust vent. 
-\begin{enumerate}
-\item [\textit{P}] - Hole pierced in chamber, allowing a huge jet of flame to escape when the engine is firing. Reduces output.
-\item [\textit{B}] - Shape of chamber changed, reducing flow and altering exhaust direction vector. \newline \hspace*{3pt} 1d4 = 1 Hit so hard that the shape of the output nozzle changes too, significantly limiting exhaust flow. 
-\item [\textit{H}] - Possible slight structural warping giving similar effects to bludgeoning damage. Otherwise designed to get hot.
-\item [\textit{W}] - Severe erosion at nozzle.
-\end{enumerate}
+\\ \pbhw
+{Hole pierced in chamber, allowing a huge jet of flame to escape when the engine is firing. Reduces output.}
+{Shape of chamber changed, reducing flow and altering exhaust direction vector. \newline 1d4 = 1 Hit so hard that the shape of the output nozzle changes too, significantly limiting exhaust flow. }
+{Possible slight structural warping giving similar effects to bludgeoning damage. Otherwise designed to get hot.}
+{Severe erosion at nozzle.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Exhaust Vent} \label{engine_exhaust} \vspace{-0.2cm}
 Exhaust from the combustion chamber flows out this vent and into space. The particular shape of the vent is designed to maximize the output of the engine. The vent gets very hot, so liquid oxygen fuel is pumped through an extensive array of cooling pipes that surround the vent. This liquid oxygen absorbs much of the heat, and then immediately explodes and flies off to space, taking the heat with it.
-\begin{enumerate}
-\item [\textit{P}] - A small hole is pierced through the plate shell of the vent, releasing a jet of hot steam out the side when firing. \newline \hspace*{-3pt} 1d4 = 1 A structural joint, bolt, or strut is punctured, compromising it. Doing full throttle will result in the structure warping.
-\item [\textit{B}] - Structure dented, changed exhaust vector. \newline \hspace*{3pt} 1d4 = 1 Structure compromised, so doing full throttle will result in the structure warping.
-\item [\textit{H}] - If coolant is flowing, the liquid oxygen can boil before it reaches the combustion chamber, noticeably reducing output. If coolant has stopped, the boiling oxygen will burst the pipes. Afterwards, the heat may begin to warp the engine.
-\item [\textit{W}] - Noticeable erosion inside the vent.
-\end{enumerate}
+\\ \pbhw
+{A small hole is pierced through the plate shell of the vent, releasing a jet of hot steam out the side when firing. \newline 1d4 = 1 A structural joint, bolt, or strut is punctured, compromising it. Doing full throttle will result in the structure warping.}
+{Structure dented, changed exhaust vector. \newline 1d4 = 1 Structure compromised, so doing full throttle will result in the structure warping.}
+{If coolant is flowing, the liquid oxygen can boil before it reaches the combustion chamber, noticeably reducing output. If coolant has stopped, the boiling oxygen will burst the pipes. Afterwards, the heat may begin to warp the engine.}
+{Noticeable erosion inside the vent.}
+
 
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Storage} \label{engine_h2o_storage} \vspace{-0.2cm} 
 Water is easy to store at room temperature and pressure. However, a zero-gravity ship makes this more complicated. No water tower can provide water pressure, and water in any container will slosh around and mix with the gas in the container. As a result, liquid storage vats contain inflatable bags that hold the liquid itself, while the atmosphere between the bag but still inside the container is pressurized to allow flow and generate water pressure as desired.
-\begin{enumerate}
-\item [\textit{P}] - The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline \vspace{-3pt} 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.
-\item [\textit{B}] - The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.
-\item [\textit{H}] - Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.
-\item [\textit{W}] - Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.
-\end{enumerate}
+\\ \pbhw
+{The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.}
+{The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.}
+{Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.}
+{Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{engine_h2o_pipe} \vspace{-0.2cm}
 It's a pipe with room-temperature, 1 atm pressure water flowing through it. 
-\begin{enumerate}
-\item [\textit{P}] - Water flows out.
-\item [\textit{B}] - Water flow is reduced.
-\item [\textit{H}] - Water absorbs heat easily, so little effect.
-\item [\textit{W}] - Water erodes things relatively quickly.
-\end{enumerate}
+\\ \pbhw
+{Water flows out.}
+{Water flow is reduced.}
+{Water absorbs heat easily, so little effect.}
+{Water erodes things relatively quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{engine_h2o_pump} \vspace{-0.2cm}
 A big fan inside of a pipe. Usually the blades are elongated like a screw.
-\begin{enumerate}
-\item [\textit{P}] - Blade structure weakened. 1d4 = 1 Blade shatters, reducing pump flow.
-\item [\textit{B}] - Turbine grinds to a halt. 1d4 out of 4 blades are damaged.
-\item [\textit{H}] - Blades expand, increasing friction. Blade structure weakens.
-\item [\textit{W}] - Requires oiling. 
-\end{enumerate}
+\\ \pbhw
+{Blade structure weakened. 1d4 = 1 Blade shatters, reducing pump flow.}
+{Turbine grinds to a halt. 1d4 out of 4 blades are damaged.}
+{Blades expand, increasing friction. Blade structure weakens.}
+{Requires oiling. }
+
 
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (l) Storage} \label{engine_h2_storage} \vspace{-0.2cm}
 Liquid hydrogen is terrifying to store. The liquid can spontaneously evaporate, particularly when jostled or flowing, and it's highly flammable if it hits an oxygen atmosphere. Only so much storage at a time is safe, making this another main limiting factor of the engine. There is no material flexible enough to expand and contract like a bag at such low temperatures, so it is kept in a container that is pressurized highly enough to ensure the majority of the hydrogen inside is liquid.
 
 Liquid hydrogen must be stored below 20 K to ensure no boiling occurs at room pressure \cite{international_temperature_scale_of_1968}. With a pressurized tank, some leniency is given. Expect pressures in the range of tens of atmospheres.
-\begin{enumerate}
-\item [\textit{P}] - The huge pressure of the container squirts out a jet of freezing-cold liquid hydrogen. The hydrogen spray would cover the room, immediately evaporating into hydrogen steam. Both the freezing temperature and the evaporation sap heat from the room, quickly making it cold. At the moment of evaporation, the hydrogen gas becomes highly flammable, and the slightest stray spark will completely combust the room, removing all available oxygen and roasting everything inside.
-\item [\textit{B}] - The tank is dented. A pressure wave flows throughout the tank. The pressure wave combines with the nucleation site of the dent, both making many bubbles where hydrogen is kicked into evaporating. The pressure wave and the additional pressure from the newly-created gas are likely to overload the opening valve of the tank. \newline \hspace*{-3pt} 1d2 = 1 The opening valve of the tank bursts, spraying liquid hydrogen throughout the room. The effects will be similar to piercing damage.
-\item [\textit{H}] - When liquid hydrogen is heated even slightly, many additional bubbles form from the spontaneous evaporation. \newline \hspace*{3pt} 1d2 = 1 The additional bubbles become enough to burst the opening valve of the tank. The effects will be similar to piercing damage.
-\item [\textit{W}] - Hydrogen is slightly corrosive, forming rare free radicals that have an acidic effect.
-\end{enumerate}
+\\ \pbhw
+{The huge pressure of the container squirts out a jet of freezing-cold liquid hydrogen. The hydrogen spray would cover the room, immediately evaporating into hydrogen steam. Both the freezing temperature and the evaporation sap heat from the room, quickly making it cold. At the moment of evaporation, the hydrogen gas becomes highly flammable, and the slightest stray spark will completely combust the room, removing all available oxygen and roasting everything inside.}
+{The tank is dented. A pressure wave flows throughout the tank. The pressure wave combines with the nucleation site of the dent, both making many bubbles where hydrogen is kicked into evaporating. The pressure wave and the additional pressure from the newly-created gas are likely to overload the opening valve of the tank. \newline 1d2 = 1 The opening valve of the tank bursts, spraying liquid hydrogen throughout the room. The effects will be similar to piercing damage.}
+{When liquid hydrogen is heated even slightly, many additional bubbles form from the spontaneous evaporation. \newline 1d2 = 1 The additional bubbles become enough to burst the opening valve of the tank. The effects will be similar to piercing damage.}
+{Hydrogen is slightly corrosive, forming rare free radicals that have an acidic effect.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (l) Pipe} \label{engine_h2_pipe} \vspace{-0.2cm}
 A highly-insulated strictly-static pipe through which liquid hydrogen flows.
-\begin{enumerate}
-\item [\textit{P}] - Liquid hydrogen spills into the room, resulting in smaller but similar effects as piercing damage in \textit{H$_2$ Storage} \ref{engine_h2_storage}.
-\item [\textit{B}] - Liquid flow slightly reduced.
-\item [\textit{H}] - Hydrogen gas bubbles form and pass the extra pressure on to the next component.
-\item [\textit{W}] - Hydrogen is slightly corrosive.
-\end{enumerate}
+\\ \pbhw
+{Liquid hydrogen spills into the room, resulting in smaller but similar effects as piercing damage in \textit{H$_2$ Storage} \ref{engine_h2_storage}.}
+{Liquid flow slightly reduced.}
+{Hydrogen gas bubbles form and pass the extra pressure on to the next component.}
+{Hydrogen is slightly corrosive.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Condenser} \label{engine_h2_condenser} \vspace{-0.2cm}
 The liquid hydrogen storage tank is pressurized to ensure its contents are liquid. This has the added benefit that the pressure naturally forces liquid hydrogen out of the container when it is opened, meaning no pump is required. This is helpful since a pump would jostle the liquid hydrogen too much. Still a powerful condenser is needed to put hydrogen into the tank. 
 
 This particular condenser is composed of a chamber which collects hydrogen. This chamber is then mechanically compressed with a piston, increasing the pressure until the hydrogen condenses. Once the pressure is higher than the pressure of the tank, the new liquid hydrogen will freely flow into the tank.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and hydrogen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.} \\
-\item [\textit{B}] - \qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.} \\
-\item [\textit{H}] - The dangerous part is the hydrogen absorbing the heat, which then is transferred directly into the hydrogen storage.
-\item [\textit{W}] - Pistons require lubrication and maintenance.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and hydrogen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.}}
+{\qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.}}
+{The dangerous part is the hydrogen absorbing the heat, which then is transferred directly into the hydrogen storage.}
+{Pistons require lubrication and maintenance.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Storage} \label{engine_o2_storage} \vspace{-0.2cm}
 The oxygen storage tank is similarly supercooled to around 60 K and pressurized to a handful of tens of atmospheres. Oxygen is slightly more forgiving, since it won't explode or spontaneously boil, though it's highly corrosive to the wrong materials.
-\begin{enumerate}
-\item [\textit{P}] - A stream of highly pressurized liquid oxygen at unbelievably cold temperatures streams outward and covers the room. The oxygen sucks heat out of the air both to warm itself up and to boil away, leaving everything a frost-covered mess. A high concentration of oxygen in the room allows for many more things to burn than normal, and at even lower temperatures, making the risk of fires high.
-\item [\textit{B}] - The tank is dented, sending a sudden pressure wave to the output valve. \newline \hspace*{3pt} 1d4 = 1 The pressure is enough to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.
-\item [\textit{H}] - Liquid oxygen will boil if its temperature gets too high, though not as sensitively as hydrogen. \newline \hspace*{3pt} 1d4 = 1 The boiling creates enough additional pressure to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.
-\item [\textit{W}] - Oxygen corrodes the wrong materials, though the tank is designed to avoid that. 
-\end{enumerate}
+\\ \pbhw
+{A stream of highly pressurized liquid oxygen at unbelievably cold temperatures streams outward and covers the room. The oxygen sucks heat out of the air both to warm itself up and to boil away, leaving everything a frost-covered mess. A high concentration of oxygen in the room allows for many more things to burn than normal, and at even lower temperatures, making the risk of fires high.}
+{The tank is dented, sending a sudden pressure wave to the output valve. \newline 1d4 = 1 The pressure is enough to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.}
+{Liquid oxygen will boil if its temperature gets too high, though not as sensitively as hydrogen. \newline 1d4 = 1 The boiling creates enough additional pressure to burst the output valve, and oxygen floods out. The effects will be similar to piercing damage.}
+{Oxygen corrodes the wrong materials, though the tank is designed to avoid that. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Pipe} \label{engine_o2_pipe} \vspace{-0.2cm}
 This pipe carries liquid oxygen from place to place. 
-\begin{enumerate}
-\item [\textit{P}] - Liquid oxygen leaks out. Use a less dangerous version of the piercing damage section of \textit{O$_2$(l) Storage} \ref{engine_o2_storage}
-\item [\textit{B}] - Limits liquid flow rate.
-\item [\textit{H}] - Transfers heat to downstream component.
-\item [\textit{W}] - Designed to withstand oxygen corrosion.
-\end{enumerate}
+\\ \pbhw
+{Liquid oxygen leaks out. Use a less dangerous version of the piercing damage section of \textit{O$_2$(l) Storage} \ref{engine_o2_storage}}
+{Limits liquid flow rate.}
+{Transfers heat to downstream component.}
+{Designed to withstand oxygen corrosion.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Cooling Pipes} \label{engine_o2_cooling} \vspace{-0.2cm}
 Since oxygen has a decent specific heat capacity, these pipes wrap around the exhaust vent several times. Otherwise these pipes are identical to the above O$_2$(l) pipes.
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (l) Pump} \label{engine_o2_pump} \vspace{-0.2cm}
 While a decent flow comes out of the liquid oxygen storage tank due to the pressurization of the liquid, it's not enough to push the liquid around the exhaust vent several times. An additional liquid pump is required, which is simply a small turbine that pushes the liquid through it.
-\begin{enumerate}
-\item [\textit{P}] - A turbine blade has a hole punched through it, compromising its structure. \newline \hspace*{3pt} 1d4 = 1 It shatters when used, stopping its addition to the flow until it can be rebalanced.s
-\item [\textit{B}] - The turbine grinds to a halt. 1d4 of the 4 turbine blades are damaged.
-\item [\textit{H}] - Heating here will transfer to the exhaust vent.
-\item [\textit{W}] - Designed to withstand oxygen corrosion.
-\end{enumerate}
+\\ \pbhw
+{A turbine blade has a hole punched through it, compromising its structure. \newline 1d4 = 1 It shatters when used, stopping its addition to the flow until it can be rebalanced.}
+{The turbine grinds to a halt. 1d4 of the 4 turbine blades are damaged.}
+{Heating here will transfer to the exhaust vent.}
+{Designed to withstand oxygen corrosion.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Condenser} \label{engine_o2_condenser} \vspace{-0.2cm}
 An oxygen condenser is similar to a hydrogen condenser except that it's significantly safer.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and oxygen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.} \\
-\item [\textit{B}] - \qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.} \\
-\item [\textit{H}] - Oxygen will absorb the heat readily, though it will heat up relatively slowly, and this will be transferred into the oxygen storage.
-\item [\textit{W}] - Pistons require lubrication and maintenance.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{A hole is pierced behind the piston head, which is harmless as long as the piston stays ahead of it.}{A hole is pierced in front of the piston head, and oxygen gas will begin to escape. The escapage is especially rapid if the piston is compressing the gas.}}
+{\qtwo{A dent is placed behind the piston, stopping it from being able to retract fully.}{A dent is placed in front of the piston, stopping it from being able to compress fully.}}
+{Oxygen will absorb the heat readily, though it will heat up relatively slowly, and this will be transferred into the oxygen storage.}
+{Pistons require lubrication and maintenance.}
+
 
 \subsection{Thermal} \label{thermal}
 
@@ -460,26 +483,26 @@ If the radiator or nitrogen circuit stops, heat will continue being transferred 
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item If a single hole were poked into the \textit{Radiator} \ref{thermal_radiator}, or if a bludgeoning attack tears a crack in it, a laser beam of heat would escape. This beam would be raging hot, something that nobody should touch, nobody should see. The belly of the beast is a raw and powerful thing.
+\item If a single hole were poked into the radiator \ref{thermal_radiator}, or if a bludgeoning attack tears a crack in it, a laser beam of heat would escape. This beam would be raging hot, something that nobody should touch, nobody should see. The belly of the beast is a raw and powerful thing.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
 Anger
 \begin{itemize}
-\item Heat is often synonymous with anger. If a player is getting particularly angry, consider having the thermal pipes that carry water to their system \textit{H$_2$O (l) Pipe} \ref{thermal_h2o_pipe} burst. This way their machine will become hot to be around, hot to the touch, and further problems may arise. 
+\item Heat is often synonymous with anger. If a player is getting particularly angry, consider having the thermal pipes that carry water to their system H$_2$O (l) Pipe \ref{thermal_h2o_pipe} burst. This way their machine will become hot to be around, hot to the touch, and further problems may arise. 
 \end{itemize}
 \end{minipage}
 
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item Something small and insignificant stops working, like a \textit{compressor} \ref{thermal_compressor}. Perhaps even a simple fix. However, for a brief moment, the radiator must stop running, and heat must build up. The ship is only one tiny malfunction away from the radiator completely stopping, and the ship would boil alive. The only line of defense that the ship has is the player.
+\item Something small and insignificant stops working, like a compressor \ref{thermal_compressor}. Perhaps even a simple fix. However, for a brief moment, the radiator must stop running, and heat must build up. The ship is only one tiny malfunction away from the radiator completely stopping, and the ship would boil alive. The only line of defense that the ship has is the player.
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item When a \textit{Radiator} \ref{thermal_radiator} breaks open, the air around it becomes singed with heat and plasma, and the walls of the room facing the opening grow red hot. If more heat keeps spilling into the room, it will overheat the enginery and overload the atmosphere's climate control. The lone player must venture directly toward the radiator, into the blazing heat and sizzling air, and have the courage to place something over the breakage to stop it.
+\item When a radiator \ref{thermal_radiator} breaks open, the air around it becomes singed with heat and plasma, and the walls of the room facing the opening grow red hot. If more heat keeps spilling into the room, it will overheat the enginery and overload the atmosphere's climate control. The lone player must venture directly toward the radiator, into the blazing heat and sizzling air, and have the courage to place something over the breakage to stop it.
 \end{itemize}
 \end{minipage}
 
@@ -507,71 +530,72 @@ Duty
 The radiator is the component that actually sends heat flying away. All objects constantly release some energy in the form of light as a result of their temperature. Hotter objects like the sun release more energy as light. Larger objects also release more energy, which is why the ISS is equipped with huge arrays of white panel radiators.
 
 Aboard a combat vessel, a ship's radiator should be as small as possible to avoid being damaged. As a result, high-temperature radiators are used. These radiators dump waste heat into an extremely hot metal filament. The insane temperature of the filament means that it will radiate heat much more quickly. The waste heat therefore escapes out the radiator and is reflected into a thin cone pointed in a single direction.
-\begin{enumerate}
-\item [\textit{P}] - A hole is pierced through the casing of the radiator. The heat from the radiator escapes through this hole. The air begins to noticeably warm, and wherever the beam of heat is shining becomes red-hot quickly. \newline \hspace*{-3pt} 1d4 = 1 The shot pierces through the filament as well. Sudden kicks to the ship or full-throttle acceleration may cause the filament to snap. If it snaps, the tip of the filament will touch the casing at a single point, beginning to melt it.
-\item [\textit{B}] - The casing of the radiator is dented, altering its outflow direction slightly. \newline \hspace*{3pt} 1d2 = 1 The denting is enough to touch the filament. The casing at that point immediately becomes red hot and will quickly melt.
-\item [\textit{H}] - The radiator is designed to get stupidly hot.
-\item [\textit{W}] - The filament needs to be changed regularly. 
-\end{enumerate}
+\\ \pbhw
+{A hole is pierced through the casing of the radiator. The heat from the radiator escapes through this hole. The air begins to noticeably warm, and wherever the beam of heat is shining becomes red-hot quickly. \newline 1d4 = 1 The shot pierces through the filament as well. Sudden kicks to the ship or full-throttle acceleration may cause the filament to snap. If it snaps, the tip of the filament will touch the casing at a single point, beginning to melt it.}
+{The casing of the radiator is dented, altering its outflow direction slightly. \newline 1d2 = 1 The denting is enough to touch the filament. The casing at that point immediately becomes red hot and will quickly melt.}
+{The radiator is designed to get stupidly hot.}
+{The filament needs to be changed regularly.} 
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Compressor} \label{thermal_compressor} \vspace{-0.2cm}
 Just before nitrogen enters the radiator to transfer its heat to the filament, the nitrogen must become hotter than the filament. This work is done by a compressor, squeezing the gas by so much that its temperature rises significantly. Once it has transferred its heat, a decompresser just after the nitrogen leaves the radiator will return it to normal pressure levels.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{The piercing shot hits the compressor while nitrogen is still highly pressurized. A stream of piping-hot nitrogen shoots out of the pipage.}{The piercing shot hits the while nitrogen is depressurized. A small leakage of nitrogen gas escapes.} \\
-\item [\textit{B}] - \qtwo{The dent prevents the compressor from fully compressing the gas.}{The dent prevents the compressor from fully entering the decompressed state.} \\
-\item [\textit{H}] - The nitrogen takes the heat and dumps it directly into the radiator.
-\item [\textit{W}] - Compressors require oiling and are subject to mechanical erosion.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{The piercing shot hits the compressor while nitrogen is still highly pressurized. A stream of piping-hot nitrogen shoots out of the pipage.}{The piercing shot hits the while nitrogen is depressurized. A small leakage of nitrogen gas escapes.}}
+{\qtwo{The dent prevents the compressor from fully compressing the gas.}{The dent prevents the compressor from fully entering the decompressed state.}}
+{The nitrogen takes the heat and dumps it directly into the radiator.}
+{Compressors require oiling and are subject to mechanical erosion.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heat Exchanger} \label{thermal_exchanger} \vspace{-0.2cm}
 The thermal system on large ships is split into two separate circuits: the main H$_2$O (l) circuit which cools the majority of systems, and the secondary N$_2$ (g) circuit which cools the very cold systems and heats the very hot ones. Between these two systems is an interface called the heat exchanger. This exchanger keeps the two liquids separate, but separates them by a material that allows heat to pass easily. This means that the waste heat in the water circuit can be constantly passed to the nitrogen circuit in order to release it out the radiator.
 
 The exchanger separates water and nitrogen into large sheets and lets them flow down either side of a large boundary. Several layers of sheets are included to increase the total heat flow rate.
-\begin{enumerate}
-\item [\textit{P}] - Flip two coins. \newline \hspace*{3pt} \qtwo{The shot misses any water tube.}{The shot hits a water tube, and lukewarm water sprays out.} \\ \hspace*{3pt} \qtwo{The shot misses any nitrogen tube.}{The shot hits a nitrogen tube, releasing it.} \\
-\item [\textit{B}] - The dent will certainly cause flow to slow somewhere. However, there are so many different tubes and panels that it will go mostly unnoticed.
-\item [\textit{H}] - The exchanger will dump heat into the nitrogen.
-\item [\textit{W}] - The exchanger is subject to erosion on both sides across a huge surface area. Layers require frequent cleaning and replacing.
-\end{enumerate}
+\\ \pbhw
+{\qeq{1d4}{1.}{The shot hits both a water tube and a nitrogen tube, releasing both a stream of water and a cloud of gas.}{2.}{The shot hits a nitrogen tube, releasing nitrogen gas into the atmosphere.}{3.}{The shot hits a water tube, and lukewarm water sprays out.}{4.}{The shot misses everything.}}
+%{Flip two coins. \newline \qtwo{The shot misses any water tube.}{The shot hits a water tube, and lukewarm water sprays out.}  \qtwo{The shot misses any nitrogen tube.}{The shot hits a nitrogen tube, releasing it.}}
+{The dent will certainly cause flow to slow somewhere. However, there are so many different tubes and panels that it will go mostly unnoticed.}
+{The exchanger will dump heat into the nitrogen.}
+{The exchanger is subject to erosion on both sides across a huge surface area. Layers require frequent cleaning and replacing.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heat Sink} \label{thermal_sink} \vspace{-0.2cm}
 When the radiator needs repairs, or when too much heat is entering the ship for the radiator to handle, the extra heat can be dumped into a heat sink. In the majority of cases this heat sink is the engine's water fuel tank, since water has an impressive specific heat capacity and a lot of water is carried in the tank. For problems with this tank, see \textit{H$_2$O (l) Storage} \ref{engine_h2o_storage}. When nearly empty, certain metal parts of the hull can also absorb much heat. 
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{thermal_h2o_pipe} \vspace{-0.2cm}
 It carries water. Amazing.
-\begin{enumerate}
-\item [\textit{P}] - Water spills out.
-\item [\textit{B}] - Water flow is slowed.
-\item [\textit{H}] - The water carries heat to the heat exchanger.
-\item [\textit{W}] - Water erodes pipes relatively quickly compared to other liquids.
-\end{enumerate}
+\\ \pbhw
+{Water spills out.}
+{Water flow is slowed.}
+{The water carries heat to the heat exchanger.}
+{Water erodes pipes relatively quickly compared to other liquids.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{thermal_h2o_pump} \vspace{-0.2cm}
 A water pump is a big wet fan.
-\begin{enumerate}
-\item [\textit{P}] - The structure of a fan blade becomes compromised. \newline \hspace*{3pt} 1d4 = 1 The blade shatters, severely slowing flow until it can be rebalanced.
-\item [\textit{B}] - The fan grinds to a halt. A total of 1d4 out of the 8 blades are damaged.
-\item [\textit{H}] - The fan is cooled by the water around it.
-\item [\textit{W}] - Water erodes fans quickly.
-\end{enumerate}
+\\ \pbhw
+{The structure of a fan blade becomes compromised. \newline 1d4 = 1 The blade shatters, severely slowing flow until it can be rebalanced.}
+{The fan grinds to a halt. A total of 1d4 out of the 8 blades are damaged.}
+{The fan is cooled by the water around it.}
+{Water erodes fans quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (g) Pipe} \label{thermal_n2_pipe} \vspace{-0.2cm}
 A pipe that holds nitrogen. When these pipes carry nitrogen to a system that requires extreme cooling, the nitrogen passes through a condenser first to be turned into a liquid. This allows it to reach temperatures far lower than as a gas. Afterwards it is turned back into a gas via an evaporator and the nitrogen rejoins the gas circuit.
-\begin{enumerate}
-\item [\textit{P}] - Nitrogen gas spills out.  
-\item [\textit{B}] - The flow of nitrogen gas is limited slightly.
-\item [\textit{H}] - The nitrogen delivers its heat directly to the radiator. If the nitrogen is in liquid form, extra heat may cause some to boil. This is not dangerous in small quantities, since the evaporator handles gases just fine. In large quantities, bursting may occur from the unexpected pressure increase.
-\item [\textit{W}] - Little wear or tear.
-\end{enumerate}
+\\ \pbhw
+{Nitrogen gas spills out.  }
+{The flow of nitrogen gas is limited slightly.}
+{The nitrogen delivers its heat directly to the radiator. If the nitrogen is in liquid form, extra heat may cause some to boil. This is not dangerous in small quantities, since the evaporator handles gases just fine. In large quantities, bursting may occur from the unexpected pressure increase.}
+{Little wear or tear.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (g) Pump} \label{thermal_n2_pump} \vspace{-0.2cm}
 A pump that pushes gaseous nitrogen through its circuit. It is literally just a fan.
-\begin{enumerate}
-\item [\textit{P}] - One of the blades is punctured. \newline \hspace*{3pt} 1d4 = 1 The blade shatters on use, severely slowing nitrogen flow until it can be rebalanced.
-\item [\textit{B}] - The blades grind to a halt against their casing. A total of 1d4 out of 4 of the blades are damaged.
-\item [\textit{H}] - The pump is cooled by the nitrogen.
-\item [\textit{W}] - Little wear or tear.
-\end{enumerate}
+\\ \pbhw
+{One of the blades is punctured. \newline 1d4 = 1 The blade shatters on use, severely slowing nitrogen flow until it can be rebalanced.}
+{The blades grind to a halt against their casing. A total of 1d4 out of 4 of the blades are damaged.}
+{The pump is cooled by the nitrogen.}
+{Little wear or tear.}
+
 
 
 \subsection{Railgun} \label{railgun}
@@ -582,7 +606,7 @@ A railgun is composed of two parallel metal rails with a round of ammunition, a 
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item The railgun can get messy. Consider first having the \textit{Ammunition Supply} \ref{railgun_ammunition} get bludgeoned so that the room is covered with floating metal cubes getting in the way of everything. Also make sure to emphasize the sound of the railgun itself as it fires: the scrape of metal on metal, the hiss of gases and water sizzling, and the hum of pumps and pistons resetting the gun.
+\item The railgun can get messy. Consider first having the ammunition supply \ref{railgun_ammunition} get bludgeoned so that the room is covered with floating metal cubes getting in the way of everything. Also make sure to emphasize the sound of the railgun itself as it fires: the scrape of metal on metal, the hiss of gases and water sizzling, and the hum of pumps and pistons resetting the gun.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
@@ -595,13 +619,13 @@ Anger
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item Gazing through the \textit{Cameras} \ref{railgun_cameras} shows complete darkness most of the time, and otherwise only shows the smallest red blip of another ship. The gunner has the closest connection to space outside, so make sure there's a window nearby. Occasionally describe their shots disappearing into the void when they miss.
+\item Gazing through the cameras \ref{railgun_cameras} shows complete darkness most of the time, and otherwise only shows the smallest red blip of another ship. The gunner has the closest connection to space outside, so make sure there's a window nearby. Occasionally describe their shots disappearing into the void when they miss.
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item A railgun that's lost its \textit{Cameras} \ref{railgun_cameras} or its computer system can still be aimed and fired manually. Perhaps a player must fire the last critical shot at an enemy by hand. 
+\item A railgun that's lost its cameras \ref{railgun_cameras} or its computer system can still be aimed and fired manually. Perhaps a player must fire the last critical shot at an enemy by hand. 
 \end{itemize}
 \end{minipage}
 
@@ -627,85 +651,84 @@ Duty
 
 \hspace{-18pt} \subsubsection{Rails} \label{railgun_rails} \vspace{-0.2cm}
 Two long metal rails are precisely engineered to be smooth and an exact distance away from each other, so that they fit rounds of ammunition snugly. Unfortunately no matter the smoothness, the railgun still loses much energy to friction and to the partial deformation of the rails. The friction generates huge amounts of heat, so a railgun can only fire one shot before requiring cooling. It is cooled by sealing the railgun with exterior flaps, pumping the chamber full of atmosphere and then spraying the rails with water via sprinklers, which evaporates and sucks heat away.  
-\begin{enumerate}
-\item [\textit{P}] - The structure of one of the rails is compromised. The outer casing is pierced, so a small amount of atmosphere and water escapes each cooling cycle. 
-\newline \hspace{-3pt} The next time the railgun is fired, the railgun shot will warp the rail enough to break the flow of current between them, weakening the shot until the rail is changed. A rapid change from hot to cold or vice-versa via the heating system could also cause such a significant warpage.
-\item [\textit{B}] - The outer casing of the railgun is hugely dented, and the rail took the brunt of the rest of the hit. It is deformed enough to break the flow of current halfway through the shot, weakening the shot and making it much less accurate until the rail is changed.
-\item [\textit{H}] - Heating will weaken the metal just like firing a shot.
-\item [\textit{W}] - The frequent heating and cooling of the rails weakens the metal and can contribute to developing cracks, and the flak scrapes metal away as it is fired and this can deform the rails further. This means that rails need to be frequently changed out even under optimal conditions.
-\end{enumerate}
+\\ \pbhw
+{The structure of one of the rails is compromised. The outer casing is pierced, so a small amount of atmosphere and water escapes each cooling cycle. \newline \hspace{-3pt} The next time the railgun is fired, the railgun shot will warp the rail enough to break the flow of current between them, weakening the shot until the rail is changed. A rapid change from hot to cold or vice-versa via the heating system could also cause such a significant warpage.}
+{The outer casing of the railgun is hugely dented, and the rail took the brunt of the rest of the hit. It is deformed enough to break the flow of current halfway through the shot, weakening the shot and making it much less accurate until the rail is changed.}
+{Heating will weaken the metal just like firing a shot.}
+{The frequent heating and cooling of the rails weakens the metal and can contribute to developing cracks, and the flak scrapes metal away as it is fired and this can deform the rails further. This means that rails need to be frequently changed out even under optimal conditions.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Reloader} \label{railgun_reloader} \vspace{-0.2cm}
 The railgun fires several shots at a time, cooling between each one, before returning to upright position to reload. The reloading mechanism is a simple piston which pushes a chunk of cubical metal slugs into the railgun, while maintaining a seal. This device is typically broken when directly being used, so when the piston is expanding and retracting.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{The piston arm or head is pierced, weakening it though not noticeably.}{The piston's pneumatics are pierced, releasing water and immediately shrinking the bottom of the piston arm down to the level of the hole.} \\
-\item [\textit{B}] - \qtwo{The piston arm is dented, and will not push straight nor far enough.}{The pneumatic cylinder is dented, preventing the bottom of the piston arm from dropping lower than the dent.} \\
-\item [\textit{H}] - The piston head is a relatively small piece of metal, meaning it can heat up quickly.
-\item [\textit{W}] - Pistons require lubrication and occasional maintenance.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{The piston arm or head is pierced, weakening it though not noticeably.}{The piston's pneumatics are pierced, releasing water and immediately shrinking the bottom of the piston arm down to the level of the hole.}}
+{\qtwo{The piston arm is dented, and will not push straight nor far enough.}{The pneumatic cylinder is dented, preventing the bottom of the piston arm from dropping lower than the dent.}}
+{The piston head is a relatively small piece of metal, meaning it can heat up quickly.}
+{Pistons require lubrication and occasional maintenance.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hatch} \label{railgun_hatch} \vspace{-0.2cm}
 The entire railgun arms are enclosed in a cylindrical casing. At the muzzle, a hatch opens so that the railgun can fire into the vacuum of space. 
-\begin{enumerate}
-\item [\textit{P}] - Some water and atmosphere escape when cooling the railgun.
-\item [\textit{B}] - \qtwo{The hatch is stuck open.}{The hatch is stuck closed.} \\
-\item [\textit{H}] - The hatch becomes much easier to push open from the inside.
-\item [\textit{W}] - The hatch requires lubrication and decays under stellar radiation.
-\end{enumerate}
+\\ \pbhw
+{Some water and atmosphere escape when cooling the railgun.}
+{\qtwo{The hatch is stuck open.}{The hatch is stuck closed.}}
+{The hatch becomes much easier to push open from the inside.}
+{The hatch requires lubrication and decays under stellar radiation.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Cameras} \label{railgun_cameras} \vspace{-0.2cm}
 A railgun is equipped with several thermal cameras which track the locations of enemy ships so that targeting computers can properly aim the railguns. There are at least two cameras per railgun in order to help estimate distances.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.} \\
-\item [\textit{B}] - One of the cameras is smashed to pieces.
-\item [\textit{H}] - The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.
-\item [\textit{W}] - Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.}}
+{One of the cameras is smashed to pieces.}
+{The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.}
+{Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ammunition Supply} \label{railgun_ammunition} \vspace{-0.2cm}
 Somewhere next to the railgun a huge pile of ammunition is stored. This is just a cube of stacked metal slugs, where each slug is a cube as well, with a piston to push slugs into reloading position.
-\begin{enumerate}
-\item [\textit{P}] - A total of 1d4 slugs now have a hole in them.
-\item [\textit{B}] - A total of 1d4 slugs are smashed into unusable shape and another 1d12 slugs go flying off into the room.
-\item [\textit{H}] - The metal slugs can absorb a ton of heat.
-\item [\textit{W}] - Slugs need to have precisely manufactured dimensions in order to fit between the perfect distance between the rails. Deforming them in any way will most of the time make them unusable.
-\end{enumerate}
+\\ \pbhw
+{A total of 1d4 slugs now have a hole in them.}
+{A total of 1d4 slugs are smashed into unusable shape and another 1d12 slugs go flying off into the room.}
+{The metal slugs can absorb a ton of heat.}
+{Slugs need to have precisely manufactured dimensions in order to fit between the perfect distance between the rails. Deforming them in any way will most of the time make them unusable.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (g) Condenser} \label{railgun_h2o_condenser} \vspace{-0.2cm}
 Spraying water into the railgun chamber utilizes the huge amount of latent heat required to turn water from liquid into steam. The steam is vented out by a steam pump, and needs to be recovered. Thermal pipes curl around several times to provide ample surface area for water to condense, drip, and be collected for spraying again.
-\begin{enumerate}
-\item [\textit{P}] - Some steam escapes. \newline \hspace*{3pt} 1d2 = 1 A thermal pipe is also pierced. Additional water flows into the condenser until it can be plugged.
-\item [\textit{B}] - The condenser chamber is dented. \newline \hspace*{3pt} 1d4 = 1 The denting is enough to break a seal somewhere, and steam escapes.
-\item [\textit{H}] - If this component ends up collecting extra heat, it will increase the temperature difference between steam and thermal pipe and therefore will increase the heat flow rate into from the steam into the pipe. Thus the steam will condense even faster.
-\item [\textit{W}] - Water will corrode both sides of the thermal pipes, making them subject to annual replacement.
-\end{enumerate}
+\\ \pbhw
+{Some steam escapes. \newline 1d2 = 1 A thermal pipe is also pierced. Additional water flows into the condenser until it can be plugged.}
+{The condenser chamber is dented. \newline 1d4 = 1 The denting is enough to break a seal somewhere, and steam escapes.}
+{If this component ends up collecting extra heat, it will increase the temperature difference between steam and thermal pipe and therefore will increase the heat flow rate into from the steam into the pipe. Thus the steam will condense even faster.}
+{Water will corrode both sides of the thermal pipes, making them subject to annual replacement.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (g) Pump} \label{railgun_h2o_g_pump} \vspace{-0.2cm}
 It's a big fan.
-\begin{enumerate}
-\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
-\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
-\item [\textit{H}] - The turbine will transfer heat to the steam. 
-\item [\textit{W}] - The turbine erodes moderately quickly due to the steam.
-\end{enumerate}
+\\ \pbhw
+{One of the turbine blades has a hole pierced through it. \newline 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. }
+{The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.}
+{The turbine will transfer heat to the steam. }
+{The turbine erodes moderately quickly due to the steam.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{railgun_h2o_pipe} \vspace{-0.2cm}
 It's a pipe that carries water.
-\begin{enumerate}
-\item [\textit{P}] - Water spills out.
-\item [\textit{B}] - Limits water flow slightly.
-\item [\textit{H}] - Transfers heat to the railgun when sprayed on it.
-\item [\textit{W}] - Water wears pipes decently quickly.
-\end{enumerate}
+\\ \pbhw
+{Water spills out.}
+{Limits water flow slightly.}
+{Transfers heat to the railgun when sprayed on it.}
+{Water wears pipes decently quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{railgun_h2o_l_pump} \vspace{-0.2cm}
 It's literally just a big wet fan.
-\begin{enumerate}
-\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
-\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
-\item [\textit{H}] - The turbine will transfer heat to the water. 
-\item [\textit{W}] - The turbine erodes quickly from the water.
-\end{enumerate}
+\\ \pbhw
+{One of the turbine blades has a hole pierced through it. \newline 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. }
+{The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.}
+{The turbine will transfer heat to the water.} 
+{The turbine erodes quickly from the water.}
+
 
 \subsection{Ray Accelerator} \label{ray}
 
@@ -756,61 +779,61 @@ Duty
 
 \hspace{-18pt} \subsubsection{Vacuum Chamber} \label{ray_chamber} \vspace{-0.2cm}
 The gaseous material needs to be accelerated to incredible speeds in order for such otherwise weak gases to deal damage. This simply is not possible in an atmosphere, since air resistance will completely destroy such small quantities of gas. Therefore the donut in which the gas is accelerated has a near-perfect vacuum maintained in it.
-\begin{enumerate}
-\item [\textit{P}] - The vacuum quickly weakens to unacceptable levels and the gas becomes unable to accelerate.
-\item [\textit{B}] - The chamber is dented. \newline \hspace*{3pt} 1d2 = 1. The dent is enough to break the vacuum seal, quickly destroying the vacuum. \newline \hspace*{3pt} 1d2 = 1. The dent is enough to get in the way of the beam of gas as it accelerates, meaning the ray cannot fire until this dent is undone.
-\item [\textit{H}] - The metal walls of the chamber can store a decent amount of heat, though they do not get rid of it very quickly.
-\item [\textit{W}] - A vacuum is never perfect and the seal weakens over time. 
-\end{enumerate}
+\\ \pbhw
+{The vacuum quickly weakens to unacceptable levels and the gas becomes unable to accelerate.}
+{The chamber is dented. \newline 1d2 = 1. The dent is enough to break the vacuum seal, quickly destroying the vacuum. \newline 1d2 = 1. The dent is enough to get in the way of the beam of gas as it accelerates, meaning the ray cannot fire until this dent is undone.}
+{The metal walls of the chamber can store a decent amount of heat, though they do not get rid of it very quickly.}
+{A vacuum is never perfect and the seal weakens over time. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ionization Chamber} \label{ray_ionization} \vspace{-0.2cm}
 Only charged particles are affected by electric and magnetic field, meaning the gas needs to be ionized before use. A shot's worth of gas is sprayed into the ionization chamber, where it is bombarded with electrons until electrons are knocked off. Like the acceleration chamber, this chamber must be at a vacuum as well.
-\begin{enumerate}
-\item [\textit{P}] - The vacuum is destroyed, xenon gas leaks out, and stray electrons can leak out.
-\item [\textit{B}] - The chamber is dented. \newline \hspace*{3pt} The dent is enough to break the seal, destroying the vacuum.
-\item [\textit{H}] - The chamber walls will heat up and stay hot.
-\item [\textit{W}] - Vacuum seal weakens over time. Inside walls become damaged by ions and bombardment.
-\end{enumerate}
+\\ \pbhw
+{The vacuum is destroyed, xenon gas leaks out, and stray electrons can leak out.}
+{The chamber is dented. \newline 1d2 = 1. The dent is enough to break the seal, destroying the vacuum.}
+{The chamber walls will heat up and stay hot.}
+{Vacuum seal weakens over time. Inside walls become damaged by ions and bombardment.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Electric Field Accelerator} \label{ray_accelerator} \vspace{-0.2cm}
 Each time that the gas goes around in a circle inside the main vacuum chamber, it passes the accelerator. This device generates a strong electric field that will accelerate charged particles that pass through it in the proper direction. If it circles enough times, its velocity will eventually be so large that the gas can pierce nearly anything.
 
 This particular design of electric field uses an electromagnet wrapped around a single slice of the main vacuum chamber. Energy is dumped rapidly into the magnet coil, and the rapid rise in a magnetic field can generate a strong electric field as well. As long as the timings for when the particles arrive at the accelerator and when the magnetic field is increasing or decreasing are matched up, this can accelerate particles to huge velocities.
-\begin{enumerate}
-\item [\textit{P}] - The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline \hspace*{3pt} 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.
-\item [\textit{B}] - The electromagnet is bent out of shape, altering the precise direction that it accelerates the particles in the main chamber. As a result the beam of particles will eventually hit the wall, and the weapon cannot accelerate its shot to proper speed.
-\item [\textit{H}] - The wiring will warp and can come in contact with the vacuum chamber. Even slight warping will alter the direction of acceleration, scattering the beam far before it can fire every time it is shot.
-\item [\textit{W}] - Such swings in current will wear even a strong wire decently quickly.
-\end{enumerate}
+\\ \pbhw
+{The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.}
+{The electromagnet is bent out of shape, altering the precise direction that it accelerates the particles in the main chamber. As a result the beam of particles will eventually hit the wall, and the weapon cannot accelerate its shot to proper speed.}
+{The wiring will warp and can come in contact with the vacuum chamber. Even slight warping will alter the direction of acceleration, scattering the beam far before it can fire every time it is shot.}
+{Such swings in current will wear even a strong wire decently quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Magnetic Field Containment} \label{ray_containment} \vspace{-0.2cm}
 The particles inside the vacuum chamber need some force that keeps them spinning in a circle. This force is conveniently supplied just by placing strong magnets above and below. The faster the particle is moving, the stronger the magnetic field needs to be, so its power increases over time as a shot is fired.
 
 The magnetic field needs to begin at near zero and end at a huge strength. Such huge changes are possible with only electromagnets. This magnetic coil will be larger and more densely packed than the electric field generator coil. 
-\begin{enumerate}
-\item [\textit{P}] - One of the wires is nicked, stopping ample current from flowing until it is patched.
-\item [\textit{B}] - The coil is knocked out of shape, altering the direction of the magnetic field it creates. This will change the exact orbit of the gas in the accelerator when it fires. \newline \hspace*{-3pt} 1d2 = 1. The magnetic field is altered enough to knock particles into the walls of the vacuum chamber every time. The ray cannot fire.
-\item [\textit{H}] - The coil can warp with temperature and change direction slightly. Slight changes to direction mean only slight changes to particle orbits, meaning not much happens until the electromagnet is significantly warped.
-\item [\textit{W}] - The coil deals with large changes in current and voltage, and it generates a lot of heat, making it wear away quickly.
-\end{enumerate}
+\\ \pbhw
+{One of the wires is nicked, stopping ample current from flowing until it is patched.}
+{The coil is knocked out of shape, altering the direction of the magnetic field it creates. This will change the exact orbit of the gas in the accelerator when it fires. \newline 1d2 = 1. The magnetic field is altered enough to knock particles into the walls of the vacuum chamber every time. The ray cannot fire.}
+{The coil can warp with temperature and change direction slightly. Slight changes to direction mean only slight changes to particle orbits, meaning not much happens until the electromagnet is significantly warped.}
+{The coil deals with large changes in current and voltage, and it generates a lot of heat, making it wear away quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Xe (g) Storage} \label{ray_xe_storage} \vspace{-0.2cm}
 A particle accelerator requires single ions in a stream, meaning diatomic gases and larger molecules are off-limits. In terms of natural and common gases, this leaves only the noble gases. The gas chosen is the gas with the most weight per small chunk, so as to punch as large a hole as possible with as little material as possible. A bonus of noble gases is that they store easily and are not poisonous or reactive in any way, as long as one can overlook the price and lack of abundance.
-\begin{enumerate}
-\item [\textit{P}] - Xenon gas escapes. Only a small amount is kept in storage, since microscopic amounts are used per shot. The gas will all escape if not stopped quickly.
-\item [\textit{B}] - The storage vessel is dented. \newline \hspace{3pt} 1d4 = 1. The dent is enough to break a seal, and nearly all the xenon escapes.
-\item [\textit{H}] - The xenon heats up and the pressure increases. This is unlikely to break anything given the small and well-reinforced container.
-\item [\textit{W}] - The seal becomes less effective over time.
-\end{enumerate}
+\\ \pbhw
+{Xenon gas escapes. Only a small amount is kept in storage, since microscopic amounts are used per shot. The gas will all escape if not stopped quickly.}
+{The storage vessel is dented. \newline \hspace{3pt} 1d4 = 1. The dent is enough to break a seal, and nearly all the xenon escapes.}
+{The xenon heats up and the pressure increases. This is unlikely to break anything given the small and well-reinforced container.}
+{The seal becomes less effective over time.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Vacuum Pump} \label{ray_vacuum_pump} \vspace{-0.2cm}
 Both the main chamber and the ionization chamber need to be almost perfect vacuums. As a result one almost always hears the loud hum of a vacuum pump running. A vacuum pump is a pump with a one way seal. That is, a fan pumps air out, and when the fan stops the seal prevents air from rushing back in. 
-\begin{enumerate}
-\item [\textit{P}] - The seal around the fan is broken, making it much less effective. One of the fan blades has a hole punched through it. \newline \hspace{-3pt} 1d4 = 1. The fan blade is compromised enough to shatter on next usage.
-\item [\textit{B}] - The fan grinds to a stop. A total of 1d4 of the 8 blades are damaged.
-\item [\textit{H}] - The fan is cooled by the air it sucks out.
-\item [\textit{W}] - A fan of such power and constant use requires oiling and regular maintenance.
-\end{enumerate}
+\\ \pbhw
+{The seal around the fan is broken, making it much less effective. One of the fan blades has a hole punched through it. \newline \hspace{-3pt} 1d4 = 1. The fan blade is compromised enough to shatter on next usage.}
+{The fan grinds to a stop. A total of 1d4 of the 8 blades are damaged.}
+{The fan is cooled by the air it sucks out.}
+{A fan of such power and constant use requires oiling and regular maintenance.}
+
 
 
 \subsection{Life Support} \label{life}
@@ -821,26 +844,26 @@ Human beings need to live and work in the ship for long periods of time. The shi
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item The \textit{Carbon Scrubber} \ref{life_c_scrubber} and the \textit{Hydrogen Recapture} \ref{life_h2_recapture} components both handle extremely dangerous gases. The hydrogen and methane they use is handled at many hundreds of degrees centigrade, meaning the gases will instantly, violently explode if they come into contact with oxygen. Dealing with these systems requires the utmost care to avoid burn, explosion, or other extremely dangerous mishap.
+\item The carbon scrubber \ref{life_c_scrubber} and the hydrogen recapture \ref{life_h2_recapture} components both handle extremely dangerous gases. The hydrogen and methane they use is handled at many hundreds of degrees centigrade, meaning the gases will instantly, violently explode if they come into contact with oxygen. Dealing with these systems requires the utmost care to avoid burn, explosion, or other extremely dangerous mishap.
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
 Anger
 \begin{itemize}
-\item The endless tiny pebbles contained in the \textit{Dehumidifier} \ref{life_dehumidifier} could be unimaginably annoying if they escape into the room. They will float around everywhere, bump into you while you work, and get into delicate machinery. A DM could poke a single player over and over with such a mishap, raising their frustration each time.
+\item The endless tiny pebbles contained in the dehumidifier \ref{life_dehumidifier} could be unimaginably annoying if they escape into the room. They will float around everywhere, bump into you while you work, and get into delicate machinery. A DM could poke a single player over and over with such a mishap, raising their frustration each time.
 \end{itemize}
 \end{minipage}
 
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item The quintessential way to make your players feel like they are alone in space, is to open up their room to the vacuum of space. Piercing or bludgeoning open the \textit{Atmosphere} \ref{life_atmosphere} of a room is a simple way to add tension while making sure the players are constantly reminded of just how close they are to cold, dead nothingness.
+\item The quintessential way to make your players feel like they are alone in space, is to open up their room to the vacuum of space. Piercing or bludgeoning open the atmosphere \ref{life_atmosphere} of a room is a simple way to add tension while making sure the players are constantly reminded of just how close they are to cold, dead nothingness.
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item The \textit{Carbon Scrubber} \ref{life_c_scrubber} and the \textit{Hydrogen Recapture} \ref{life_h2_recapture} components both contain layers of delicate catalysts. If a bludgeoning shot hits one of them, it can dent the sheets of metal out of shape, making them extremely difficult to remove. A character might be forced to open up the blazing-hot chamber and physically yank the sheets out in order to make sure the system keeps working.
+\item The carbon scrubber \ref{life_c_scrubber} and the hydrogen recapture \ref{life_h2_recapture} components both contain layers of delicate catalysts. If a bludgeoning shot hits one of them, it can dent the sheets of metal out of shape, making them extremely difficult to remove. A character might be forced to open up the blazing-hot chamber and physically yank the sheets out in order to make sure the system keeps working.
 \end{itemize}
 \end{minipage}
 
@@ -874,13 +897,12 @@ Duty
 A large vat of water serves as backup oxygen in case of failure. This is also needed because the one of the byproducts of the carbon stripping process is water. This water is split into its component gases which both go to temporary storage, to be then sent where needed.
 
 An electrolysis chamber is composed of two filaments which gain opposite charges when electricity is applied. The electricity excites the water enough to split into gases, which are then collected. In case the electrolysis chamber needs to work very quickly, many layers of thin filaments are stacked on top of each other inside the chamber. 
-\begin{enumerate}
-\item [\textit{P}] - A small hole is punctured through the casing. \newline 
-\hspace*{3pt} \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.} \\
-\item [\textit{B}] - The casing is dented. \newline \hspace*{3pt} 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.
-\item [\textit{H}] - Heats very slowly. \newline \hspace*{3pt} 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.
-\item [\textit{W}] - Filaments must be regularly replaced. Container is subject to acids and oxidation.
-\end{enumerate}
+\\ \pbhw
+{A small hole is punctured through the casing. \newline \qtwo{A stream of water flows out.}{Either 1d2 H$_2$(g) or O$_2$(g) escapes.}}
+{The casing is dented. \newline 1d4 = 1 A seal is broken. Either 1d3 H$_2$O(l), H$_2$(g), or O$_2$(g) escapes.}
+{Heats very slowly. \newline 1d4 = 1 An electrical filament overheats. Either 1d2 H$_2$ or O$_2$ production is severely reduced.}
+{Filaments must be regularly replaced. Container is subject to acids and oxidation.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Carbon Scrubber} \label{life_c_scrubber} \vspace{-0.2cm}
 The carbon scrubbing process is composed of two parts. First carbon dioxide must be isolated from the air, and then the oxygen in it must be reclaimed. The first part of the process takes place in the \textit{Dehumidifier} \ref{life_dehumidifier}.
@@ -890,12 +912,12 @@ The second part of the scrubbing process isolates extracts oxygen from carbon di
 CO_2 + 4 H_2 \xrightarrow[\text{pressure}]{\text{400 C}} CH_4 + 2 H_2O
 \end{equation}
 A small pressurized chamber next to the radiator is kept very hot. Several thin plates of nickel act as catalysts for the reaction \cite{recycling_water_and_air}. Carbon dioxide is brought from the dehumidifier and allowed to pass over the catalysts in a hydrogen atmosphere. The reaction is allowed to go to near completion, and the methane then passes to the hydrogen recapture chamber.   
-\begin{enumerate}
-\item [\textit{P}] - Extremely hot gas of either 1d2 H$_2$ or CH$_4$ escapes. As soon as the gas meets the oxygen of the air, it is so hot that it combusts, turning the jet of gas into a hydrogen or methane flamethrower.
-\item [\textit{B}] - The case is dented. \newline \hspace{3pt} 1d2 = 1. The denting is enough to make it difficult to remove layers of catalyst when they need to be replaced.
-\item [\textit{H}] - The heating of this component is kept tightly controlled. Any stray heat will transfer directly to the radiator to escape. 
-\item [\textit{W}] - Plates require constant replacement due to cracking, wear, and depositing. 
-\end{enumerate}
+\\ \pbhw
+{Extremely hot gas of either 1d2 H$_2$ or CH$_4$ escapes. As soon as the gas meets the oxygen of the air, it is so hot that it combusts, turning the jet of gas into a hydrogen or methane flamethrower.}
+{The case is dented. \newline \hspace{3pt} 1d2 = 1. The denting is enough to make it difficult to remove layers of catalyst when they need to be replaced.}
+{The heating of this component is kept tightly controlled. Any stray heat will transfer directly to the radiator to escape. }
+{Plates require constant replacement due to cracking, wear, and depositing. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hydrogen Recapture} \label{life_h2_recapture} \vspace{-0.2cm}
 Once oxygen has been reclaimed from the carbon dioxide, hydrogen has taken the place of the oxygen. If the life support system intends to be fully self-sufficient, this hydrogen must be recaptured as well. If methane becomes hot enough in the absence of oxygen, it will decompose into solid carbon and hydrogen gas. 
@@ -904,135 +926,135 @@ CH_4\ (g) \xrightarrow[anaerobic]{above\ 400\ C} C\ (s) + H_2\ (g)
 \end{equation}
 
 A second chamber sits next to the carbon scrubber chamber, which is also kept pressurized and much hotter, up to 900 \degree C. This chamber is similarly filled with plates of catalysts, though these plates are thinner and are made of iron or nickel in an alternating pattern. Methane enters, is heated, and the carbon is deposited on the surface of the catalyst sheets in the form of black soot, nanotubes, or graphite. The hydrogen can then return to storage while the carbon is scraped and shaken off. \cite{hydrogen_recapture}. 
-\begin{enumerate}
-\item [\textit{P}] - A hole is pierced through the chamber, and a hot gas escapes of either 1d2 H$_2$ or CH$_4$. As soon as the hot gas meets the oxygen of the atmosphere, it combusts, turning the jet of gas into a flamethrower.
-\item [\textit{B}] - The chamber is dented. Carbon begins to accumulate at the point of denting, and is difficult to remove. \newline \hspace*{3pt} 1d2 = 1. The denting is enough to make it difficult to remove catalyst layers when they need replacement. 
-\item [\textit{H}] - The heating of this component is also tightly controlled, so extra heat passes directly to the radiator.
-\item [\textit{W}] - Carbon is deposited directly onto the plates. The hot, pressurized plates are then shaken vigorously, and carbon is physically scraped off. This is a trifecta of erosion. Catalyst plates need to be replaced and recycled constantly.
-\end{enumerate}
+\\ \pbhw
+{A hole is pierced through the chamber, and a hot gas escapes of either 1d2 H$_2$ or CH$_4$. As soon as the hot gas meets the oxygen of the atmosphere, it combusts, turning the jet of gas into a flamethrower.}
+{The chamber is dented. Carbon begins to accumulate at the point of denting, and is difficult to remove. \newline 1d2 = 1. The denting is enough to make it difficult to remove catalyst layers when they need replacement. }
+{The heating of this component is also tightly controlled, so extra heat passes directly to the radiator.}
+{Carbon is deposited directly onto the plates. The hot, pressurized plates are then shaken vigorously, and carbon is physically scraped off. This is a trifecta of erosion. Catalyst plates need to be replaced and recycled constantly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Dehumidifier} \label{life_dehumidifier} \vspace{-0.2cm}
 Humans mix water vapor and carbon dioxide into the air they breathe. The nitrogen and oxygen left in the gas can be reused, and will often mess with reclamation reactions, meaning the carbon dioxide and water must be physically separated from the rest of the atmosphere before they can be reused.
 
 Eventually the air contained in all rooms in the ship must pass through a central dehumidifier chamber. This chamber is filled with a synthetic mineral called zeolite which soaks up water and carbon dioxide. Then the atmosphere can be vacated, and when the zeolite is reheated in the presence of a vacuum it will give off its stored water and carbon dioxide. The water is then condensed to a liquid and sent to storage, while the carbon dioxide is passed to the carbon scrubber.
-\begin{enumerate}
-\item [\textit{P}] - The hole allows either air or carbon dioxide and water to escape.
-\item [\textit{B}] - The tiny mineral rocks are scattered everywhere throughout the room. They are smaller than pebbels and begin to bounce off everything in the room.
-\item [\textit{H}] - The rocks absorb heat well and will not melt for a long time.
-\item [\textit{W}] - Rocks become covered in stray grime and dust over time, becoming less absorbant. Rocks therefore must be replaced and recycled.
-\end{enumerate}
+\\ \pbhw
+{The hole allows either air or carbon dioxide and water to escape.}
+{The tiny mineral rocks are scattered everywhere throughout the room. They are smaller than pebbels and begin to bounce off everything in the room.}
+{The rocks absorb heat well and will not melt for a long time.}
+{Rocks become covered in stray grime and dust over time, becoming less absorbant. Rocks therefore must be replaced and recycled.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Atmosphere} \label{life_atmosphere} \vspace{-0.2cm}
 Each individual room is hooked up to several things needed for life support. Every room needs to be pressurized and climate controlled. A room is connected directly to oxygen and nitrogen gas storage in case it needs to be repressurized, and it can be opened to the vacuum of space to depressurize as well. Each room has thermal cooling pipes for cooling the room and an electric heater in case a room needs to be quickly heated.
 
 I recommend avoiding the more trivial items listed in the above paragraph. The following list describes how any room can be damaged by a weapon. Include this to add additional challenge to a problem. 
-\begin{enumerate}
-\item [\textit{P}] - If a room's walls are pierced, it's only a matter of time before the room runs out of atmosphere.
-\item [\textit{B}] - If a bludgeoning shot has hit another system, it must have gone through the outer hull to get there. Make the hole small and the dent large so that every single bludgeoning shot doesn't immediately depressurize the room.
-\item [\textit{H}] - The room's heating system can only handle so much. If a system is heating up in a room, then the room is heating up too.
-\item [\textit{W}] - The structure of the outer hull degenerates over time like all things. Expect larger dents, and perhaps throw in a permanent crack or two. 
-\end{enumerate}
+\\ \pbhw
+{If a room's walls are pierced, it's only a matter of time before the room runs out of atmosphere.}
+{If a bludgeoning shot has hit another system, it must have gone through the outer hull to get there. Make the hole small and the dent large so that every single bludgeoning shot doesn't immediately depressurize the room.}
+{The room's heating system can only handle so much. If a system is heating up in a room, then the room is heating up too.}
+{The structure of the outer hull degenerates over time like all things. Expect larger dents, and perhaps throw in a permanent crack or two. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Storage} \label{life_h2o_storage} \vspace{-0.2cm}
 This tank holds long-term reserve oxygen in case of emergency. It additionally collects the byproducts of the carbon scrubbing process and the water vapor that humans breathe out into the atmosphere.
-\begin{enumerate}
-\item [\textit{P}] - The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline \vspace{-3pt} 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.
-\item [\textit{B}] - The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.
-\item [\textit{H}] - Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.
-\item [\textit{W}] - Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.
-\end{enumerate}
+\\ \pbhw
+{The outside container is punctured. Maintaining pressure becomes difficult, so only passive flow occurs. \newline 1d2 = 1 The inner lining is punctured too. Liquid escapes into the container vat, and passive flow is reduced.}
+{The outer container is dented, reducing maximum capacity. If the tank is full, this sends a pressure wave to break the weakest point of the tank, its outflow valve. 1d4 = 1 The outflow valve breaks and water surges out.}
+{Water absorbs huge amounts of heat before its temperature rises dangerously. Little effect.}
+{Water erodes any container it's in relatively quickly. This is particularly apparent around the input and output valves.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pump} \label{life_h2o_pump} \vspace{-0.2cm}
 It's a big wet fan.
-\begin{enumerate}
-\item [\textit{P}] - One of the turbine blades has a hole pierced through it. \newline \hspace*{3pt} 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. 
-\item [\textit{B}] - The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.
-\item [\textit{H}] - The turbine will transfer heat to the water. 
-\item [\textit{W}] - The turbine erodes quickly from the water.
-\end{enumerate}
+\\ \pbhw
+{One of the turbine blades has a hole pierced through it. \newline 1d4 = 1 The hole is enough to shatter the blade when it starts spinning too quickly. }
+{The turbine comes screeching to a halt. A total of 1d4 out of 8 blades are damaged.}
+{The turbine will transfer heat to the water. }
+{The turbine erodes quickly from the water.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$O (l) Pipe} \label{life_h2o_pipe} \vspace{-0.2cm}
 It's a pipe that carries water.
-\begin{enumerate}
-\item [\textit{P}] - Water spills out.
-\item [\textit{B}] - Limits water flow slightly.
-\item [\textit{H}] - Transfers heat to the railgun when sprayed on it.
-\item [\textit{W}] - Water wears pipes decently quickly.
-\end{enumerate}
+\\ \pbhw
+{Water spills out.}
+{Limits water flow slightly.}
+{Transfers heat to the railgun when sprayed on it.}
+{Water wears pipes decently quickly.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Storage} \label{life_h2_storage} \vspace{-0.2cm}
 Hydrogen is slightly less terrifying to store as a gas than as a liquid, but should still be handled with utmost care. 
-\begin{enumerate}
-\item [\textit{P}] - Hydrogen gas escapes.
-\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.
-\item [\textit{H}] - Hydrogen gas heats very quickly and will push out immense pressures. \newline \hspace*{3pt} 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.
-\item [\textit{W}] - Hydrogen wears containers very little.
-\end{enumerate}
+\\ \pbhw
+{Hydrogen gas escapes.}
+{The tank is dented. \newline 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.}
+{Hydrogen gas heats very quickly and will push out immense pressures. \newline 1d4 = 1. The pressure increase is enough to break the output valve, letting hydrogen gas gush into the air.}
+{Hydrogen wears containers very little.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Pipe} \label{life_h2_pipe} \vspace{-0.2cm}
 Hydrogen gas flows through this pipe.
-\begin{enumerate}
-\item [\textit{P}] - Hydrogen gas escapes.
-\item [\textit{B}] - The flow is restricted. \newline \hspace*{3pt} 1d2 = 1. The blow is enough to break a seal, letting hydrogen gas escape into the atmosphere.
-\item [\textit{H}] - The hydrogen will heat up a lot and transfer that increased temperature and pressure to the system downstream.
-\item [\textit{W}] - Little wear.
-\end{enumerate}
+\\ \pbhw
+{Hydrogen gas escapes.}
+{The flow is restricted. \newline 1d2 = 1. The blow is enough to break a seal, letting hydrogen gas escape into the atmosphere.}
+{The hydrogen will heat up a lot and transfer that increased temperature and pressure to the system downstream.}
+{Little wear.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{H$_2$ (g) Compressor} \label{life_h2_compressor} \vspace{-0.2cm}
 For hydrogen gas to be stored in a tank, something must compress it to a higher pressure than the tank before it will flow into the tank. A typical compressor is a fan that blows strongly, but such blades could disturb the hydrogen into combustion. Instead, a slow-moving piston is used to compress the gas.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{The hole is behind the piston, preventing it from retracting behind that point.}{The hole is in front of the piston. Super-compressed hydrogen gas escapes extremely quickly. The sheer speed of the hydrogen escaping would likely be enough to ignite it on fire.} \\ 
-\item [\textit{B}] - \qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.} \\
-\item [\textit{H}] - The pressure of the hydrogen will increase. Luckily, that is what this system is designed to handle.
-\item [\textit{W}] - Pistons require lubrication and the seal requires maintenance.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{The hole is behind the piston, preventing it from retracting behind that point.}{The hole is in front of the piston. Super-compressed hydrogen gas escapes extremely quickly. The sheer speed of the hydrogen escaping would likely be enough to ignite it on fire.}}
+{\qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.}}
+{The pressure of the hydrogen will increase. Luckily, that is what this system is designed to handle.}
+{Pistons require lubrication and the seal requires maintenance.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Storage} \label{life_o2_storage} \vspace{-0.2cm}
 Oxygen gas is stored in a container before it is piped into the atmosphere.
-\begin{enumerate}
-\item [\textit{P}] - Oxygen gas escapes.
-\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The denting sends a pressure wave strong enough to break the output valve, letting oxygen gas escape.
-\item [\textit{H}] - The oxygen will absorb the heat slowly, and then will transfer it to the atmosphere of the rooms.
-\item [\textit{W}] - Oxygen is corrosive but the tank is designed to mitigate that.
-\end{enumerate}
+\\ \pbhw
+{Oxygen gas escapes.}
+{The tank is dented. \newline 1d4 = 1. The denting sends a pressure wave strong enough to break the output valve, letting oxygen gas escape.}
+{The oxygen will absorb the heat slowly, and then will transfer it to the atmosphere of the rooms.}
+{Oxygen is corrosive but the tank is designed to mitigate that.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Pipe} \label{life_o2_pipe} \vspace{-0.2cm}
 This pipe carries oxygen gas.
-\begin{enumerate}
-\item [\textit{P}] - Oxygen gas escapes.
-\item [\textit{B}] - Restricts flow. \newline \hspace*{3pt} 1d2 = 1. The blow is enough to break a seal, and oxygen gas escapes.
-\item [\textit{H}] - The oxygen gas transfers the heat to the atmosphere of the room it is entering.
-\item [\textit{W}] - Oxygen is corrosive but the pipe is designed to mitigate that.
-\end{enumerate}
+\\ \pbhw
+{Oxygen gas escapes.}
+{Restricts flow. \newline 1d2 = 1. The blow is enough to break a seal, and oxygen gas escapes.}
+{The oxygen gas transfers the heat to the atmosphere of the room it is entering.}
+{Oxygen is corrosive but the pipe is designed to mitigate that.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{O$_2$ (g) Compressor} \label{life_o2_compressor} \vspace{-0.2cm}
 A similar oxygen compressor works in parallel with the hydrogen compressor, pushing oxygen gas into storage.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{The hole is behind the piston, stopping it from retracting behind that point.}{The hole is in front of the piston, allowing super-compressed oxygen gas to escape very quickly.} \\
-\item [\textit{B}] - \qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.} \\
-\item [\textit{H}] - The oxygen heats up, increasing the pressure, but this device is designed to handle high pressures.
-\item [\textit{W}] - Oxygen corrodes things that aren't designed to hold it.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{The hole is behind the piston, stopping it from retracting behind that point.}{The hole is in front of the piston, allowing super-compressed oxygen gas to escape very quickly.}}
+{\qtwo{The dent prevents the piston from retracting fully.}{The dent prevents the piston from compressing fully.}}
+{The oxygen heats up, increasing the pressure, but this device is designed to handle high pressures.}
+{Oxygen corrodes things that aren't designed to hold it.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{N$_2$ (l) Storage} \label{life_n2_storage} \vspace{-0.2cm}
 A vat of liquid nitrogen supplies extra air for the ship. The vat is kept very close to boiling temperature, and the gas that evaporates naturally flows into each room. This nitrogen should only be used if a room needs to be repressurized after its air has been evacuated.
-\begin{enumerate}
-\item [\textit{P}] - Liquid nitrogen spills out. It immediately freezes anything it touches. Great billows of thick white gas engulf the room, significantly lowering the temperature and completely blocking vision.
-\item [\textit{B}] - The tank is dented. \newline \hspace*{3pt} 1d4 = 1. The dent sends a pressure wave enough to burst a seal, and liquid nitrogen spills out. See \textit{piercing} effects above.
-\item [\textit{H}] - The nitrogen immediately begins to boil. The cooling coils can deal with heat gain due to passive influences, but if something actively adds heat to this tank, they could not keep up. The boiling nitrogen will raise the pressure of its container significantly. \newline \hspace{-3pt} 1d2 = 1. The rise in pressure is enough to burst a seal, letting liquid nitrogen spill out. See \textit{piercing} effects above.
-\item [\textit{W}] - Such cold liquids wear little, but their containers become brittle over time.
-\end{enumerate}
+\\ \pbhw
+{Liquid nitrogen spills out. It immediately freezes anything it touches. Great billows of thick white gas engulf the room, significantly lowering the temperature and completely blocking vision.}
+{The tank is dented. \newline 1d4 = 1. The dent sends a pressure wave enough to burst a seal, and liquid nitrogen spills out. See \textit{piercing} effects above.}
+{The nitrogen immediately begins to boil. The cooling coils can deal with heat gain due to passive influences, but if something actively adds heat to this tank, they could not keep up. The boiling nitrogen will raise the pressure of its container significantly. \newline 1d2 = 1. The rise in pressure is enough to burst a seal, letting liquid nitrogen spill out. See \textit{piercing} effects above.}
+{Such cold liquids wear little, but their containers become brittle over time.}
+
 
 
 \subsection{Electrical Grid} \label{grid}
 
-Every single system aboard the ship requires some form of electricity to function properly. A small, sel-contained nuclear reactor gives the ship more power than it knows what to do with. This supplies power in the form of a central high-voltage AC line. Weaponry taps directly into this line, though converting it to DC power first. A transformer lowers the voltage for the less intense systems and computers.
+Every single system aboard the ship requires some form of electricity to function properly. A small, self-contained nuclear reactor gives the ship more power than it knows what to do with. This supplies power in the form of a central high-voltage AC line. Weaponry taps directly into this line, though converting it to DC power first. A transformer lowers the voltage for the less intense systems and computers.
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
 Fear
 \begin{itemize}
-\item While it would match with the theme of fear, I recommend avoiding damaging the \textit{reactor} \ref{grid_reactor}, as it would immediately turn the RPG into a post-apocalyptic horror scenario. Instead, the extremely cold, humming \textit{magnetic field coils} \ref{grid_m_field_coils} provide sufficient tension while keeping the danger (relatively) low. A single puncture or a stray source of heat can turn this system into a frozen helium bomb. 
+\item While it would match with the theme of fear, I recommend avoiding damaging the reactor \ref{grid_reactor}, as it would immediately turn the RPG into a post-apocalyptic horror scenario. Instead, the extremely cold, humming magnetic field coils \ref{grid_m_field_coils} provide sufficient tension while keeping the danger (relatively) low. A single puncture or a stray source of heat can turn this system into a frozen helium bomb. 
 \end{itemize}
 \end{minipage} 
 \begin{minipage}[t]{0.4\linewidth}
@@ -1051,7 +1073,7 @@ Isolation
 \begin{minipage}[t]{0.4\linewidth}
 Duty
 \begin{itemize}
-\item Many different coils exist throughout the electrical grid, including in the \textit{transformer} \ref{grid_transformer}, \textit{electric field generator} \ref{grid_e_field_generator}, and \textit{magnetic field coils} \ref{grid_m_field_coils}. If these are bent out of shape, it is likely they come into contact with another metal object. This short circuits the coil and causes a part of it to become very hot very quickly. A brave soul might have to bend a coil back into shape by hand while it's searing hot.
+\item Many different coils exist throughout the electrical grid, including in the transformer \ref{grid_transformer}, electric field generator \ref{grid_e_field_generator}, and magnetic field coils \ref{grid_m_field_coils}. If these are bent out of shape, it is likely they come into contact with another metal object. This short circuits the coil and causes a part of it to become very hot very quickly. A brave soul might have to bend a coil back into shape by hand while it's searing hot.
 \end{itemize}
 \end{minipage}
 
@@ -1079,80 +1101,79 @@ The part of the ship that generates electricity is a self-contained nuclear reac
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Batteries} \label{grid_batteries} \vspace{-0.2cm}
 If the reactor needs to temporarily shut down, the ship can run off of a store of batteries for a few hours. Using these batteries to shoot weaponry will make them deplete significantly faster.
-\begin{enumerate}
-\item [\textit{P}] - Battery acid spills out from a total of 1d4 batteries.
-\item [\textit{B}] - One battery is smashed to pieces. A total of 1d4 batteries are ripped from their sockets and scattered, and 1d8 more are disloged from place but are still connected.
-\item [\textit{H}] - Batteries do not fare well under heat. Expect eventual leakage and expansion. 
-\item [\textit{W}] - Batteries lose capacity over time, and must be replaced.
-\end{enumerate}
+\\ \pbhw
+{Battery acid spills out from a total of 1d4 batteries.}
+{One battery is smashed to pieces. A total of 1d4 batteries are ripped from their sockets and scattered, and 1d8 more are dislodged from place but are still connected.}
+{Batteries do not fare well under heat. Expect eventual leakage and expansion.}
+{Batteries lose capacity over time, and must be replaced.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Transformer} \label{grid_transformer} \vspace{-0.2cm}
 Power from the reactor comes at high voltage for the more demanding parts of the ship. The majority of systems require only a computer or minor electrical parts, and so only need low-voltage wiring. A transformer turns the high voltage reactor output into low voltage electricity for most of the ship to use.
 
 A transformer is composed of a large hunk of metal with two coils wrapped entirely around it on separate sides. 
-\begin{enumerate}
-\item [\textit{P}] - \qeq{1d4}{1-2.}{The chunk of metal in the middle is pierced, with little effect.}{3.}{The high voltage coil is pierced, significantly reducing current flow.}{4.}{The low voltage coil is pierced, significantly reducing current output.}{}{}
-\item [\textit{B}] - Will likely dent something enough that a coil begins to touch the metal hunk. This will short circuit the system and may melt or burn a section of the coil.
-\item [\textit{H}] - The metal chunk will absorb much heat.
-\item [\textit{W}] - Little wear.
-\end{enumerate}
+\\ \pbhw
+{\qeq{1d4}{1-2.}{The chunk of metal in the middle is pierced, with little effect.}{3.}{The high voltage coil is pierced, significantly reducing current flow.}{4.}{The low voltage coil is pierced, significantly reducing current output.}{}{}}
+{Will likely dent something enough that a coil begins to touch the metal hunk. This will short circuit the system and may melt or burn a section of the coil.}
+{The metal chunk will absorb much heat.}
+{Little wear.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Converter} \label{grid_converter} \vspace{-0.2cm}
 The main electrical grid of the ship uses AC power, which needs to be converted to DC power for a few systems, including the 1d4 railgun, ray, electric field generator, and magnetic field coils. A converter consists of a diode bridge, containing four diodes, and a capacitor. 
+\\ \pbhw
+{\qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}}
+{Mostly only the casing is dented. \newline 1d4 = 1 A single wire is disconnected somewhere.}
+{The wires are thick and used to being heated significantly from the huge current.}
+{Wiring and especially soldering joints require maintenance and occasional replacement.}
 
-\begin{enumerate}
-\item [\textit{P}] - \qeq{1d5}{1-4.}{A diode is hit. These are impractical to fix and simply need replacing. The wires are unfortunately quite thick in order to handle such currents and voltages, and so need thick wire cutters and proper soldering to replace.}{5.}{The capacitor is hit. This is a heavy-duty capacitor and there are plenty of replacement capacitors, though again soldering is required for a proper fix on such a critical part.}{}{}{}{}
-\item [\textit{B}] - Mostly only the casing is dented. \newline \hspace*{3pt} 1d4 = 1 A single wire is disconnected somewhere.
-\item [\textit{H}] - The wires are thick and used to being heated significantly from the huge current.
-\item [\textit{W}] - Wiring and especially soldering joints require maintenance and occasional replacement.
-\end{enumerate}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Capacitor} \label{grid_capacitor} \vspace{-0.2cm}
 Certain systems need a huge surge of current and voltage in a fraction of a second, which is perfect for a capacitor. A large array of capacitors are connected in parallel and charged by the DC power coming from the converter before it. A capacitor is included in the 1d3 railgun, ray, and electric field generator (sub)systems.
-\begin{enumerate}
-\item [\textit{P}] - A single capacitor is hit and requires replacement.
-\item [\textit{B}] - A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.
-\item [\textit{H}] - The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.
-\item [\textit{W}] - Capacitors burn out and wires corrode.
-\end{enumerate}
+\\ \pbhw
+{A single capacitor is hit and requires replacement.}
+{A total of 1d4 different capacitors are all damaged by the hit, and many are scattered and displaced. A few wires become tangled, and some are pulled out.}
+{The thin metal plates of a capacitor will melt under focused heat, though capacitors are kept far from the hot rails.}
+{Capacitors burn out and wires corrode.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Electric Field Generator} \label{grid_e_field_generator} \vspace{-0.2cm}
 This particular design of electric field generator uses a strong electromagnet. Energy is dumped rapidly into the magnet coil, and the rapid rise in a magnetic field can generate a strong electric field as well. An electric field generator coil is included at two opposite parts of the ship where the magnetic fields of the ship end up accumulating hot particles. Strong bursts of electric field push the particles away when the accumulations become too large.
-\begin{enumerate}
-\item [\textit{P}] - The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline \hspace*{3pt} 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.
-\item [\textit{B}] - The electromagnet is bent out of shape, altering the direction that it accelerates away the hot ions near it. \newline \hspace{-3pt} 1d2 = 1. The coil is bent completely out of shape, and will not sufficiently push away the hot ions.
-\item [\textit{H}] - The wiring will warp and can eventually short circuit.
-\item [\textit{W}] - Such swings in current will wear even a strong wire decently quickly. 
-\end{enumerate}
+\\ \pbhw
+{The wiring of the electromagnet is pierced. The casing is open, meaning sparks can fly. \newline 1d2 = 1. The piercing completely nicks the wiring, stopping all electrical flow.}
+{The electromagnet is bent out of shape, altering the direction that it accelerates away the hot ions near it. \newline 1d2 = 1. The coil is bent completely out of shape, and will not sufficiently push away the hot ions.}
+{The wiring will warp and can eventually short circuit.}
+{Such swings in current will wear even a strong wire decently quickly. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Magnetic Field Coils} \label{grid_m_field_coils} \vspace{-0.2cm}
 The ship is wrapped in long coils that envelop the ship in magnetic fields. When hot ions arrive from the sun or from enemy ray shots, they are deflected by the magnetic fields. 
 
 Ray shots arrive far too quickly to be able to predict. As a result, the magnetic fields must be kept up at all times. This is possible by keeping the magnetic field coils cooled so much that the helium inside becomes a superconductor. A ship can dump excess electrical energy into the superconductor, and very little of that energy will be dissipated over time. Instead that energy will all go toward deflecting any ions that arrive, whenever they arrive.
-\begin{enumerate}
-\item [\textit{P}] - Liquid helium escapes. Whether it escapes into the vacuum of space or into a pressurized atmosphere, it instantly evaporates into a gas. 
-\item [\textit{B}] - The coils become dented, limiting helium flow rate and thus magnetic field strength. Warms up the coil noticeably as well, temporarily stopping its use.
-\item [\textit{H}] - Keeping the coils so incredibly cool for so long is difficult, and the more energy the ship dumps into the coils the warmer they become. As a result, this defense mechanism works in the beginning of the fight, but rapidly falls behind as the helium loses its superconducting state and must be slowly cooled again. Once it stops superconducting, all the magnetic fields die.
-\item [\textit{W}] - Casing becomes brittle from the cold. Helium escapes slightly, but over time this is noticeable.
-\end{enumerate}
+\\ \pbhw
+{Liquid helium escapes. Whether it escapes into the vacuum of space or into a pressurized atmosphere, it instantly evaporates into a gas. }
+{The coils become dented, limiting helium flow rate and thus magnetic field strength. Warms up the coil noticeably as well, temporarily stopping its use.}
+{Keeping the coils so incredibly cool for so long is difficult, and the more energy the ship dumps into the coils the warmer they become. As a result, this defense mechanism works in the beginning of the fight, but rapidly falls behind as the helium loses its superconducting state and must be slowly cooled again. Once it stops superconducting, all the magnetic fields die.}
+{Casing becomes brittle from the cold. Helium escapes slightly, but over time this is noticeable.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Wiring} \label{grid_wiring} \vspace{-0.2cm}
 The most common wiring carries low voltage electricity to the majority of systems on the ship.
-\begin{enumerate}
-\item [\textit{P}] - The wire is nicked, reducing current flow significantly.
-\item [\textit{B}] - The wire is yanked out of place and its 1d2 out of its two connections on either side are ripped out.
-\item [\textit{H}] - The wire's covering will burn before the wire melts.
-\item [\textit{W}] - Little wear, mostly on the connections between wires and other things.
-\end{enumerate}
+\\ \pbhw
+{The wire is nicked, reducing current flow significantly.}
+{The wire is yanked out of place and its 1d2 out of its two connections on either side are ripped out.}
+{The wire's covering will burn before the wire melts.}
+{Little wear, mostly on the connections between wires and other things.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Heavy Wiring} \label{grid_heavy_wiring} \vspace{-0.2cm}
 Heavy wiring carries high voltage electricity from the reactor to the systems of the ship that demand more power.
-\begin{enumerate}
-\item [\textit{P}] - A small section of the wiring is pierced, doing little. Sparks can now easily jump out of the hole due to the enormous voltage.
-\item [\textit{B}] - The wiring takes the brunt of the hit. This can split open its rubber casing, allow sparks out. Additionally it can smash wires inside or break them, reducing flow. Finally it can sever the connection on either end of the wiring.
-\item [\textit{H}] - The metal in the wire will absorb much heat, though the rubber will still burn first.
-\item [\textit{W}] - Requires regular replacement.
-\end{enumerate}
+\\ \pbhw
+{A small section of the wiring is pierced, doing little. Sparks can now easily jump out of the hole due to the enormous voltage.}
+{The wiring takes the brunt of the hit. This can split open its rubber casing, allow sparks out. Additionally it can smash wires inside or break them, reducing flow. Finally it can sever the connection on either end of the wiring.}
+{The metal in the wire will absorb much heat, though the rubber will still burn first.}
+{Requires regular replacement.}
+
 
 
 \subsection{Fighter AR Display} \label{fighter}
@@ -1299,6 +1320,7 @@ Secondary problems
 \item [signal warpage] - The communications signals that should be coming to the player are being warped by faulty parts or magnetic field interference. As a result voice communications are distorted, your measured distance to the parent ship and thus also your own velocity (calculated based on this distance) will be off, and any further orders or transferred data may be inaccurate.
 \end{enumerate}
 
+
 \vspace{0.2cm}
 Result problems
 \begin{enumerate}[leftmargin=4cm]
@@ -1306,6 +1328,7 @@ Result problems
 \item [corruption] - The computer has failed to find something or found nothing where it should have been. This results in basic textures being displayed, missing data points, and warped lines displayed on screen. If not bugfixed, a restart may (1d2 = 2) successfully reformat everything and fix the problem, or it may be unsucessful.
 \item [inaccuracies] - While all the components are properly working, wrong numbers keep consistently getting spit out. This results in warped voices, missed shots, and an inaccurate depiction of the battlefield.
 \end{enumerate}
+
 
 \subsubsection{Computer Bug Types} \label{fighter_computer_bug_types}
 
@@ -1354,59 +1377,52 @@ A DM can cause physical damage to the computer systems of the fighter, as descri
 
 \hspace{-18pt} \subsubsection{Positioning} \label{fighter_positioning} \vspace{-0.2cm}
 The role of the positioning systems is to ensure that the pilot has a decent understanding of their current position in the battlefield. The fighter vessel pings its parent ship every fraction of a second. This ping travels at exactly the speed of light, meaning its time taken can be converted directly into a distance. Thus the pilot always knows the distance to their parent. Additional distance lines are drawn toward any other ship detected. This system also draws a clear outline around every ship looked at, to ensure the pilot can see it.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - The positioning system shuts down. The fighter's relative position to anything becomes unknown. The fighter's velocity becomes unknown. All other ships go dark, vanishing from screen.
-\item [\textit{corruption}] - An image file disappears. Either a distance line or all ships' outlines gain the debug texture, a bright, annoying texture that blocks out a bunch of stuff behind it.
-\item [\textit{inaccuracy}] - One distance number becomes either slightly or wildly inaccurate, depending on the problem. This can also alter the shape of one part of a line, giving a distance line a pimple or a ship's outline a dent. An inaccurate distance between this ship and another ship results in the weaponry missing the majority of its shots, particularly if the enemy is at the edge of the range of the weapon.
-\end{enumerate}
+\\ \cci
+{The positioning system shuts down. The fighter's relative position to anything becomes unknown. The fighter's velocity becomes unknown. All other ships go dark, vanishing from screen.}
+{An image file disappears. Either a distance line or all ships' outlines gain the debug texture, a bright, annoying texture that blocks out a bunch of stuff behind it.}
+{One distance number becomes either slightly or wildly inaccurate, depending on the problem. This can also alter the shape of one part of a line, giving a distance line a pimple or a ship's outline a dent. An inaccurate distance between this ship and another ship results in the weaponry missing the majority of its shots, particularly if the enemy is at the edge of the range of the weapon.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Vectoring} \label{fighter_vectoring} \vspace{-0.2cm}
 While the position of the battlefield is important, the pilot also needs to know what it will look like in ten seconds. The orientation, velocity, and acceleration vectors are drawn for every ship. This system also draws the future trajectories of every ship, if they continue holding their current acceleration, so that the pilot does not have to guess it.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - All future trajectories and vectors disappear. The weaponry cannot hit anything for its life, as it depends on this trajectory to know where to aim.
-\item [\textit{corruption}] - A single vector simply disappears. For example, a ship may be clearly moving very quickly, yet its velocity vector simply displays zero.
-\item [\textit{inaccuracy}] - A vector becomes slightly longer or shorter, or changes direction. This results in larger and larger errors the farther along the future trajectory you try to predict, meaning the weapon's maximum range reduces noticeably.
-\end{enumerate}
+\\ \cci
+{All future trajectories and vectors disappear. The weaponry cannot hit anything for its life, as it depends on this trajectory to know where to aim.}
+{A single vector simply disappears. For example, a ship may be clearly moving very quickly, yet its velocity vector simply displays zero.}
+{A vector becomes slightly longer or shorter, or changes direction. This results in larger and larger errors the farther along the future trajectory you try to predict, meaning the weapon's maximum range reduces noticeably.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Ranging} \label{fighter_ranging} \vspace{-0.2cm}
 Instead of a blank black background, the ranging component adds a coordinate system to the battlefield. This coordinate system consists of regularly-spaced lines as well as markings for the maximum ranges of weaponry. The maximum ranges of weaponry are shown around both the pilot and any enemy they are pointed at. Typically the coordinate system is centered on the player, but this can be changed to center on any other ship, object, or place. The most useful coordinate system for a pilot is polar coordinates, since it immediately informs the pilot of whether they can swivel the ship and immediately be in range of an enemy to fire at. Polar coordinates appear as concentric circles around the center. The coordinate system can be switched to Cartesian as well.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - The black void of space returns. While distances to every ship is known, a good understanding of the layout of the battlefield will be lacking.
-\item [\textit{corruption}] - The image of the coordinate markings is gone, so the system replaces it with a bright, ugly debug texture that now completely covers the battlefield. 
-\item [\textit{inaccuracy}] - One of the lines of the coordinate system has a bump on it.
-\end{enumerate}
+\\ \cci
+{The black void of space returns. While distances to every ship is known, a good understanding of the layout of the battlefield will be lacking.}
+{The image of the coordinate markings is gone, so the system replaces it with a bright, ugly debug texture that now completely covers the battlefield.}
+{One of the lines of the coordinate system has a bump on it.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Aiming} \label{fighter_aiming} \vspace{-0.2cm}
 Extending from the railgun at the front of the ship is a long straight path representing exactly where the railgun will go under perfect circumstances. Around this line is displayed a cone representing the accuracy of the weapon, and another larger cone around that representing the full turning range of the railgun. Underneath these visual systems, thermal cameras are recording from the front of the railgun and tracking the target. A dedicated GPU on the railgun calculates the future trajectory of the ship and where to aim the railgun in order to hit it, so that the pilot doesn't have to guess.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - The railgun no longer has a visual trajectory, and it cannot compute its own aiming anymore. The gun must be aimed manually.
-\item [\textit{corruption}] - A piece of data about the tracked enemy ship goes missing. This particular enemy can no longer be tracked by the system, though any other enemy can be. 
-\item [\textit{inaccuracy}] - A value related to the trajectory of the railgun is incorrect. The railgun is less likely to hit.
-\end{enumerate}
+\\ \cci
+{The railgun no longer has a visual trajectory, and it cannot compute its own aiming anymore. The gun must be aimed manually.}
+{A piece of data about the tracked enemy ship goes missing. This particular enemy can no longer be tracked by the system, though any other enemy can be.}
+{A value related to the trajectory of the railgun is incorrect. The railgun is less likely to hit.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Warning} \label{fighter_warning} \vspace{-0.2cm}
 Arrows pointing to the direction of enemy ships and other hazards are drawn in the peripherals of the pilot's vision, so that the pilot knows where the enemies are no matter what direction they are facing.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - The arrows disappear.
-\item [\textit{corruption}] - An arrow disappears.
-\item [\textit{inaccuracy}] - An arrow starts pointing in the wrong direction.
-\end{enumerate}
+\\ \cci
+{The arrows disappear.}
+{An arrow disappears.}
+{An arrow starts pointing in the wrong direction.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Evading} \label{fighter_evading} \vspace{-0.2cm}
 Thermal warning cameras are placed all around the ship. These cameras look for the signature temperature of a railgun shot and immediately identify and track any shot fired at the ship. Since railgun shots move at inhuman speeds, the computer system automatically begins dodging the shot. These evasion systems also allow the ship to fire deflecting shots if the ship is already aimed at the incoming shot.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - The ship will no longer automatically dodge, significantly increasing your chance of being hit by something.
-\item [\textit{corruption}] - A camera feed loses track of a shot at a critical moment. This forces the computer system to guess, and it may not move the ship away properly or fire a proper deflection shot.
-\item [\textit{inaccuracy}] - Inaccuracy will prevent a deflection shot from hitting but will not affect dodges as much.
-\end{enumerate}
+\\ \cci
+{The ship will no longer automatically dodge, significantly increasing your chance of being hit by something.}
+{A camera feed loses track of a shot at a critical moment. This forces the computer system to guess, and it may not move the ship away properly or fire a proper deflection shot.}
+{Inaccuracy will prevent a deflection shot from hitting but will not affect dodges as much.}
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Controlling} \label{fighter_controlling} \vspace{-0.2cm}
 The ship is controlled with three joysticks. In one hand the pilot always holds the main control joystick, which rotates the ship to quickly face in any direction. In the other hand, the pilot typically holds on to the aiming joystick. This joystick allows the pilot to finely aim the orientation of the ship and the railgun it fires. The third joystick is only held during parking and taxiing or during group maneuvers. It is the linear control joystick, which gently pushes the ship to move in any direction.
-\begin{enumerate}[leftmargin=2cm]
-\item [\textit{crash}] - All joysticks lose control for a very short amount of time while the controlling system flash-reboots. This can mess up turns and other maneuvers.
-\item [\textit{corruption}] - An input gets lost, meaning the pilot cannot begin a maneuver they intended to until they try a few times. This can delay a dodge to dangerous levels.
-\item [\textit{inaccuracy}] - A pilot is intimately familiar with the sensitivity of their controls. If they are even slightly off, shot will start to miss and the pilot will begin missing their intended marks.
-\end{enumerate}
+\\ \cci
+{All joysticks lose control for a very short amount of time while the controlling system flash-reboots. This can mess up turns and other maneuvers.}
+{An input gets lost, meaning the pilot cannot begin a maneuver they intended to until they try a few times. This can delay a dodge to dangerous levels.}
+{A pilot is intimately familiar with the sensitivity of their controls. If they are even slightly off, shot will start to miss and the pilot will begin missing their intended marks.}
 
 
 \subsection{Outer Hull} \label{outer}
@@ -1468,102 +1484,102 @@ Duty
 
 \hspace{-18pt} \subsubsection{Antennae} \label{outer_antennae} \vspace{-0.2cm}
 The ship uses various long-range antannae to communicate with nearby stations, satellites, and their own child ships. These antannae do not receive nor send signals well behind aluminum plating, meaning they cannot be inside the ship, and must be outside of the hull. They are typically hidden underneath kevlar, which does not reduce the signal nearly as much.
-\begin{enumerate}
-\item [\textit{P}] - One of the metal antennae is pierced. \newline \hspace*{3pt} 1d2 = 1. The hole is enough to structurally compromise the antenna. See bludgeoning damage below.
-\item [\textit{B}] - The antenna is bent out of shape, drastically reducing its ability to detect signals in precise bandwidths. Choose either 1d2 a sending antenna or a receiving antenna. The ship can no longer send or receive messages to the following others. \newline \hspace*{-3pt} \qthree{The ship's signal with its own children fighters is disconnected, preventing the ship from sending or receiving orders from them.}{The ship's line to the nearest station is closed, preventing the ship from receiving any new orders or guidance from command, or from requesting immediate backup.}{The ship's long-range antenna is broken, preventing them from raising concerns to higher command on the nearest planet, or receiving updates and reports from higher command.} 
-\item [\textit{H}] - Antennae which get too hot can expand enough to receive signals at slightly the wrong frequency, and eventually a jolt can be enough to bend the wire out of shape. Then see bludgeoning damage above.
-\item [\textit{W}] - Stray UV light can cause voltage surges and can be enough to fry an antenna's connection. Surges typically only result in annoying blips in the signal, while the signal completely stops if the connection is fried. \newline \hspace*{3pt} Antennae are engineered to rotate when subjected to a foreign magnetic field, and when they properly align with the direction of the magnetic field, communication is still possible in both directions. On a fighter, the antennae may not be engineered this way, meaning only certain orientations will allow a fighter to communicate when under a magnetic field. Those orientations are exactly when the antenna is aligned perfectly with the magnetic field line at that point.
-\end{enumerate}
+\\ \pbhw
+{One of the metal antennae is pierced. \newline 1d2 = 1. The hole is enough to structurally compromise the antenna. See bludgeoning damage below.}
+{The antenna is bent out of shape, drastically reducing its ability to detect signals in precise bandwidths. Choose either 1d2 a sending antenna or a receiving antenna. The ship can no longer send or receive messages to the following others. \newline \qthree{The ship's signal with its own children fighters is disconnected, preventing the ship from sending or receiving orders from them.}{The ship's line to the nearest station is closed, preventing the ship from receiving any new orders or guidance from command, or from requesting immediate backup.}{The ship's long-range antenna is broken, preventing them from raising concerns to higher command on the nearest planet, or receiving updates and reports from higher command.} }
+{Antennae which get too hot can expand enough to receive signals at slightly the wrong frequency, and eventually a jolt can be enough to bend the wire out of shape. Then see bludgeoning damage above.}
+{Stray UV light can cause voltage surges and can be enough to fry an antenna's connection. Surges typically only result in annoying blips in the signal, while the signal completely stops if the connection is fried. \newline \hspace*{3pt} Antennae are engineered to rotate when subjected to a foreign magnetic field, and when they properly align with the direction of the magnetic field, communication is still possible in both directions. On a fighter, the antennae may not be engineered this way, meaning only certain orientations will allow a fighter to communicate when under a magnetic field. Those orientations are exactly when the antenna is aligned perfectly with the magnetic field line at that point.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Radar Dishes} \label{outer_radar} \vspace{-0.2cm}
 In order to detect nearby scrap, ships, asteroids, and other large objects, the ship employs a few sweeping radars. The radar dish uses radio waves like the antennae, which reflect off aluminum but can pass relatively unimpeded through a thin layer of kevlar, meaning it can be hidden behind the kevlar as well. 
-\begin{enumerate}
-\item [\textit{P}] - A small hole is pierced in the large rotating block of metal, the head of the radar dish. Little occurs.
-\item [\textit{B}] - The radar head is bent out of shape significantly. \newline \hspace*{3pt} \qtwo{Either side of the radar is bent so far out of shape as to become useless. The head can still spin, but only one side of it can detect things.}{The entire head grinds to a halt.} \\
-\item [\textit{H}] - The metal can absorb much heat.
-\item [\textit{W}] - Stray UV light can cause unintended blips on the radar. \newline When right inside of a magnetic field, there is no orientation that will result in a perfect signal all the time. If you know which of the following die outcomes should occur, choose it, and if not then roll. \newline \hspace*{-3pt} \qtwo{The current orientation allows a clear signal half of the time.}{The current orientation interferest with the signal significantly the entire time.} \\
-\end{enumerate}
+\\ \pbhw
+{A small hole is pierced in the large rotating block of metal, the head of the radar dish. Little occurs.}
+{The radar head is bent out of shape significantly. \newline \qtwo{Either side of the radar is bent so far out of shape as to become useless. The head can still spin, but only one side of it can detect things.}{The entire head grinds to a halt.}}
+{The metal can absorb much heat.}
+{Stray UV light can cause unintended blips on the radar. \newline When right inside of a magnetic field, there is no orientation that will result in a perfect signal all the time. If you know which of the following die outcomes should occur, choose it, and if not then roll. \newline \qtwo{The current orientation allows a clear signal half of the time.}{The current orientation interferest with the signal significantly the entire time.}}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Airlocks} \label{outer_airlocks} \vspace{-0.2cm}
 The following few components will be less critical to the combat than the ones above. Only consider having an airlock break during combat if a player or NPC is inside of it.
-\begin{enumerate}
-\item [\textit{P}] - The airlock is no longer airtight and will leak atmosphere while full or filling. 
-\item [\textit{B}] - The shot collides with the airlock hatch. \newline \hspace*{3pt} \qtwo{The seal remains, but locking or unlocking the airlock becomes blocked by the dent.}{The dent is enough to break the seal, and atmosphere rapidly escapes.} \\
-\item [\textit{H}] - The hatch can absorb much heat, and otherwise it will go into the atmosphere.
-\item [\textit{W}] - Stray UV light and fast-moving microparticles can damage the seal of the airlock over time.
-\end{enumerate}
+\\ \pbhw
+{The airlock is no longer airtight and will leak atmosphere while full or filling. }
+{The shot collides with the airlock hatch. \newline \qtwo{The seal remains, but locking or unlocking the airlock becomes blocked by the dent.}{The dent is enough to break the seal, and atmosphere rapidly escapes.}}
+{The hatch can absorb much heat, and otherwise it will go into the atmosphere.}
+{Stray UV light and fast-moving microparticles can damage the seal of the airlock over time.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hangar Door} \label{outer_hangar} \vspace{-0.2cm}
 The hangar is a large region of the ship capable of fitting a fighter. The hangar can be pressurized so that mechanics can fix or perform maintenance on the fighter children of the ship. It then depressurizes, and its large door slide open, allowing the fighter to leave. Only consider damaging the hangar doors when somebody or something is inside of the hangar. If questioned, I would justify this by saying that problems do happen to the hangar doors (and to other less important components of the outer hull), but the problem is not significant or noteworthy if a player or object is not at risk inside, so what is the purpose of mentioning it?
-\begin{enumerate}
-\item [\textit{P}] - A small hole is pierced in the enormous hangar door. Atmosphere leaks out. However, the hangar necessarily has a lot more atmosphere than most other rooms on the ship, meaning this time pressure is not as significant as other rooms.
-\item [\textit{B}] - The hangar door is dented. If it is closed, it is prevented from opening fully, and vice-versa.
-\item [\textit{H}] - The hangar door can absorb much heat, and the large atmosphere inside can absorb the rest.
-\item [\textit{W}] - Stray UV light and fast-moving microparticles can slowly compromise the seal of the hangar door over time.
-\end{enumerate}
+\\ \pbhw
+{A small hole is pierced in the enormous hangar door. Atmosphere leaks out. However, the hangar necessarily has a lot more atmosphere than most other rooms on the ship, meaning this time pressure is not as significant as other rooms.}
+{The hangar door is dented. If it is closed, it is prevented from opening fully, and vice-versa.}
+{The hangar door can absorb much heat, and the large atmosphere inside can absorb the rest.}
+{Stray UV light and fast-moving microparticles can slowly compromise the seal of the hangar door over time.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Docking Magnets} \label{outer_docking} \vspace{-0.2cm}
 A few permanent magnets can slide out of a container in order to attach to another piece of metal. This is used to dock the ship to a station and to dock fighters to the outside of the ship. In this state, fighter spacecraft can be ready to fly at a moment's notice, since the belly of the fighter can be opened to allow the pilot to quickly get inside while it is docked on the outside of the hull. This hatch on the fighter connects to an airlock. Again, only consider bringing up that a docking magnet has become damaged if something is attached to it.
-\begin{enumerate}
-\item [\textit{P}] - A hole is pierced through the hunk of metal. Little effect.
-\item [\textit{B}] - The magnet is bent out of shape. \newline \hspace*{3pt} \qtwo{The magnet's connecting strength is reduced, so it becomes easy for something to knock it off.}{The magnet can no longer connect at all.} \\
-\item [\textit{H}] - The hunks of metal absorb much heat.
-\item [\textit{W}] - Stray UV light and microparticles do little as they act like piercing damage in certain ways. \newline A docking magnet encountering another strong magnetic field can weaken the magnet if it is pointed against the docking magnet or strengthen it if they are pointed in the same direction. Typically this will only weaken the magnet over time, therefore requiring frequent replacement.
-\end{enumerate}
+\\ \pbhw
+{A hole is pierced through the hunk of metal. Little effect.}
+{The magnet is bent out of shape. \newline \qtwo{The magnet's connecting strength is reduced, so it becomes easy for something to knock it off.}{The magnet can no longer connect at all.}}
+{The hunks of metal absorb much heat.}
+{Stray UV light and microparticles do little as they act like piercing damage in certain ways. \newline A docking magnet encountering another strong magnetic field can weaken the magnet if it is pointed against the docking magnet or strengthen it if they are pointed in the same direction. Typically this will only weaken the magnet over time, therefore requiring frequent replacement.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Scrap Arm} \label{outer_arm} \vspace{-0.2cm}
 This arm is a small prehensile robotic arm with both an electromagnet and grabbing fingers attached to the end. It is used to pick out important pieces of scrap or for other miscellaneous uses. Only consider damaging this arm if it is being used to grab something.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{A metal arm is pierced, doing little.}{A hydraulic tube is pierced. One joint of the arm no longer can rotate back and forth, as hydraulic fluid spills out.} \\
-\item [\textit{B}] - One section of the arm is bent out of shape. \newline \hspace{3pt} 1d2 = 1. The hit also disconnects or damages one of the pneumatic pipes, spilling hydraulic fluid and stopping one joint of the arm from working.
-\item [\textit{H}] - The metal of the arms absorb all the heat.
-\item [\textit{W}] - UV light and microparticles are particularly dangerous for such a delicately-controlled system. It can damage the metal joints over time. The seals of the hydraulic system can also become compromised. Fast-moving microparticles can also pierce large enough holes to leak hydraulic fluid itself. \newline \hspace*{3pt} Under a strong magnetic field, the arm will move in strange directions and will be very difficult to control.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{A metal arm is pierced, doing little.}{A hydraulic tube is pierced. One joint of the arm no longer can rotate back and forth, as hydraulic fluid spills out.}}
+{One section of the arm is bent out of shape. \newline \hspace{3pt} 1d2 = 1. The hit also disconnects or damages one of the pneumatic pipes, spilling hydraulic fluid and stopping one joint of the arm from working.}
+{The metal of the arms absorb all the heat.}
+{UV light and microparticles are particularly dangerous for such a delicately-controlled system. It can damage the metal joints over time. The seals of the hydraulic system can also become compromised. Fast-moving microparticles can also pierce large enough holes to leak hydraulic fluid itself. \newline \hspace*{3pt} Under a strong magnetic field, the arm will move in strange directions and will be very difficult to control.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Hull} \label{outer_hull} \vspace{-0.2cm}
 The hull of the ship is composed of two layers. The first layer is a sheet of dense kevlar \cite{kevlar_properties}. This layer obliterates railgun flak shots when they arrive. This obliteration scatters the shot so that it hits a wider area of the hull underneath, and therefore the dent will be wider but more shallow, and is much less likely to pierce the hull. Below the kevlar the proper hull is a thin sheet of aluminum, reinforced by its precisely-engineered shape that maintains structural integrity while saving mass.
-\begin{enumerate}
-\item [\textit{P}] - The piercing shots of a ray accelerator essentially go straight through the relatively thin kevlar and aluminum layers. The shot will continue until it encounters enough different layers of metal, or it will stop immediately if it hits a vat of liquid.
-\item [\textit{B}] - The railgun shot is shattered by the kevlar layer and spreads its energy over a larger area. Once the kevlar is hit like this, it becomes much weaker and is no longer held taught. If a railgun shot hits the same place again, it the kevlar will deflect it directly into the dent that was just made, and it can pierce through the aluminum. Once this happens, the shot continues until it hits a hunk of metal and it severely dents that. The shot may bounce and hit other nearby parts. The hole in the aluminum hull is ragged and difficult to achieve a proper seal around.
-\item [\textit{H}] - Kevlar absorbs much heat, and if you can get it hot enough it will decompose and become weaker. After that, some heat may transfer to the aluminum plate, which spreads heat very quickly and will only melt at extreme temperatures. In short, the hull is affected by heat very little.
-\item [\textit{W}] - Repeated exposure to UV radiation noticeably decomposes the kevlar outer layer of the hull. It is also designed to shatter microparticles, stopping them from piercing the hull while damaging and weakening the kevlar. 
-\end{enumerate}
+\\ \pbhw
+{The piercing shots of a ray accelerator essentially go straight through the relatively thin kevlar and aluminum layers. The shot will continue until it encounters enough different layers of metal, or it will stop immediately if it hits a vat of liquid.}
+{The railgun shot is shattered by the kevlar layer and spreads its energy over a larger area. Once the kevlar is hit like this, it becomes much weaker and is no longer held taught. If a railgun shot hits the same place again, it the kevlar will deflect it directly into the dent that was just made, and it can pierce through the aluminum. Once this happens, the shot continues until it hits a hunk of metal and it severely dents that. The shot may bounce and hit other nearby parts. The hole in the aluminum hull is ragged and difficult to achieve a proper seal around.}
+{Kevlar absorbs much heat, and if you can get it hot enough it will decompose and become weaker. After that, some heat may transfer to the aluminum plate, which spreads heat very quickly and will only melt at extreme temperatures. In short, the hull is affected by heat very little.}
+{Repeated exposure to UV radiation noticeably decomposes the kevlar outer layer of the hull. It is also designed to shatter microparticles, stopping them from piercing the hull while damaging and weakening the kevlar. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Structural Beams} \label{outer_beams} \vspace{-0.2cm}
 A few other components of the ship stick out of the hull, including the radiator and engine exhaust vent. The structural beams of the ship hold the large magnetic field coils \ref{grid_m_field_coils}. Evenly spaced along the length of the ship are these beams, which separate sections of kevlar held taught. 
-\begin{enumerate}
-\item [\textit{P}] - Adds some slight wear to the beam.
-\item [\textit{B}] - A structural beam taking a direct hit from a railgun is not a good thing. The beam becomes dented and its structure is compromised. Every time that the ship goes to full acceleration while it is still dented and compromised, roll 1d2. On 1d2 = 1, the force is enough to warp the entire structure of the ship. The long cylindrical ship now is slightly bent at this beam. Firing the engine now causes the entire ship to spin, and some rooms may crack open to the vacuum of space.
-\item [\textit{H}] - The huge metal beams absorb heat well.
-\item [\textit{W}] - UV radiation wears away at the beams over time. The beams at the rear of the ship become worn by constantly being pushed strongly by the engine. 
-\end{enumerate}
+\\ \pbhw
+{Adds some slight wear to the beam.}
+{A structural beam taking a direct hit from a railgun is not a good thing. The beam becomes dented and its structure is compromised. Every time that the ship goes to full acceleration while it is still dented and compromised, roll 1d2. On 1d2 = 1, the force is enough to warp the entire structure of the ship. The long cylindrical ship now is slightly bent at this beam. Firing the engine now causes the entire ship to spin, and some rooms may crack open to the vacuum of space.}
+{The huge metal beams absorb heat well.}
+{UV radiation wears away at the beams over time. The beams at the rear of the ship become worn by constantly being pushed strongly by the engine. }
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Observation Deck} \label{outer_observation} \vspace{-0.2cm}
 The ship has a room with a series of windows that can look in many directions. Only considering damaging this room if something or somebody is inside of it.
-\begin{enumerate}
-\item [\textit{P}] - A small hole is pierced through a window. \newline \hspace*{3pt} 1d4 = 1. Cracks form, and the pressure of the atmosphere is enough to blow the window out. See bludgeoning damage below.
-\item [\textit{B}] - The railgun shot completely shatters the window, instantly sucking out the entirety of the atmosphere.
-\item [\textit{H}] - The glass does not fare well to repeated or sudden heating.
-\item [\textit{W}] - The glass and seals between panes slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.
-\end{enumerate}
+\\ \pbhw
+{A small hole is pierced through a window. \newline 1d4 = 1. Cracks form, and the pressure of the atmosphere is enough to blow the window out. See bludgeoning damage below.}
+{The railgun shot completely shatters the window, instantly sucking out the entirety of the atmosphere.}
+{The glass does not fare well to repeated or sudden heating.}
+{The glass and seals between panes slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Windows} \label{outer_windows} \vspace{-0.2cm}
 Around the ship are various small, circular, thick-paned windows for crew to look out.
-\begin{enumerate}
-\item [\textit{P}] - The window has a hole in it. \newline \hspace*{3pt} 1d4 = 1. Cracks form and the pressure is enough to shatter the window. See bludgeoning damage below.
-\item [\textit{B}] - The majority of the window shatters, letting out atmosphere extremely quickly.
-\item [\textit{H}] - The glass does not appreciate repeated or sudden heating.
-\item [\textit{W}] - The glass and seal slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.
-\end{enumerate}
+\\ \pbhw
+{The window has a hole in it. \newline 1d4 = 1. Cracks form and the pressure is enough to shatter the window. See bludgeoning damage below.}
+{The majority of the window shatters, letting out atmosphere extremely quickly.}
+{The glass does not appreciate repeated or sudden heating.}
+{The glass and seal slowly decompose from UV radiation. Microparticles can puncture microscopic holes in a window that can still leak atmosphere.}
+
 
 \vspace{-0.5cm} \hspace{-18pt} \subsubsection{Cameras} \label{outer_cameras} \vspace{-0.2cm}
 Various cameras of several wavelengths of light are placed around the outer hull of the ship so that the the full battlefield can be displayed for the commanders inside.
-\begin{enumerate}
-\item [\textit{P}] - \qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.} \\
-\item [\textit{B}] - One of the cameras is smashed to pieces.
-\item [\textit{H}] - The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.
-\item [\textit{W}] - Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.
-\end{enumerate}
+\\ \pbhw
+{\qtwo{A part of the electronics of the camera is pierced through, completely disabling it.}{The lens chamber is pierced, allowing in extra light.}}
+{One of the cameras is smashed to pieces.}
+{The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.}
+{Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.}
+
 
 
 
