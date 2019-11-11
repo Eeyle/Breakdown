@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.10)  11 NOV 2019 11:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.10)  11 NOV 2019 12:33
 entering extended mode
 **./DirectionAndDrive.tex
 (DirectionAndDrive.tex
@@ -1402,61 +1402,86 @@ Overfull \hbox (33.20042pt too wide) in paragraph at lines 1759--1776
  []
 
 [41]
-Overfull \hbox (19.41347pt too wide) in paragraph at lines 1866--1880
+Underfull \hbox (badness 4505) in paragraph at lines 1811--1812
+[]|\T1/cmr/m/n/10 Long range to the satel-lite,
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 1811--1812
+\T1/cmr/m/n/10 medium range to the drones.
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 1816--1817
+[]|\T1/cmr/m/n/10 The re-ac-tor in-side the satel-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 1816--1817
+\T1/cmr/m/n/10 tem when close range to the
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1806--1823
 [][] 
  []
 
-[42] [43] [44]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1914
+[42]
+Overfull \hbox (19.41347pt too wide) in paragraph at lines 1915--1929
+[][] 
+ []
+
+[43] [44] [45] [46]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1988
 .
 
 ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2875) in paragraph at lines 1914--1915
+Underfull \hbox (badness 2875) in paragraph at lines 1988--1989
 []\T1/cmr/m/n/10 Adams, D. A. (2003). Naval rail guns are rev-o-lu-tion-ary. \T
 1/cmr/m/it/10 US Naval In-sti-tute\T1/cmr/m/n/10 . Re-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 1917--1918
+Underfull \hbox (badness 1675) in paragraph at lines 1991--1992
 []\T1/cmr/m/n/10 Closing the Loop: Re-cy-cling Wa-ter and Air in Space [PDF fil
 e]. (n.d.). Sum-mary
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 1917--1918
+Underfull \hbox (badness 1655) in paragraph at lines 1991--1992
 \T1/cmr/m/n/10 of in-ac-ces-si-ble video. \T1/cmr/m/it/10 NASA\T1/cmr/m/n/10 . 
 Re-trieved from [][]$\T1/cmtt/m/n/10 https : / / www . nasa . gov / pdf / 14655
 8main _
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 1920--1921
+Underfull \hbox (badness 3375) in paragraph at lines 1994--1995
 \T1/cmr/m/n/10 Re-trieved from [][]$\T1/cmtt/m/n/10 http : / / www . dupont . c
 om / content / dam / dupont / products-[]and-[]services /
  []
 
-[45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1931.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1931.
+[47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2005.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2005.
  (DirectionAndDrive.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1931.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1931.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2005.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2005.
 
 Package rerunfilecheck Info: File `DirectionAndDrive.out' has not changed.
-(rerunfilecheck)             Checksum: 4C9174E3CA7BF6C63F5F218EF0FE02FB;1700.
+(rerunfilecheck)             Checksum: 596DA89DA5ABF81D5B950F04F61A7C4B;1868.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1931.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2005.
  ) 
 Here is how much of TeX's memory you used:
- 18999 strings out of 492972
- 353958 string characters out of 3127066
- 454294 words of memory out of 3000000
- 22336 multiletter control sequences out of 15000+200000
+ 19008 strings out of 492972
+ 354060 string characters out of 3127066
+ 454483 words of memory out of 3000000
+ 22341 multiletter control sequences out of 15000+200000
  16968 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,56p,905b,570s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1479,9 +1504,9 @@ grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Meow/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
 Meow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 >
-Output written on DirectionAndDrive.pdf (45 pages, 409404 bytes).
+Output written on DirectionAndDrive.pdf (47 pages, 417336 bytes).
 PDF statistics:
- 1079 PDF objects out of 1200 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1100 PDF objects out of 1200 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

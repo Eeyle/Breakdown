@@ -110,6 +110,8 @@
 \contentsline {section}{\numberline {4}Combats}{40}{section.4}
 \contentsline {subsection}{\numberline {4.1}Combat 1: Formula S Track}{40}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Combat 2: Industrial District}{41}{subsection.4.2}
-\contentsline {section}{\numberline {5}Quests}{42}{section.5}
-\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{42}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{43}{subsection.5.2}
+\contentsline {subsection}{\numberline {4.3}Combat 3: Derelict Satellite}{42}{subsection.4.3}
+\contentsline {section}{\numberline {5}Quests}{43}{section.5}
+\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{43}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{44}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{45}{subsection.5.3}
