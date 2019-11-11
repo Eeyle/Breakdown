@@ -32,6 +32,8 @@
 \usepackage{gensymb}
 %% Drawing connections between nodes of graph
 \usepackage{tikz}
+%% Multi-line comments
+\usepackage{verbatim}
 
 % Dashes not dots
 \renewcommand\labelitemi{---}
@@ -119,7 +121,7 @@ Typical D\&D notation will be used, with some shorthand added.
 
 % This is the four-fold PBHW list seen under every component.
 \def\pbhw#1#2#3#4{
-\begin{tabular}[t]{r p{15cm}}
+\begin{tabular}[t]{r p{14cm}}
 \textit{P} - & #1 \\
 \textit{B} - & #2 \\
 \textit{H} - & #3 \\
@@ -152,17 +154,39 @@ The players can have any amount of schooling in the subject, or none at all, as 
 
 \subsection{Pitch}
 
-Spacefaring vessels are entirely controlled by computers in the modern age. When extending this to space combat, it becomes readily apparent that computers will control all aiming, most dodging, and harder maneuvers like docking. Most spaceships could be run with no crew whatsoever and space combat would go on its way normally.
+Spacefaring vessels are entirely controlled by computers in the modern age. When extending this to space combat, it becomes readily apparent that computers will control all aiming, most dodging, and harder maneuvers like docking. Most spaceships could be run with no crew whatsoever and space traffic would go on its way normally.
 
-Railguns accelerate hunks of metal to incredible speeds, which are impossible for a large ship to dodge, and other ship weaponry is even faster. These weapons will hit a large ship constantly and with devastating effect. Consider the incredible precision engineering required for a single subsystem of the ships. A hole pierced in the wrong place or a dent in something at the wrong time proves disastrous for every system, be it the intricate plumbing of the rocket engine or the various tubes and chambers of the life support system.
+Railguns accelerate hunks of metal to incredible speeds, which are impossible for a large ship to dodge, and other ship weaponry can be even faster. During space combat, weaponry will hit a large ship constantly and with devastating effect. An incredible amount of precision engineering is put into every system of the ship. A hole pierced in the wrong place or a dent in something at the wrong time proves disastrous for nearly every system, be it the intricate plumbing of the rocket engine or the various tubes and chambers of the life support system.
 
-An autonomous ship, entirely controlled by a computer, can fly, dodge, and land just a well as a human. But as soon as it takes a single shot of flak, it's almost certainly going to lose a core system. What is the use of a space ship if it dies after the first hit?
+A ship entirely controlled by a computer can fly, dodge, and land just a well as a human. But as soon as it takes a single shot during combat, it's almost certainly going to lose a core system and will cease to function. What is the use of a space ship if it dies after the first hit?
 
-Only a human being can make up the difference. While redundancies and safeties can be engineered into the design, no robot can be created that can fix every problem, and certainly not with any speed. Only a human has the rapid problem-solving ability, combined with incredible dexterity and muscle memory, to fix a problem that arises. When a system has a hole pierced through it by a ray shot, a trained plumber can patch it while half-asleep. Denting a delicate life-support chamber is fine as long as a human is there to strip away dangerous parts and maintain the flow.
+Only a human being can make up the difference. While redundancies and safeties can be engineered into the design of a ship, no robot can be created that can fix every problem, and certainly not with any speed. Only a human has the rapid problem-solving ability, combined with incredible dexterity and muscle memory, to fix a problem that arises. When a system has a hole pierced through it by a ray shot, a trained plumber can patch it while half-asleep. Denting a delicate life-support chamber is fine as long as a human is there to strip away dangerous parts and maintain the flow of chemicals.
 
-This RPG a science fiction campaign centered around realistic space combat, except that the players hardly participate in the combat itself at all. Instead, the purpose of the players is to understand their particular system well enough to identify problems, come up with solutions, and then fix those problems. The players will not be valiant heroes nor keen mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances. 
+This RPG is a science fiction campaign centered around realistic space combat, except that the players hardly participate in the combat itself at all. Instead, the purpose of the players is to understand their particular systems well enough to identify problems, come up with solutions, and then fix those problems. The players will not be valiant heroes nor keen mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances. 
 
 \subsection{Example First Combat}
+
+\begin{enumerate}[leftmargin=2cm]
+\item [\textit{DM}] - The two enemy fighter spacecraft turn towards the ship. All you can see out the window is different endless specs of light. They shoot, and the railgun shots connect with the ship faster than you can blink. Six total shots hit the ship's hull, each with a resounding thud. Everybody in the ship can feel the jerks. 
+\item [] \textit{It's at this moment that the DM chooses a player to be Player 1.} 
+\item [\textit{DM}] - \textit{Player 1}, a shot  hits one of the walls of your rooms. Then the second shot hits, and that's the one that gets through.
+\item [\textit{Player 1}] - Oh no. What happens?
+\item [] \textit{Now the DM picks one of the systems that the player is supposed to oversee. Under that system the DM looks up the table of components and rolls a die on the bottom half of the table, to make sure the components are rather simple. That component is the part that gets hit by the railgun.}
+\item [\textit{DM}] - \textit{Chooses system Engine. Rolls 10 to hit H$_2$O (l) Storage.} The shot clangs against the fuel storage tank. The tank is full, meaning the pressure wave was enough to reach the outflow valve, and the valve bursts. Three flat streams of water are streaming out the sides of the hole in the tank where liquid flows in and out.
+\item [\textit{Player 1}] - I cover it with my hands! 
+\item [\textit{DM}] - You spray yourself as your hands wrap around the pipe, but you're successful at holding the water at bay.
+\item [\textit{Player 1}] - ...
+\item [\textit{DM}] - You hear a hiss coming from the wall of the room. You recall that the railgun shot had to go through the wall of the room to hit the fuel tank. The room is open to the vacuum of space.
+\item [\textit{Player 1}] - I whip out my duct tape and seal the pipe as strongly as possible.
+\item [\textit{DM}] - You seal the pipe with layer after layer.
+\item [\textit{Player 1}] - Now I rip off my trusty leather jacket and hold it as tightly as I can against the hole in the wall!
+\item [\textit{DM}] - The hole makes one last suck as it pulls the jacket taught over it, and the hissing stops.
+\item [\textit{Player 1}] - Will my jacket stay there if I leave it? 
+\item [\textit{DM}] - Yes, the atmosphere inside the ship is pushing the leather jacket into place, though the seal is questionable at best. Atmosphere will leak out significantly less.
+\item [] \textit{The DM would then do the same thing for each other player in the group, rolling on their system table to find out which part breaks. The DM presents the problem, and that player has to solve it.}
+\end{enumerate}
+
+\subsection{Method of Running a Combat}
 
 Ship-to-ship combat has begun, but the players' only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The weapon will hit and damage a single component of one of this player's systems, and it will be up to that player alone to fix it.
 
@@ -1580,11 +1604,225 @@ Various cameras of several wavelengths of light are placed around the outer hull
 {The intricate electronics of a camera's optical sensor will be the first to melt, followed by the rest of the circuitry.}
 {Cameras in space are subject to harmful radiation. Stray UV photons fry individual pixels of the optical sensor over time. Those same photons can interfere with wiring as well and cause errors in the electronics of the camera. Cameras have some shielding but this is still not enough.}
 
+\begin{comment}
+\subsection{Blank System} \label{blank}
+
+System description
+
+\vspace{0.3cm}
+\begin{minipage}[t]{0.4\linewidth}
+Fear
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage} 
+\begin{minipage}[t]{0.4\linewidth}
+Anger
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+
+\begin{minipage}[t]{0.4\linewidth}
+Isolation
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+Duty
+\begin{itemize}
+\item problem
+\end{itemize}
+\end{minipage}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{blank} Blank Components} \\
+\toprule
+1d?? & Component & Link \\
+\midrule
+1 & Blank Component & \ref{blank_component} \\
+2 & Blank Component 2 & \ref{blank_component2} \\
+\bottomrule
+\end{tabular}
+
+\hspace{-18pt} \subsubsection{Blank Component} \label{blank_component} \vspace{-0.2cm}
+Component description
+\\ \pbhw
+{}
+{}
+{}
+{}
+
+\vspace{-0.5cm} \hspace{-18pt} \subsubsection{Blank Component 2} \label{blank_component2} \vspace{-0.2cm}
+Component description
+\\ \pbhw
+{}
+{}
+{}
+{}
+
+\end{comment}
+
+
+\newpage
+
+\section{Combats}
+
+\subsection{Combat 1: Formula S Track} \label{combat_1}
+
+\begin{minipage}[t]{0.5\linewidth}
+\begin{tabular}[t]{| p{7cm} |}
+\toprule
+\multicolumn{1}{|c|}{Combat Description} \\
+\midrule
+Simultaneous Problems :- \\
+Only one problem at a time. \\	
+\midrule
+Component Complexity :- \\
+Start the combat by rolling once for each player. Roll on only the bottom half of the system's table to ensure the component is rather simple. Then, you can optionally continue the combat as long as you want by rolling on the entire system table for up to each player again. \\
+\midrule
+Problem Complexity :- \\
+Ensure the problem only affects a single component at a time. \\
+\midrule
+Enemy Description :- \\
+Two fighter spacecraft lurking behind a beacon that marks a corner in the racetrack. \\
+\midrule
+Reason for Engagement :- \\
+The fighters are shooting at the racers. Even shooting close to a racer will trigger the racer's automatic dodging system, which can knock them off course enough to change the outcome of a race. Unfortunately, one of the shot hits one of the racers, and hard. The enemy fighters immediately run. \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\begin{tabular}[t]{| r | p{5cm} |}
+\toprule
+\multicolumn{2}{| c |}{Battlefield Description} \\
+\midrule
+location & Formula S track. Fighter spacecraft have been modified to be agile racing ships, which are currently in a race right next to a space station. \\
+distances & The enemy spacecraft begin in close range but immediately run away. They turn and take four shots while in medium range before running again. \\
+comm.s time & Instant communication with the station and the planet below. \\
+\begin{tabular}[c]{@{}r@{}}relative\\velocities\end{tabular} & All begin stationary. \\ 
+visibility & Racers and enemies fully lit by sun. \\ 
+ions & none \\
+radioactivity & none \\
+UV radiation & Full view of sun. \\
+molecules & Stray O$_2$(g), N$_2$(g), and H$_2$O(g) from station. \\
+scrap & A few nuts and bolts from the station. \\
+asteroids & none \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+
+\begin{comment}
+\newpage
+\subsection{Combat N: Blank Combat} \label{combat_n}
+
+\begin{minipage}[t]{0.5\linewidth}
+\begin{tabular}[t]{| p{7cm} |}
+\toprule
+\multicolumn{1}{|c|}{Combat Description} \\
+\midrule
+Simultaneous Problems :- \\
+\\	
+\midrule
+Component Complexity :- \\
+\\
+\midrule
+Problem Complexity :- \\
+\\
+\midrule
+Enemy Description :- \\
+\\
+\midrule
+Reason for Engagement :- \\
+\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\begin{tabular}[t]{| r | p{5cm} |}
+\toprule
+\multicolumn{2}{| c |}{Battlefield Description} \\
+\midrule
+location &  \\
+distances & \\
+comm.s time & \\
+\begin{tabular}[c]{@{}r@{}}relative\\velocities\end{tabular} & \\ 
+visibility & \\ 
+ions & \\
+radioactivity & \\
+UV radiation &  \\
+molecules &  \\
+scrap &  \\
+asteroids &  \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{comment}
 
 
 
+\newpage
+\section{Quests} 
 
+The following few quests is an example of how you can guide your players through building their own spaceship. The quests will take the players through three locations with various hazards, including the outside of a large destroyed ship, the inside of such a ship, and nearby to a derelict satellite. These allow the players to pick up a fighter ship hull, radiator, and reactor. 
 
+If you want to create your own quest involving the players building their own ship, you can still find inspiration below. You can include more different systems of the ship than just the reactor and radiator that the player must scavenge. Additionally, the locations described in each quest have hazard tables which can be applicable to surprisingly many different situations. 
+
+\subsection{Quest 1: Retrieving a Hull} \label{quest_1}
+
+Today is a big day. The major local space station has organized a display, and has invited the policemen to join when they are not overseeing the events. The events will include space skating, a Formula S race, and a weaponry test.
+
+The crew is allowed to watch the pleasant display of space skating outside the window of the station's main, high-class observation deck. It is zero-g, but drinks are available in pouches. This is a fine time to introduce the player's characters to each other, if it hasn't happened already.
+
+Then the crew boards and is required to keep watch over the Formula S game, where the fastest and most maneuverable spaceships gather each year to race. Combat 1 occurs \ref{combat_1}. The crew is allowed back onto the station as proper repair crews rush in. Over the loudspeaker they hear that the Formula S race is officially postponed to a later date due to excess scrap metal on the runway.  Then they hear that one of the teams has dropped out of the race due to loss of equipment (if players ask, the reactor was smashed, fighter completely irradiated, unusable). 
+
+When the players sit down for drinks to watch the weaponry test, the barkeep points out that new teams are allowed to sign up for the race. He then offers that he knows where to get a free ship. Make sure the players get the hint that this is the main quest. The players should feel proud for having the bravery to sign up and excited for what is to come. That is, until the barkeep then points out that their "free ship" is inside the hangar of a large ship. And that ship is about to be destroyed as part of the weaponry test.
+
+The players will have to put on EV suits (optionally the fighter pilot may fly their spacecraft) and retrieve the fighter from the hangar of the larger ship. They can either choose to do this during the weaponry test, in which case railguns will be constantly firing, or to wait until after the weaponry test when things are safer. Both options come with similar but separate dangers and hazards, listed in the tables below.
+
+\begin{minipage}[t]{0.45\linewidth}
+\begin{tabular}[t]{| c | p{5 cm} |}
+\toprule
+\multicolumn{2}{| l |}{Table \ref{quest_1}.1 During Weaponry Test} \\
+\midrule
+1d8 & Hazard \\
+\midrule
+1 & One of the glass windows is shattered right in front of the eyes of the player. Glass scatters and may puncture their suit. \\
+2 & The tools and scrap of a room are suddenly vented from the ship. These nuts, bolts, and wrenches can get moving quickly, and can hurt. \\
+3 & Hot gas is escaping from the ship, or a gas is being heated by the radiator. \\
+4 & Cold gas is escaping. \\
+5 & A radiator is blaring heat in the way. \\
+6 & Stray hunks of metal shoot off in random direction and can get in the way. \\ 
+7 & Wiring on the ship is exposed and generating sparks that leap to nearby things. \\
+8 & The ship's strong magnetic fields can get in the way of moving a fighter ship or can send other debris scattering in strange directions. \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\begin{tabular}[t]{| c | p{6cm} |}
+\toprule
+\multicolumn{2}{| l |}{Table \ref{quest_1}.2 After Weaponry Test} \\
+\midrule
+1d6 & Hazard \\
+\midrule
+1 & A large section of windows has broken and the cloud of shattered glass is in the way. \\
+2 & A room is open to space, and has evacuated the tools and other things inside. These are now scattered in a cloud of scrap. \\
+3 & One of the hot gases has escaped and has kept its heat. Otherwise a gas has escaped and was heated by either the radiator or the sun. \\
+4 & A cold gas has escaped and has remained in shadow in order to retain its coldness.  \\
+5 & A designated crew in EV suits and salvaging frigates has purchased the rights to scavenge this vessel. Their large magnetic arms can lock onto the fighter and hold it in place. \\
+6 & A scientific crew has also went in, and is interested in pieces of metal that have been impacted or pierced. One wing of the fighters hull is damaged, and the scientists kindly ask for it. If given, the players will have to find a new piece of metal for that hull. \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+
+\vspace{0.2cm}
+Once the fighter spaceship has been retrieved, the ship will be missing several key components. It has been stripped of its radiator, reactor, and railgun due to their complexity and expensiveness, while the engine remains. If the players waited until after the weaponry test to retrieve it, the ship will have a total of 1d4 severe dents in its hull and its glass window(s) will be shattered. You can roleplay that other random things are missing like radios and communication devices, but the only parts truly necessary to make this ship flyable are a radiator, reactor, and to fix the hull if it's damaged. 
+
+This quest leads into the four other quests. Two of these will be to retrieve a free radiator and reactor from dangerous places, and the other two are the warmup laps and race. 
 
 
 
