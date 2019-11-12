@@ -1,6 +1,6 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Preface}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Notation}{1}{subsection.1.1}
+\contentsline {section}{\numberline {1}Preface}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Notation}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Recommended Prior Knowledge}{2}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Content Warning}{2}{subsection.1.3}
 \contentsline {section}{\numberline {2}Theory of the RPG}{3}{section.2}
@@ -111,7 +111,13 @@
 \contentsline {subsection}{\numberline {4.1}Combat 1: Formula S Track}{40}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Combat 2: Industrial District}{41}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Combat 3: Derelict Satellite}{42}{subsection.4.3}
-\contentsline {section}{\numberline {5}Quests}{43}{section.5}
-\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{43}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{44}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{45}{subsection.5.3}
+\contentsline {subsection}{\numberline {4.4}Combat 4: In the Shadow of the Station}{43}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Combat 5: Behind a Faraway Moon}{44}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Combat 6: A Station}{45}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Combat 7: Trained Fighter Squadron}{46}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Combat 8: An Entire Planet}{47}{subsection.4.8}
+\contentsline {section}{\numberline {5}Quests}{48}{section.5}
+\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{48}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{49}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{50}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Quest 4: The Race}{51}{subsection.5.4}
