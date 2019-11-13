@@ -12,6 +12,7 @@
 %% Useful packages
 \usepackage{amsmath}
 \usepackage{graphicx}
+\graphicspath{ {./pic/} }
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
@@ -33,13 +34,14 @@
 \usepackage{gensymb}
 %% Drawing connections between nodes of graph
 \usepackage{tikz}
+\usetikzlibrary{angles, quotes}
 %% Multi-line comments
 \usepackage{verbatim}
 
 % Dashes not dots
 \renewcommand\labelitemi{---}
 
-\title{Direction and Drive \\ {\large What would you do if your spaceship was falling apart around you?}}
+\title{Breakdown \\ {\large What would you do if your spaceship was falling apart around you?}}
 \author{Scott Armstrong}
 \date{1 Nov 2019}
 
@@ -255,6 +257,7 @@ My suggested split is composed of four roles. Each role takes care of exactly tw
 \end{itemize}
 \end{itemize}
 
+\begin{comment}
 \subsection{Direction and Drive}
 
 This title is a handy way of remembering the key variables needed to describe the different areas of physics. For Each unique disciple of classical mechanics, fluid mechanics, thermodynamics, and electronics all have different variables but share this common relation between two variables. 
@@ -277,6 +280,7 @@ The direction variable encodes which direction things are moving in a situation.
 The drive variable encodes how strong things are being pushed in a situation. Think of the word "drive" as in a car's engine creates a "driving" force that pushes the car. While temperature tells you which direction heat will flow, the heat flow rate must be known to be aware of how much heat actually ends up flowing. The current in a wire means nothing to an electrical device if it doesn't have the adequate voltage to push it through the device fully. A similar story exists for water, where the water flowing through a pipe is useless if there isn't enough pressure to push it out. In classical mechanics, momentum tells you the direction of movement while kinetic energy is a measure of how much punch something has, and both are needed to determine the final speeds and directions after a collision in zero gravity. 
 
 More of these variables exist, for example all of fluid mechanics, thermodynamics, and electronics have an analogue for resistance, and both fluid mechanics and electronics have an analogue for power. However, none of these variables have a thesaurus entry that starts with d, meaning including them in the title would ruin the alliteration. Additionally, these variables tend to have a weak counterpart in one or more discipline, for example classical mechanics does not have a clean variable that mimics resistance. Thus including them would break the pretty symmetry in the table above. Finally, the title is the perfect length as-is. It follows anapestic meter, meaning it scores bonus points with poets. Its initialism is DnD, which is neat too.
+\end{comment}
 
 
 \subsection{Highlighting Emotions}
@@ -309,6 +313,35 @@ Engineeers aboard a large ship spend their time in the hot engine decks by the r
 
 The following table contains all the different components of an engine. When the engine is hit by a damaging weapon, roll on the table to determine which component of the engine is actually going to be hit. When a component is hit, determine which type of damage the weapon does, then look up the component below the table and find that damage type listed beneath the component. That sentence will explain the most likely problems that arise because of that component taking that type of damage, so use this to continuously throw different random problems at the players. In general, more important components are located near the top, so for harder problems roll smaller dice or give yourself disadvantage on the roll.
 
+\vspace{0.2cm}
+\includegraphics[scale=0.35]{Engine}
+
+%\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}[t]{| c | l | c |}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
+\toprule
+1d30 & Component & Link \\
+\midrule
+1-2 & Electrolysis Chamber & \ref{engine_electrolysis} \\
+3 & Turbo & \ref{engine_turbo} \\
+4 & Combustion Chamber & \ref{engine_combustion} \\
+5-8 & Exhaust Vent & \ref{engine_exhaust} \\
+\midrule
+9-12 & H$_2$O (l) Storage & \ref{engine_h2o_storage} \\
+13 & H$_2$O (l) Pipe & \ref{engine_h2o_pipe} \\
+14 & H$_2$O (l) Pump & \ref{engine_h2o_pump} \\
+15-16 & H$_2$ (l) Storage & \ref{engine_h2_storage} \\
+17-18 & H$_2$ (l) Pipe & \ref{engine_h2_pipe} \\
+19 & H$_2$ (g) Condenser & \ref{engine_h2_condenser} \\
+20-21 & O$_2$ (l) Storage & \ref{engine_o2_storage} \\
+22-23 & O$_2$ (l) Pipe & \ref{engine_o2_pipe} \\
+24 & O$_2$ (l) Pump & \ref{engine_o2_pump} \\
+25 & O$_2$ (g) Condenser & \ref{engine_o2_condenser} \\
+26-29 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
+\bottomrule
+\end{tabular}
+
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
 Fear
@@ -335,32 +368,6 @@ Duty
 \item When a severely cold liquid escapes, such as in H$_2$ (l) Storage \ref{engine_h2_storage} or O$_2$ (l) Storage \ref{engine_o2_storage}, the whole room will fill with white gas and it will become cold. A true crewman must fix this before things start freezing around him, and so must push directly into the smoke and cold to fix it.
 \end{itemize}
 \end{minipage}
- 
-\vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{| c | l | c |}
-\toprule
-\multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
-\toprule
-1d30 & Component & Link \\
-\midrule
-1-2 & Electrolysis Chamber & \ref{engine_electrolysis} \\
-3 & Turbo & \ref{engine_turbo} \\
-4 & Combustion Chamber & \ref{engine_combustion} \\
-5-8 & Exhaust Vent & \ref{engine_exhaust} \\
-\midrule
-9-12 & H$_2$O (l) Storage & \ref{engine_h2o_storage} \\
-13 & H$_2$O (l) Pipe & \ref{engine_h2o_pipe} \\
-14 & H$_2$O (l) Pump & \ref{engine_h2o_pump} \\
-15-16 & H$_2$ (l) Storage & \ref{engine_h2_storage} \\
-17-18 & H$_2$ (l) Pipe & \ref{engine_h2_pipe} \\
-19 & H$_2$ (g) Condenser & \ref{engine_h2_condenser} \\
-20-21 & O$_2$ (l) Storage & \ref{engine_o2_storage} \\
-22-23 & O$_2$ (l) Pipe & \ref{engine_o2_pipe} \\
-24 & O$_2$ (l) Pump & \ref{engine_o2_pump} \\
-25 & O$_2$ (g) Condenser & \ref{engine_o2_condenser} \\
-26-29 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
-\bottomrule
-\end{tabular}
 
 
 \hspace{-18pt} \subsubsection{Electrolysis Chamber} \label{engine_electrolysis} \vspace{-0.2cm}
@@ -508,7 +515,7 @@ An oxygen condenser is similar to a hydrogen condenser except that it's signific
 {Oxygen will absorb the heat readily, though it will heat up relatively slowly, and this will be transferred into the oxygen storage.}
 {Pistons require lubrication and maintenance.}
 
-
+\newpage
 \subsection{Thermal} \label{thermal}
 
 Every ship in space generates heat via various mechanisms. Any energy generation has some inefficiency which becomes stray heat, weaponry creates heat on firing, and every other system generates at least some heat as well. If a spaceship were left in space with no way to get rid of its heat, it would melt far more quickly than it would freeze. As a result, every ship is equipped with a thermal system, a system designed to take the heat from all the other parts of the ship and to get rid of it.
@@ -516,6 +523,28 @@ Every ship in space generates heat via various mechanisms. Any energy generation
 Most systems aboard a ship operate at room temperature. For these systems, liquid water works perfectly fine as a conduit to transfer heat to the radiator. Even systems that generate large amounts of heat like weaponry can be handled by water due to its specific heat capacity. However, certain parts of the ship require extreme temperatures. The radiator must be excruciatingly hot, while liquid fuel for the engines and liquid helium in magnetic field coils must be near absolute zero. For these, a compressible substance is needed. Compressible substances can be compressed and expanded at will, unlike water, allowing their temperature to be varied as needed.
 
 If the radiator or nitrogen circuit stops, heat will continue being transferred into the heat sink until the heat sink becomes full. When the heat sink is full, heat can be dumped into any system that can handle it. If the water circuit stops, heat will start to be generated by every system on the ship. Each system will simultaneously have to fight off heat-related problems, though more severe for systems that generate lots of heat like weaponry.
+
+\vspace{0.2cm}
+\includegraphics[scale=0.275]{Thermal}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{| c | l | c |}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{thermal} Thermal Components} \\
+\toprule
+1d10 & Component & Link \\
+\midrule
+1 & Radiator & \ref{thermal_radiator} \\
+2 & Compressor & \ref{thermal_compressor} \\
+3 & Heat Exchanger & \ref{thermal_exchanger} \\
+4 & Heat Sink & \ref{thermal_sink} \\
+\midrule
+5-6 & H$_2$O (l) Pipe & \ref{thermal_h2o_pipe} \\
+7 & H$_2$O (l) Pump & \ref{thermal_h2o_pump} \\
+8-9 & N$_2$ (g) Pipe & \ref{thermal_n2_pipe} \\
+10 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
+\bottomrule
+\end{tabular}
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -543,25 +572,6 @@ Duty
 \item When a radiator \ref{thermal_radiator} breaks open, the air around it becomes singed with heat and plasma, and the walls of the room facing the opening grow red hot. If more heat keeps spilling into the room, it will overheat the enginery and overload the atmosphere's climate control. The lone player must venture directly toward the radiator, into the blazing heat and sizzling air, and have the courage to place something over the breakage to stop it.
 \end{itemize}
 \end{minipage}
-
-\vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{| c | l | c |}
-\toprule
-\multicolumn{3}{|l|}{Table \ref{thermal} Thermal Components} \\
-\toprule
-1d10 & Component & Link \\
-\midrule
-1 & Radiator & \ref{thermal_radiator} \\
-2 & Compressor & \ref{thermal_compressor} \\
-3 & Heat Exchanger & \ref{thermal_exchanger} \\
-4 & Heat Sink & \ref{thermal_sink} \\
-\midrule
-5-6 & H$_2$O (l) Pipe & \ref{thermal_h2o_pipe} \\
-7 & H$_2$O (l) Pump & \ref{thermal_h2o_pump} \\
-8-9 & N$_2$ (g) Pipe & \ref{thermal_n2_pipe} \\
-10 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
-\bottomrule
-\end{tabular}
 
 \hspace{-18pt} \subsubsection{Radiator} \label{thermal_radiator} \vspace{-0.2cm}
 
@@ -635,7 +645,7 @@ A pump that pushes gaseous nitrogen through its circuit. It is literally just a 
 {Little wear or tear.}
 
 
-
+\newpage
 \subsection{Railgun} \label{railgun}
 
 A railgun is composed of two parallel metal rails with a round of ammunition, a small hunk of metal flak, sandwiched between them. Huge amounts of current is passed through this system, traveling down one rail, through the metal flak, and then back the other rail. The particular circular movement of current generates a magnetic field, and individual electrons in the current through the flak round experience a force as a result of the moving through the magnetic field. With a capacitor to store a huge amount of electrical energy and a switch to release it, the large voltage from the capacitor will draw a large current from the electrical grid. The will generate an enormous force on the small flak round. Railguns can typically accelerate a small round to velocities at least 2.5 km/s \cite{naval_railgun} and up to 5.9 km/s \cite{scientific_railgun}.
@@ -768,6 +778,7 @@ It's literally just a big wet fan.
 {The turbine erodes quickly from the water.}
 
 
+\newpage
 \subsection{Ray Accelerator} \label{ray}
 
 The ray accelerator is a theoretical weapon based on the particle accelerators of modern day. The machine ionizes a material, accelerates it by spinning it around a circular path, and then lets the stream of hot ionized gas fly toward the enemy. While no proper experiments have been done to determine this, it is likely that the shot will penetrate through essentially anything it comes across due to the pinpoint accuracy available when using voltages for precise targeting.
@@ -873,10 +884,39 @@ Both the main chamber and the ionization chamber need to be almost perfect vacuu
 {A fan of such power and constant use requires oiling and regular maintenance.}
 
 
-
+\newpage
 \subsection{Life Support} \label{life}
 
 Human beings need to live and work in the ship for long periods of time. The ship is equipped with a fully self-sufficient life support system, meaning it its a closed loop that could theoretically go on indefinitely. Note that life support does not include thermal controle. The primary function of life support is to clean the air of the ship. As humans waddle about the ship, they release moisture, germs, and they add take away oxygen while adding carbon dioxide. The physical moisture and bacteria is not particularly difficult to deal with, so the main challenge is getting rid of carbon dioxide chemically.
+
+\vspace{0.2cm}
+\includegraphics[scale=0.275]{Life_Support}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{life} Life Support Components} \\
+\toprule
+1d30 & Component & Link \\
+\midrule
+1-2 & Electrolysis Chamber & \ref{life_electrolysis} \\
+3-4 & Carbon Scrubber & \ref{life_c_scrubber} \\
+5 & Hydrogen Recapture & \ref{life_h2_recapture} \\
+6-7 & Dehumidifier & \ref{life_dehumidifier} \\
+8-9 & Atmosphere & \ref{life_atmosphere} \\
+\midrule
+12-15 & H$_2$O (l) Storage & \ref{life_h2o_storage} \\
+16 & H$_2$O (l) Pump & \ref{life_h2o_pump} \\
+17-18 & H$_2$O (l) Pipe & \ref{life_h2o_pipe} \\
+19-20 & H$_2$ (g) Storage & \ref{life_h2_storage} \\
+21-22 & H$_2$ (g) Pipe & \ref{life_h2_pipe} \\
+23 & H$_2$ (g) Compressor & \ref{life_h2_compressor} \\
+24-25 & O$_2$ (g) Storage & \ref{life_o2_storage} \\
+26-27 & O$_2$ (g) Pipe & \ref{life_o2_pipe} \\
+28 & O$_2$ (g) Compressor & \ref{life_o2_compressor} \\
+29-30 & N$_2$ (l) Storage & \ref{life_n2_storage} \\
+\bottomrule
+\end{tabular}
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -904,32 +944,6 @@ Duty
 \item The carbon scrubber \ref{life_c_scrubber} and the hydrogen recapture \ref{life_h2_recapture} components both contain layers of delicate catalysts. If a bludgeoning shot hits one of them, it can dent the sheets of metal out of shape, making them extremely difficult to remove. A character might be forced to open up the blazing-hot chamber and physically yank the sheets out in order to make sure the system keeps working.
 \end{itemize}
 \end{minipage}
-
-\vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
-\toprule
-\multicolumn{3}{|l|}{Table \ref{blank} Life Support Components} \\
-\toprule
-1d30 & Component & Link \\
-\midrule
-1-2 & Electrolysis Chamber & \ref{life_electrolysis} \\
-3-4 & Carbon Scrubber & \ref{life_c_scrubber} \\
-5 & Hydrogen Recapture & \ref{life_h2_recapture} \\
-6-7 & Dehumidifier & \ref{life_dehumidifier} \\
-8-9 & Atmosphere & \ref{life_atmosphere} \\
-\midrule
-12-15 & H$_2$O (l) Storage & \ref{life_h2o_storage} \\
-16 & H$_2$O (l) Pump & \ref{life_h2o_pump} \\
-17-18 & H$_2$O (l) Pipe & \ref{life_h2o_pipe} \\
-19-20 & H$_2$ (g) Storage & \ref{life_h2_storage} \\
-21-22 & H$_2$ (g) Pipe & \ref{life_h2_pipe} \\
-23 & H$_2$ (g) Compressor & \ref{life_h2_compressor} \\
-24-25 & O$_2$ (g) Storage & \ref{life_o2_storage} \\
-26-27 & O$_2$ (g) Pipe & \ref{life_o2_pipe} \\
-28 & O$_2$ (g) Compressor & \ref{life_o2_compressor} \\
-29-30 & N$_2$ (l) Storage & \ref{life_n2_storage} \\
-\bottomrule
-\end{tabular}
 
 \hspace{-18pt} \subsubsection{Electrolysis Chamber} \label{life_electrolysis} \vspace{-0.2cm}
 A large vat of water serves as backup oxygen in case of failure. This is also needed because the one of the byproducts of the carbon stripping process is water. This water is split into its component gases which both go to temporary storage, to be then sent where needed.
@@ -1083,10 +1097,32 @@ A vat of liquid nitrogen supplies extra air for the ship. The vat is kept very c
 {Such cold liquids wear little, but their containers become brittle over time.}
 
 
-
+\newpage
 \subsection{Electrical Grid} \label{grid}
 
 Every single system aboard the ship requires some form of electricity to function properly. A small, self-contained nuclear reactor gives the ship more power than it knows what to do with. This supplies power in the form of a central high-voltage AC line. Weaponry taps directly into this line, though converting it to DC power first. A transformer lowers the voltage for the less intense systems and computers.
+
+\vspace{0.2cm}
+\includegraphics[scale=0.3]{Electrical_Grid}
+
+\vspace{0.5cm} \hspace{0.25\linewidth}
+\begin{tabular}{@{} | c | l | c | @{}}
+\toprule
+\multicolumn{3}{|l|}{Table \ref{grid} Electrical Grid Components} \\
+\toprule
+1d20 & Component & Link \\
+\midrule
+- & Reactor & \ref{grid_reactor} \\
+1-4 & Batteries & \ref{grid_batteries} \\
+5-6 & Transformer & \ref{grid_transformer} \\
+7-8 & Converter & \ref{grid_converter} \\
+9-10 & Capacitor & \ref{grid_capacitor} \\
+11-12 & Electric Field Generator & \ref{grid_e_field_generator} \\
+13-16 & Magnetic Field Coils & \ref{grid_m_field_coils} \\
+17-19 & Wiring & \ref{grid_wiring} \\
+20 & Heavy Wiring & \ref{grid_heavy_wiring} \\
+\bottomrule
+\end{tabular}
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -1114,25 +1150,6 @@ Duty
 \item Many different coils exist throughout the electrical grid, including in the transformer \ref{grid_transformer}, electric field generator \ref{grid_e_field_generator}, and magnetic field coils \ref{grid_m_field_coils}. If these are bent out of shape, it is likely they come into contact with another metal object. This short circuits the coil and causes a part of it to become very hot very quickly. A brave soul might have to bend a coil back into shape by hand while it's searing hot.
 \end{itemize}
 \end{minipage}
-
-\vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
-\toprule
-\multicolumn{3}{|l|}{Table \ref{grid} Electrical Grid Components} \\
-\toprule
-1d20 & Component & Link \\
-\midrule
-- & Reactor & \ref{grid_reactor} \\
-1-4 & Batteries & \ref{grid_batteries} \\
-5-6 & Transformer & \ref{grid_transformer} \\
-7-8 & Converter & \ref{grid_converter} \\
-9-10 & Capacitor & \ref{grid_capacitor} \\
-11-12 & Electric Field Generator & \ref{grid_e_field_generator} \\
-13-16 & Magnetic Field Coils & \ref{grid_m_field_coils} \\
-17-19 & Wiring & \ref{grid_wiring} \\
-20 & Heavy Wiring & \ref{grid_heavy_wiring} \\
-\bottomrule
-\end{tabular}
 
 \hspace{-18pt} \subsubsection{Reactor} \label{grid_reactor} \vspace{-0.2cm}
 The part of the ship that generates electricity is a self-contained nuclear reactor. A ship's engineer need only plug it in to the electrical and thermal grids, and it works. The reactor typically produces an excess of electrical energy for the ship, so that nobody should worry about running out. A nuclear reactor is a complicated thing in itself, and any damage to it could be catastrophic to the crew inside. As a result, avoid having the reactor undergo any problems. It is by far the safest hardware on the ship, with the worst consequences if broken.
@@ -1213,7 +1230,7 @@ Heavy wiring carries high voltage electricity from the reactor to the systems of
 {Requires regular replacement.}
 
 
-
+\newpage
 \subsection{Fighter AR Display} \label{fighter}
 
 A fighter pilot in open space would look around him outside a glass window and see the pitch black void of space. If there were any ships visible, they would be so far away as to be minuscule specks, and often are only partially lit by the sun. As a result, a collection of videogame designers and military simulation designers worked together to create an alternate-reality virtual battlefield for pilots to view in real-time.
@@ -1463,6 +1480,7 @@ The ship is controlled with three joysticks. In one hand the pilot always holds 
 {A pilot is intimately familiar with the sensitivity of their controls. If they are even slightly off, shot will start to miss and the pilot will begin missing their intended marks.}
 
 
+\newpage
 \subsection{Outer Hull} \label{outer}
 
 While a wealth of possible bugs and problems are possible with the fighter pilot's AR display, they are also in charge of extravehicular (EV) maneuvers. The pilot is trained in zero-g dexterity and maneuvering, meaning it is better to have the pilot fix a problem on the outside of the hull than have some plumber put on a space suit and fumble their way around the outer hull.
@@ -1911,7 +1929,7 @@ The enemies only expected one police vessel to take this transfer orbit, but the
 location & In the shadow of the moon of a different planet than the one that the station orbits. \\
 distances & Long range which rapidly becomes close. \\
 comm.s time & Anywhere from 5 minutes to an hour (~ 3 x 1d20 minutes). \\
-\begin{tabular}[c]{@{}r@{}}relative\\velocities\end{tabular} & The enemies are orbiting in the opposite direction as the friendly ships around the moon. This means the ships will get close to each other very quickly and will pass each other at enormous speeds. \\ 
+\begin{tabular}[c]{@{}r@{}}relative\\velocities\end{tabular} & The enemies are orbiting in the opposite direction as the friendly ships around the moon. The ships will become close quickly and will pass each other at huge speeds. \\ 
 visibility & Complete darkness. \\ 
 ions & none \\
 radioactivity & none \\
@@ -1923,7 +1941,6 @@ asteroids & none \\
 \end{tabular}
 \end{minipage}
 
-\newpage
 \subsection{Combat 6: A Station} \label{combat_6}
 
 \begin{minipage}[t]{0.5\linewidth}
@@ -2013,8 +2030,9 @@ asteroids & Numerous asteroids of all sizes. \\
 \end{tabular}
 \end{minipage}
 
-\newpage
 \subsection{Combat 8: An Entire Planet} \label{combat_8}
+
+When each ballistic missile takes a railgun or ray shot, \newline \qeq{1d4}{1-2.}{The hole or dent does little to nothing.}{3.}{The hole or dent disables the targeting and guidance systems, killing it quietly.}{4.}{The hole or dent sets off the ignition system, instantly exploding the rocket.}{}{}
 
 \begin{minipage}[t]{0.5\linewidth}
 \begin{tabular}[t]{| p{7cm} |}
@@ -2031,7 +2049,7 @@ Problem Complexity :- \\
 Propagate the problem to as many different systems as you can. The goal of this combat is not to destroy an entire planet, but to escape. This sort of combat lends itself to the most intense kinds of problems, problem cascades. \\
 \midrule
 Enemy Description :- \\
-The player's home station has identified them as a threat. The home station fires weaponry which causes most of the problems, while the entire planet below launches its defenses. These planetary defenses include only missiles. \newline When each missile takes a railgun or ray shot, \newline \qeq{1d4}{1-2.}{The hole or dent does little to nothing.}{3.}{The hole or dent disables the targeting and guidance systems, putting the rocket dead in the water.}{4.}{The hole or dent sets off the ignition system, instantly exploding the rocket.}{}{} \\
+The player's home station has identified them as a threat. The home station fires weaponry which causes most of the problems, while the entire planet below launches its defenses. These planetary defenses include only missiles. \\
 \midrule
 Reason for Engagement :- \\
 The home station and planet could be on high alert for the players' ship because it engaged a station in combat 6 \ref{combat_6}. \\
@@ -2285,6 +2303,83 @@ Then the race begins. Five laps with a pitstop after the third lap. The racetrac
 \end{tabular}
 
 
+\section{Documentation}
+
+The following few subsections include a justification for the ship weaponry used. They are written in denser language and are not necessary to run the campaign.
+
+\subsection{To Hit a Fighter}
+
+Consider a situation where a fighter ship wants to dodge a railgun shot fired at it. The railgun's cameras and targeting systems are so advanced that the fighter's position, velocity, and acceleration are known. 
+
+The fighter cannot do anything to dodge before the shot is fired. If the fighter tries to dodge before, its velocity will change. However, the targeting systems know the fighter's velocity, so any change in velocity can be accounted for by aiming the railgun. Any acceleration taking place at the moment the shot is fired is also taken into account. Therefore the fighter must accelerate after the shot is fired in order to dodge it.
+
+Since velocity and acceleration are accounted for, the only velocity and acceleration that matter are those that are gained after the shot is fired. The fighter then must accelerate a sufficient amount after the shot is fired in order to dodge it. During this acceleration, where the initial velocity and acceleration are accounted for and therefore can be treated as zero, the total distance traveled $d$ over a time $t$ is given by 
+
+\begin{equation} d = \frac{1}{2}at^2 \end{equation}
+
+where $a$ is the acceleration, assuming it is held roughly constant. The total distance needed to be traveled in order to dodge a shot aimed at the center of a ship is half of the length of the ship. Since the engine is positioned only at the back of the ship, this length is strictly along the forward-backward axis of the fighter. Using $ d = \frac{1}{2} l $ and solving for time, the equation above becomes
+\begin{equation} \label{dodge_time}
+t = \sqrt{\frac{l}{a}}
+\end{equation}
+This equation takes the ship's length $l$ and maximum acceleration $a$ and yields a time $t$ which represents how long it takes the ship to accelerate over half of its length. If a shot takes less than this amount of time to arrive, the ship will not have enough time to accelerate over half of its length, meaning the shot will hit the ship somewhere. If a shot takes more than this amount of time to arrive, the ship will have enough time to dodge over half of its length, and so the shot will not hit. This \textit{dodge time} is an effective measure of a fighter's ability to maneuver. 
+
+The dodge time can also be converted into a range. If a railgun fires a shot at initial velocity $v$, then the distance it travels in a certain amount of time $t$ is 
+
+\begin{equation} d = vt \end{equation}
+
+Using the proof above that the shot must take less than the dodge time \ref{dodge_time} to arrive or else it will always miss a fighter that dodges it, the equation above becomes 
+\begin{equation} \label{effective_range}
+d = v \sqrt{\frac{l}{a}}
+\end{equation}
+This equation gives the \textit{effective distance} $d$ that a railgun can fire at a specific fighter. If the railgun fires at a fighter past this distance, the shot's speed will be too slow to cover the distance within the time required by the fighter's dodge time. This equation can help a savvy DM determine exactly whether or not a Gunner or Pilot can hit a small enemy ship at a given range, assuming they are going to dodge it. If the enemy does not dodge, the actual range of the weapon can be longer.
+
+To recap, the proper measure of a fighter's defense against railguns is its \textit{dodge time} found in equation \ref{dodge_time}. A railgun's \textit{effective range} found in equation \ref{effective_range} will depend on the ship it is firing at. A railgun that fires faster typically has longer ranges.
+
+\subsection{Weapon Accuracy}
+
+Consider a weapon firing a shot at a target ship. The weapon aims at a single point, and the perfect straight line between the weapon and that point is the original trajectory of the shot. Call this distance $R$. However, every shot inevitably leaves the muzzle with some error in angle $\delta \theta$ that causes the real trajectory to deviate from the original. 
+
+The shot arrives at the target. A right triangle is formed between the muzzle of the weapon, the point on the target the weapon was aimed at, and the real point that the shot arrives at. 
+
+\begin{minipage}[t]{\linewidth} \centering
+\begin{tikzpicture}
+\coordinate (M) at (0, 0);
+\coordinate (A) at (4, 0);
+\coordinate (E) at (4, 2);
+
+\draw (A) node[anchor=west]{point aimed at} 
+-- (M) node[anchor=east]{muzzle} 
+-- (E) node[anchor=west]{real point hit} 
+-- cycle
+pic [draw=black, angle radius=2cm, "$\delta\theta$"] {angle= A--M--E};
+
+\fill [black] (M) rectangle (0.5, 0.2);
+\fill [red] (A) circle (0.1);
+\fill [black] (E) circle (0.1);
+
+\draw (2, -0.5) node[anchor=north]{$R$ original trajectory};
+\draw (4.5, 1) node[anchor=west]{$r$ error};
+\draw (1.5, 1) node[anchor=east]{real trajectory};
+\end{tikzpicture}
+\end{minipage}
+
+Using a tangent the following relation can be derived from the above triangle
+
+\begin{equation} tan(\delta\theta) = \frac{r}{R} \end{equation}
+
+Assume that the length of the original trajectory is significantly larger than the length of $r$ the error. That is, $ R >> r $. This ensures that $\delta\theta$ is a very small number, so that the small angle approximation $tan(x) = x$ can be used to simplify the equation above into
+
+\begin{equation} \delta\theta = \frac{r}{R} \end{equation}
+
+Rearranging,
+
+\begin{equation} \label{accuracy}
+r = R \delta\theta
+\end{equation}
+
+is an equation that tells the maximum possible error $r$ in the arrival of the shot at the target, over a distance $R$ and assuming a maximum error in angle of $\delta\theta$.
+
+A shot aimed at the center of a target must ensure that $r$ never becomes larger than half of the length of the smallest dimension of the target. More than this and the shot might miss the target, solely due to the inherent error in angle as the shot leaves the muzzle. This equation is applicable to any kind of weapon that fires a shot at a specific point, including railguns, rays, and lasers. A savvy DM could use this equation to determine whether or not a Gunner or Pilot can reliably hit a specific part of a large ship or station at a given range. 
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.10)  12 NOV 2019 13:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.10)  13 NOV 2019 12:50
 entering extended mode
 **./DirectionAndDrive.tex
 (DirectionAndDrive.tex
@@ -782,6 +782,14 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 ) ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
+("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibraryangles.code.tex"
+File: tikzlibraryangles.code.tex 2013/08/28 v3.0.1a (rcs-revision 1.1)
+)
+("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibraryquotes.code.tex"
+File: tikzlibraryquotes.code.tex 2014/03/21 v3.0.1a (rcs-revision 1.4)
+)
 ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks44
@@ -790,20 +798,20 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 ) (DirectionAndDrive.aux)
 \openout1 = `DirectionAndDrive.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -874,7 +882,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring ON on input line 46.
+Package hyperref Info: Link coloring ON on input line 48.
 
 ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.st
 y"
@@ -886,9 +894,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 48.
+LaTeX Info: Redefining \pageref on input line 48.
+LaTeX Info: Redefining \nameref on input line 48.
  (DirectionAndDrive.out) (DirectionAndDrive.out)
 \@outlinefile=\write4
 \openout4 = `DirectionAndDrive.out'.
@@ -904,15 +912,15 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Info: Redefining \celsius on input line 46.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 46.
+LaTeX Info: Redefining \celsius on input line 48.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 48.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 46.
-Package gensymb Info: Using \Omega for \ohm on input line 46.
+LaTeX Info: Redefining \ohm on input line 48.
+Package gensymb Info: Using \Omega for \ohm on input line 48.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -923,415 +931,426 @@ Package gensymb Warning: Not defining \micro.
  [1
 
 {C:/Users/Meow/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] [3] [4] 
-[5] [6] [7] [8]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 369--375
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 388--394
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 396--402
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 405--411
+[5] [6] [7]
+<./pic/Engine.png, id=244, 1073.51062pt x 1373.88281pt>
+File: ./pic/Engine.png Graphic file (type png)
+<use ./pic/Engine.png>
+Package pdftex.def Info: ./pic/Engine.png  used on input line 317.
+(pdftex.def)             Requested size: 375.73434pt x 480.8662pt.
+ [8 <./pic/Engine.png>]
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 376--382
 [] 
  []
 
 [9]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 415--421
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 395--401
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 424--430
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 403--409
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 433--439
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 412--418
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 445--451
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 422--428
 [] 
  []
 
 [10]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 454--460
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 431--437
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 465--471
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 440--446
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 474--480
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 452--458
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 461--467
 [] 
  []
 
 [11]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 483--489
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 472--478
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 495--501
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 481--487
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 504--510
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 490--496
 [] 
  []
 
-[12]
-Underfull \hbox (badness 1092) in paragraph at lines 530--531
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 502--508
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 511--517
+[] 
+ []
+
+[12] [13]
+<./pic/Thermal.png, id=316, 1444.39626pt x 1510.64375pt>
+File: ./pic/Thermal.png Graphic file (type png)
+<use ./pic/Thermal.png>
+Package pdftex.def Info: ./pic/Thermal.png  used on input line 528.
+(pdftex.def)             Requested size: 397.19917pt x 415.4168pt.
+ [14 <./pic/Thermal.png>]
+Underfull \hbox (badness 1092) in paragraph at lines 559--560
 \T1/cmr/m/n/10 anger. If a player is get-ting
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 543--544
+Underfull \hbox (badness 1910) in paragraph at lines 572--573
 []\T1/cmr/m/n/10 When a ra-di-a-tor [][]3.2.1[][] breaks
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 570--576
-[] 
- []
-
-[13]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 579--585
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 590--597
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 603--609
-[] 
- []
-
-[14]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 612--618
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 621--627
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 630--636
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 580--586
 [] 
  []
 
 [15]
-Underfull \hbox (badness 1622) in paragraph at lines 660--661
-\T1/cmr/m/n/10 shows com-plete dark-ness most
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 589--595
+[] 
  []
 
 
-Underfull \hbox (badness 1418) in paragraph at lines 660--661
-\T1/cmr/m/n/10 scribe their shots dis-ap-pear-ing
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 600--607
+[] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 691--697
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 613--619
 [] 
  []
 
 [16]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 700--706
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 622--628
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 709--715
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 631--637
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 718--724
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 727--733
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 640--646
 [] 
  []
 
 [17]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 736--742
+Underfull \hbox (badness 1622) in paragraph at lines 670--671
+\T1/cmr/m/n/10 shows com-plete dark-ness most
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 670--671
+\T1/cmr/m/n/10 scribe their shots dis-ap-pear-ing
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 701--707
 [] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 745--751
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 754--760
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 763--769
-[] 
- []
-
-
-Underfull \hbox (badness 1946) in paragraph at lines 779--780
-\T1/cmr/m/n/10 in the main vac-uum cham-ber
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 779--780
-[][]\T1/cmr/m/n/10 3.4.4[][] so much as mal-func-tions
  []
 
 [18]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 819--825
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 710--716
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 828--834
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 719--725
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 728--734
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 737--743
 [] 
  []
 
 [19]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 839--845
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 746--752
 [] 
  []
 
 
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 755--761
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 764--770
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 773--779
+[] 
+ []
+
+[20]
+Underfull \hbox (badness 1946) in paragraph at lines 790--791
+\T1/cmr/m/n/10 in the main vac-uum cham-ber
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 790--791
+[][]\T1/cmr/m/n/10 3.4.4[][] so much as mal-func-tions
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 830--836
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 839--845
+[] 
+ []
+
+[21]
 Overfull \hbox (14.03436pt too wide) in paragraph at lines 850--856
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 859--865
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 861--867
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 868--874
-[] 
- []
-
-[20]
-Underfull \hbox (badness 2245) in paragraph at lines 885--886
-\T1/cmr/m/n/10 burn, ex-plo-sion, or other ex-
- []
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 891--892
-[]\T1/cmr/m/n/10 The end-less tiny peb-bles con-
- []
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 891--892
-\T1/cmr/m/n/10 if they es-cape into the room.
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 891--892
-\T1/cmr/m/n/10 They will float around ev-ery-
- []
-
-
-LaTeX Warning: Reference `blank' on page 21 undefined on input line 911.
-
-[21]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 937--943
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 951--958
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 870--876
 [] 
  []
 
 [22]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 966--972
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 977--983
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 988--994
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 879--885
 [] 
  []
 
 [23]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 997--1003
-[] 
+<./pic/Life_Support.png, id=427, 1444.39626pt x 1781.65625pt>
+File: ./pic/Life_Support.png Graphic file (type png)
+<use ./pic/Life_Support.png>
+Package pdftex.def Info: ./pic/Life_Support.png  used on input line 893.
+(pdftex.def)             Requested size: 397.19917pt x 489.94339pt.
+ [24 <./pic/Life_Support.png>]
+Underfull \hbox (badness 2245) in paragraph at lines 925--926
+\T1/cmr/m/n/10 burn, ex-plo-sion, or other ex-
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1006--1012
-[] 
+Underfull \hbox (badness 1490) in paragraph at lines 931--932
+[]\T1/cmr/m/n/10 The end-less tiny peb-bles con-
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1015--1021
-[] 
+Underfull \hbox (badness 1342) in paragraph at lines 931--932
+\T1/cmr/m/n/10 if they es-cape into the room.
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1024--1030
-[] 
+Underfull \hbox (badness 1939) in paragraph at lines 931--932
+\T1/cmr/m/n/10 They will float around ev-ery-
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1033--1039
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1042--1048
-[] 
- []
-
-[24]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1051--1057
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1060--1066
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1069--1075
-[] 
- []
-
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1078--1084
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 951--957
 [] 
  []
 
 [25]
-Underfull \hbox (badness 3942) in paragraph at lines 1101--1102
-[]\T1/cmr/m/n/10 Any time a com-po-nent with
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 965--972
+[] 
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 1101--1102
-\T1/cmr/m/n/10 wiring is dam-aged by ei-ther
- []
-
-
-Underfull \hbox (badness 1939) in paragraph at lines 1101--1102
-\T1/cmr/m/n/10 pierc-ing or blud-geon-ing, there
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1115
-[]\T1/cmr/m/n/10 Many dif-fer-ent coils ex-ist
- []
-
-
-Underfull \hbox (badness 3942) in paragraph at lines 1114--1115
-\T1/cmr/m/n/10 they come into con-tact with
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 980--986
+[] 
  []
 
 [26]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1141--1147
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 991--997
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1152--1158
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1002--1008
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1161--1167
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1011--1017
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1020--1026
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1029--1035
 [] 
  []
 
 [27]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1170--1176
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1038--1044
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1179--1185
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1047--1053
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1190--1196
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1056--1062
 [] 
  []
 
 
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1199--1205
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1065--1071
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1074--1080
 [] 
  []
 
 [28]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1208--1214
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1083--1089
 [] 
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 1240--1241
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1092--1098
+[] 
+ []
+
+[29]
+<./pic/Electrical_Grid.png, id=504, 1372.12625pt x 1017.8025pt>
+File: ./pic/Electrical_Grid.png Graphic file (type png)
+<use ./pic/Electrical_Grid.png>
+Package pdftex.def Info: ./pic/Electrical_Grid.png  used on input line 1106.
+(pdftex.def)             Requested size: 411.64105pt x 305.34311pt.
+
+Underfull \hbox (badness 3942) in paragraph at lines 1137--1138
+[]\T1/cmr/m/n/10 Any time a com-po-nent with
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 1137--1138
+\T1/cmr/m/n/10 wiring is dam-aged by ei-ther
+ []
+
+
+Underfull \hbox (badness 1939) in paragraph at lines 1137--1138
+\T1/cmr/m/n/10 pierc-ing or blud-geon-ing, there
+ []
+
+[30 <./pic/Electrical_Grid.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1151
+[]\T1/cmr/m/n/10 Many dif-fer-ent coils ex-ist
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 1150--1151
+\T1/cmr/m/n/10 they come into con-tact with
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1158--1164
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1169--1175
+[] 
+ []
+
+[31]
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1178--1184
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1187--1193
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1196--1202
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1207--1213
+[] 
+ []
+
+[32]
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1216--1222
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1225--1231
+[] 
+ []
+
+[33]
+Underfull \hbox (badness 1087) in paragraph at lines 1257--1258
 []\T1/cmr/m/n/10 If a suf-fi-cient ter-ri-ble prob-lem
  []
 
-[29] [30] [31] [32] [33] [34]
-Underfull \hbox (badness 1215) in paragraph at lines 1476--1477
+[34] [35] [36] [37] [38] [39]
+Underfull \hbox (badness 1215) in paragraph at lines 1494--1495
 \T1/cmr/m/n/10 in-duc-ing, not to men-tion how
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 1489--1490
+Underfull \hbox (badness 1137) in paragraph at lines 1507--1508
 \T1/cmr/m/n/10 bro-ken, it can com-pletely dis-
  []
 
 
-Underfull \hbox (badness 1728) in paragraph at lines 1489--1490
+Underfull \hbox (badness 1728) in paragraph at lines 1507--1508
 \T1/cmr/m/n/10 able com-mu-ni-ca-tion ei-ther be-
  []
 
-[35]
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1524--1530
-[] 
- []
 
-
-Overfull \hbox (14.03436pt too wide) in paragraph at lines 1533--1539
-[] 
- []
-
-[36]
 Overfull \hbox (14.03436pt too wide) in paragraph at lines 1542--1548
 [] 
  []
 
-
+[40]
 Overfull \hbox (14.03436pt too wide) in paragraph at lines 1551--1557
 [] 
  []
@@ -1341,7 +1360,7 @@ Overfull \hbox (14.03436pt too wide) in paragraph at lines 1560--1566
 [] 
  []
 
-[37]
+[41]
 Overfull \hbox (14.03436pt too wide) in paragraph at lines 1569--1575
 [] 
  []
@@ -1356,7 +1375,7 @@ Overfull \hbox (14.03436pt too wide) in paragraph at lines 1587--1593
 [] 
  []
 
-[38]
+[42]
 Overfull \hbox (14.03436pt too wide) in paragraph at lines 1596--1602
 [] 
  []
@@ -1371,155 +1390,176 @@ Overfull \hbox (14.03436pt too wide) in paragraph at lines 1614--1620
 [] 
  []
 
-[39]
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1717--1734
-[][] 
- []
-
-[40]
-Underfull \hbox (badness 1515) in paragraph at lines 1767--1768
-[]|\T1/cmr/m/n/10 Above the sta-tion's in-dus-trial
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 1775--1776
-[]|\T1/cmr/m/n/10 Light in-dus-trial de-bris in the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1775--1776
-\T1/cmr/m/n/10 form of mostly at-mo-spheric
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1776--1777
-[]|\T1/cmr/m/n/10 Industrial scrap still floats
- []
-
-
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1763--1780
-[][] 
- []
-
-[41]
-Underfull \hbox (badness 4505) in paragraph at lines 1815--1816
-[]|\T1/cmr/m/n/10 Long range to the satel-lite,
- []
-
-
-Underfull \hbox (badness 1400) in paragraph at lines 1815--1816
-\T1/cmr/m/n/10 medium range to the drones.
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 1820--1821
-[]|\T1/cmr/m/n/10 The re-ac-tor in-side the satel-
- []
-
-
-Underfull \hbox (badness 1158) in paragraph at lines 1820--1821
-\T1/cmr/m/n/10 tem when close range to the
- []
-
-
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1810--1827
-[][] 
- []
-
-[42]
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1858--1875
-[][] 
- []
-
 [43]
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1907--1924
-[][] 
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1623--1629
+[] 
+ []
+
+
+Overfull \hbox (14.03436pt too wide) in paragraph at lines 1632--1638
+[] 
  []
 
 [44]
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1952--1969
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1735--1752
 [][] 
  []
 
 [45]
-Underfull \hbox (badness 2707) in paragraph at lines 2004--2005
-[]|\T1/cmr/m/n/10 Players' ship mov-ing for-ward
+Underfull \hbox (badness 1515) in paragraph at lines 1785--1786
+[]|\T1/cmr/m/n/10 Above the sta-tion's in-dus-trial
  []
 
 
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 1997--2014
+Underfull \hbox (badness 1281) in paragraph at lines 1793--1794
+[]|\T1/cmr/m/n/10 Light in-dus-trial de-bris in the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1793--1794
+\T1/cmr/m/n/10 form of mostly at-mo-spheric
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1794--1795
+[]|\T1/cmr/m/n/10 Industrial scrap still floats
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1781--1798
 [][] 
  []
 
 [46]
-Underfull \hbox (badness 1590) in paragraph at lines 2055--2056
-[]|\T1/cmr/m/n/10 Physical waste from ex-ploded
+Underfull \hbox (badness 4505) in paragraph at lines 1833--1834
+[]|\T1/cmr/m/n/10 Long range to the satel-lite,
  []
 
 
-Overfull \hbox (33.20042pt too wide) in paragraph at lines 2042--2059
+Underfull \hbox (badness 1400) in paragraph at lines 1833--1834
+\T1/cmr/m/n/10 medium range to the drones.
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 1838--1839
+[]|\T1/cmr/m/n/10 The re-ac-tor in-side the satel-
+ []
+
+
+Underfull \hbox (badness 1158) in paragraph at lines 1838--1839
+\T1/cmr/m/n/10 tem when close range to the
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1828--1845
 [][] 
  []
 
 [47]
-Overfull \hbox (19.41347pt too wide) in paragraph at lines 2148--2162
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1876--1893
 [][] 
  []
 
-[48] [49] [50] [51] [52]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2294
+[48]
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1925--1942
+[][] 
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 1969--1986
+[][] 
+ []
+
+[49]
+Underfull \hbox (badness 2707) in paragraph at lines 2021--2022
+[]|\T1/cmr/m/n/10 Players' ship mov-ing for-ward
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 2014--2031
+[][] 
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 2073--2074
+[]|\T1/cmr/m/n/10 Physical waste from ex-ploded
+ []
+
+
+Overfull \hbox (33.20042pt too wide) in paragraph at lines 2060--2077
+[][] 
+ []
+
+[50]
+Overfull \hbox (19.41347pt too wide) in paragraph at lines 2166--2180
+[][] 
+ []
+
+[51] [52] [53] [54] [55]
+Overfull \hbox (15.0pt too wide) in paragraph at lines 2344--2365
+[][] 
+ []
+
+[56] [57]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2389
 .
 
 ("C:\Users\Meow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2875) in paragraph at lines 2294--2295
+Underfull \hbox (badness 2875) in paragraph at lines 2389--2390
 []\T1/cmr/m/n/10 Adams, D. A. (2003). Naval rail guns are rev-o-lu-tion-ary. \T
 1/cmr/m/it/10 US Naval In-sti-tute\T1/cmr/m/n/10 . Re-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 2297--2298
+Underfull \hbox (badness 1675) in paragraph at lines 2392--2393
 []\T1/cmr/m/n/10 Closing the Loop: Re-cy-cling Wa-ter and Air in Space [PDF fil
 e]. (n.d.). Sum-mary
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 2297--2298
+Underfull \hbox (badness 1655) in paragraph at lines 2392--2393
 \T1/cmr/m/n/10 of in-ac-ces-si-ble video. \T1/cmr/m/it/10 NASA\T1/cmr/m/n/10 . 
 Re-trieved from [][]$\T1/cmtt/m/n/10 https : / / www . nasa . gov / pdf / 14655
 8main _
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 2300--2301
+Underfull \hbox (badness 3375) in paragraph at lines 2395--2396
 \T1/cmr/m/n/10 Re-trieved from [][]$\T1/cmtt/m/n/10 http : / / www . dupont . c
 om / content / dam / dupont / products-[]and-[]services /
  []
 
-[53]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2311.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2311.
+[58]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2406.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2406.
  (DirectionAndDrive.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2311.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2311.
-
-Package rerunfilecheck Info: File `DirectionAndDrive.out' has not changed.
-(rerunfilecheck)             Checksum: FF2F29DAF876FFF9916FDBD8F0A1974C;2339.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2406.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2406.
 
 
-LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2311.
+Package rerunfilecheck Warning: File `DirectionAndDrive.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `DirectionAndDrive.out':
+(rerunfilecheck)             Before: 2F4F6D8E9CFB0755563AA4C5F674DD77;2445
+(rerunfilecheck)             After:  08220DAEA870B8A160DF42A7EA46C614;2452.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2406.
  ) 
 Here is how much of TeX's memory you used:
- 19038 strings out of 492972
- 354404 string characters out of 3127066
- 454895 words of memory out of 3000000
- 22359 multiletter control sequences out of 15000+200000
+ 19238 strings out of 492972
+ 359723 string characters out of 3127066
+ 457970 words of memory out of 3000000
+ 22533 multiletter control sequences out of 15000+200000
  16968 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,56p,905b,570s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,14n,56p,905b,918s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Meow\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 ctt1000.pk> <C:\Users\Meow\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
 \dpi600\ecrm0700.pk> <C:\Users\Meow\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
@@ -1532,16 +1572,17 @@ w\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk> <C:\
 Users\Meow\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200
 .pk> <C:\Users\Meow\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
 \ecrm1728.pk><C:/Users/Meow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb><C:/Users/Meow/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Meow/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Meow/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Meow/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-Meow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
->
-Output written on DirectionAndDrive.pdf (53 pages, 441602 bytes).
+c/amsfonts/cm/cmex10.pfb><C:/Users/Meow/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Meow/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Meow/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Meow/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/
+Meow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Users/Meow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb>
+Output written on DirectionAndDrive.pdf (58 pages, 12578989 bytes).
 PDF statistics:
- 1168 PDF objects out of 1200 (max. 8388607)
- 186 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1227 PDF objects out of 1440 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
