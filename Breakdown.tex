@@ -43,7 +43,7 @@
 
 \title{Breakdown \\ {\large What would you do if your spaceship was falling apart around you?}}
 \author{Scott Armstrong}
-\date{1 Nov 2019}
+\date{14 Nov 2019}
 
 \begin{document}
 
@@ -51,25 +51,28 @@
 
 \begin{abstract}
 
+A science fiction RPG centered around realistic space combat, except that the players hardly participate in the combat itself at all. The campaign seeks to answer how it would feel to really be on a spaceship that was falling apart, and what this kind of intense and dangerous situation can drive people to do. Instead of leading the combat, the players will witness their ship breaking down around them as shots fly and engines roar. The players must understand their particular systems of the ship well enough to identify any problems, come up with solutions to them, and then fix those problems. The players will not be valiant heroes nor mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances.
 
 \end{abstract}
 
-\setcounter{tocdepth}{2}
-\tableofcontents
+{
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+}
 
 \section{Preface} \label{preface}
 
 \subsection{Notation} \label{preface_notation}
 Typical D\&D notation will be used, with some shorthand added. 
 \begin{itemize}
-\item \textit{Advantage} means roll two dice and use the larger result. \textit{Disadvantage} means roll two dice and use the smaller result.
 \item \textit{1d20} means roll one 20-sided die.
 \item \textit{1d2} means flip a coin.
 \item \textit{1d20 = 1} means only do this if you roll exactly one on a 20-sided die.
 \item \textit{1d4 ? 1. ... 2. ... 3. ... 4. ...} means roll a 4-sided die, and if it comes up 1 then follow the sentence after 1 (whatever is in the first ellipsis), and likewise for 2, 3, and 4.
 \end{itemize}
 
-\vspace{0.2cm} \hspace{-18pt} Some abbreviations for damage types will be used. For a description of these, see \ref{damage_types} In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
+\vspace{0.2cm} \hspace{-18pt} Some abbreviations for damage types will be used. For a description of these, see section \ref{damage_types}. In general piercing and bludgeoning will be more common, since ship weaponry can cause them. Heating is usually caused indirectly by thermal system failures, and wear is generally the result of hazards in the environment.
 \begin{itemize}
 \item \textit{P} - piercing
 \item \textit{B} - bludgeoning
@@ -141,7 +144,7 @@ Typical D\&D notation will be used, with some shorthand added.
 
 \subsection{Recommended Prior Knowledge}
 
-The players can have any amount of schooling in the subject, or none at all, as long as they are ready and willing to learn. The DM's knowledge is more demanding, as the arbiter of engineered solutions. In general this RPG assumes that the DM has at least high-school (secondary school) level knowledge in the sciences. The following is a list of topics that the DM should know or be familiar with.
+The players can have any amount of schooling in the subject, or none at all, as long as they are ready and willing to learn their systems. The DM's knowledge is more demanding, as the arbiter of engineered solutions. In general this RPG assumes that the DM has at least high-school (secondary school) level knowledge in the sciences. The following is a list of topics that the DM should know or be familiar with.
 \begin{itemize}
 \item Most biology required will be related to medicine or injury. Recommended is an awareness of how the following injuries manifest in a person: burns, acids, deafening noises, and oxygen deprivation.
 \item High-school level chemistry will be plenty. Technically the only knowledge necessary is chemical reaction equations, all four states of matter, ionization, and combustion reactions.
@@ -155,13 +158,13 @@ The players can have any amount of schooling in the subject, or none at all, as 
 
 \subsection{Content Warning}
 
-The following campaign will feature graphic depictions of mechanical failures in large engineered structures. While the focus will be on fixing these problems safely and reliably, it is unfortunately likely that an accident will cause serious bodily harm to a character within the game. Players who have experienced trauma from workplace accidents, particularly industrial in nature, should be warned now to turn away. 
+The following campaign will feature graphic depictions of mechanical failures in large engineered structures. While the focus will be on fixing these problems safely and reliably, it is unfortunately likely that an accident will cause serious bodily harm to a character within the game. Players who have experienced trauma from workplace accidents, particularly industrial in nature, should be warned. 
 
 Humans will not be attempting to harm any other human. No character will have a firearm nor any knife. In-game this is justified by saying that aging has been cured, making the human life infinitely more valuable. In practice this encourages players to solve problems safely while trying to save anybody they encounter, friend or foe. To reiterate, this RPG is about space combat, but no character in the game will be intentionally harmed during the making of this campaign.
 
 The campaign will focus on problems arising within a small spaceship. A spaceship is similar to a submarine in that there is nowhere to run and the spaces are very confined. Often times the players might find their characters trapped in game, or else pushed into a tight space. This may affect players with claustrophobia or cleithrophobia, the fear of small spaces or being trapped.
 
-A spaceship traverses the void of space. When problems arise on the ship, the characters in game will be mere inches away from the cold, dead vacuum of space. If a player fails to solve a problem adequately, it can result in an entire ship failing to function. The consequences of each problem that the players encounter can be severe, either deadly dangerous or affecting multiple people. If a player cannot handle the responsibility of this kind of problem solving, or becomes unpleasantly nervous from the stress of this, be warned now that this is not the RPG for you.
+A spaceship traverses the void of space. When problems arise on the ship, the characters in game will be mere inches away from the cold, dead vacuum of space. If a player fails to solve a problem adequately, it can result in an entire ship failing to function. The consequences of each problem can be severe, either life-threatening or affecting multiple people. If a player cannot handle the responsibility of this kind of problem solving, or becomes unpleasantly nervous from the stress of this, be warned now that this is not the RPG for you.
 
 \vspace{0.5cm} \hspace{-18pt} Content Warning Summary - \textit{PG *non-violent life-threatening situations}
 \begin{itemize}
@@ -176,19 +179,19 @@ A spaceship traverses the void of space. When problems arise on the ship, the ch
 
 A spaceship entirely controlled by a computer can fly, dodge, and land just a well as a human. But as soon as it takes a single shot during combat, it's almost certainly going to lose a core system and will cease to function. What is the use of a space ship if it dies after the first hit?
 
-Only a human being can make up the difference. While redundancies and safeties can be engineered into the design of a ship, no robot can be created that can fix every problem, and certainly not with any speed. Only a human has the rapid problem-solving ability, combined with incredible dexterity and muscle memory, to fix a problem that arises. When a system has a hole pierced through it by a ray shot, a trained plumber can patch it while half-asleep. Denting a delicate life-support chamber is fine as long as a human is there to strip away dangerous parts and maintain the flow of chemicals.
+Only a human being can make up the difference. While redundancies and safeties can be engineered into the design of a ship, no robot can be created that can fix every problem, and certainly not with any speed. Only a human has the rapid problem-solving ability, combined with incredible dexterity and muscle memory, to fix a problem that arises. When a system has a hole pierced through it, a trained plumber can patch it while half-asleep. Denting a delicate life-support chamber is fine as long as a human is there to strip away dangerous parts and maintain the flow of chemicals.
 
-This RPG is a science fiction campaign centered around realistic space combat, except that the players hardly participate in the combat itself at all. Instead, the purpose of the players is to understand their particular systems well enough to identify problems, come up with solutions, and then fix those problems. The players will not be valiant heroes nor keen mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances. 
+This RPG is a science fiction campaign centered around realistic space combat, except that the players hardly participate in the combat itself at all. Instead, the players must understand their particular systems of the ship well enough to identify problems, come up with solutions, and then fix those problems. The players will not be valiant heroes nor mystery investigators, instead they will be average mechanics, plumbers, and pilots who are forced to fix extreme problems, in complicated subsystems, under dangerous circumstances. 
 
 \subsection{Example First Combat} \label{example_first_combat}
 
 \begin{enumerate}[leftmargin=2cm]
-\item [\textit{DM}] - The two enemy fighter spacecraft turn towards the ship. All you can see out the window is different endless specs of light. They shoot, and the railgun shots connect with the ship faster than you can blink. Six total shots hit the ship's hull, each with a resounding thud. Everybody in the ship can feel the jerks. 
+\item [\textit{DM}] - Two enemy fighter spacecraft turn towards the ship. All you can see out the window is endless specs of light. The enemies shoot, and the shots connect with the ship faster than you can blink. Six total railgun shots hit the ship's hull, each with a resounding thud. Everybody in the ship can feel the jerks. 
 \item [] \textit{It's at this moment that the DM chooses a player to be Player 1.} 
-\item [\textit{DM}] - \textit{Player 1}, a shot  hits one of the walls of your rooms. Then the second shot hits, and that's the one that gets through.
+\item [\textit{DM}] - \textit{Player 1}, a shot hits one of the walls of your room, leaving a dent. Then a second shot hits and smashes through.
 \item [\textit{Player 1}] - Oh no. What happens?
 \item [] \textit{Now the DM picks one of the systems that the player is supposed to oversee. Under that system the DM looks up the table of components and rolls a die on the bottom half of the table, to make sure the components are rather simple. That component is the part that gets hit by the railgun.}
-\item [\textit{DM}] - \textit{Chooses system Engine. Rolls 10 to hit H$_2$O (l) Storage.} The shot clangs against the fuel storage tank. The tank is full, meaning the pressure wave was enough to reach the outflow valve, and the valve bursts. Three flat streams of water are streaming out the sides of the hole in the tank where liquid flows in and out.
+\item [\textit{DM}] - \textit{Chooses the engine system. Rolls 10 on the system's table to hit H$_2$O (l) Storage.} The shot clangs against the fuel storage tank. The tank is full, meaning the pressure wave was enough to reach the outflow valve, and the valve bursts. Three flat streams of water are streaming out the sides of the hole in the tank where liquid flows in and out.
 \item [\textit{Player 1}] - I cover it with my hands! 
 \item [\textit{DM}] - You spray yourself as your hands wrap around the pipe, but you're successful at holding the water at bay.
 \item [\textit{Player 1}] - ...
@@ -206,9 +209,56 @@ This RPG is a science fiction campaign centered around realistic space combat, e
 
 Ship-to-ship combat has begun, but the players' only glimpse of the action will be what specks they can pick out of the tiny windows. All will be silent until the first enemy shots connect with the ship. It's at this moment that the DM chooses a single player to face a problem. The DM and player then go back and forth presenting and solving the problem. 
 
+
+
+\vspace{0.2cm}
+\begin{tabular}{|c|}
+\toprule
+\begin{tikzpicture}	
+\coordinate (Ao) at (0, 0);
+\coordinate (Ai) at (0, -0.2);
+\coordinate (Bi) at (4, 0);
+\coordinate (Bo) at(4, -0.2);
+\coordinate (Ci) at (2, -1);
+\coordinate (Coa) at (1.5, -1);
+\coordinate (Cod) at (2, -1.5);
+\coordinate (D) at (2, -2);
+
+\draw[->] (Ao) node[anchor=east]{DM presents problem} 
+-- (Bi) node[anchor=west]{Player comes up with solution};
+\draw[->] (Bo) -- (Ci) node[anchor=north]{DM determines effectiveness of solution};
+\draw[->] (Coa) -- (Ai);
+\draw[->] (Cod) -- (D) node[anchor=north]{Problem solved};
+\end{tikzpicture} \\
+\bottomrule
+\end{tabular}
+\vspace{0.2cm}
+
 Here the DM refers back to an interview they had with the player about their character (see section \ref{interview}). While the DM encouraged each character to have clear and helpful strengths, they also required tangible weaknesses. Whether it's anger issues, feeling lost, or childhood fears, the DM will have picked out several weaknesses that can challenge the player and a few strengths to reward them.
 
 The DM picks a weakness and keeps it in mind for what then plays out. Then the DM rolls or chooses from the list of components of one of that player's systems. Whatever component chosen is then damaged according to the damage type of the weapon used. For the first few fights, and when unsure, roll on the table. However, if a specific theme has already come up and you want to explore it further, feel free to choose a specific part to break, as long as you keep the weapon the same.
+
+\vspace{0.2cm}
+\begin{tabular}{|c|}
+\toprule
+\begin{tikzpicture}
+\coordinate (A) at (0, 0);
+\coordinate (B) at (0, -1);
+\coordinate (Ci) at (0.6, -1);
+\coordinate (Co) at (3.4, -1);
+\coordinate (D) at (4, 0);
+\coordinate (E) at (4, -1);
+\coordinate (de) at (4, -0.5);
+
+\draw[->] (A) node[anchor=east]{DM intends to explore a weakness}
+-- (D) node[anchor=west]{Choose a component};
+\draw[->] (B) node[anchor=east]{DM wants a random outcome} -- (
+Ci) node[anchor=west]{Choose a system};
+\draw [->] (Co) -- (E) node[anchor=west]{Roll for a component};
+\end{tikzpicture} \\
+\bottomrule
+\end{tabular}
+\vspace{0.2cm}
 
 A DM must choose their words carefully. When describing the problem that arises, the DM keeps in mind the player's weakness and delivers the information in a way to help build the emotion of the scene. A sentence spoken is generally split up into three things to notice:
 \begin{itemize}
@@ -225,7 +275,7 @@ Each part of the ship is a real, tangible thing in today's society. When things 
 
 \subsection{Damage Types} \label{damage_types}
 
-Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a huge dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe damage to the delicate systems of the ship.
+Two types of weaponry will be prominent during ship combat: railguns and rays. Railguns accelerate hunks of metal to huge speeds. The shot hits its target with \textit{bludgeoning} damage, leaving a sizable dent in whatever it hits. Rays accelerate small streams of hot plasma to insane speeds. These shots are focused over a much smaller area, meaning they deal \textit{piercing} damage, poking a hole directly through whatever it hits. Both of these types of damage can cause severe harm to the delicate systems of the ship.
 
 Additionally, two other less common types of damage exist. If the thermal control of a system fails, it will begin to heat up, and the component will be subject to \textit{heating} damage. Over time, every system becomes subject to \textit{wear} damage, representing the long-term wear and tear of the system. This is only rarely apparent for systems inside the ship, which can be engineered to avoid wear for many years. However, the outside of the ship is subject to stray solar wind and ionizing radiation, which breaks down materials much more quickly than without. Wear is most apparent and relevant to the systems outside the ship.
 
@@ -237,7 +287,7 @@ My suggested split is composed of four roles. Each role takes care of exactly tw
 \begin{itemize}
 \item \textit{Engineer}. Primarily in charge of the rocket engine \ref{engine} of the ship. Such a complex system requires a dedicated caretaker. The plumbing experience of the engineer is also useful for the thermal system \ref{thermal} of the ship.
 \begin{itemize}
-\item \textit{Plumbing}. The rocket engine uses many different types of piping, pump, and storage chamber. Not to mention the extensive array of liquid cooling pipes that the engineer is typically in charge of.
+\item \textit{Plumbing}. The rocket engine uses many different types of piping, pumps, and storage chambers. Not to mention the extensive array of liquid cooling pipes that the engineer is typically in charge of.
 \item \textit{Temperature Hazards}. Between the extremely cold liquid fuel of the engine to the blazing hot radiator, the engineer must develop a respect for and an understanding of the hazards of extreme temperatures.
 \end{itemize}
 \item \textit{Systems Manager}. A large number of various sensors, measurements, and data feeds are directed to the central computer of the ship. The system manager is responsible for sifting through pages of data and identifying problems that arise. On a smaller ship, the systems manager has a more hands-on role as well, and is responsible for repairing the core systems of the ship. The systems manager is in full control of the power grid \ref{grid} and life support systems \ref{life}.
@@ -245,9 +295,9 @@ My suggested split is composed of four roles. Each role takes care of exactly tw
 \item \textit{Electronics}. The systems manager should develop a solid grasp of the electrical grid of the ship, dealing with both practical skills like wiring and more theoretical ones like magnetic coils.
 \item \textit{Chemistry}. The life support system uses both physical and industrial chemistry to properly cleanse the atmosphere. 
 \end{itemize}
-\item \textit{Gunner}. The gunner is in charge of ensuring that the weapons hit their targets. This role can have a slightly more active role in combat. If a target enemy is close enough, the gunner can choose which part of the enemy ship to aim at. If the target is in medium range, they can try to predict which direction the enemy is going to dodge. Otherwise the gunner is in charge of repairing the railgun \ref{railgun} and ray accelerator \ref{ray}.
+\item \textit{Gunner}. The gunner is in charge of ensuring that the weapons hit their targets. This role can play a slightly more active part in combat. If a target enemy is close enough, the gunner can choose which part of the enemy ship to aim at. If the target is in medium range, they can try to predict which direction the enemy is going to dodge. Otherwise the gunner is in charge of repairing the railgun \ref{railgun} and ray accelerator \ref{ray}.
 \begin{itemize}
-\item \textit{Electronics}. Both the railgun and ray require surges of electricity, and accelerate their shots using electricity. The gunner should become familiar with how the laws of electromagnetism bend to their will.
+\item \textit{Electronics}. Both the railgun and ray require surges of electricity, and accelerate their shots using electricity. The gunner should become familiar with how the laws of electricity and magnetism bend to their will.
 \item \textit{Construction}. The railgun requires enormous metal rails, which undergo constant stress from firing. The ray requires a large chamber that can withstand a strong vacuum and has several large hunks of metal that serve as electromagnets. A familiarity of the tools of an automobile mechanic and/or construction worker, combined with an eye for cracks and weak points, is helpful to a gunner.
 \end{itemize}
 \item \textit{Fighter Pilot}. The fighter pilot has the most active role during combat, but will still end up bugfixing and troubleshooting often. They are in control of their own separate small fighter spacecraft during combat, and are in charge of its maintenance during downtime. A fighter spaceship contains most if not all of the same systems as the proper ship, so instead the fighter pilot will deal with problems in their computer visualization system \ref{fighter} and problems outside the hull of the ship \ref{outer}. 
@@ -322,12 +372,13 @@ Finally, isolation will hopefully inspire a sense of Duty to the ship and crew. 
 
 Engineeers aboard a large ship spend their time in the hot engine decks by the rear of the ship. An engineer needs to be particularly handy in fixing things, since a rocket engine is already a complex thing, let alone one that needs to work in zero gravity, survive no atmosphere, and turn on and off at will.
 
-The following table contains all the different components of an engine. When the engine is hit by a damaging weapon, roll on the table to determine which component of the engine is actually going to be hit. When a component is hit, determine which type of damage the weapon does, then look up the component below the table and find that damage type listed beneath the component. That sentence will explain the most likely problems that arise because of that component taking that type of damage, so use this to continuously throw different random problems at the players. In general, more important components are located near the top, so for harder problems roll smaller dice or give yourself disadvantage on the roll.
+The following table contains all the different components of an engine. When the engine is hit by a damaging weapon, roll on the table to determine which component of the engine is actually going to be hit. When a component is hit, determine which type of damage the weapon does, then look up the component below the table and find that damage type listed beneath the component. That sentence will explain the most likely problems that arise because of that component taking that type of damage, so use this to continuously throw different random problems at the players. In general, more important components are located near the top, so for harder problems roll smaller dice or roll two dice and take the smaller result. 
 
 \vspace{0.2cm}
 \includegraphics[scale=0.35]{Engine}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
+\def\engine_components{
 \begin{tabular}[t]{| c | l | c |}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{engine} Engine Components} \\
@@ -352,6 +403,8 @@ The following table contains all the different components of an engine. When the
 26-29 & O$_2$ (l) Cooling Pipes & \ref{engine_o2_cooling} \\
 \bottomrule
 \end{tabular}
+}
+\engine_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -539,7 +592,8 @@ If the radiator or nitrogen circuit stops, heat will continue being transferred 
 \includegraphics[scale=0.275]{Thermal}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{| c | l | c |}
+\def\thermal_components{
+\begin{tabular}[t]{| c | l | c |}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{thermal} Thermal Components} \\
 \toprule
@@ -556,6 +610,8 @@ If the radiator or nitrogen circuit stops, heat will continue being transferred 
 10 & N$_2$ (g) Pump & \ref{thermal_n2_pump} \\
 \bottomrule
 \end{tabular}
+}
+\thermal_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -665,7 +721,8 @@ A railgun is composed of two parallel metal rails with a round of ammunition, a 
 \includegraphics[scale=0.275]{Railgun}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\railgun_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{railgun} Railgun Components} \\
 \toprule
@@ -683,6 +740,8 @@ A railgun is composed of two parallel metal rails with a round of ammunition, a 
 18 & H$_2$O (l) Pump & \ref{railgun_h2o_l_pump} \\
 \bottomrule
 \end{tabular}
+}
+\railgun_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -801,7 +860,8 @@ The ray accelerator is a theoretical weapon based on the particle accelerators o
 \includegraphics[scale=0.3]{Ray_Accelerator}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\ray_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{ray} Ray Components} \\
 \toprule
@@ -815,6 +875,8 @@ The ray accelerator is a theoretical weapon based on the particle accelerators o
 10 & Vacuum Pump & \ref{ray_vacuum_pump} \\
 \bottomrule
 \end{tabular}
+}
+\ray_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -904,13 +966,14 @@ Both the main chamber and the ionization chamber need to be almost perfect vacuu
 \newpage
 \subsection{Life Support} \label{life}
 
-Human beings need to live and work in the ship for long periods of time. The ship is equipped with a fully self-sufficient life support system, meaning it its a closed loop that could theoretically go on indefinitely. Note that life support does not include thermal controle. The primary function of life support is to clean the air of the ship. As humans waddle about the ship, they release moisture, germs, and they add take away oxygen while adding carbon dioxide. The physical moisture and bacteria is not particularly difficult to deal with, so the main challenge is getting rid of carbon dioxide chemically.
+Human beings need to live and work in the ship for long periods of time. The ship is equipped with a fully self-sufficient life support system, meaning it its a closed loop that could theoretically go on indefinitely. Note that life support does not include thermal control. The primary function of life support is to clean the air of the ship. As humans waddle about the ship, they release moisture, germs, and they add take away oxygen while adding carbon dioxide. The physical moisture and bacteria is not particularly difficult to deal with, so the main challenge is getting rid of carbon dioxide chemically.
 
 \vspace{0.2cm}
 \includegraphics[scale=0.275]{Life_Support}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\life_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{life} Life Support Components} \\
 \toprule
@@ -934,6 +997,8 @@ Human beings need to live and work in the ship for long periods of time. The shi
 29-30 & N$_2$ (l) Storage & \ref{life_n2_storage} \\
 \bottomrule
 \end{tabular}
+}
+\life_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -1127,7 +1192,8 @@ Every single system aboard the ship requires some form of electricity to functio
 \includegraphics[scale=0.3]{Electrical_Grid}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\grid_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{grid} Electrical Grid Components} \\
 \toprule
@@ -1144,6 +1210,8 @@ Every single system aboard the ship requires some form of electricity to functio
 20 & Heavy Wiring & \ref{grid_heavy_wiring} \\
 \bottomrule
 \end{tabular}
+}
+\grid_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -1254,7 +1322,7 @@ Heavy wiring carries high voltage electricity from the reactor to the systems of
 \newpage
 \subsection{Fighter AR Display} \label{fighter}
 
-A fighter pilot in open space would look around him outside a glass window and see the pitch black void of space. If there were any ships visible, they would be so far away as to be minuscule specks, and often are only partially lit by the sun. As a result, a collection of videogame designers and military simulation designers worked together to create an alternate-reality virtual battlefield for pilots to view in real-time.
+A fighter pilot in open space would look around see the pitch black void of space. If there were any ships visible, they would be so far away as to be minuscule specks, and often are only partially lit by the sun. As a result, a collection of videogame designers and military simulation designers worked together to create an alternate-reality virtual battlefield for pilots to view in real-time.
 
 Now, when a pilot looks out their visor, they see any ships nearby as highlighted outlines, with indications of their direction of movement and orientation, and they instead of an empty void they see a field of spaced lines as a coordinate system around them. The picture below is a third-person view of a battlefield with most components of the AR display drawn and labeled.
 
@@ -1262,7 +1330,8 @@ Now, when a pilot looks out their visor, they see any ships nearby as highlighte
 \includegraphics[scale=0.3]{Fighter_AR_Display}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\fighter_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{fighter} Fighter AR Components} \\
 \toprule
@@ -1277,6 +1346,8 @@ Now, when a pilot looks out their visor, they see any ships nearby as highlighte
 8-9 & Controlling & \ref{fighter_controlling} \\
 \bottomrule
 \end{tabular}
+}
+\fighter_components
 
 \vspace{0.3cm}
 \begin{minipage}[t]{0.4\linewidth}
@@ -1307,7 +1378,7 @@ Duty
 
 \subsubsection{Combat System} \label{fighter_combat_system}
 
-The following is a brief description of a combat system for fighter ships. I recommend focusing on the bugfixing, problem solving, and outer-space acrobatics problems instead of the combat.
+The following is a brief description of a combat system for fighter ships. You may choose whether or not to implement this. I recommend focusing on the bugfixing, problem solving, and outer-space acrobatics problems instead of the combat.
 
 Each turn of fighter combat, choose \textit{up to two} of the following actions to take.
 \begin{itemize}
@@ -1507,7 +1578,7 @@ The ship is controlled with three joysticks. In one hand the pilot always holds 
 
 While a wealth of possible bugs and problems are possible with the fighter pilot's AR display, they are also in charge of extravehicular (EV) maneuvers. The pilot is trained in zero-g dexterity and maneuvering, meaning it is better to have the pilot fix a problem on the outside of the hull than have some plumber put on a space suit and fumble their way around the outer hull.
 
-The bottom half of every system's table so far has been relatively useless, but the bottom of this table is especially useless. See the description of each part to determine whether or not to actually hit it, since many parts are unnecessary unless they are actively being used.
+The bottom half of every system's table so far has been relatively useless, but the bottom of this table is especially useless. See the description of each part to determine whether or not to actually hit it, since many parts are unnecessary unless they are actively being used. Note that the picture below is an idealization and should not be taken literally.
 
 \vspace{0.2cm}
 \includegraphics[scale=0.3]{Outer_Hull}
@@ -1529,7 +1600,7 @@ Anger
 \begin{minipage}[t]{0.4\linewidth}
 Isolation
 \begin{itemize}
-\item If one of the antennae \ref{outer_antennae} are broken, it can completely disable communication either between the fighter pilot and their parent ship or between the parent ship and any backup or higher command. Leaving a ship completely in the dark is a terrifying thing, particularly for a fighter pilot completely alone in their craft. A similar feeling could also be achieved by breaking a radar dish \ref{outer_radar}. 
+\item If one of the antennae \ref{outer_antennae} are broken, it can completely disable communication either between the fighter pilot and their parent ship or between the parent ship and any backup or higher command. Leaving a ship completely in the dark is a terrifying thing, particularly for a fighter pilot alone in their craft. A similar feeling could also be achieved by breaking a radar dish \ref{outer_radar}. 
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{0.4\linewidth}
@@ -1540,29 +1611,33 @@ Duty
 \end{minipage}
 
 \vspace{0.5cm} \hspace{0.25\linewidth}
-\begin{tabular}{@{} | c | l | c | @{}}
+\def\outer_components{
+\begin{tabular}[t]{@{} | c | l | c | @{}}
 \toprule
 \multicolumn{3}{|l|}{Table \ref{outer} Outer Hull Components} \\
-\multicolumn{3}{|l|}{*skip nonessentials in "full table" roll} \\
 \toprule
 1d10 & Component & Link \\
 \midrule
 1 & Antennae & \ref{outer_antennae} \\
 2 & Radar Dishes & \ref{outer_radar} \\
-3-4 & Airlocks & \ref{outer_airlocks} \\
-5-7 & Hangar Doors & \ref{outer_hangar} \\
-8 & Docking Magnets & \ref{outer_docking} \\
-9 & Scrap Arm & \ref{outer_arm} \\
+3-4 & Airlocks* & \ref{outer_airlocks} \\
+5-7 & Hangar Doors* & \ref{outer_hangar} \\
+8 & Docking Magnets* & \ref{outer_docking} \\
+9 & Scrap Arm* & \ref{outer_arm} \\
 \midrule
 1d32 & Nonessentials & Link \\
 \midrule
 1-16 & Hull & \ref{outer_hull} \\
 17-25 & Structural Beams & \ref{outer_beams} \\
-26-29 & Observation Deck & \ref{outer_observation} \\
+26-29 & Observation Deck* & \ref{outer_observation} \\
 30-31 & Windows & \ref{outer_windows} \\ 
 32 & Cameras & \ref{outer_cameras} \\
+\midrule
+\multicolumn{3}{|l|}{*only pick when being used by someone} \\
 \bottomrule
 \end{tabular}
+}
+\outer_components
 
 \hspace{-18pt} \subsubsection{Antennae} \label{outer_antennae} \vspace{-0.2cm}
 The ship uses various long-range antannae to communicate with nearby stations, satellites, and their own child ships. These antannae do not receive nor send signals well behind aluminum plating, meaning they cannot be inside the ship, and must be outside of the hull. They are typically hidden underneath kevlar, which does not reduce the signal nearly as much.
@@ -1729,11 +1804,13 @@ Component description
 
 \section{Combats} \label{combats}
 
-Combats 1-4 have a questline included in them in section \ref{quests}, while combats 5-8 are more general, late game combats that can be used to either extend the length of an existing campaign or offer endgame combats to play through after the story is finished.
+Combats 1-4 have a questline included in them in section \ref{quests}, while combats 5-8 are late-game combats that can be used to either extend the length of an existing campaign or offer post-game combats to play through after the story is finished.
+
+With each combat is included a description of the battlefield and a recommendation for how to run the problems of the campaign. Each combat from 1-4 will hopefully gradually increase the difficulty of problem solving. Combats 5-8 are all the hardest difficulty of problem solving.
 
 \subsection{Combat 1: Formula S Track} \label{combat_1}
 
-This combat takes place in a location related to the quests included later in the document. In practice, you can take this combat and use it in any other location (near a station) with little problem, as long as you change the reason for engagement.
+This combat takes place in a location related to the quests included later in the document. For a drawing of the track see section \ref{quest_4}. In practice, you can take this combat and use it in any other location (near a station) with little problem, as long as you change the reason for engagement.
 
 \begin{minipage}[t]{0.5\linewidth}
 \begin{tabular}[t]{| p{7cm} |}
@@ -1779,7 +1856,7 @@ asteroids & none \\
 
 \newpage
 \subsection{Combat 2: Industrial District} \label{combat_2}
-The ship takes a detour above the factories and plants as they leave the station. The station is composed of the commercial and residential districts, spinning on the outside of a ring as to have gravity, while the industrial district and docks are floating in zero gravity next to the station. The industrial district is situated a ways away from the station to avoid debris contamination.
+The ship takes a detour above the factories and plants of the industrial district as they leave the station. The station is composed of the commercial and residential districts, spinning on the outside of a ring as to have gravity, while the industrial district and docks are floating in zero gravity next to the station. The factories are situated a ways away from the station to avoid debris contamination.
 
 \begin{minipage}[t]{0.5\linewidth}
 \begin{tabular}[t]{| p{7cm} |}
@@ -1954,7 +2031,7 @@ The enemies only expected one police vessel to take this transfer orbit, but the
 \midrule
 location & In the shadow of the moon of a different planet than the one that the station orbits. \\
 distances & Long range which rapidly becomes close. \\
-comm.s time & Anywhere from 5 minutes to an hour (~ 3 x 1d20 minutes). \\
+comm.s time & Anywhere from 5 minutes to an hour (\~3 x 1d20 minutes). \\
 \begin{tabular}[c]{@{}r@{}}relative\\velocities\end{tabular} & The enemies are orbiting in the opposite direction as the friendly ships around the moon. The ships will become close quickly and will pass each other at huge speeds. \\ 
 visibility & Complete darkness. \\ 
 ions & none \\
@@ -2160,7 +2237,7 @@ If you want to create your own quest involving the players building their own sh
 
 \subsection{Quest 1: Retrieving a Hull} \label{quest_1}
 
-Today is a big day. The major local space station has organized a display, and has invited the policemen to join when they are not overseeing the events. The events will include space skating, a Formula S race, and a weaponry test.
+The largest space station in the system has organized a display, and has invited the guard forces to join when they are not overseeing the events. The events will include space skating, a Formula S race, and a weaponry test.
 
 The crew is allowed to watch the pleasant display of space skating outside the window of the station's main, high-class observation deck. It is zero-g, but drinks are available in pouches. This is a fine time to introduce the player's characters to each other, if it hasn't happened already.
 
@@ -2435,6 +2512,29 @@ We can treat this situation as an accuracy problem described in the section abov
 Missile weaponry are more simple to debunk. The missiles are simply shot out of the sky before they can do anything. Treat a missile like a fighter so that equation \ref{effective_range} applies to it. A railgun firing at a modest $v=$3km/s at a missile of length $l=$4m which can accelerate at ten times the maximum of a human being $a=$100g$=$980.6m/s$^2$. These values result in an effective range for a railgun against the missile of 192m, assuming the missile constantly chooses new directions to accelerate at full speed.
 
 While a missile may not be able to hit a missile in time, a ray certainly will. The missile's length was conservatively 4m, while its width is $2r=$1m, approximating. Applying equation \ref{accuracy} with the standard 2.87 arc minutes of accuracy yields a range of $R=$599m. Both railguns and rays can hit the railgun before it arrives, and rays can hit it reliably quite before it arrives. Considering that a single hit from a railgun or ray can instantly disable a hugely-expensive missile, missiles are not used often during combat.
+
+
+\newpage
+
+\begin{multicols}{2}
+
+\engine_components
+
+\thermal_components
+
+\railgun_components
+
+\ray_components
+
+\life_components
+
+\grid_components
+
+\fighter_components
+
+\outer_components
+
+\end{multicols}
 
 
 

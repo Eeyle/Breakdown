@@ -8,123 +8,123 @@
 \contentsline {subsection}{\numberline {2.2}Example First Combat}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Method of Running a Combat}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Damage Types}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Roles}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Pre-Game Interview}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.5}Roles}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Pre-Game Interview}{7}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Highlighting Emotions}{7}{subsection.2.7}
 \contentsline {subsubsection}{\numberline {2.7.1}Fear}{7}{subsubsection.2.7.1}
 \contentsline {subsubsection}{\numberline {2.7.2}Anger}{7}{subsubsection.2.7.2}
 \contentsline {subsubsection}{\numberline {2.7.3}Isolation}{7}{subsubsection.2.7.3}
-\contentsline {subsubsection}{\numberline {2.7.4}Duty}{7}{subsubsection.2.7.4}
-\contentsline {section}{\numberline {3}Systems}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Engine}{8}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}Electrolysis Chamber}{9}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Turbo}{10}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Combustion Chamber}{10}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Exhaust Vent}{10}{subsubsection.3.1.4}
-\contentsline {subsubsection}{\numberline {3.1.5}H$_2$O (l) Storage}{10}{subsubsection.3.1.5}
-\contentsline {subsubsection}{\numberline {3.1.6}H$_2$O (l) Pipe}{11}{subsubsection.3.1.6}
-\contentsline {subsubsection}{\numberline {3.1.7}H$_2$O (l) Pump}{11}{subsubsection.3.1.7}
-\contentsline {subsubsection}{\numberline {3.1.8}H$_2$ (l) Storage}{11}{subsubsection.3.1.8}
-\contentsline {subsubsection}{\numberline {3.1.9}H$_2$ (l) Pipe}{11}{subsubsection.3.1.9}
-\contentsline {subsubsection}{\numberline {3.1.10}H$_2$ (g) Condenser}{12}{subsubsection.3.1.10}
-\contentsline {subsubsection}{\numberline {3.1.11}O$_2$ (l) Storage}{12}{subsubsection.3.1.11}
-\contentsline {subsubsection}{\numberline {3.1.12}O$_2$ (l) Pipe}{12}{subsubsection.3.1.12}
-\contentsline {subsubsection}{\numberline {3.1.13}O$_2$ (l) Cooling Pipes}{12}{subsubsection.3.1.13}
-\contentsline {subsubsection}{\numberline {3.1.14}O$_2$ (l) Pump}{12}{subsubsection.3.1.14}
-\contentsline {subsubsection}{\numberline {3.1.15}O$_2$ (g) Condenser}{13}{subsubsection.3.1.15}
-\contentsline {subsection}{\numberline {3.2}Thermal}{14}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Radiator}{15}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Compressor}{16}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Heat Exchanger}{16}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Heat Sink}{16}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}H$_2$O (l) Pipe}{17}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}H$_2$O (l) Pump}{17}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}N$_2$ (g) Pipe}{17}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}N$_2$ (g) Pump}{17}{subsubsection.3.2.8}
-\contentsline {subsection}{\numberline {3.3}Railgun}{18}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Rails}{19}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Reloader}{19}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Hatch}{20}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Cameras}{20}{subsubsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.5}Ammunition Supply}{20}{subsubsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.6}H$_2$O (g) Condenser}{20}{subsubsection.3.3.6}
-\contentsline {subsubsection}{\numberline {3.3.7}H$_2$O (g) Pump}{21}{subsubsection.3.3.7}
-\contentsline {subsubsection}{\numberline {3.3.8}H$_2$O (l) Pipe}{21}{subsubsection.3.3.8}
-\contentsline {subsubsection}{\numberline {3.3.9}H$_2$O (l) Pump}{21}{subsubsection.3.3.9}
-\contentsline {subsection}{\numberline {3.4}Ray Accelerator}{22}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Vacuum Chamber}{23}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Ionization Chamber}{23}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Electric Field Accelerator}{23}{subsubsection.3.4.3}
-\contentsline {subsubsection}{\numberline {3.4.4}Magnetic Field Containment}{23}{subsubsection.3.4.4}
-\contentsline {subsubsection}{\numberline {3.4.5}Xe (g) Storage}{24}{subsubsection.3.4.5}
-\contentsline {subsubsection}{\numberline {3.4.6}Vacuum Pump}{24}{subsubsection.3.4.6}
-\contentsline {subsection}{\numberline {3.5}Life Support}{25}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Electrolysis Chamber}{26}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Carbon Scrubber}{27}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Hydrogen Recapture}{27}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Dehumidifier}{28}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Atmosphere}{28}{subsubsection.3.5.5}
-\contentsline {subsubsection}{\numberline {3.5.6}H$_2$O (l) Storage}{28}{subsubsection.3.5.6}
-\contentsline {subsubsection}{\numberline {3.5.7}H$_2$O (l) Pump}{28}{subsubsection.3.5.7}
-\contentsline {subsubsection}{\numberline {3.5.8}H$_2$O (l) Pipe}{29}{subsubsection.3.5.8}
-\contentsline {subsubsection}{\numberline {3.5.9}H$_2$ (g) Storage}{29}{subsubsection.3.5.9}
-\contentsline {subsubsection}{\numberline {3.5.10}H$_2$ (g) Pipe}{29}{subsubsection.3.5.10}
-\contentsline {subsubsection}{\numberline {3.5.11}H$_2$ (g) Compressor}{29}{subsubsection.3.5.11}
-\contentsline {subsubsection}{\numberline {3.5.12}O$_2$ (g) Storage}{29}{subsubsection.3.5.12}
-\contentsline {subsubsection}{\numberline {3.5.13}O$_2$ (g) Pipe}{30}{subsubsection.3.5.13}
-\contentsline {subsubsection}{\numberline {3.5.14}O$_2$ (g) Compressor}{30}{subsubsection.3.5.14}
-\contentsline {subsubsection}{\numberline {3.5.15}N$_2$ (l) Storage}{30}{subsubsection.3.5.15}
-\contentsline {subsection}{\numberline {3.6}Electrical Grid}{31}{subsection.3.6}
-\contentsline {subsubsection}{\numberline {3.6.1}Reactor}{32}{subsubsection.3.6.1}
-\contentsline {subsubsection}{\numberline {3.6.2}Batteries}{32}{subsubsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.3}Transformer}{32}{subsubsection.3.6.3}
-\contentsline {subsubsection}{\numberline {3.6.4}Converter}{33}{subsubsection.3.6.4}
-\contentsline {subsubsection}{\numberline {3.6.5}Capacitor}{33}{subsubsection.3.6.5}
-\contentsline {subsubsection}{\numberline {3.6.6}Electric Field Generator}{33}{subsubsection.3.6.6}
-\contentsline {subsubsection}{\numberline {3.6.7}Magnetic Field Coils}{33}{subsubsection.3.6.7}
-\contentsline {subsubsection}{\numberline {3.6.8}Wiring}{34}{subsubsection.3.6.8}
-\contentsline {subsubsection}{\numberline {3.6.9}Heavy Wiring}{34}{subsubsection.3.6.9}
-\contentsline {subsection}{\numberline {3.7}Fighter AR Display}{35}{subsection.3.7}
-\contentsline {subsubsection}{\numberline {3.7.1}Combat System}{36}{subsubsection.3.7.1}
-\contentsline {subsubsection}{\numberline {3.7.2}Computer Damage Types}{37}{subsubsection.3.7.2}
-\contentsline {subsubsection}{\numberline {3.7.3}Computer Bug Types}{38}{subsubsection.3.7.3}
-\contentsline {subsubsection}{\numberline {3.7.4}Positioning}{39}{subsubsection.3.7.4}
-\contentsline {subsubsection}{\numberline {3.7.5}Vectoring}{39}{subsubsection.3.7.5}
-\contentsline {subsubsection}{\numberline {3.7.6}Ranging}{40}{subsubsection.3.7.6}
-\contentsline {subsubsection}{\numberline {3.7.7}Aiming}{40}{subsubsection.3.7.7}
-\contentsline {subsubsection}{\numberline {3.7.8}Warning}{40}{subsubsection.3.7.8}
-\contentsline {subsubsection}{\numberline {3.7.9}Evading}{40}{subsubsection.3.7.9}
-\contentsline {subsubsection}{\numberline {3.7.10}Controlling}{40}{subsubsection.3.7.10}
-\contentsline {subsection}{\numberline {3.8}Outer Hull}{42}{subsection.3.8}
-\contentsline {subsubsection}{\numberline {3.8.1}Antennae}{43}{subsubsection.3.8.1}
-\contentsline {subsubsection}{\numberline {3.8.2}Radar Dishes}{43}{subsubsection.3.8.2}
-\contentsline {subsubsection}{\numberline {3.8.3}Airlocks}{44}{subsubsection.3.8.3}
-\contentsline {subsubsection}{\numberline {3.8.4}Hangar Door}{44}{subsubsection.3.8.4}
-\contentsline {subsubsection}{\numberline {3.8.5}Docking Magnets}{44}{subsubsection.3.8.5}
-\contentsline {subsubsection}{\numberline {3.8.6}Scrap Arm}{45}{subsubsection.3.8.6}
-\contentsline {subsubsection}{\numberline {3.8.7}Hull}{45}{subsubsection.3.8.7}
-\contentsline {subsubsection}{\numberline {3.8.8}Structural Beams}{45}{subsubsection.3.8.8}
-\contentsline {subsubsection}{\numberline {3.8.9}Observation Deck}{46}{subsubsection.3.8.9}
-\contentsline {subsubsection}{\numberline {3.8.10}Windows}{46}{subsubsection.3.8.10}
-\contentsline {subsubsection}{\numberline {3.8.11}Cameras}{46}{subsubsection.3.8.11}
-\contentsline {section}{\numberline {4}Combats}{47}{section.4}
-\contentsline {subsection}{\numberline {4.1}Combat 1: Formula S Track}{47}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Combat 2: Industrial District}{48}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Combat 3: Derelict Satellite}{49}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Combat 4: In the Shadow of the Station}{50}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Combat 5: Behind a Faraway Moon}{51}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Combat 6: A Station}{51}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Combat 7: Trained Fighter Squadron}{52}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}Combat 8: An Entire Planet}{52}{subsection.4.8}
-\contentsline {section}{\numberline {5}Quests}{53}{section.5}
-\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{53}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{54}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{55}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Quest 4: The Race}{56}{subsection.5.4}
-\contentsline {section}{\numberline {6}Documentation}{59}{section.6}
-\contentsline {subsection}{\numberline {6.1}To Hit a Fighter}{59}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Weapon Accuracy}{59}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Putting Numbers To It}{60}{subsubsection.6.2.1}
-\contentsline {subsection}{\numberline {6.3}On Laser and Missile Weaponry}{60}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Lasers}{60}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Missiles}{61}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {2.7.4}Duty}{8}{subsubsection.2.7.4}
+\contentsline {section}{\numberline {3}Systems}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Engine}{9}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Electrolysis Chamber}{10}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Turbo}{11}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Combustion Chamber}{11}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Exhaust Vent}{11}{subsubsection.3.1.4}
+\contentsline {subsubsection}{\numberline {3.1.5}H$_2$O (l) Storage}{11}{subsubsection.3.1.5}
+\contentsline {subsubsection}{\numberline {3.1.6}H$_2$O (l) Pipe}{12}{subsubsection.3.1.6}
+\contentsline {subsubsection}{\numberline {3.1.7}H$_2$O (l) Pump}{12}{subsubsection.3.1.7}
+\contentsline {subsubsection}{\numberline {3.1.8}H$_2$ (l) Storage}{12}{subsubsection.3.1.8}
+\contentsline {subsubsection}{\numberline {3.1.9}H$_2$ (l) Pipe}{12}{subsubsection.3.1.9}
+\contentsline {subsubsection}{\numberline {3.1.10}H$_2$ (g) Condenser}{13}{subsubsection.3.1.10}
+\contentsline {subsubsection}{\numberline {3.1.11}O$_2$ (l) Storage}{13}{subsubsection.3.1.11}
+\contentsline {subsubsection}{\numberline {3.1.12}O$_2$ (l) Pipe}{13}{subsubsection.3.1.12}
+\contentsline {subsubsection}{\numberline {3.1.13}O$_2$ (l) Cooling Pipes}{13}{subsubsection.3.1.13}
+\contentsline {subsubsection}{\numberline {3.1.14}O$_2$ (l) Pump}{13}{subsubsection.3.1.14}
+\contentsline {subsubsection}{\numberline {3.1.15}O$_2$ (g) Condenser}{14}{subsubsection.3.1.15}
+\contentsline {subsection}{\numberline {3.2}Thermal}{15}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Radiator}{16}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Compressor}{17}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Heat Exchanger}{17}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Heat Sink}{17}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}H$_2$O (l) Pipe}{18}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}H$_2$O (l) Pump}{18}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}N$_2$ (g) Pipe}{18}{subsubsection.3.2.7}
+\contentsline {subsubsection}{\numberline {3.2.8}N$_2$ (g) Pump}{18}{subsubsection.3.2.8}
+\contentsline {subsection}{\numberline {3.3}Railgun}{19}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Rails}{20}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Reloader}{20}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Hatch}{21}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Cameras}{21}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}Ammunition Supply}{21}{subsubsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.6}H$_2$O (g) Condenser}{21}{subsubsection.3.3.6}
+\contentsline {subsubsection}{\numberline {3.3.7}H$_2$O (g) Pump}{22}{subsubsection.3.3.7}
+\contentsline {subsubsection}{\numberline {3.3.8}H$_2$O (l) Pipe}{22}{subsubsection.3.3.8}
+\contentsline {subsubsection}{\numberline {3.3.9}H$_2$O (l) Pump}{22}{subsubsection.3.3.9}
+\contentsline {subsection}{\numberline {3.4}Ray Accelerator}{23}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Vacuum Chamber}{24}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Ionization Chamber}{24}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Electric Field Accelerator}{24}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.4.4}Magnetic Field Containment}{24}{subsubsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.4.5}Xe (g) Storage}{25}{subsubsection.3.4.5}
+\contentsline {subsubsection}{\numberline {3.4.6}Vacuum Pump}{25}{subsubsection.3.4.6}
+\contentsline {subsection}{\numberline {3.5}Life Support}{26}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Electrolysis Chamber}{27}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Carbon Scrubber}{28}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Hydrogen Recapture}{28}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Dehumidifier}{29}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Atmosphere}{29}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}H$_2$O (l) Storage}{29}{subsubsection.3.5.6}
+\contentsline {subsubsection}{\numberline {3.5.7}H$_2$O (l) Pump}{29}{subsubsection.3.5.7}
+\contentsline {subsubsection}{\numberline {3.5.8}H$_2$O (l) Pipe}{30}{subsubsection.3.5.8}
+\contentsline {subsubsection}{\numberline {3.5.9}H$_2$ (g) Storage}{30}{subsubsection.3.5.9}
+\contentsline {subsubsection}{\numberline {3.5.10}H$_2$ (g) Pipe}{30}{subsubsection.3.5.10}
+\contentsline {subsubsection}{\numberline {3.5.11}H$_2$ (g) Compressor}{30}{subsubsection.3.5.11}
+\contentsline {subsubsection}{\numberline {3.5.12}O$_2$ (g) Storage}{30}{subsubsection.3.5.12}
+\contentsline {subsubsection}{\numberline {3.5.13}O$_2$ (g) Pipe}{31}{subsubsection.3.5.13}
+\contentsline {subsubsection}{\numberline {3.5.14}O$_2$ (g) Compressor}{31}{subsubsection.3.5.14}
+\contentsline {subsubsection}{\numberline {3.5.15}N$_2$ (l) Storage}{31}{subsubsection.3.5.15}
+\contentsline {subsection}{\numberline {3.6}Electrical Grid}{32}{subsection.3.6}
+\contentsline {subsubsection}{\numberline {3.6.1}Reactor}{33}{subsubsection.3.6.1}
+\contentsline {subsubsection}{\numberline {3.6.2}Batteries}{33}{subsubsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.3}Transformer}{33}{subsubsection.3.6.3}
+\contentsline {subsubsection}{\numberline {3.6.4}Converter}{34}{subsubsection.3.6.4}
+\contentsline {subsubsection}{\numberline {3.6.5}Capacitor}{34}{subsubsection.3.6.5}
+\contentsline {subsubsection}{\numberline {3.6.6}Electric Field Generator}{34}{subsubsection.3.6.6}
+\contentsline {subsubsection}{\numberline {3.6.7}Magnetic Field Coils}{34}{subsubsection.3.6.7}
+\contentsline {subsubsection}{\numberline {3.6.8}Wiring}{35}{subsubsection.3.6.8}
+\contentsline {subsubsection}{\numberline {3.6.9}Heavy Wiring}{35}{subsubsection.3.6.9}
+\contentsline {subsection}{\numberline {3.7}Fighter AR Display}{36}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Combat System}{37}{subsubsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.2}Computer Damage Types}{38}{subsubsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.3}Computer Bug Types}{39}{subsubsection.3.7.3}
+\contentsline {subsubsection}{\numberline {3.7.4}Positioning}{40}{subsubsection.3.7.4}
+\contentsline {subsubsection}{\numberline {3.7.5}Vectoring}{40}{subsubsection.3.7.5}
+\contentsline {subsubsection}{\numberline {3.7.6}Ranging}{41}{subsubsection.3.7.6}
+\contentsline {subsubsection}{\numberline {3.7.7}Aiming}{41}{subsubsection.3.7.7}
+\contentsline {subsubsection}{\numberline {3.7.8}Warning}{41}{subsubsection.3.7.8}
+\contentsline {subsubsection}{\numberline {3.7.9}Evading}{41}{subsubsection.3.7.9}
+\contentsline {subsubsection}{\numberline {3.7.10}Controlling}{41}{subsubsection.3.7.10}
+\contentsline {subsection}{\numberline {3.8}Outer Hull}{43}{subsection.3.8}
+\contentsline {subsubsection}{\numberline {3.8.1}Antennae}{44}{subsubsection.3.8.1}
+\contentsline {subsubsection}{\numberline {3.8.2}Radar Dishes}{44}{subsubsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.3}Airlocks}{45}{subsubsection.3.8.3}
+\contentsline {subsubsection}{\numberline {3.8.4}Hangar Door}{45}{subsubsection.3.8.4}
+\contentsline {subsubsection}{\numberline {3.8.5}Docking Magnets}{45}{subsubsection.3.8.5}
+\contentsline {subsubsection}{\numberline {3.8.6}Scrap Arm}{46}{subsubsection.3.8.6}
+\contentsline {subsubsection}{\numberline {3.8.7}Hull}{46}{subsubsection.3.8.7}
+\contentsline {subsubsection}{\numberline {3.8.8}Structural Beams}{46}{subsubsection.3.8.8}
+\contentsline {subsubsection}{\numberline {3.8.9}Observation Deck}{47}{subsubsection.3.8.9}
+\contentsline {subsubsection}{\numberline {3.8.10}Windows}{47}{subsubsection.3.8.10}
+\contentsline {subsubsection}{\numberline {3.8.11}Cameras}{47}{subsubsection.3.8.11}
+\contentsline {section}{\numberline {4}Combats}{48}{section.4}
+\contentsline {subsection}{\numberline {4.1}Combat 1: Formula S Track}{48}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Combat 2: Industrial District}{49}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Combat 3: Derelict Satellite}{50}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Combat 4: In the Shadow of the Station}{51}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Combat 5: Behind a Faraway Moon}{52}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Combat 6: A Station}{52}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Combat 7: Trained Fighter Squadron}{53}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Combat 8: An Entire Planet}{53}{subsection.4.8}
+\contentsline {section}{\numberline {5}Quests}{54}{section.5}
+\contentsline {subsection}{\numberline {5.1}Quest 1: Retrieving a Hull}{54}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{55}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{56}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Quest 4: The Race}{57}{subsection.5.4}
+\contentsline {section}{\numberline {6}Documentation}{60}{section.6}
+\contentsline {subsection}{\numberline {6.1}To Hit a Fighter}{60}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Weapon Accuracy}{60}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Putting Numbers To It}{61}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.3}On Laser and Missile Weaponry}{61}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Lasers}{61}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Missiles}{62}{subsubsection.6.3.2}
