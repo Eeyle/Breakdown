@@ -9,11 +9,12 @@
 \contentsline {subsection}{\numberline {2.3}Method of Running a Combat}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Damage Types}{5}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Roles}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Highlighting Emotions}{6}{subsection.2.6}
-\contentsline {subsubsection}{\numberline {2.6.1}Fear}{6}{subsubsection.2.6.1}
-\contentsline {subsubsection}{\numberline {2.6.2}Anger}{6}{subsubsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.3}Isolation}{7}{subsubsection.2.6.3}
-\contentsline {subsubsection}{\numberline {2.6.4}Duty}{7}{subsubsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6}Pre-Game Interview}{6}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Highlighting Emotions}{7}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Fear}{7}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}Anger}{7}{subsubsection.2.7.2}
+\contentsline {subsubsection}{\numberline {2.7.3}Isolation}{7}{subsubsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.4}Duty}{7}{subsubsection.2.7.4}
 \contentsline {section}{\numberline {3}Systems}{8}{section.3}
 \contentsline {subsection}{\numberline {3.1}Engine}{8}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Electrolysis Chamber}{9}{subsubsection.3.1.1}
@@ -120,6 +121,10 @@
 \contentsline {subsection}{\numberline {5.2}Quest 2: Retrieving a Radiator}{52}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Quest 3: Navigating a Broken Satellite}{53}{subsection.5.3}
 \contentsline {subsection}{\numberline {5.4}Quest 4: The Race}{54}{subsection.5.4}
-\contentsline {section}{\numberline {6}Documentation}{55}{section.6}
-\contentsline {subsection}{\numberline {6.1}To Hit a Fighter}{55}{subsection.6.1}
+\contentsline {section}{\numberline {6}Documentation}{56}{section.6}
+\contentsline {subsection}{\numberline {6.1}To Hit a Fighter}{56}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Weapon Accuracy}{56}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Putting Numbers To It}{57}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.3}Debunking Laser and Missile Weaponry}{57}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Lasers}{57}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Missiles}{58}{subsubsection.6.3.2}
