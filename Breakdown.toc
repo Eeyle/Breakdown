@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {1.3}Content Warning}{3}{subsection.1.3}
 \contentsline {section}{\numberline {2}Theory of the RPG}{3}{section.2}
 \contentsline {subsection}{\numberline {2.1}Pitch}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Example First Combat}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Example First Combat}{4}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Method of Running a Combat}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Damage Types}{5}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Roles}{6}{subsection.2.5}
@@ -128,3 +128,5 @@
 \contentsline {subsection}{\numberline {6.3}On Laser and Missile Weaponry}{61}{subsection.6.3}
 \contentsline {subsubsection}{\numberline {6.3.1}Lasers}{61}{subsubsection.6.3.1}
 \contentsline {subsubsection}{\numberline {6.3.2}Missiles}{62}{subsubsection.6.3.2}
+\contentsline {subsection}{\numberline {6.4}Weaponry Development}{62}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}All system tables in one place}{63}{subsection.6.5}
